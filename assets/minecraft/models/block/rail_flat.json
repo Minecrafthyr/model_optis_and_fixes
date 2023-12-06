@@ -1,0 +1,1 @@
+{"elements":[{"faces":{"down":{"cullface":"down","texture":"#rail","uv":[0,16,16,0]},"up":{"texture":"#rail","uv":[0,0,16,16]}},"from":[0,1,0],"shade":false,"to":[16,1,16]}],"textures":{"particle":"#rail"}}

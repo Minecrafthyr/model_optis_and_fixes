@@ -1,0 +1,1 @@
+{"elements":[{"faces":{"down":{"rotation":90,"texture":"#tripwire","uv":[15,0,0,2]},"up":{"rotation":90,"texture":"#tripwire","uv":[0,0,15,2]}},"from":[7.75,1.5,4],"to":[8.25,1.5,7.75]}],"textures":{"particle":"minecraft:block/tripwire","tripwire":"minecraft:block/tripwire"}}

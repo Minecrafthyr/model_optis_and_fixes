@@ -1,0 +1,1 @@
+{"elements":[{"faces":{"down":{"texture":"#rail","uv":[0,16,16,0]},"up":{"texture":"#rail","uv":[0,0,16,16]}},"from":[0,9,0],"rotation":{"angle":45,"axis":"x","origin":[8,9,8],"rescale":true},"shade":false,"to":[16,9,16]}],"textures":{"particle":"#rail"}}
