@@ -1,0 +1,21 @@
+{
+  "pack": {
+    "pack_format": 22,
+    "description": "v3.3 ——Minecraft_hyr",
+    "supported_formats": [18,22]
+  },
+  "filter": {
+    "block": [
+      { "namespace": "minecraft", "path": "models/block/tripwire_n.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_ne.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_ns.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_nse.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_nsew.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_attached_n.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_attached_ne.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_attached_ns.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_attached_nse.json" },
+      { "namespace": "minecraft", "path": "models/block/tripwire_attached_nsew.json" }
+    ]
+  }
+}
