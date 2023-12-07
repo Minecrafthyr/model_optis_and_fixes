@@ -1,8 +1,8 @@
 This resource pack optimized some model to get a little more fps, and also fixes lots of bugs.
 
-## Model Optimization and Fixes
+## Model Optimizations and Fixes
 
-### Block Optimize
+### Block Optimizations
 
 - beacon
 - bell
