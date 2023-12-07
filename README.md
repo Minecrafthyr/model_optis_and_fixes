@@ -1,6 +1,6 @@
 This resource pack optimized some model to get a little more fps, and also fixes lots of bugs.
 
-## Model Optimize & Fixes
+## Model Optimization and Fixes
 
 ### Block Optimize
 
