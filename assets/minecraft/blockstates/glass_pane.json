@@ -1,0 +1,293 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_rim_center"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_rim_ne"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_rim_ne",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_rim_sw"
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_rim_sw",
+        "y": 90
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_thin"
+      },
+      "when": {
+        "east":  "false",
+        "south": "false",
+        "west":  "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_thin",
+        "y": 90
+      },
+      "when": {
+        "south": "false",
+        "west":  "false",
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_thin",
+        "y": 180
+      },
+      "when": {
+        "west":  "false",
+        "north": "false",
+        "east":  "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_thin",
+        "y": 270
+      },
+      "when": {
+        "north": "false",
+        "east":  "false",
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_full"
+      },
+      "when": {
+        "east":  "true",
+        "south": "false",
+        "west":  "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_full",
+        "y": 90
+      },
+      "when": {
+        "south": "true",
+        "west":  "false",
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_full",
+        "y": 180
+      },
+      "when": {
+        "west":  "true",
+        "north": "false",
+        "east":  "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_full",
+        "y": 270
+      },
+      "when": {
+        "north": "true",
+        "east":  "false",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_outer_left"
+      },
+      "when": {
+        "west":  "true",
+        "south": "false",
+        "east":  "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_outer_left",
+        "y": 90
+      },
+      "when": {
+        "north": "true",
+        "west":  "false",
+        "south": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_outer_left",
+        "y": 180
+      },
+      "when": {
+        "east":  "true",
+        "north": "false",
+        "west":  "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_outer_left",
+        "y": 270
+      },
+      "when": {
+        "south": "true",
+        "east":  "false",
+        "north": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_outer_right"
+      },
+      "when": {
+        "west":  "false",
+        "south": "false",
+        "east":  "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_outer_right",
+        "y": 90
+      },
+      "when": {
+        "north": "false",
+        "west":  "false",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_outer_right",
+        "y": 180
+      },
+      "when": {
+        "east":  "false",
+        "north": "false",
+        "west":  "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_outer_right",
+        "y": 270
+      },
+      "when": {
+        "south": "false",
+        "east":  "false",
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_inner_left"
+      },
+      "when": {
+        "west":  "true",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_inner_left",
+        "y": 90
+      },
+      "when": {
+        "north": "true",
+        "west":  "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_inner_left",
+        "y": 180
+      },
+      "when": {
+        "east":  "true",
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_inner_left",
+        "y": 270
+      },
+      "when": {
+        "south": "true",
+        "east":  "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_inner_right"
+      },
+      "when": {
+        "south": "true",
+        "east":  "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_inner_right",
+        "y": 90
+      },
+      "when": {
+        "west":  "true",
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_inner_right",
+        "y": 180
+      },
+      "when": {
+        "north": "true",
+        "west":  "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "minecraft:block/glass_pane_face_inner_right",
+        "y": 270
+      },
+      "when": {
+        "east":  "true",
+        "north": "true"
+      }
+    }
+  ]
+}

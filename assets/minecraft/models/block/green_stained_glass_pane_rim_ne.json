@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_pane_rim_ne",
+  "textures": {
+    "particle": "minecraft:block/green_stained_glass",
+    "texture":  "minecraft:block/green_stained_glass_pane_top"
+  }
+}

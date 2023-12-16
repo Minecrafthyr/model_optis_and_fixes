@@ -290,3 +290,10 @@ Add Credits.md
 **Other:**
 
 - Remove dragon_egg and spawner (Mojang fix it)
+
+### Version 4.0
+
+- Fix error bell bar cull
+- Use Unlicense.
+- fence from [MC-267281](https://bugs.mojang.com/projects/MC/issues/MC-267281)
+- glass_pane from [MC-267315](https://bugs.mojang.com/browse/MC-267315)

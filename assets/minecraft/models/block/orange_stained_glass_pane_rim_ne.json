@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_pane_rim_ne",
+  "textures": {
+    "particle": "minecraft:block/orange_stained_glass",
+    "texture":  "minecraft:block/orange_stained_glass_pane_top"
+  }
+}

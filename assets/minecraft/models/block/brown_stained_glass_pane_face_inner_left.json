@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_pane_face_inner_left",
+  "textures": {
+    "texture": "minecraft:block/brown_stained_glass"
+  }
+}

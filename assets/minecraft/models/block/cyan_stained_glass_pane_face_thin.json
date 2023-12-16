@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_pane_face_thin",
+  "textures": {
+    "texture": "minecraft:block/cyan_stained_glass"
+  }
+}
