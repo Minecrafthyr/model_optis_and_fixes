@@ -297,3 +297,11 @@ Add Credits.md
 - Use Unlicense.
 - fence from [MC-267281](https://bugs.mojang.com/projects/MC/issues/MC-267281)
 - glass_pane from [MC-267315](https://bugs.mojang.com/browse/MC-267315)
+
+### Version 4.1
+
+- Mojang doesn't (and can't) fix [MC-262652](https://bugs.mojang.com/browse/MC-262652) so I add dragon_egg back  
+  Really confusing, see [This comment](https://bugs.mojang.com/browse/MC-262652?focusedId=1289602&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-1289602)
+- Remove candle no shading
+- Torch fix (but lower performance)
+- Iron Bars improvements

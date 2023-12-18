@@ -1,8 +1,8 @@
 {
   "pack": {
     "pack_format": 22,
-    "description": "v3.3 ——Minecraft_hyr",
-    "supported_formats": [18,22]
+    "description": "v4.1",
+    "supported_formats": 22
   },
   "filter": {
     "block": [

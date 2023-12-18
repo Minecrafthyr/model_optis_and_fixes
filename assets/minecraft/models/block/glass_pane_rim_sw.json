@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_pane_rim_sw",
-  "textures": {
-    "particle": "minecraft:block/glass",
-    "texture":  "minecraft:block/glass_pane_top"
-  }
-}
