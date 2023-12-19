@@ -11,8 +11,6 @@ Optimized some models to get a little more fps, and also fixes lots of bugs.
 - brewing_stand
 - cauldron
 - composter
-- fence from [MC-267281](https://bugs.mojang.com/browse/MC-267281) by [Connor Steppie](https://bugs.mojang.com/secure/ViewProfile.jspa?name=Awesoman3000)
-- glass_pane from [MC-267315](https://bugs.mojang.com/browse/MC-267315) by [Connor Steppie](https://bugs.mojang.com/secure/ViewProfile.jspa?name=Awesoman3000)
 - fence_gate_open
 - hopper
 - lectern

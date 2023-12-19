@@ -305,3 +305,9 @@ Add Credits.md
 - Remove candle no shading
 - Torch fix (but lower performance), also change repeater, comparator
 - Iron Bars improvements
+
+### Version 4.2
+
+- Improve Iron Bars again
+- remove fence from [MC-267281](https://bugs.mojang.com/browse/MC-267281) by [Connor Steppie](https://bugs.mojang.com/secure/ViewProfile.jspa?name=Awesoman3000) because it's unsafe for new varient
+- Rail is on ground now

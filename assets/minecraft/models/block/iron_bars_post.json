@@ -7,16 +7,16 @@
 	},
 	"elements": [
 		{
-			"from": [8, 0.01, 7],
-			"to": [8, 15.99, 9],
+			"from": [8, 0, 7],
+			"to": [8, 16, 9],
 			"faces": {
 				"east": {"uv": [9, 0, 7, 16], "texture": "#bars"},
 				"west": {"uv": [9, 0, 7, 16], "texture": "#bars"}
 			}
 		},
 		{
-			"from": [7, 0.01, 8],
-			"to": [9, 15.99, 8],
+			"from": [7, 0, 8],
+			"to": [9, 16, 8],
 			"faces": {
 				"north": {"uv": [7, 0, 9, 16], "texture": "#bars"},
 				"south": {"uv": [9, 0, 7, 16], "texture": "#bars"}

@@ -5,7 +5,7 @@
         "edge": "block/iron_bars"
     },
     "elements": [
-        {   "from": [ 7, 0.01, 7 ],
+        {   "from": [ 7, 0, 7 ],
             "to": [ 9, 0.01, 9 ],
             "faces": {
                 "down":  { "uv": [  7, 7,  9,  9 ], "texture": "#edge", "cullface": "down" },
@@ -13,7 +13,7 @@
             }
         },
         {   "from": [ 7, 15.99, 7 ],
-            "to": [ 9, 15.99, 9 ],
+            "to": [ 9, 16, 9 ],
             "faces": {
                 "down":  { "uv": [  7, 7,  9,  9 ], "texture": "#edge" },
                 "up":    { "uv": [  7, 7,  9,  9 ], "texture": "#edge", "cullface": "up" }
