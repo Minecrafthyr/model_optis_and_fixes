@@ -311,3 +311,8 @@ Add Credits.md
 - Improve Iron Bars again
 - remove fence from [MC-267281](https://bugs.mojang.com/browse/MC-267281) by [Connor Steppie](https://bugs.mojang.com/secure/ViewProfile.jspa?name=Awesoman3000) because it's unsafe for new varient
 - Rail is on ground now
+
+### Version 4.3
+
+- Disable rail ambient occlusion
+- Fix lots of problems on tripwire_hook_attached

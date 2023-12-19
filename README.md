@@ -2,18 +2,16 @@
 
 Optimized some models to get a little more fps, and also fixes lots of bugs.
 
-
-### Block Optimize
+### Block Optimized
 
 - anvil
 - beacon
-- bell
-- brewing_stand
+- bell_floor
 - cauldron
 - composter
-- fence_gate_open
+- fence
+- fence_gate
 - hopper
-- lectern
 - spore_blossom
 - glow_lichen
 - sculk_vein
@@ -31,24 +29,23 @@ Optimized some models to get a little more fps, and also fixes lots of bugs.
 - sunflower_top from [MC-122701](https://bugs.mojang.com/browse/MC-122701) (also fix [MC-201760](https://bugs.mojang.com/browse/MC-201760), [MC-90566](https://bugs.mojang.com/browse/MC-90566))
 - iron_bars z-fighting fix and visual improvements
 - tripwire from [MC-262600](https://bugs.mojang.com/browse/MC-262600)
-- no beacon, end_rod shade
+- no beacon, end_rod, lectern shade
 - sculk_sensor uv fix
+- repeater, comparator
 
 ### Block Fix with Optimize
 
-- repeater, comparator from [MC-214662](https://bugs.mojang.com/browse/MC-214662)
-- tripwire_hook from [MC-262546](https://bugs.mojang.com/browse/MC-262546)
+- tripwire_hook from [MC-262546](https://bugs.mojang.com/browse/MC-262546) (modified)
 - dragon_egg in [MC-262652](https://bugs.mojang.com/browse/MC-262652)
 
 ### Item Fix
 
 - handheld arrow, spectral_arrow, tipped_arrow from [MC-201808](https://bugs.mojang.com/browse/MC-201808)
-- Left Hand Fix in [MC-160810](https://bugs.mojang.com/browse/MC-160810) (modified)
-- 3D candle, hopper, cauldron, torch, lantern
+- Left Hand Fix from [MC-160810](https://bugs.mojang.com/browse/MC-160810) (modified)
+- 3D candle, hopper, cauldron, torch, lantern, comparator, repeater
 - hopper, cauldron now display upside down on the head
-- thin_block, slab display on the head
+- thin_block display on the head
 - spore_blossom is upside down on ground
 - block is a bit bigger in item frame
-- 3D comparator, repeater form [mintynoura's 3D Redstone Items](https://modrinth.com/resourcepack/3d-redstone-items-mintynoura)
 
 _#: "from" means it is not my code. From version 4.0, this project is under Unlicense._
