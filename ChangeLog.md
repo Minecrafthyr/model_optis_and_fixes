@@ -316,3 +316,9 @@ Add Credits.md
 
 - Disable rail ambient occlusion
 - Fix lots of problems on tripwire_hook_attached
+
+### Version 4.4
+
+- Fix spawner in [MC-266463](https://bugs.mojang.com/browse/MC-266463)
+- Fix glow_lichen in [MC-249079](https://bugs.mojang.com/browse/MC-249079)
+- Fix redstone_torch and cactus *\*:experimental* in [MC-129108](https://bugs.mojang.com/browse/MC-129108)

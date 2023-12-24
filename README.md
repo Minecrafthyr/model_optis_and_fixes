@@ -1,6 +1,6 @@
-# Model Optimize & Fixes
+# Model Optimizations & Fixes
 
-Optimized some models to get a little more fps, and also fixes lots of bugs.
+Optimize some models to get a little more fps and fix lots of bugs.
 
 ### Block Optimized
 
@@ -12,6 +12,7 @@ Optimized some models to get a little more fps, and also fixes lots of bugs.
 - fence
 - fence_gate
 - hopper
+- item_frame
 - spore_blossom
 - glow_lichen
 - sculk_vein
@@ -27,11 +28,15 @@ Optimized some models to get a little more fps, and also fixes lots of bugs.
 - scaffolding_unstable from [MC-209947](https://bugs.mojang.com/browse/MC-209947)
 - big_dripleaf_tilt in [MC-221851](https://bugs.mojang.com/browse/MC-221851)
 - sunflower_top from [MC-122701](https://bugs.mojang.com/browse/MC-122701) (also fix [MC-201760](https://bugs.mojang.com/browse/MC-201760), [MC-90566](https://bugs.mojang.com/browse/MC-90566))
-- iron_bars z-fighting fix and visual improvements
+- iron_bars in [MC-192420](https://bugs.mojang.com/browse/MC-192420) and some visual improvements
 - tripwire from [MC-262600](https://bugs.mojang.com/browse/MC-262600)
-- no beacon, end_rod, lectern shade
+- no beacon, end_rod, lantern shade
 - sculk_sensor uv fix
-- repeater, comparator
+- redstone_torch and cactus *\*:experimental* in [MC-129108](https://bugs.mojang.com/browse/MC-129108)
+- repeater in [MC-177452](https://bugs.mojang.com/browse/MC-177452) (Also fix [MC-214662](https://bugs.mojang.com/browse/MC-214662), [MC-129108](https://bugs.mojang.com/browse/MC-129108))
+- comparator in [MC-177453](https://bugs.mojang.com/browse/MC-177453) (Also fix [MC-214662](https://bugs.mojang.com/browse/MC-214662), [MC-129108](https://bugs.mojang.com/browse/MC-129108))
+- spawner in [MC-266463](https://bugs.mojang.com/browse/MC-266463)
+- glow_lichen in [MC-249079](https://bugs.mojang.com/browse/MC-249079)
 
 ### Block Fix with Optimize
 

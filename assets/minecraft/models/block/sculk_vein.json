@@ -1,1 +1,6 @@
-{"ambientocclusion":false,"elements":[{"faces":{"north":{"cullface":"north","texture":"#sculk_vein","uv":[0,0,16,16]},"south":{"texture":"#sculk_vein","uv":[0,0,16,16]}},"from":[0,0,0.1],"to":[16,16,0.1]}],"textures":{"particle":"block/sculk_vein","sculk_vein":"block/sculk_vein"}}
+{
+  "parent": "block/template_a_face",
+  "textures": {
+    "texture": "minecraft:block/sculk_vein"
+  }
+}
