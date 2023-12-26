@@ -21,9 +21,10 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 ### Block Fix
 
+- lever in [MC-141291](https://bugs.mojang.com/browse/MC-141291), [MC-262864](https://bugs.mojang.com/browse/MC-262864), [MC-262865](https://bugs.mojang.com/browse/MC-262865)
 - brewing_stand in [MC-262410](https://bugs.mojang.com/browse/MC-262410)
 - spore_blossom from [MC-224195](https://bugs.mojang.com/browse/MC-224195)
-- flower_pot_cross from [MC-129826](https://bugs.mojang.com/browse/MC-129826)
+- flower_pot_cross in [MC-129826](https://bugs.mojang.com/browse/MC-129826)
 - big_dripleaf/big_dripleaf_stem
 - scaffolding_unstable from [MC-209947](https://bugs.mojang.com/browse/MC-209947)
 - big_dripleaf_tilt in [MC-221851](https://bugs.mojang.com/browse/MC-221851)
@@ -32,7 +33,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 - tripwire from [MC-262600](https://bugs.mojang.com/browse/MC-262600)
 - no beacon, end_rod, lantern shade
 - sculk_sensor uv fix
-- redstone_torch and cactus *\*:experimental* in [MC-129108](https://bugs.mojang.com/browse/MC-129108)
+- redstone_torch in [MC-129108](https://bugs.mojang.com/browse/MC-129108)
 - repeater in [MC-177452](https://bugs.mojang.com/browse/MC-177452) (Also fix [MC-214662](https://bugs.mojang.com/browse/MC-214662), [MC-129108](https://bugs.mojang.com/browse/MC-129108))
 - comparator in [MC-177453](https://bugs.mojang.com/browse/MC-177453) (Also fix [MC-214662](https://bugs.mojang.com/browse/MC-214662), [MC-129108](https://bugs.mojang.com/browse/MC-129108))
 - spawner in [MC-266463](https://bugs.mojang.com/browse/MC-266463)
@@ -47,7 +48,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 - handheld arrow, spectral_arrow, tipped_arrow from [MC-201808](https://bugs.mojang.com/browse/MC-201808)
 - Left Hand Fix from [MC-160810](https://bugs.mojang.com/browse/MC-160810) (modified)
-- 3D candle, hopper, cauldron, torch, lantern, comparator, repeater
+- 3D candle, hopper, cauldron, torch, lantern, comparator, repeater, lever
 - hopper, cauldron now display upside down on the head
 - thin_block display on the head
 - spore_blossom is upside down on ground

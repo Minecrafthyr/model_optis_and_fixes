@@ -1,1 +1,26 @@
-{"display":{"firstperson_lefthand":{"rotation":[0,180,0],"scale":[0.4,0.4,0.4],"translation":[0,0,0]},"firstperson_righthand":{"rotation":[0,0,0],"scale":[0.4,0.4,0.4],"translation":[0,0,0]},"head":{"rotation":[0,0,0],"scale":[1,1,1],"translation":[0,6.4,0]},"thirdperson_righthand":{"rotation":[0,0,0],"scale":[0.5,0.5,0.5],"translation":[0,0,1.01]}},"elements":[{"faces":{"down":{"texture":"#texture","uv":[5,6,11,10]},"east":{"texture":"#texture","uv":[6,12,10,16]},"north":{"texture":"#texture","uv":[5,12,11,16]},"south":{"texture":"#texture","uv":[5,12,11,16]},"up":{"texture":"#texture","uv":[5,10,11,6]},"west":{"texture":"#texture","uv":[6,12,10,16]}},"from":[5,6,6],"to":[11,10,10]}],"parent":"block/block","textures":{"particle":"#texture"}}
+{
+	"parent": "minecraft:block/button",
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 4.01, 1.01],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"scale": [0.4, 0.4, 0.4],
+			"translation": [0, 3.5, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 180, 0],
+			"scale": [0.4, 0.4, 0.4],
+			"translation": [0, 3.5, 0]
+		},
+		"head": {
+			"translation": [0, 6.4, 0]
+		},
+    "gui": {
+      "rotation": [30, 225, 0],
+      "scale": [0.8, 0.8, 0.8],
+      "translation": [0, 1, 0]
+    }
+	}
+}

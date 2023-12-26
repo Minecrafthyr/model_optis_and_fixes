@@ -321,4 +321,5 @@ Add Credits.md
 
 - Fix spawner in [MC-266463](https://bugs.mojang.com/browse/MC-266463)
 - Fix glow_lichen in [MC-249079](https://bugs.mojang.com/browse/MC-249079)
-- Fix redstone_torch and cactus *\*:experimental* in [MC-129108](https://bugs.mojang.com/browse/MC-129108)
+- Fix redstone_torch in [MC-129108](https://bugs.mojang.com/browse/MC-129108)
+- Fix very confusing lever in [MC-141291](https://bugs.mojang.com/browse/MC-141291), [MC-262864](https://bugs.mojang.com/browse/MC-262864), [MC-262865](https://bugs.mojang.com/browse/MC-262865)
