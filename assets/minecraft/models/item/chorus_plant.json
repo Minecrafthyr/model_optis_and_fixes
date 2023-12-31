@@ -1,0 +1,29 @@
+{
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [75, 45, 0],
+      "scale": [0.4, 0.4, 0.4],
+      "translation": [0, 2, 0]
+    }
+  },
+  "credit": "Made with Blockbench",
+  "parent": "block/block",
+  "textures": {
+    "particle": "block/chorus_plant",
+    "inside": "block/chorus_plant"
+  },
+  "elements": [
+    {
+      "from": [4, 0, 4],
+      "to": [12, 12, 12],
+      "faces": {
+        "north": { "texture": "#inside" },
+        "east": { "texture": "#inside" },
+        "south": { "texture": "#inside" },
+        "west": { "texture": "#inside" },
+        "up": { "texture": "#inside" },
+        "down": { "texture": "#inside" }
+      }
+    }
+  ]
+}

@@ -1,1 +1,0 @@
-{"elements":[{"faces":{"up":{"cullface":"up","texture":"#inside"}},"from":[2,0,2],"to":[14,15,14]}],"textures":{"inside":"block/composter_ready","particle":"block/composter_compost"}}

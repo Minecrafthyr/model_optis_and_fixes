@@ -1,87 +1,3 @@
-## Version 0.1
-
-**Block Optimize:**
-
-- beacon
-- bell
-- brewing_stand
-- dragon_egg
-- glow_lichen
-- lectern
-- lightning_rod
-- sculk_vein
-- spore_blossom
-- template_anvil
-- template_glass_pane
-- template_torch.
-
-## Version 0.2
-
-Change name to "More Cull Face and Fixes"
-
-**Block Fix with Optimize:**
-
-- iron_bar.
-
-**Block Fix:**
-
-- brewing_stand from MC-262410.
-
-## Version 0.3
-
-Divide the resource pack into two parts:  
-"Vanilla" and "Mods".
-
-**Block Fix:**
-
-- spore_blossom from MC-224195
-- flower_pot_cross from MC-129826
-- tripwire_hook from MC-262172.
-
-**Item Fix:**
-
-- arrow, spectral_arrow, tipped_arrow from MC-201808.
-
-**Other:**  
-Remove culling of iron_bar, template_glass_pane because they can't culling correctly.
-
-## Version 0.4
-
-**Block Optimize:**
-
-- beacon
-- mangrove_roots (experimental)
-- redstone_dust, repeater, comparator, flower_pot from MC-262433 (experimental)
-- hopper from MC-262452 (experimental) cauldron from MC-262470, stairs from MC-262461, fence_side.
-
-**Block Fix:**
-
-- template_azalea
-- spore_blossom (doesn't work in v0.3), big_dripleaf
-- button_inventory
-- frogspawn
-- scaffolding_unstable from MC-209947.
-
-**Item Fix:**  
-Left Hand Fix from MC-160810, by Shaddatic.
-
-## Version 0.5
-
-**Block Optimize:**
-
-- template_fence_gate_open
-- fence_side
-- template_wall_side.
-
-**Block Fix:**
-
-- big_dripleaf_tilt in MC-221851
-- repeater, comparator from MC-214662
-- sunflower_top MC-122701.
-
-**Other:**  
-Fix a bug in Left Hand Fix. Reformat code. Remove button fix.
-
 ## Version 1.0
 
 **Block Optimize:**
@@ -300,8 +216,7 @@ Add Credits.md
 
 ### Version 4.1
 
-- Mojang doesn't (and can't) fix [MC-262652](https://bugs.mojang.com/browse/MC-262652) so I add dragon_egg back  
-  Really confusing, see [This comment](https://bugs.mojang.com/browse/MC-262652?focusedId=1289602&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-1289602)
+- Mojang doesn't fix [MC-262652](https://bugs.mojang.com/browse/MC-262652) so I add dragon_egg back 
 - Remove candle no shading
 - Torch fix (but lower performance), also change repeater, comparator
 - Iron Bars improvements
@@ -323,3 +238,7 @@ Add Credits.md
 - Fix glow_lichen in [MC-249079](https://bugs.mojang.com/browse/MC-249079)
 - Fix redstone_torch in [MC-129108](https://bugs.mojang.com/browse/MC-129108)
 - Fix very confusing lever in [MC-141291](https://bugs.mojang.com/browse/MC-141291), [MC-262864](https://bugs.mojang.com/browse/MC-262864), [MC-262865](https://bugs.mojang.com/browse/MC-262865)
+
+### Version 4.5
+
+- Support for [Respackopts](https://modrinth.com/mod/respackopts) for config the resource pack
