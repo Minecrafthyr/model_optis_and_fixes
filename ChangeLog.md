@@ -241,4 +241,4 @@ Add Credits.md
 
 ### Version 4.5
 
-- Support for [Respackopts](https://modrinth.com/mod/respackopts) for config the resource pack
+- Support for [Respackopts](https://modrinth.com/mod/respackopts) for config the resource pack ([#1](https://github.com/Minecrafthyr/Model-Optimizations-and-Fixes/issues/1))
