@@ -29,7 +29,6 @@
   "rpo.model_optis_and_fixes.improvements.conduit": "Conduit",
   "rpo.model_optis_and_fixes.improvements.lantern": "Lanterns",
   "rpo.model_optis_and_fixes.improvements.stonecutter": "Stonecutter",
-  "rpo.model_optis_and_fixes.improvements.button": "Buttons",
 
   "rpo.model_optis_and_fixes.improvements.torch": "3D Torches",
   "rpo.model_optis_and_fixes.improvements.candle": "3D Candles",
@@ -42,11 +41,6 @@
   "rpo.model_optis_and_fixes.improvements.sniffer_egg": "3D Sniffer Egg",
   "rpo.model_optis_and_fixes.improvements.flower_pot": "3D Flower Pot",
   "rpo.model_optis_and_fixes.improvements.brewing_stand": "3D Brewing Stand",
-
-  
-  "rpo.model_optis_and_fixes.optimizations.title": "Optimizations",
-  "rpo.model_optis_and_fixes.optimizations.all": "All",
-
   
   "rpo.model_optis_and_fixes.optimizations_and_fixes.title": "Optimizations and Fixes",
   "rpo.model_optis_and_fixes.optimizations_and_fixes.a_face": "Sculk Vein and Glow Lichen",
