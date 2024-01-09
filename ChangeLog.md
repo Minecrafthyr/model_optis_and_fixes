@@ -3,7 +3,7 @@
 **Block Optimize:**
 
 - beacon
-- fence_side.
+- fence_side
 
 **Other:**  
 Fix some bugs in version 0.1~0.4. Remove frogspawn fix, redstone cull face. Remove multiple description.
@@ -246,3 +246,5 @@ Add Credits.md
 ### Version 4.6
 
 - Remove some unused files, bad improvements, config that shouldn't be exist.
+- Fix Chorus Plant inventory item use wrong model (I'm not sure my model is good or not).
+- A "lite" version for this project.

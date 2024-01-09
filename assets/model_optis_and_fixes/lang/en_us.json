@@ -27,10 +27,10 @@
   "rpo.model_optis_and_fixes.improvements.end_rod": "End Rod",
   "rpo.model_optis_and_fixes.improvements.chorus_plant": "Chorus Plant",
   "rpo.model_optis_and_fixes.improvements.conduit": "Conduit",
-  "rpo.model_optis_and_fixes.improvements.lantern": "Lanterns",
   "rpo.model_optis_and_fixes.improvements.stonecutter": "Stonecutter",
 
   "rpo.model_optis_and_fixes.improvements.torch": "3D Torches",
+  "rpo.model_optis_and_fixes.improvements.lantern": "3D Lanterns",
   "rpo.model_optis_and_fixes.improvements.candle": "3D Candles",
   "rpo.model_optis_and_fixes.improvements.cauldron": "3D Cauldron",
   "rpo.model_optis_and_fixes.improvements.hopper": "3D Hopper",
