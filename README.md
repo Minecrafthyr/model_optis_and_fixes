@@ -8,7 +8,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 ### Optional
 
-- *[Respackopts](https://modrinth.com/mod/respackopts) mod for config this resource pack
+- \*[Respackopts](https://modrinth.com/mod/respackopts) mod for config this resource pack
 
 ## Feature list
 
