@@ -2,7 +2,7 @@
 
 Optimize some models to get a little more fps and fix lots of bugs.
 
-There is also a "lite" version of this pack, which removes some features that may affect gameplay. ("\*" means it will not in the lite version)
+**There is also a "lite" version of this pack, which removes some features that may affect gameplay. ("\*" means it will not in the lite version)**
 
 ## Dependencies
 
