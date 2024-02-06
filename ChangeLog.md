@@ -248,3 +248,8 @@ Add Credits.md
 - Remove some unused files, bad improvements, config that shouldn't be exist.
 - Fix Chorus Plant inventory item use wrong model (I'm not sure my model is good or not).
 - A "lite" version for this project.
+
+### Version 4.7
+
+- Fix a bug in lever_on.json
+- Updated version

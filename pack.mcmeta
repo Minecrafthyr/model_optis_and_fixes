@@ -1,8 +1,11 @@
 {
   "pack": {
     "pack_format": 22,
-    "description": "Resource pack v4.6",
-    "supported_formats": 22
+    "description": "Resource pack v4.7",
+    "supported_formats": [
+      13,
+      25
+    ]
   },
   "filter": {
     "block": [

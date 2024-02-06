@@ -1,1 +1,0 @@
-- [mintynoura's 3D Redstone Items](https://modrinth.com/resourcepack/3d-redstone-items-mintynoura) by [mintynoura](https://modrinth.com/user/mintynoura)
