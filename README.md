@@ -4,8 +4,8 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 This pack is the lite version of the project.
 
-- Version: 4.6
-- Game versions: 1.20.4 (Format 22)
+- Version: 4.7
+- Game versions: 1.19.4 - 1.20.4 - (1.20.5)
 - Author: [Minecraft_hyr](https://github.com/Minecrafthyr)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
