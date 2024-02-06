@@ -3,7 +3,8 @@
 	"ambientocclusion": false,
 	"textures": {
 		"particle": "block/cobblestone",
-		"base": "block/cobblestone"
+		"base": "block/cobblestone",
+		"lever": "block/lever"
 	},
 	"elements": [
 		{
