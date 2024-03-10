@@ -254,9 +254,13 @@ Add Credits.md
 - Fix a bug in lever_on.json
 - Updated version
 
-### Version 4.8
+### Version 4.8 (WIP)
 
-- Remove left hand fix
+- Remove left hand fix because it's mirroring texture (affect the custom textures like text).
+- Remove more Respackopts options may not used
+- Experimental, may have changes in future.
+- Feature list is rewriting.
+- Fix [#3](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/3), [#4](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/4).
 
 Fixes
 

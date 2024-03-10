@@ -15,11 +15,9 @@
 			"brewing_stand": true,
 			"stonecutter": true,
 			"random_rotate": true,
-			"handheld_arrow": true,
-			"left_hand_rotate": true
+			"handheld_arrow": true
 		},
 		"optimizations_and_fixes": {
-			"a_face": true,
 			"flower_pot": true,
 			"spore_blossom": true,
 			"redstone_dust": true
