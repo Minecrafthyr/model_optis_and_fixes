@@ -241,7 +241,7 @@ Add Credits.md
 
 ### Version 4.5
 
-- Support for [Respackopts](https://modrinth.com/mod/respackopts) for config the resource pack ([#1](https://github.com/Minecrafthyr/Model-Optimizations-and-Fixes/issues/1))
+- Support for [Respackopts](https://modrinth.com/mod/respackopts) for config the resource pack ([#1](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/1))
 
 ### Version 4.6
 
@@ -253,3 +253,21 @@ Add Credits.md
 
 - Fix a bug in lever_on.json
 - Updated version
+
+### Version 4.8
+
+- Remove left hand fix
+
+Fixes
+
+- [MC-226453](https://bugs.mojang.com/browse/MC-226453) Potted Azalea is incorrectly shaded when smooth lighting is enabled
+- [MC-262694](https://bugs.mojang.com/browse/MC-262694) Inner planes of azaleas are shaded
+- [MC-262695](https://bugs.mojang.com/browse/MC-262695) Inner planes of potted azaleas are shaded
+- [MC-262696](https://bugs.mojang.com/browse/MC-262696) Potted mangrove propagules appear darker than they should due to shading not being disabled
+- [MC-267895](https://bugs.mojang.com/browse/MC-267895) Anvil's texture is mapped very strangely
+- [MC-224392](https://bugs.mojang.com/browse/MC-224392) Big dripleaves are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- [MC-236374](https://bugs.mojang.com/browse/MC-236374) Chains are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- [MC-262598](https://bugs.mojang.com/browse/MC-262598) Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block
+- [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- nether_sprouts item model fix

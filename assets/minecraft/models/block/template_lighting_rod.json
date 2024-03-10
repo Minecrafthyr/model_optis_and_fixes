@@ -1,5 +1,6 @@
 {
   "parent": "block/block",
+  "ambientocclusion": false,
   "display": {
       "head": {
           "rotation": [ -180, 0, 0 ],

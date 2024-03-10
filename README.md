@@ -5,7 +5,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 **There is also a "lite" version of this pack, which removes some features that may affect gameplay.** ("\*" means it will not in the lite version)
 
 - Version: 4.7
-- Game versions: 1.19.4 - 1.20.4 - (1.20.5)
+- Game versions: 1.19.4 - 1.20.4
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -21,7 +21,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 ### Optimizations
 
-Blocks
+#### Blocks
 
 - Anvil
 - Beacon
@@ -37,45 +37,93 @@ Blocks
 
 ### Fixes
 
-Blocks
+#### Blocks
 
-- Lever in [MC-141291](https://bugs.mojang.com/browse/MC-141291), [MC-262864](https://bugs.mojang.com/browse/MC-262864), [MC-262865](https://bugs.mojang.com/browse/MC-262865)
-- Brewing Stand in [MC-262410](https://bugs.mojang.com/browse/MC-262410)
-- Spore Blossom from [MC-224195](https://bugs.mojang.com/browse/MC-224195)
-- Scaffolding from [MC-209947](https://bugs.mojang.com/browse/MC-209947)
-- Dripleaf in [MC-221851](https://bugs.mojang.com/browse/MC-221851)
-- Sunflower from [MC-122701](https://bugs.mojang.com/browse/MC-122701) (also fix [MC-201760](https://bugs.mojang.com/browse/MC-201760), [MC-90566](https://bugs.mojang.com/browse/MC-90566))
-- Iron Bars in [MC-192420](https://bugs.mojang.com/browse/MC-192420) and some visual improvements
-- Tripwire from [MC-262600](https://bugs.mojang.com/browse/MC-262600)
+- Lever  
+  [MC-141291](https://bugs.mojang.com/browse/MC-141291) lever state blockstate json backwards  
+  [MC-262864](https://bugs.mojang.com/browse/MC-262864) Lever base texture is mapped upside-down  
+  [MC-262865](https://bugs.mojang.com/browse/MC-262865) Lever handle is shaded
+
+- Brewing Stand  
+  [MC-262410](https://bugs.mojang.com/browse/MC-262410) Brewing stand arms appear darker than they should
+
+- Scaffolding  
+  [MC-209947](https://bugs.mojang.com/browse/MC-209947) minecraft:block/scaffolding_unstable has incorrect cullfaces
+
+- Big dripleaf  
+  [MC-221851](https://bugs.mojang.com/browse/MC-221851) Tilted big dripleaf texture mirrored incorrectly from underneath  
+  [MC-224035](https://bugs.mojang.com/browse/MC-224035) Small Dripleaf's model is inconsistent  
+  [MC-224392](https://bugs.mojang.com/browse/MC-224392) Big dripleaves are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+
+- Chain  
+  [MC-236374](https://bugs.mojang.com/browse/MC-236374) Chains are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+
+- Sunflower  
+  [MC-90566](https://bugs.mojang.com/browse/MC-90566) The plants of sunflowers don't connect to their stems  
+  [MC-122701](https://bugs.mojang.com/browse/MC-122701) Sunflowers are stretched  
+  [MC-201760](https://bugs.mojang.com/browse/MC-201760) Sunflower top half cross model is not mirrored on the back
+
+- Iron Bars  
+  [MC-192420](https://bugs.mojang.com/browse/MC-192420) Iron bars Z-fight on the bottom and top
+
+- Tripwire (Hook)  
+  [MC-262172](https://bugs.mojang.com/browse/MC-262172) Tripwire hook model incorrect - stick does not attach to ring symmetrically  
+  [MC-262173](https://bugs.mojang.com/browse/MC-262173)The tripwire hook model uses the oak planks texture for the stick, rather than the tripwire hook item texture  
+  [MC-262174](https://bugs.mojang.com/browse/MC-262174) The section of tripwire that is attached to a tripwire hook is stretched  
+  [MC-262546](https://bugs.mojang.com/browse/MC-262546) Texture mapping on tripwire hook rings appears to be wrong  
+  [MC-262598](https://bugs.mojang.com/browse/MC-262598) Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block  
+  [MC-262600](https://bugs.mojang.com/browse/MC-262600) Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently
+
 - Sculk Sensors uv fix
-- Spawner in [MC-266463](https://bugs.mojang.com/browse/MC-266463)
-- Glow Lichen in [MC-249079](https://bugs.mojang.com/browse/MC-249079)
-- Tripwire and Tripwire Hook from [MC-262546](https://bugs.mojang.com/browse/MC-262546). (modified)
-- Dragon Egg in [MC-262652](https://bugs.mojang.com/browse/MC-262652)
-- \*Repeater and Comparator in [MC-177452](https://bugs.mojang.com/browse/MC-177452), [MC-177453](https://bugs.mojang.com/browse/MC-177453), also fix [MC-214662](https://bugs.mojang.com/browse/MC-214662), [MC-129108](https://bugs.mojang.com/browse/MC-129108) for Redstone Torch.
+
+- Spawner  
+  [MC-266463](https://bugs.mojang.com/browse/MC-266463) The interior north and south faces of trial spawners are culled incorrectly
+
+- Dragon Egg  
+  [MC-120417](https://bugs.mojang.com/browse/MC-120417) Incorrect dragon egg block model
+
+- Stonecutter  
+  [MC-164741](https://bugs.mojang.com/browse/MC-164741) Stonecutter blades are much brighter when north/south than east/west
+
+- \*Repeater, Comparator and Torch  
+  [MC-177452](https://bugs.mojang.com/browse/MC-177452)  
+  [MC-177453](https://bugs.mojang.com/browse/MC-177453)  
+  [MC-214662](https://bugs.mojang.com/browse/MC-214662)  
+  [MC-129108](https://bugs.mojang.com/browse/MC-129108)
+
+- Lightning rod  
+  [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+
 - \*More blocks random rotate
 
-Items
+- Campfire  
+  [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+
+#### Items
 
 - Handheld Arrow from [MC-201808](https://bugs.mojang.com/browse/MC-201808)
 - \*Left hand rotate in [MC-160810](https://bugs.mojang.com/browse/MC-160810)
 
 ### Optimizations and Fixes
 
-Blocks
+#### Blocks
 
-- Flower Pot in [MC-129826](https://bugs.mojang.com/browse/MC-129826)
-- Spore Blossom
-- \*Sculk Vein and Glow Lichen
+- Flower Pot  
+  [MC-129826](https://bugs.mojang.com/browse/MC-129826)
+- Spore Blossom [MC-224195](https://bugs.mojang.com/browse/MC-224195) Parity issue: Differences in the spore blossom model in JE/BE
+
+- \*Sculk Vein and Glow Lichen  
+  [MC-249079](https://bugs.mojang.com/browse/MC-249079) Sculk veins not mirrored correctly from behind
+
 - \*Redstone Dust
 
 ### Improvements
 
-Blocks
+#### Blocks
 
-- \*Shadeless End Rod, Lantern, Stonecutter saw.
+- \*Shadeless End Rod, Lantern.
 
-Items
+#### Items
 
 - 3D Hopper, Cauldron, Comparator, Repeater.
 - \*Chorus Plant, Conduit improvements.
@@ -88,6 +136,3 @@ Items
 ## Credits
 
 - [mintynoura's 3D Redstone Items](https://modrinth.com/resourcepack/3d-redstone-items-mintynoura) by [mintynoura](https://modrinth.com/user/mintynoura)
-
-
-_"from" means it is not my code. From version 4.0, this project is under Unlicense._

@@ -9,16 +9,10 @@
 			"beacon": true,
 			"torch": true,
 			"iron_bars": true,
-			"rail": true,
 			"other": true,
 			"lever": true,
-			"tripwire": true,
 			"sculk_sensor": true,
-			"dragon_egg": true,
-			"dripleaf": true,
-			"seagrass": true,
 			"brewing_stand": true,
-			"sunflower": true,
 			"stonecutter": true,
 			"random_rotate": true,
 			"handheld_arrow": true,
@@ -46,8 +40,7 @@
 			"lever": true,
 			"cake": true,
 			"chorus_plant": true,
-			"sniffer_egg": true,
-			"stonecutter": true
+			"sniffer_egg": true
 		}
 	}
 }
