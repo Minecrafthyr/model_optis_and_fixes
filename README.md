@@ -85,11 +85,11 @@ Optimize some models to get a little more fps and fix lots of bugs.
 - Stonecutter  
   [MC-164741](https://bugs.mojang.com/browse/MC-164741) Stonecutter blades are much brighter when north/south than east/west
 
-- \*Repeater, Comparator and Torch  
-  [MC-177452](https://bugs.mojang.com/browse/MC-177452)  
-  [MC-177453](https://bugs.mojang.com/browse/MC-177453)  
-  [MC-214662](https://bugs.mojang.com/browse/MC-214662)  
-  [MC-129108](https://bugs.mojang.com/browse/MC-129108)
+- \*Repeater, Comparator and Torch    
+  [MC-177452](https://bugs.mojang.com/browse/MC-177452) Unneeded faces inside repeater models  
+  [MC-177453](https://bugs.mojang.com/browse/MC-177453) Unneeded faces inside comparator models  
+  [MC-214625](https://bugs.mojang.com/browse/MC-214625) Unlit redstone torches are unaffected by block shading / are evenly lit on all sides  
+  [MC-214662](https://bugs.mojang.com/browse/MC-214662) Redstone torches on repeaters and comparators are shaded differently from normal redstone torches
 
 - Lightning rod  
   [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
@@ -98,6 +98,10 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 - Campfire  
   [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+
+- Doors  
+  [MC-172852](https://bugs.mojang.com/browse/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
+
 
 #### Items
 
@@ -109,8 +113,9 @@ Optimize some models to get a little more fps and fix lots of bugs.
 #### Blocks
 
 - Flower Pot  
-  [MC-129826](https://bugs.mojang.com/browse/MC-129826)
-- Spore Blossom [MC-224195](https://bugs.mojang.com/browse/MC-224195) Parity issue: Differences in the spore blossom model in JE/BE
+  [MC-129826](https://bugs.mojang.com/browse/MC-129826) ["shade": false] is missing from potted cross models, resulting in most potted plants appearing darker than they should
+- Spore Blossom  
+  [MC-224195](https://bugs.mojang.com/browse/MC-224195) Parity issue: Differences in the spore blossom model in JE/BE
 
 - \*Sculk Vein and Glow Lichen  
   [MC-249079](https://bugs.mojang.com/browse/MC-249079) Sculk veins not mirrored correctly from behind

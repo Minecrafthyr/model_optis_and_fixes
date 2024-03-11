@@ -256,7 +256,7 @@ Add Credits.md
 
 ### Version 4.8 (WIP)
 
-- Remove left hand fix because it's mirroring texture (affect the custom textures like text).
+- Remove left hand fix because it's mirroring custom texture like text.
 - Remove more Respackopts options may not used
 - Experimental, may have changes in future.
 - Feature list is rewriting.
@@ -275,3 +275,5 @@ Fixes
 - [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 - [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 - nether_sprouts item model fix
+- [MC-214625](https://bugs.mojang.com/browse/MC-214625) Unlit redstone torches are unaffected by block shading / are evenly lit on all sides
+- [MC-172852](https://bugs.mojang.com/browse/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
