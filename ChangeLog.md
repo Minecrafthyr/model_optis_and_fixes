@@ -274,6 +274,8 @@ Fixes
 - [MC-262598](https://bugs.mojang.com/browse/MC-262598) Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block
 - [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 - [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
-- nether_sprouts item model fix
+- Make the item model of Nether Sprouts matches Amethyst Bud
 - [MC-214625](https://bugs.mojang.com/browse/MC-214625) Unlit redstone torches are unaffected by block shading / are evenly lit on all sides
 - [MC-172852](https://bugs.mojang.com/browse/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
+- Bell ambient occlusion is disabled
+- (Readded) Button item model tweaks

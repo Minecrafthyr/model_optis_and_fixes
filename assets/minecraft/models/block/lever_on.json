@@ -22,7 +22,6 @@
 		{
 			"from": [7, 2.8, 7],
 			"to": [9, 11, 9],
-			"shade": false,
 			"rotation": {"angle": 45, "axis": "x", "origin": [8, 1, 8]},
 			"faces": {
 				"north": {"uv": [7, 6, 9, 13.2], "texture": "#lever"},

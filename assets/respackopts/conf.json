@@ -6,10 +6,8 @@
 	],
 	"conf": {
 		"fixes": {
-			"beacon": true,
 			"torch": true,
 			"iron_bars": true,
-			"other": true,
 			"lever": true,
 			"sculk_sensor": true,
 			"stonecutter": true,
@@ -17,7 +15,6 @@
 			"handheld_arrow": true
 		},
 		"optimizations_and_fixes": {
-			"flower_pot": true,
 			"spore_blossom": true,
 			"redstone_dust": true
 		},
@@ -37,7 +34,8 @@
 			"lever": true,
 			"cake": true,
 			"chorus_plant": true,
-			"sniffer_egg": true
+			"sniffer_egg": true,
+			"tripwire_hook": true
 		}
 	}
 }

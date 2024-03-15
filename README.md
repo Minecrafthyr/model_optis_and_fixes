@@ -9,7 +9,6 @@ Optimize some models to get a little more fps and fix lots of bugs.
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
-  - [Lite version in Github](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/lite)
 
 ## Dependencies
 
@@ -105,8 +104,8 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 #### Items
 
-- Handheld Arrow from [MC-201808](https://bugs.mojang.com/browse/MC-201808)
-- \*Left hand rotate in [MC-160810](https://bugs.mojang.com/browse/MC-160810)
+- Handheld Arrow in [MC-201808](https://bugs.mojang.com/browse/MC-201808)
+- Button item model tweaks
 
 ### Optimizations and Fixes
 
@@ -116,8 +115,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
   [MC-129826](https://bugs.mojang.com/browse/MC-129826) ["shade": false] is missing from potted cross models, resulting in most potted plants appearing darker than they should
 - Spore Blossom  
   [MC-224195](https://bugs.mojang.com/browse/MC-224195) Parity issue: Differences in the spore blossom model in JE/BE
-
-- \*Sculk Vein and Glow Lichen  
+- Sculk Vein and Glow Lichen  
   [MC-249079](https://bugs.mojang.com/browse/MC-249079) Sculk veins not mirrored correctly from behind
 
 - \*Redstone Dust
@@ -134,10 +132,5 @@ Optimize some models to get a little more fps and fix lots of bugs.
 - \*Chorus Plant, Conduit improvements.
 - \*End Rod matches Torch-style.
 - \*Thin block display on the head.
-- \*Hopper, Cauldron display upside down on the head.
 - \*block is a bit bigger in item frame.
-- \*3D Candles, Torches, Lanterns, Lever.
-
-## Credits
-
-- [mintynoura's 3D Redstone Items](https://modrinth.com/resourcepack/3d-redstone-items-mintynoura) by [mintynoura](https://modrinth.com/user/mintynoura)
+- \*3D Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg, Flower Pot, Brewing Stand.
