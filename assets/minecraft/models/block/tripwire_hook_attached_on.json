@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
 	"textures": {
 		"hook": "block/tripwire_hook",
 		"tripwire": "block/tripwire",
