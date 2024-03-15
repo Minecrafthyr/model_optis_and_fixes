@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_a_face",
+  "textures": {
+    "texture": "minecraft:block/sculk_vein"
+  }
+}

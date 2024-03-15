@@ -1,0 +1,1 @@
+{"ambientocclusion":false,"elements":[{"faces":{"north":{"cullface":"north","texture":"#texture","uv":[16,0,0,16]},"south":{"texture":"#texture","uv":[0,0,16,16]}},"from":[0,0,0],"to":[16,16,0.025]}],"textures":{"particle":"#texture"}}

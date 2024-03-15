@@ -1,9 +1,9 @@
 {
   "pack": {
     "pack_format": 22,
-    "description": "Resource pack v4.7",
+    "description": "Resource pack v4.8",
     "supported_formats": [
-      13,
+      11,
       25
     ]
   },
