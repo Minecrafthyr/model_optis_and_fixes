@@ -254,7 +254,7 @@ Add Credits.md
 - Fix a bug in lever_on.json
 - Updated version
 
-### Version 4.8 (WIP)
+### Version 4.8
 
 - Remove left hand fix because it's mirroring custom texture like text.
 - Remove more Respackopts options may not used
