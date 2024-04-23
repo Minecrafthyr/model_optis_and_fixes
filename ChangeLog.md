@@ -258,7 +258,6 @@ Add Credits.md
 
 - Remove left hand fix because it's mirroring custom texture like text.
 - Remove more Respackopts options may not used
-- Experimental, may have changes in future.
 - Feature list is rewriting.
 - Fix [#3](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/3), [#4](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/4).
 
@@ -279,3 +278,12 @@ Fixes
 - [MC-172852](https://bugs.mojang.com/browse/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
 - Bell ambient occlusion is disabled
 - (Readded) Button item model tweaks
+
+### Version 4.9
+
+- Remove fixes of MC-172852. (It caused doors too dark)
+- Update pack format to 32.
+
+Fixes
+
+- [MC-175626](https://bugs.mojang.com/browse/MC-175626) Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled

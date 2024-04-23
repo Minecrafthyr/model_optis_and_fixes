@@ -4,8 +4,8 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 **There is also a "lite" version of this pack, which removes some features that may affect gameplay.** ("\*" means it will not in the lite version)
 
-- Version: 4.8
-- Game versions: 1.19.4 - 1.20.4
+- Version: 4.9
+- Game versions: 1.19.4 - 1.20.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -22,9 +22,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 #### Blocks
 
-- Anvil
 - Beacon
-- Bell
 - Cauldron
 - Composter
 - Fences
@@ -93,13 +91,10 @@ Optimize some models to get a little more fps and fix lots of bugs.
 - Lightning rod  
   [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 
-- \*More blocks random rotate
-
 - Campfire  
   [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 
-- Doors  
-  [MC-172852](https://bugs.mojang.com/browse/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
+- \*More blocks random rotate
 
 
 #### Items
@@ -111,12 +106,15 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 #### Blocks
 
+- Anvil  
+  [MC-267895](https://bugs.mojang.com/browse/MC-267895) Anvil's texture is mapped very strangely
 - Flower Pot  
   [MC-129826](https://bugs.mojang.com/browse/MC-129826) ["shade": false] is missing from potted cross models, resulting in most potted plants appearing darker than they should
 - Spore Blossom  
   [MC-224195](https://bugs.mojang.com/browse/MC-224195) Parity issue: Differences in the spore blossom model in JE/BE
 - Sculk Vein and Glow Lichen  
   [MC-249079](https://bugs.mojang.com/browse/MC-249079) Sculk veins not mirrored correctly from behind
+- Bell floor has ambient occlusion
 
 - \*Redstone Dust
 
