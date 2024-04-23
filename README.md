@@ -4,8 +4,8 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 This pack is the lite version of the project.
 
-- Version: 4.8
-- Game versions: 1.19.4 - 1.20.4
+- Version: 4.9
+- Game versions: 1.19.4 - 1.20.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -88,8 +88,6 @@ This pack is the lite version of the project.
 - Campfire  
   [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 
-- Doors  
-  [MC-172852](https://bugs.mojang.com/browse/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
 
 
 #### Items
