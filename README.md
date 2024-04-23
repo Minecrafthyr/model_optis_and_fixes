@@ -65,7 +65,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 - Tripwire (Hook)  
   [MC-262172](https://bugs.mojang.com/browse/MC-262172) Tripwire hook model incorrect - stick does not attach to ring symmetrically  
-  [MC-262173](https://bugs.mojang.com/browse/MC-262173)The tripwire hook model uses the oak planks texture for the stick, rather than the tripwire hook item texture  
+  [MC-262173](https://bugs.mojang.com/browse/MC-262173) The tripwire hook model uses the oak planks texture for the stick, rather than the tripwire hook item texture  
   [MC-262174](https://bugs.mojang.com/browse/MC-262174) The section of tripwire that is attached to a tripwire hook is stretched  
   [MC-262546](https://bugs.mojang.com/browse/MC-262546) Texture mapping on tripwire hook rings appears to be wrong  
   [MC-262598](https://bugs.mojang.com/browse/MC-262598) Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block  
@@ -93,6 +93,10 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 - Campfire  
   [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+
+- Trapdoor  
+  [MC-175626](https://bugs.mojang.com/browse/MC-175626) Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+
 
 - \*More blocks random rotate
 
