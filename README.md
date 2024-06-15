@@ -4,8 +4,8 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 This pack is the lite version of the project.
 
-- Version: 4.9
-- Game versions: 1.19.4 - 1.20.5
+- Version: 4.10
+- Game versions: 1.19.4 - 1.21
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -25,6 +25,8 @@ This pack is the lite version of the project.
 - Item Frames
 - Lighting Rod
 - Stairs in [MC-262461](https://bugs.mojang.com/browse/MC-262461)
+- Bell floor
+- ... (small changes)
 
 ### Fixes
 
@@ -84,9 +86,6 @@ This pack is the lite version of the project.
 
 - Lightning rod  
   [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
-
-- Campfire  
-  [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 
 - Trapdoor  
   [MC-175626](https://bugs.mojang.com/browse/MC-175626) Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled

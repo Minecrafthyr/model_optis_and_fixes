@@ -7,11 +7,11 @@
         "text": "Lite",
         "color": "green"
       },
-      " v4.9"
+      " v4.10"
     ],
     "supported_formats": [
       11,
-      32
+      34
     ]
   },
   "filter": {
