@@ -4,8 +4,8 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 **There is also a "lite" version of this pack, which removes some features that may affect gameplay.** ("\*" means it will not in the lite version)
 
-- Version: 4.9
-- Game versions: 1.19.4 - 1.20.5
+- Version: 4.10
+- Game versions: 1.19.4 - 1.21
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -31,6 +31,8 @@ Optimize some models to get a little more fps and fix lots of bugs.
 - Item Frames
 - Lighting Rod
 - Stairs in [MC-262461](https://bugs.mojang.com/browse/MC-262461)
+- Bell floor
+- ... (small changes)
 
 ### Fixes
 
@@ -91,9 +93,6 @@ Optimize some models to get a little more fps and fix lots of bugs.
 - Lightning rod  
   [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 
-- Campfire  
-  [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
-
 - Trapdoor  
   [MC-175626](https://bugs.mojang.com/browse/MC-175626) Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 
@@ -118,7 +117,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
   [MC-224195](https://bugs.mojang.com/browse/MC-224195) Parity issue: Differences in the spore blossom model in JE/BE
 - Sculk Vein and Glow Lichen  
   [MC-249079](https://bugs.mojang.com/browse/MC-249079) Sculk veins not mirrored correctly from behind
-- Bell floor has ambient occlusion
+
 
 - \*Redstone Dust
 

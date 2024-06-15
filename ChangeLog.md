@@ -258,7 +258,6 @@ Add Credits.md
 
 - Remove left hand fix because it's mirroring custom texture like text.
 - Remove more Respackopts options may not used
-- Feature list is rewriting.
 - Fix [#3](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/3), [#4](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/4).
 
 Fixes
@@ -287,3 +286,12 @@ Fixes
 Fixes
 
 - [MC-175626](https://bugs.mojang.com/browse/MC-175626) Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+
+### Version 4.10
+
+- Ambient occlusion is enabled again for bell floor, extinguished campfire, grindstone (it's a bit dark but maybe is WAI).
+- Update pack format to 34.
+
+Fixes
+
+- Cull vault, heavy core downside.
