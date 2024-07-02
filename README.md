@@ -4,7 +4,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 **There is also a "lite" version of this pack, which removes some features that may affect gameplay.** ("\*" means it will not in the lite version)
 
-- Version: 4.10
+- Version: 4.11
 - Game versions: 1.19.4 - 1.21
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)

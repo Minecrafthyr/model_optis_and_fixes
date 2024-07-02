@@ -289,9 +289,13 @@ Fixes
 
 ### Version 4.10
 
-- Ambient occlusion is enabled again for bell floor, extinguished campfire, grindstone (it's a bit dark but maybe is WAI).
+- Ambient occlusion is enabled again for bell floor, extinguished campfire, grindstone (they are a bit dark but maybe is intented).
 - Update pack format to 34.
 
 Fixes
 
 - Cull vault, heavy core downside.
+
+### Version 4.11
+
+- Remove pack.mcmeta filter
