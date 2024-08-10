@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 22,
+    "description": "Model Optimizations & Fixes v4.11",
+    "supported_formats": [
+      11,
+      34
+    ]
+  }
+}

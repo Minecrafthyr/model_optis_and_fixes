@@ -1,0 +1,17 @@
+{
+  "pack": {
+    "pack_format": 22,
+    "description": [
+      "Model Optimizations & Fixes ",
+      {
+        "text": "Lite",
+        "color": "green"
+      },
+      " v4.11"
+    ],
+    "supported_formats": [
+      11,
+      34
+    ]
+  }
+}
