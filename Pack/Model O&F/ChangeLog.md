@@ -299,6 +299,6 @@ Fixes
 ### Version 4.11
 
 - Remove pack.mcmeta filter
-- Async Lite and Full version
+- Synchronizing files of two versions
 - Remove Candles & Cake no ambient occlusion
 - Now rail 1 pixel (y = 1/16 block) height
