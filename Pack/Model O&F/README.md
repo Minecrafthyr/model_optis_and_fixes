@@ -4,7 +4,7 @@ Optimize some models to get a little more fps and fix lots of bugs.
 
 **There is also a "lite" version of this pack,** which removes some features that may affect modified gameplay or conflict to texture-only resourcepack. ("\*" means it will not in the lite version)
 
-- Version: 4.11
+- Version: 4.12
 - Game versions: 1.19.4 - 1.21
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
@@ -66,8 +66,12 @@ Optimize some models to get a little more fps and fix lots of bugs.
   [MC-192420](https://bugs.mojang.com/browse/MC-192420 "Iron bars Z-fight on the bottom and top")
 
 - Tripwire (Hook)  
-  [MC-262172](https://bugs.mojang.com/browse/MC-262172 "Tripwire hook model incorrect - stick does not attach to ring symmetrically") [MC-262173](https://bugs.mojang.com/browse/MC-262173 "The tripwire hook model uses the oak planks texture for the stick, rather than the tripwire hook item texture") [MC-262174](https://bugs.mojang.com/browse/MC-262174 "The section of tripwire that is attached to a tripwire hook is stretched")  
-  [MC-262546](https://bugs.mojang.com/browse/MC-262546 "Texture mapping on tripwire hook rings appears to be wrong") [MC-262598](https://bugs.mojang.com/browse/MC-262598 'Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block') [MC-262600](https://bugs.mojang.com/browse/MC-262600 "Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently")
+  [MC-262172](https://bugs.mojang.com/browse/MC-262172 "Tripwire hook model incorrect - stick does not attach to ring symmetrically")  
+  [MC-262173](https://bugs.mojang.com/browse/MC-262173 "The tripwire hook model uses the oak planks texture for the stick, rather than the tripwire hook item texture")  
+  [MC-262174](https://bugs.mojang.com/browse/MC-262174 "The section of tripwire that is attached to a tripwire hook is stretched")  
+  [MC-262546](https://bugs.mojang.com/browse/MC-262546 "Texture mapping on tripwire hook rings appears to be wrong")  
+  [MC-262598](https://bugs.mojang.com/browse/MC-262598 'Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block')  
+  [MC-262600](https://bugs.mojang.com/browse/MC-262600 "Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently")
 
 - Sculk Sensors UV fix
 

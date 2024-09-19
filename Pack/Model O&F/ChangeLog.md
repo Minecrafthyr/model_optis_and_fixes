@@ -302,3 +302,10 @@ Fixes
 - Synchronizing files of two versions
 - Remove Candles & Cake no ambient occlusion
 - Now rail 1 pixel (y = 1/16 block) height
+
+
+### Version 4.12
+
+- Fix [#5](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/5) missing texture on redstone torch.
+- 1.21.2 changed some model, so this version will be archived, the pack above 1.21.2 is version 5.
+- Lite version has no changes
