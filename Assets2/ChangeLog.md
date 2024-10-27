@@ -314,5 +314,5 @@ Fixes
 
 - Correction Spawner and Vault UV (now mirrored from back).
 - Remove (Redstone) Torch, Dragon Egg, Small Dripleaves, Comparator, Repeater. Mojang Studios fix them in 1.21.2.
-- Remove lectern model, it basically affects nothing.
-- Modify the button in inventory model, matches vanilla style.
+- Remove lectern because it affects nothing.
+- Modify the button in inventory model to match vanilla style.

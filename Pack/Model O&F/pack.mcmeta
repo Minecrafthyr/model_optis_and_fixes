@@ -5,6 +5,11 @@
     "supported_formats": [
       11,
       34
-    ]
+    ],
+    "overlays": {
+      "entries": [
+         {"format":[22,34],""}
+      ]
+    }
   }
 }
