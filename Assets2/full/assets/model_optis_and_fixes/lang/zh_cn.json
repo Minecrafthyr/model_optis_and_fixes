@@ -11,8 +11,11 @@
   "rpo.model_optis_and_fixes.fixes.dripleaf": "大型垂滴叶",
   "rpo.model_optis_and_fixes.fixes.sunflower": "向日葵",
   "rpo.model_optis_and_fixes.fixes.stonecutter": "切石机",
-  "rpo.model_optis_and_fixes.fixes.seagrass": "海草",
   "rpo.model_optis_and_fixes.fixes.random_rotate": "随机方块旋转",
+  "rpo.model_optis_and_fixes.fixes.lanternCategory" : "灯笼",
+  "rpo.model_optis_and_fixes.fixes.lanternCategory.enabled" : "启用",
+  "rpo.model_optis_and_fixes.fixes.lanternCategory.shadeless" : "无阴影",
+  
 
 
   "rpo.model_optis_and_fixes.improvements.title": "改进",
@@ -34,8 +37,8 @@
   "rpo.model_optis_and_fixes.improvements.sniffer_egg": "3D 嗅探兽蛋",
   "rpo.model_optis_and_fixes.improvements.flower_pot": "3D 花盆",
   "rpo.model_optis_and_fixes.improvements.brewing_stand": "3D 炼药台",
-  
-  "rpo.model_optis_and_fixes.optimizations_and_fixes.title": "优化与修复",
-  "rpo.model_optis_and_fixes.optimizations_and_fixes.spore_blossom": "孢子花",
-  "rpo.model_optis_and_fixes.optimizations_and_fixes.redstone_dust": "红石粉"
+
+  "rpo.model_optis_and_fixes.optimizations": "优化",
+  "rpo.model_optis_and_fixes.optimizations.redstone_dust": "红石粉",
+  "rpo.model_optis_and_fixes.optimizations.mod_ebe": "方块实体增强(Enhanced Block Entities)模组"
 }

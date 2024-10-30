@@ -140,5 +140,12 @@
 				"down": {"uv": [0, 0, 16, 16], "texture": "#inside"}
 			}
 		}
-	]
+	],
+	"display": {
+		"head": {
+			"rotation": [180, 0, 0],
+			"translation": [0, 2.25, 0],
+			"scale": [1.1, 1.1, 1.1]
+		}
+	}
 }

@@ -13,7 +13,9 @@
   "rpo.model_optis_and_fixes.fixes.stonecutter": "Stonecutter",
   "rpo.model_optis_and_fixes.fixes.seagrass": "Seagrass",
   "rpo.model_optis_and_fixes.fixes.random_rotate": "Block random rotate",
-
+  "rpo.model_optis_and_fixes.fixes.lanternCategory" : "Lanterns",
+  "rpo.model_optis_and_fixes.fixes.lanternCategory.enabled" : "Enabled",
+  "rpo.model_optis_and_fixes.fixes.lanternCategory.shadeless" : "Shadeless",
 
   "rpo.model_optis_and_fixes.improvements.title": "Improvements",
   "rpo.model_optis_and_fixes.improvements.block": "Blocks",
@@ -36,7 +38,7 @@
   "rpo.model_optis_and_fixes.improvements.flower_pot": "3D Flower Pot",
   "rpo.model_optis_and_fixes.improvements.brewing_stand": "3D Brewing Stand",
   
-  "rpo.model_optis_and_fixes.optimizations_and_fixes.title": "Optimizations and Fixes",
-  "rpo.model_optis_and_fixes.optimizations_and_fixes.spore_blossom": "Spore Blossom",
-  "rpo.model_optis_and_fixes.optimizations_and_fixes.redstone_dust": "Redstone Dust"
+  "rpo.model_optis_and_fixes.optimizations": "Optimizations",
+  "rpo.model_optis_and_fixes.optimizations.redstone_dust": "Redstone Dust",
+  "rpo.model_optis_and_fixes.optimizations.mod_ebe": "Mod Enhanced Block Entities"
 }

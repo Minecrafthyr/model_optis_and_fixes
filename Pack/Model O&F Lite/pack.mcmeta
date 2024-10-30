@@ -1,10 +1,28 @@
 {
   "pack": {
-    "pack_format": 22,
-    "description": "Model Optimizations & Fixes Lite v4.12",
-    "supported_formats": [
-      11,
-      34
+    "description": "Model Optimizations & Fixes Lite v5.0 for 1.20.2 +",
+    "pack_format": 42,
+    "support_formats": [
+      16,
+      42
+    ]
+  },
+  "overlays": {
+    "entries": [
+      {
+        "formats": [
+          16,
+          32
+        ],
+        "directory": "overlay_16_32"
+      },
+      {
+        "formats": [
+          33,
+          42
+        ],
+        "directory": "overlay_33_42"
+      }
     ]
   }
 }

@@ -7,16 +7,19 @@
 	"conf": {
 		"fixes": {
 			"buttons": true,
-			"torch": true,
 			"iron_bars": true,
 			"sculk_sensor": true,
 			"stonecutter": true,
 			"random_rotate": true,
-			"handheld_arrow": true
+			"handheld_arrow": true,
+			"lanternCategory": {
+				"enabled": true,
+				"shadeless": true
+			}
 		},
-		"optimizations_and_fixes": {
-			"spore_blossom": true,
-			"redstone_dust": true
+		"optimizations": {
+			"redstone_dust": true,
+			"mod_ebe": true
 		},
 		"improvements": {
 			"flower_pot": true,
