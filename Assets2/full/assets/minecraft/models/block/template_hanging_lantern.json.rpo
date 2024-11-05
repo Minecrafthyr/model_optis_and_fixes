@@ -1,4 +1,3 @@
 {
-  "condition": "0",
-  "fallback": "models/block/respackopts/template_hanging_lantern.json"
+  "condition": "model_optis_and_fixes.fixes.lantern"
 }

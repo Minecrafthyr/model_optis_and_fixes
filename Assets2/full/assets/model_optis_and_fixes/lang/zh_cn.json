@@ -7,15 +7,11 @@
   "rpo.model_optis_and_fixes.fixes.buttons": "按钮",
   "rpo.model_optis_and_fixes.fixes.iron_bars": "铁栏杆",
   "rpo.model_optis_and_fixes.fixes.sculk_sensor": "幽匿传感器",
-  "rpo.model_optis_and_fixes.fixes.dragon_egg": "龙蛋",
   "rpo.model_optis_and_fixes.fixes.dripleaf": "大型垂滴叶",
   "rpo.model_optis_and_fixes.fixes.sunflower": "向日葵",
   "rpo.model_optis_and_fixes.fixes.stonecutter": "切石机",
   "rpo.model_optis_and_fixes.fixes.random_rotate": "随机方块旋转",
-  "rpo.model_optis_and_fixes.fixes.lanternCategory" : "灯笼",
-  "rpo.model_optis_and_fixes.fixes.lanternCategory.enabled" : "启用",
-  "rpo.model_optis_and_fixes.fixes.lanternCategory.shadeless" : "无阴影",
-  
+  "rpo.model_optis_and_fixes.fixes.lantern" : "灯笼",
 
 
   "rpo.model_optis_and_fixes.improvements.title": "改进",

@@ -1,10 +1,10 @@
 {
   "pack": {
-    "description": "Model Optimizations & Fixes v5.0 for 1.20.2 +",
-    "pack_format": 42,
+    "description": "Model Optimizations & Fixes v5.1 for 1.20.2 +",
+    "pack_format": 43,
     "support_formats": [
       16,
-      42
+      43
     ]
   },
   "overlays": {
@@ -14,14 +14,14 @@
           16,
           32
         ],
-        "directory": "overlay_16_32"
+        "directory": "overlay_a"
       },
       {
         "formats": [
           33,
-          42
+          43
         ],
-        "directory": "overlay_33_42"
+        "directory": "overlay_b"
       }
     ]
   }

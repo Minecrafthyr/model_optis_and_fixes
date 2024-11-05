@@ -312,10 +312,16 @@ Fixes
 
 ### Version 5.0
 
+- Update pack format.
 - Correction Spawner and Vault UV (now mirrored from back).
 - Remove (Redstone) Torch, Dragon Egg, Small Dripleaves, Comparator, Repeater. Mojang Studios fix them in 1.21.2.
 - Remove lectern because it basically affects nothing.
 - Modify the button in inventory model to match vanilla style.
 - Move Shadeless Lantern to Full version.
 - Fix errors with RespackOpts (tested in 1.21.3).
-- Format some files with Blockbench.
+
+### Version 5.1
+
+- Update pack format.
+- Rename the overlay folders.
+- Some patches.

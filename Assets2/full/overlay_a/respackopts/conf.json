@@ -12,7 +12,8 @@
 			"stonecutter": true,
 			"random_rotate": true,
 			"handheld_arrow": true,
-			"lantern": true
+			"lantern": true,
+			"torch": true
 		},
 		"optimizations": {
 			"redstone_dust": true,

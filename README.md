@@ -1,28 +1,38 @@
 # Model Optimizations & Fixes
 
-Optimize some models to get a little more fps and fix lots of bugs.
+Optimize some models to get a little more fps and fix lots of bugs.  
 Notice: Some bugs can't be fix by resourepack. Does not promise has no errors :\\
 
-**There is also a "lite" version of this pack,** which removes some features that may affect modified gameplay or conflict to texture-only resourcepack. **"\*" means it will not apply in the lite version**
-
-- Version: 5.0
-- Game versions:
-  version 4 and before: 1.19.4 - 1.21.1
-  version 5: 1.20.2 - 1.21.3
+- Version: 5.1
+- Game versions:  
+  version 4 and before: 1.19.4 - 1.21.1  
+  version 5: 1.20.2 - 1.21.4
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
 
+
+### About "lite" version
+
+There is also a lite version of this pack, which removes some features that may affect modified gameplay or conflict to texture-only resourcepack. **"\*" means it will not apply in the lite version**
+
+- On Modrinth:  
+  Open specific version page -> Files -> Model O&F Lite
+- On Github:  
+  Open model_optis_and_fixes/ZippedPack2 -> [Model O&F Lite.zip](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/ZippedPack2/Model%20O%26F%20Lite.zip)
+
+
 ## Mods Info
 
-### Optional Dependency
+### Supports
 
-- \*[Respackopts](https://modrinth.com/mod/respackopts) mod for config this resource pack (full version only).
+- \*[Respackopts](https://modrinth.com/mod/respackopts) mod for config this resource pack (full version only)
 
-### Suggestions
+### Suggestions / Compatibilities
 
-- [Enhanced Block Entities](https://modrinth.com/mod/ebe)
 - [Model Gap Fix](https://modrinth.com/mod/modelfix)
+- [Enhanced Block Entities](https://modrinth.com/mod/ebe)
+- [Sodium](https://modrinth.com/mod/sodium)
 
 
 ## Feature list
