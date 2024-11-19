@@ -33,7 +33,7 @@ There is also a lite version of this pack, which removes some features that may 
 - [Model Gap Fix](https://modrinth.com/mod/modelfix)
 - [Enhanced Block Entities](https://modrinth.com/mod/ebe)
 - [Sodium](https://modrinth.com/mod/sodium)
-
+- [Luminous No Shading](https://modrinth.com/mod/luminous-no-shading)
 
 ## Feature list
 
@@ -58,10 +58,10 @@ There is also a lite version of this pack, which removes some features that may 
 
 #### Blocks
 
-(Hover the link to show description)
-
+- Anvil ([MC-267895](https://bugs.mojang.com/browse/MC-267895 "Anvil's texture is mapped very strangely"))
+- Spore Blossom ([MC-224195](https://bugs.mojang.com/browse/MC-224195 "Parity issue: Differences in the spore blossom model in JE/BE"))
 - Lever ([MC-141291](https://bugs.mojang.com/browse/MC-141291 "lever state blockstate json backwards"), [MC-262864](https://bugs.mojang.com/browse/MC-262864 "Lever base texture is mapped upside-down"), [MC-262865](https://bugs.mojang.com/browse/MC-262865 "Lever handle is shaded"))
-- Brewing Stand ([MC-262410](https://bugs.mojang.com/browse/MC-262410 "Brewing stand arms appear darker than they should"))
+- Brewing Stand ([MC-262410](https://bugs.mojang.com/browse/MC-262410 "Brewing stand arms appear darker than they should"), [MC-262464](https://bugs.mojang.com/browse/MC-262464 "Brewing stand arms appear darker than they should"))
 - Dripleaves ([MC-221851](https://bugs.mojang.com/browse/MC-221851 "Tilted big dripleaf texture mirrored incorrectly from underneath"), [MC-224392](https://bugs.mojang.com/browse/MC-224392 "Big dripleaves are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
 - Chain ([MC-236374](https://bugs.mojang.com/browse/MC-236374 "Chains are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
 - Sunflower ([MC-90566](https://bugs.mojang.com/browse/MC-90566 "The plants of sunflowers don't connect to their stems"), [MC-122701](https://bugs.mojang.com/browse/MC-122701 "Sunflowers are stretched"), [MC-201760](https://bugs.mojang.com/browse/MC-201760 "Sunflower top half cross model is not mirrored on the back"))
@@ -72,21 +72,13 @@ There is also a lite version of this pack, which removes some features that may 
 - Stonecutter ([MC-164741](https://bugs.mojang.com/browse/MC-164741 "Stonecutter blades are much brighter when north/south than east/west"))
 - Lightning Rod ([MC-234089](https://bugs.mojang.com/browse/MC-234089 "Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
 - Trapdoors ([MC-175626](https://bugs.mojang.com/browse/MC-175626 "Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
-- \*More blocks random rotate
+- \*Blocks randomly rotate correction (A part of [MC-144914](https://bugs.mojang.com/browse/MC-144914 "Some blocks don't randomly rotate correctly"))
+- \*Redstone Dust
+
 
 #### Items
 
 - Handheld Arrow in [MC-201808](https://bugs.mojang.com/browse/MC-201808)
-- Button item model tweaks
-
-### Optimizations and Fixes
-
-#### Blocks
-
-- Anvil ([MC-267895](https://bugs.mojang.com/browse/MC-267895 "Anvil's texture is mapped very strangely"))
-- Spore Blossom ([MC-224195](https://bugs.mojang.com/browse/MC-224195 "Parity issue: Differences in the spore blossom model in JE/BE"))
-- Sculk Vein and Glow Lichen ([MC-249079](https://bugs.mojang.com/browse/MC-249079 "Sculk veins not mirrored correctly from behind"))
-- \*Redstone Dust
 
 ### Improvements
 
@@ -97,7 +89,9 @@ There is also a lite version of this pack, which removes some features that may 
 
 #### Items
 
+- Button item model tweaks
 - 3D Hopper, Cauldron, Comparator, Repeater.
+- Hopper and Cauldron display upside-down on head.
 - Conduit head correction.
 - Thin block display on the head.
 - \*Chorus Plant improvements.

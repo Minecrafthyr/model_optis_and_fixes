@@ -1,0 +1,42 @@
+{
+	"id": "model_optis_and_fixes",
+	"version": 0,
+	"capabilities": [
+		"FileFilter"
+	],
+	"conf": {
+		"fixes": {
+			"buttons": true,
+			"iron_bars": true,
+			"sculk_sensor": true,
+			"stonecutter": true,
+			"random_rotate": true,
+			"handheld_arrow": true,
+			"lantern": true,
+			"torch": true
+		},
+		"optimizations": {
+			"redstone_dust": true,
+			"mod_ebe": true
+		},
+		"improvements": {
+			"flower_pot": true,
+			"brewing_stand": true,
+			"block": true,
+			"torch": true,
+			"end_rod": true,
+			"candle": true,
+			"conduit": true,
+			"lantern": true,
+			"cauldron": true,
+			"hopper": true,
+			"comparator": true,
+			"repeater": true,
+			"lever": true,
+			"cake": true,
+			"chorus_plant": true,
+			"sniffer_egg": true,
+			"tripwire_hook": true
+		}
+	}
+}
