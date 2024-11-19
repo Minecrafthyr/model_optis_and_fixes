@@ -327,3 +327,4 @@ Fixes
 - Some patches.
 - Move some files to overlay_mirror_behind.
 - Missing Shadeless End Rod is re-added.
+- ×`support_formats` -> √`supported_formats`
