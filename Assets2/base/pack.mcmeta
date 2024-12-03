@@ -1,0 +1,27 @@
+{
+  "pack": {
+    "description": "v5.1 for 1.20.2 +",
+    "pack_format": 46,
+    "supported_formats": [16, 46]
+  },
+  "overlays": {
+    "entries": [
+      {
+        "formats": [16, 32],
+        "directory": "overlay_a"
+      },
+      {
+        "formats": [33, 46],
+        "directory": "overlay_b"
+      },
+      {
+        "formats": [16, 43],
+        "directory": "overlay_c"
+      },
+      {
+        "formats": [44, 46],
+        "directory": "overlay_d"
+      }
+    ]
+  }
+}

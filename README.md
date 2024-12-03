@@ -1,23 +1,24 @@
-# Model Optimizations & Fixes
+# Resource Fixes
 
-Optimize some models to get a little more fps and fix lots of bugs.  
-Notice: Some bugs can't be fix by resourepack. Does not promise has no errors :\\
+Fix bugs in models.  
+Notice: Some bugs can't be fix by resourepack.
+Old name: Model Optimizations and Fixes
 
 - Version: 5.1
 - Game versions:  
-  version 4 and before: 1.19.4 - 1.21.1  
-  version 5: 1.20.2 - 1.21.4
+  Version 4 and before: 1.19.4 - 1.21.1  
+  Version 5: 1.20.2 - 1.21.4
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
 
-
 ### About "lite" version
 
-There is also a lite version of this pack, which removes some features that may affect modified gameplay or conflict to texture-only resourcepack. **"\*" means it will not apply in the lite version**
-
+There is also a lite version of this pack, which removes some features that may affect modified gameplay or conflict to texture-only resourcepack.  
+**"\*" means it will not apply in the lite version**  
+Download:
 - On Modrinth:  
-  Open specific version page -> Files -> Model O&F Lite
+  Version page -> Files -> Model O&F Lite
 - On Github:  
   Open model_optis_and_fixes/ZippedPack2 -> [Model O&F Lite.zip](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/ZippedPack2/Model%20O%26F%20Lite.zip)
 
@@ -33,7 +34,6 @@ There is also a lite version of this pack, which removes some features that may 
 - [Model Gap Fix](https://modrinth.com/mod/modelfix)
 - [Enhanced Block Entities](https://modrinth.com/mod/ebe)
 - [Sodium](https://modrinth.com/mod/sodium)
-- [Luminous No Shading](https://modrinth.com/mod/luminous-no-shading)
 
 ## Feature list
 
@@ -49,10 +49,10 @@ There is also a lite version of this pack, which removes some features that may 
 - Hopper
 - Item Frames
 - Lighting Rod
-- Stairs in [MC-262461](https://bugs.mojang.com/browse/MC-262461)
-- Bell floor
-- Heavy core in [MC-269368](https://bugs.mojang.com/browse/MC-269368)
-- ... (small changes)
+- Stairs ([MC-262461](https://bugs.mojang.com/browse/MC-262461 "Stair models are unoptimized and can cause rendering lag"))
+- Bell Floor ([MC-109087](https://bugs.mojang.com/browse/MC-109087 "Faces of some blocks are not at all culled when said face is hidden by a solid, opaque block"))
+- Heavy Core ([MC-269368](https://bugs.mojang.com/browse/MC-269368 "Heavy Core bottom face not culled by blocks below"))
+- ...
 
 ### Fixes
 
@@ -67,12 +67,12 @@ There is also a lite version of this pack, which removes some features that may 
 - Sunflower ([MC-90566](https://bugs.mojang.com/browse/MC-90566 "The plants of sunflowers don't connect to their stems"), [MC-122701](https://bugs.mojang.com/browse/MC-122701 "Sunflowers are stretched"), [MC-201760](https://bugs.mojang.com/browse/MC-201760 "Sunflower top half cross model is not mirrored on the back"))
 - Iron Bars ([MC-192420](https://bugs.mojang.com/browse/MC-192420 "Iron bars Z-fight on the bottom and top"))
 - Tripwire (Hook) ([MC-262172](https://bugs.mojang.com/browse/MC-262172 "Tripwire hook model incorrect - stick does not attach to ring symmetrically"), [MC-262173](https://bugs.mojang.com/browse/MC-262173 "The tripwire hook model uses the oak planks texture for the stick, rather than the tripwire hook item texture"), [MC-262174](https://bugs.mojang.com/browse/MC-262174 "The section of tripwire that is attached to a tripwire hook is stretched"), [MC-262546](https://bugs.mojang.com/browse/MC-262546 "Texture mapping on tripwire hook rings appears to be wrong"), [MC-262598](https://bugs.mojang.com/browse/MC-262598 'Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block'), [MC-262600](https://bugs.mojang.com/browse/MC-262600 "Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently"))
-- Sculk Sensors UV fix
 - Spawner ([MC-266463](https://bugs.mojang.com/browse/MC-266463 "The interior north and south faces of trial spawners are culled incorrectly"))
 - Stonecutter ([MC-164741](https://bugs.mojang.com/browse/MC-164741 "Stonecutter blades are much brighter when north/south than east/west"))
 - Lightning Rod ([MC-234089](https://bugs.mojang.com/browse/MC-234089 "Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
 - Trapdoors ([MC-175626](https://bugs.mojang.com/browse/MC-175626 "Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
 - \*Blocks randomly rotate correction (A part of [MC-144914](https://bugs.mojang.com/browse/MC-144914 "Some blocks don't randomly rotate correctly"))
+- Sculk Sensors UV fix
 - \*Redstone Dust
 
 
@@ -92,9 +92,8 @@ There is also a lite version of this pack, which removes some features that may 
 - Button item model tweaks
 - 3D Hopper, Cauldron, Comparator, Repeater.
 - Hopper and Cauldron display upside-down on head.
-- Conduit head correction.
-- Thin block display on the head.
+- Thin block, Conduit display on the head.
 - \*Chorus Plant improvements.
-- \*block is a bit bigger in item frame.
+- \*Block is a bit bigger in item frame.
 - \*3D Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg, Flower Pot, Brewing Stand.
 - \*End Rod matches 3D Torch style.
