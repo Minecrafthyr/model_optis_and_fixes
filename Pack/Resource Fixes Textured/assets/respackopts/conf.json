@@ -1,0 +1,40 @@
+{
+	"id": "res_fixes",
+	"version": 0,
+	"capabilities": [
+		"FileFilter"
+	],
+	"conf": {
+		"fixes": {
+			"buttons": true,
+			"iron_bars": true,
+			"sculk_sensor": true,
+			"random_rotate": true,
+			"handheld_arrow": true
+		},
+		"optimizations": {
+			"redstone_dust": true,
+			"mod_ebe": true
+		},
+		"improvements": {
+			"shadeless_lantern": true,
+			"flower_pot": true,
+			"brewing_stand": true,
+			"block": true,
+			"torch": true,
+			"end_rod": true,
+			"candle": true,
+			"conduit": true,
+			"lantern": true,
+			"cauldron": true,
+			"hopper": true,
+			"comparator": true,
+			"repeater": true,
+			"lever": true,
+			"cake": true,
+			"chorus_plant": true,
+			"sniffer_egg": true,
+			"tripwire_hook": true
+		}
+	}
+}
