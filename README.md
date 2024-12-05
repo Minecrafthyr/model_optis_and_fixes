@@ -1,10 +1,10 @@
 # Resource Fixes
 
-Fix bugs in models.  
+Fix bugs in vanilla resource.  
+Old name: Model Optimizations and Fixes  
 Notice: Some bugs can't be fix by resourepack.
-Old name: Model Optimizations and Fixes
 
-- Version: 5.1
+- Version: 5.2
 - Game versions:  
   Version 4 and before: 1.19.4 - 1.21.1  
   Version 5: 1.20.2 - 1.21.4
@@ -18,9 +18,9 @@ There is also a lite version of this pack, which removes some features that may 
 **"\*" means it will not apply in the lite version**  
 Download:
 - On Modrinth:  
-  Version page -> Files -> Model O&F Lite
+  Version page -> Files -> Resource Fixes Lite
 - On Github:  
-  Open model_optis_and_fixes/ZippedPack2 -> [Model O&F Lite.zip](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/ZippedPack2/Model%20O%26F%20Lite.zip)
+  Open model_optis_and_fixes/ZippedPack2 -> [Resource Fixes Lite.zip](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/ZippedPack2/Resource%20Fixes%20Lite.zip)
 
 
 ## Mods Info

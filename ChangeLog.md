@@ -325,8 +325,12 @@ Fixes
 - Update pack format.
 - Rename the overlay folders.
 - Some patches.
-- Move some files to overlay_c.
+- Move some files to overlays.
 - Re-added missing Shadeless End Rod.
 - ×`support_formats` -> √`supported_formats`
 - Rename as "Resource Fixes"
 - ...
+
+### Version 5.2
+
+- Add `assets` inside of overlay to make it works.
