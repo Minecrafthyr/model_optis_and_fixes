@@ -4,7 +4,7 @@ Fix bugs in vanilla resource.
 Old name: Model Optimizations and Fixes  
 Notice: Some bugs can't be fix by resourepack.
 
-- Version: 5.2
+- Version: 5.3
 - Game versions:  
   Version 4 and before: 1.19.4 - 1.21.1  
   Version 5: 1.20.2 - 1.21.4
@@ -37,7 +37,7 @@ Download:
 
 ## Feature list
 
-### Optimizations
+### Fixes
 
 #### Blocks
 
@@ -52,12 +52,6 @@ Download:
 - Stairs ([MC-262461](https://bugs.mojang.com/browse/MC-262461 "Stair models are unoptimized and can cause rendering lag"))
 - Bell Floor ([MC-109087](https://bugs.mojang.com/browse/MC-109087 "Faces of some blocks are not at all culled when said face is hidden by a solid, opaque block"))
 - Heavy Core ([MC-269368](https://bugs.mojang.com/browse/MC-269368 "Heavy Core bottom face not culled by blocks below"))
-- ...
-
-### Fixes
-
-#### Blocks
-
 - Anvil ([MC-267895](https://bugs.mojang.com/browse/MC-267895 "Anvil's texture is mapped very strangely"))
 - Spore Blossom ([MC-224195](https://bugs.mojang.com/browse/MC-224195 "Parity issue: Differences in the spore blossom model in JE/BE"))
 - Lever ([MC-141291](https://bugs.mojang.com/browse/MC-141291 "lever state blockstate json backwards"), [MC-262864](https://bugs.mojang.com/browse/MC-262864 "Lever base texture is mapped upside-down"), [MC-262865](https://bugs.mojang.com/browse/MC-262865 "Lever handle is shaded"))
@@ -90,10 +84,9 @@ Download:
 #### Items
 
 - Button item model tweaks
-- 3D Hopper, Cauldron, Comparator, Repeater.
 - Hopper and Cauldron display upside-down on head.
 - Thin block, Conduit display on the head.
 - \*Chorus Plant improvements.
 - \*Block is a bit bigger in item frame.
-- \*3D Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg, Flower Pot, Brewing Stand.
+- \*3D Hopper, Cauldron, Comparator, Repeater, Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg, Flower Pot, Brewing Stand.
 - \*End Rod matches 3D Torch style.

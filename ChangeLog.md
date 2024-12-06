@@ -326,7 +326,7 @@ Fixes
 - Rename the overlay folders.
 - Some patches.
 - Move some files to overlays.
-- Re-added missing Shadeless End Rod.
+- Re-added missing Shadeless End Rod, Hopper and Cauldron display upside-down on head..
 - ×`support_formats` -> √`supported_formats`
 - Rename as "Resource Fixes"
 - ...
@@ -334,3 +334,8 @@ Fixes
 ### Version 5.2
 
 - Add `assets` inside of overlay to make it works.
+
+### Version 5.3
+
+- Move more files to full version.
+- Fix item display missing.
