@@ -339,3 +339,7 @@ Fixes
 
 - Move more files to full version.
 - Fix item display missing.
+
+### Version 5.4
+
+- Fix Repeater Item Model Errors.
