@@ -2,9 +2,9 @@
 
 Fix bugs in vanilla resource.  
 Old name: Model Optimizations and Fixes  
-Notice: Some bugs can't be fix by resourepack.
+(May contains errors. Some bugs can't be fix by resourepack.)
 
-- Version: 5.4
+- Version: 5.5
 - Game versions:  
   Version 4 and before: 1.19.4 - 1.21.1  
   Version 5: 1.20.2 - 1.21.4

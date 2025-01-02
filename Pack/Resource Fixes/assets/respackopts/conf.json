@@ -21,11 +21,9 @@
 			"flower_pot": true,
 			"brewing_stand": true,
 			"block": true,
-			"torch": true,
 			"end_rod": true,
 			"candle": true,
 			"conduit": true,
-			"lantern": true,
 			"cauldron": true,
 			"hopper": true,
 			"comparator": true,
@@ -34,7 +32,9 @@
 			"cake": true,
 			"chorus_plant": true,
 			"sniffer_egg": true,
-			"tripwire_hook": true
+			"tripwire_hook": true,
+			"torch": true,
+			"lantern": true
 		}
 	}
 }

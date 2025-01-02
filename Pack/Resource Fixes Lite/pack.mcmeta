@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "v5.4 for 1.20.2 +",
+    "description": "v5.5 for 1.20.2+",
     "pack_format": 46,
     "supported_formats": [16, 46]
   },
@@ -9,10 +9,6 @@
       {
         "formats": [16, 32],
         "directory": "overlay_a"
-      },
-      {
-        "formats": [33, 46],
-        "directory": "overlay_b"
       },
       {
         "formats": [16, 43],
