@@ -2,14 +2,14 @@
 
 Fix bugs in vanilla resource.  
 Old name: Model Optimizations and Fixes  
-(May contains errors. Some bugs can't be fix by resourepack.)
+_(May contains errors. Also, some bugs can't be fix by resourepack.)_
 
-- Version: 5.5
+- Version: 5.6
 - Game versions:  
   Version 4 and before: 1.19.4 - 1.21.1  
   Version 5: 1.20.2 - 1.21.4
 - Project Links:
-  - [Modrinth](https://modrinth.com/resourcepack/model-optimizations-and-fixes)
+  - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
 
 ### About "lite" version
@@ -27,7 +27,7 @@ Download:
 
 ### Supports
 
-- \*[Respackopts](https://modrinth.com/mod/respackopts) mod for config this resource pack (full version only)
+- \*[Respackopts](https://modrinth.com/mod/TiF5QWZY) mod for config this resource pack (full version only)
 
 ### Suggestions / Compatibilities
 

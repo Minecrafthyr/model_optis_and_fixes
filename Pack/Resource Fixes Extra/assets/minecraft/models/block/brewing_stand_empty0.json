@@ -1,1 +1,0 @@
-{"elements":[{"faces":{"north":{"texture":"#stand","uv":[16,0,8,16]},"south":{"texture":"#stand","uv":[8,0,16,16]}},"from":[8,0,8],"shade":false,"to":[16,16,8]}],"textures":{"particle":"minecraft:block/brewing_stand_base","stand":"minecraft:block/brewing_stand"}}

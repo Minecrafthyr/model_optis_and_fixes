@@ -1,6 +1,0 @@
-{
-  "parent": "res_fixes:item/nugget",
-  "textures": {
-    "layer0": "minecraft:item/gold_nugget"
-  }
-}

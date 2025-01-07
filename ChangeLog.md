@@ -266,3 +266,7 @@ Fixes
 - Remove unused models.
 - Tweaks Fence Inventory models.
 - Optimize Custom Fence Gate models.
+
+### Version 5.6
+
+- Fix texture missing, again.
