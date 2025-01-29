@@ -262,11 +262,17 @@ Fixes
 
 ### Version 5.5
 
-- Button Inventory model modifies, again.
 - Remove unused models.
-- Tweaks Fence Inventory models.
+- Tweaks Fence Inventory models and Button Inventory model.
 - Optimize Custom Fence Gate models.
 
 ### Version 5.6
 
 - Fix texture missing, again.
+
+### Version 5.7
+
+- Tweaks Fence Inventory models.
+- Fix torch in inventory is smaller than before.
+- Fix Brewing Stand item missing particle.
+- Fix Filled Cauldron is using wrong texture.

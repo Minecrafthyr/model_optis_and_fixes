@@ -1,0 +1,60 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"hook": "block/tripwire_hook",
+		"particle": "block/oak_planks",
+		"wood": "block/oak_planks"
+	},
+	"elements": [
+		{
+			"from": [6, 3.5, 7.2],
+			"to": [10, 4.5, 11.2],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 6, 5.2]},
+			"faces": {
+				"north": {"uv": [10, 4, 6, 3], "texture": "#hook"},
+				"east": {"uv": [10, 4, 11, 8], "rotation": 90, "texture": "#hook"},
+				"south": {"uv": [6, 8, 10, 9], "texture": "#hook"},
+				"west": {"uv": [6, 8, 5, 4], "rotation": 90, "texture": "#hook"},
+				"up": {"uv": [6, 4, 10, 8], "texture": "#hook"},
+				"down": {"uv": [10, 4, 6, 8], "texture": "#hook"}
+			}
+		},
+		{
+			"from": [9, 4.5, 10.2],
+			"to": [7, 3.5, 8.2],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 6, 5.2]},
+			"faces": {
+				"north": {"uv": [9, 4, 7, 3], "texture": "#hook"},
+				"east": {"uv": [10, 5, 11, 7], "rotation": 90, "texture": "#hook"},
+				"south": {"uv": [7, 8, 9, 9], "texture": "#hook"},
+				"west": {"uv": [6, 7, 5, 5], "rotation": 90, "texture": "#hook"}
+			}
+		},
+		{
+			"from": [7, 5, 10],
+			"to": [9, 7, 14],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 6, 14]},
+			"faces": {
+				"north": {"uv": [7, 14, 9, 16], "texture": "#hook"},
+				"east": {"uv": [9, 9, 7, 13], "rotation": 90, "texture": "#hook"},
+				"south": {"uv": [7, 14, 9, 16], "texture": "#hook"},
+				"west": {"uv": [7, 13, 9, 9], "rotation": 90, "texture": "#hook"},
+				"up": {"uv": [9, 9, 7, 13], "texture": "#hook"},
+				"down": {"uv": [7, 13, 9, 9], "texture": "#hook"}
+			}
+		},
+		{
+			"from": [6, 1, 14],
+			"to": [10, 9, 16],
+			"faces": {
+				"north": {"uv": [6, 7, 10, 15], "texture": "#wood"},
+				"east": {"uv": [0, 7, 2, 15], "texture": "#wood"},
+				"south": {"uv": [6, 7, 10, 15], "texture": "#wood", "cullface": "south"},
+				"west": {"uv": [14, 7, 16, 15], "texture": "#wood"},
+				"up": {"uv": [6, 14, 10, 16], "texture": "#wood"},
+				"down": {"uv": [6, 0, 10, 2], "texture": "#wood"}
+			}
+		}
+	]
+}

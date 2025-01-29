@@ -4,7 +4,7 @@
 	"textures": {
 		"base": "block/brewing_stand_base",
 		"stand": "block/brewing_stand",
-		"texture": "minecraft:item/brewing_stand"
+		"particle": "minecraft:item/brewing_stand"
 	},
 	"elements": [
 		{

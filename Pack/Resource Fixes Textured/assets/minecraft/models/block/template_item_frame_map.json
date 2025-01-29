@@ -1,0 +1,49 @@
+{
+	"credit": "Made with Blockbench",
+	"elements": [
+		{
+			"from": [1, 1, 15],
+			"to": [15, 15, 16],
+			"faces": {
+				"north": {"uv": [1, 1, 15, 15], "texture": "#back"},
+				"south": {"uv": [1, 1, 15, 15], "texture": "#back", "cullface": "south"}
+			}
+		},
+		{
+			"from": [0, 0, 15],
+			"to": [16, 1, 16],
+			"faces": {
+				"north": {"uv": [0, 15, 16, 16], "texture": "#wood"},
+				"south": {"uv": [0, 15, 16, 16], "texture": "#wood", "cullface": "south"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#wood", "cullface": "down"}
+			}
+		},
+		{
+			"from": [0, 0, 15],
+			"to": [1, 16, 16],
+			"faces": {
+				"north": {"uv": [15, 0, 16, 16], "texture": "#wood"},
+				"south": {"uv": [0, 0, 1, 16], "texture": "#wood", "cullface": "south"},
+				"west": {"uv": [15, 0, 16, 16], "texture": "#wood", "cullface": "west"}
+			}
+		},
+		{
+			"from": [0, 15, 15],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 1], "texture": "#wood"},
+				"south": {"uv": [0, 0, 16, 1], "texture": "#wood", "cullface": "south"},
+				"up": {"uv": [0, 15, 16, 16], "texture": "#wood", "cullface": "up"}
+			}
+		},
+		{
+			"from": [15, 0, 15],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 16], "texture": "#wood"},
+				"east": {"uv": [0, 0, 1, 16], "texture": "#wood", "cullface": "east"},
+				"south": {"uv": [15, 0, 16, 16], "texture": "#wood", "cullface": "south"}
+			}
+		}
+	]
+}

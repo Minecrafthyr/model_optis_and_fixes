@@ -143,8 +143,8 @@
 			"from": [2, 15, 2],
 			"to": [14, 15, 14],
 			"faces": {
-				"up": {"uv": [2, 2, 14, 14], "texture": "#inside", "cullface": "up"},
-				"down": {"uv": [2, 14, 14, 2], "texture": "#inside"}
+				"up": {"uv": [2, 2, 14, 14], "texture": "#content"},
+				"down": {"uv": [2, 14, 14, 2], "texture": "#content"}
 			}
 		}
 	]
