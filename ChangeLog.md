@@ -280,4 +280,5 @@ Fixes
 ### Version 5.8
 
 - Update pack format.
-- Clean unused files, use `gen.py` to merge files.
+- Clean unused files, use `gen.py` to merge files, also packing Extra variant.
+- Fix hopper and cauldron display. (what's happend?)

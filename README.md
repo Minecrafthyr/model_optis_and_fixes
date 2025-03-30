@@ -10,32 +10,33 @@ Fix bugs in vanilla resources.
 - Old name: Model Optimizations and Fixes
 - (May contains errors. Some bugs can't be fix by resourepack.)
 
-### "Lite" version
+### Variants
 
-There is also a lite version of this pack, which removes some features that may affect modified gameplay or conflict to texture-only resourcepack.  
-**"\*" means it will not apply in the lite version**  
-Download:
-- On Modrinth:  
-  Version page -> Files -> Resource Fixes Lite
-- On Github:  
-  Open model_optis_and_fixes/ZippedPacks -> [Resource Fixes Lite.zip](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/ZippedPacks/Resource%20Fixes%20Lite.zip)
+Download in Modrinth: [Version](https://modrinth.com/resourcepack/model-optimizations-and-fixes/version/5.8) => Files
 
-### "Textured" version
+Lite < (no suffix) < Textured < Extra
 
-The textured version is using texture may conflict to other resourcepack.  
-Should be work in vanilla.
+- "Lite" variant  
+  Removes some features that may affect modified gameplay or conflict to texture-only resourcepack.  
+  **"\*" means it will not apply in the lite variant**
+- "Textured" variant  
+  The textured variant is using texture may conflict to other resourcepack.  
+  Should be work in vanilla.
+- "Extra" variant  
+  Includes other tweaks (actually is not fixes).
 
 ## Mods Info
 
-### Supports
+### Supported
 
 - \*[Respackopts](https://modrinth.com/mod/TiF5QWZY) mod for config this resource pack.
 
 ### Suggestions / Compatibilities
 
-- [Model Gap Fix](https://modrinth.com/mod/modelfix)
-- [Enhanced Block Entities](https://modrinth.com/mod/ebe)
-- [Sodium](https://modrinth.com/mod/sodium)
+- [Model Gap Fix](https://modrinth.com/mod/modelfix) mod
+- [Enhanced Block Entities](https://modrinth.com/mod/ebe) mod
+- [Sodium](https://modrinth.com/mod/sodium) mod
+<!--- [Unobtrusive Weather](https://modrinth.com/resourcepack/67f0fKM2) resourcepack-->
 
 ## Feature list
 
@@ -70,7 +71,6 @@ Should be work in vanilla.
 - \*Blocks randomly rotate correction (A part of [MC-144914](https://bugs.mojang.com/browse/MC-144914 "Some blocks don't randomly rotate correctly"))
 - Sculk Sensors UV fix
 - \*Redstone Dust
-
 
 #### Items
 
