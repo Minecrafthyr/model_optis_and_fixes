@@ -1,8 +1,8 @@
 {
   "pack": {
-    "description": "v5.7 for 1.20.2+ by Minecraft_hyr",
-    "pack_format": 46,
-    "supported_formats": [16, 46]
+    "description": "v5.8 for 1.20.2+ by Minecraft_hyr",
+    "pack_format": 55,
+    "supported_formats": [16, 55]
   },
   "overlays": {
     "entries": [
@@ -15,7 +15,7 @@
         "directory": "overlay_c"
       },
       {
-        "formats": [44, 46],
+        "formats": [44, 55],
         "directory": "overlay_d"
       }
     ]

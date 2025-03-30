@@ -276,3 +276,8 @@ Fixes
 - Fix torch in inventory is smaller than before.
 - Fix Brewing Stand item missing particle.
 - Fix Filled Cauldron is using wrong texture.
+
+### Version 5.8
+
+- Update pack format.
+- Clean unused files, use `gen.py` to merge files.

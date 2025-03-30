@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "shape=ascending_east": {
+      "model": "res_fixes:block/rail/raised_ne",
+      "y": 90
+    },
+    "shape=ascending_north": {
+      "model": "res_fixes:block/rail/raised_ne"
+    },
+    "shape=ascending_south": {
+      "model": "res_fixes:block/rail/raised_sw"
+    },
+    "shape=ascending_west": {
+      "model": "res_fixes:block/rail/raised_sw",
+      "y": 90
+    },
+    "shape=east_west": {
+      "model": "res_fixes:block/rail/flat",
+      "y": 90
+    },
+    "shape=north_east": {
+      "model": "res_fixes:block/rail/corner",
+      "y": 270
+    },
+    "shape=north_south": {
+      "model": "res_fixes:block/rail/flat"
+    },
+    "shape=north_west": {
+      "model": "res_fixes:block/rail/corner",
+      "y": 180
+    },
+    "shape=south_east": {
+      "model": "res_fixes:block/rail/corner"
+    },
+    "shape=south_west": {
+      "model": "res_fixes:block/rail/corner",
+      "y": 90
+    }
+  }
+}

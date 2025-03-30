@@ -1,18 +1,16 @@
 # Resource Fixes
 
-Fix bugs in vanilla resource.  
-Old name: Model Optimizations and Fixes  
-_(May contains errors. Also, some bugs can't be fix by resourepack.)_
+Fix bugs in vanilla resources.
 
-- Version: 5.6
-- Game versions:  
-  Version 4 and before: 1.19.4 - 1.21.1  
-  Version 5: 1.20.2 - 1.21.4
+- Version: 5.8
+- Game versions: 1.20.2 - 1.21.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
+- Old name: Model Optimizations and Fixes
+- (May contains errors. Some bugs can't be fix by resourepack.)
 
-### About "lite" version
+### "Lite" version
 
 There is also a lite version of this pack, which removes some features that may affect modified gameplay or conflict to texture-only resourcepack.  
 **"\*" means it will not apply in the lite version**  
@@ -20,14 +18,18 @@ Download:
 - On Modrinth:  
   Version page -> Files -> Resource Fixes Lite
 - On Github:  
-  Open model_optis_and_fixes/ZippedPack2 -> [Resource Fixes Lite.zip](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/ZippedPack2/Resource%20Fixes%20Lite.zip)
+  Open model_optis_and_fixes/ZippedPacks -> [Resource Fixes Lite.zip](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/ZippedPacks/Resource%20Fixes%20Lite.zip)
 
+### "Textured" version
+
+The textured version is using texture may conflict to other resourcepack.  
+Should be work in vanilla.
 
 ## Mods Info
 
 ### Supports
 
-- \*[Respackopts](https://modrinth.com/mod/TiF5QWZY) mod for config this resource pack (full version only)
+- \*[Respackopts](https://modrinth.com/mod/TiF5QWZY) mod for config this resource pack.
 
 ### Suggestions / Compatibilities
 
