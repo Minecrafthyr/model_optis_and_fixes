@@ -281,4 +281,9 @@ Fixes
 
 - Update pack format.
 - Clean unused files, use `gen.py` to merge files, also packing Extra variant.
-- Fix hopper and cauldron display. (what's happend?)
+- Fix hopper and cauldron display.
+  
+### Version 5.9
+
+- Fix missing block model in `base` floder ([#6](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/6)).
+- Remove unstable variants.

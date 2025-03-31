@@ -33,7 +33,6 @@ def zip_multiple_folders(folder_paths, zip_path):
 
     print(f"所有文件夹的内容已成功压缩到 {zip_path}")
 
-
 def pack(source, target):
     paths = []
     for s in source:
@@ -44,5 +43,5 @@ def pack(source, target):
 
 pack(["base"], "Resource Fixes Lite")
 pack(["base", "full"], "Resource Fixes")
-pack(["base", "full", "textured"], "Resource Fixes Textured")
-pack(["base", "full", "textured", "tweaks", 'animation'], "Resource Fixes Extra")
+#pack(["base", "full", "textured"], "Resource Fixes Textured")
+#pack(["base", "full", "textured", "tweaks", 'animation'], "Resource Fixes Extra")

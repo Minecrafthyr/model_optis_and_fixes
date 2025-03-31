@@ -2,7 +2,7 @@
 
 Fix bugs in vanilla resources.
 
-- Version: 5.8
+- Version: 5.9
 - Game versions: 1.20.2 - 1.21.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
@@ -14,16 +14,17 @@ Fix bugs in vanilla resources.
 
 Download in Modrinth: [Version](https://modrinth.com/resourcepack/model-optimizations-and-fixes/version/5.8) => Files
 
-Lite < (no suffix) < Textured < Extra
+Lite < (no suffix) 
+<!--< Textured < Extra-->
 
 - "Lite" variant  
   Removes some features that may affect modified gameplay or conflict to texture-only resourcepack.  
   **"\*" means it will not apply in the lite variant**
-- "Textured" variant  
+<!--- "Textured" variant  
   The textured variant is using texture may conflict to other resourcepack.  
   Should be work in vanilla.
 - "Extra" variant  
-  Includes other tweaks (actually is not fixes).
+  Includes other tweaks (actually is not fixes).-->
 
 ## Mods Info
 
