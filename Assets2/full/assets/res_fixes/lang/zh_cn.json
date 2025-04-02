@@ -1,9 +1,8 @@
 {
-  "rpo.res_fixes.title": "模型优化与修复",
+  "rpo.res_fixes.title": "资源修复",
   "rpo.res_fixes.fixes.title": "修复",
   "rpo.res_fixes.fixes.handheld_arrow": "手持箭",
 
-  "rpo.res_fixes.fixes.torch": "火把 [1.21.1-]",
   "rpo.res_fixes.fixes.buttons": "按钮",
   "rpo.res_fixes.fixes.iron_bars": "铁栏杆",
   "rpo.res_fixes.fixes.sculk_sensor": "幽匿传感器",

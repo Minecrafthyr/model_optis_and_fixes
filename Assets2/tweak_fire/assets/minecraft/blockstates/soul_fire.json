@@ -1,0 +1,90 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/soul_fire/floor0"
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor1"
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/soul_fire/floor_side0"
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side1"
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side_alt0"
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side_alt1"
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/soul_fire/floor_side0",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side1",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side_alt0",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side_alt1",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/soul_fire/floor_side0",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side1",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side_alt0",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side_alt1",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/soul_fire/floor_side0",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side1",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side_alt0",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/soul_fire/floor_side_alt1",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

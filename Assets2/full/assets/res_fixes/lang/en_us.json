@@ -1,9 +1,8 @@
 {
-  "rpo.res_fixes.title": "Model Optimizations & Fixes",
+  "rpo.res_fixes.title": "Resource Fixes",
   "rpo.res_fixes.fixes.title": "Fixes",
   "rpo.res_fixes.fixes.handheld_arrow": "Handheld Arrow",
 
-  "rpo.res_fixes.fixes.torch": "Torches [1.21.1-]",
   "rpo.res_fixes.fixes.buttons": "Buttons",
   "rpo.res_fixes.fixes.iron_bars": "Iron Bars",
   "rpo.res_fixes.fixes.sculk_sensor": "Sculk Sensors",
@@ -17,7 +16,6 @@
   "rpo.res_fixes.improvements.end_rod": "End Rod",
   "rpo.res_fixes.improvements.chorus_plant": "Chorus Plant",
   "rpo.res_fixes.improvements.conduit": "Conduit",
-  "rpo.res_fixes.improvements.stonecutter": "Stonecutter",
 
   "rpo.res_fixes.improvements.torch": "3D Torches",
   "rpo.res_fixes.improvements.tripwire_hook": "3D Tripwire Hook",

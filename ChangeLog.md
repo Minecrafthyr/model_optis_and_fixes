@@ -1,4 +1,8 @@
-## Version 1.0
+<!-- region -->
+
+## Version 1
+
+### Version 1.0
 
 - beacon
 - fence_side
@@ -6,7 +10,7 @@
 - Remove frogspawn fix, redstone cull face.
 - Remove multiplied description.
 
-## Version 1.1
+### Version 1.1
 
 - Re-added iron_bars z-fighting fix
 - replace my fence_side model with MC-229645
@@ -14,7 +18,9 @@
 - replace tripwire_hook MC-262172 with MC-262546
 - tripwire from MC-262600.
 
-## Version 2.0
+## Version 2
+
+### Version 2.0
 
 - rail, sculk_vein, redstone.
 - 3D cauldron, comparator, repeater, candle, torch, campfire, lantern, tripwire_hook
@@ -23,13 +29,13 @@
 - spore_blossom upside down on ground
 - block is bigger on ground/in item flame.
 
-## Version 2.1
+### Version 2.1
 
 - add a 3D ladder block model (optimized)
 - Shadeless for most of light blocks
 - Fix lots of bugs in version 2.0, like hand held 3d items display problems.
 
-## Version 2.2
+### Version 2.2
 
 - lever shade fix in MC-262865
 - spawner fix
@@ -37,9 +43,9 @@
 - Replace my chorus_flower model with MC-262641
 - dragon_egg from MC-262652
 - Replace my fence_gate model with MC-262953
-- Remove 3D ladder block model  
-- Fix a mangrove_roots bug  
-- Fix a campfire gui bug in v2.1  
+- Remove 3D ladder block model
+- Fix a mangrove_roots bug
+- Fix a campfire gui bug in v2.1
 - ... more fixes (I actually realized this resourcepack has so many bugs)
 
 ### Version 2.3
@@ -105,6 +111,8 @@ Fix some bugs in v2.0.
 - Remove gravel rotation
 - Remove fence inventory
 
+## Version 3
+
 ### Version 3.0
 
 - sculk_shrieker
@@ -127,16 +135,18 @@ Add Credits.md
 - crimson_nylium, warped_nylium random rotation.
 - Remove dragon_egg and spawner (Mojang fix it)
 
+## Version 4
+
 ### Version 4.0
 
 - Fix error bell bar cull
 - Use Unlicense.
 - fence from [MC-267281](https://bugs.mojang.com/projects/MC/issues/MC-267281)
-- glass_pane from [MC-267315](https://bugs.mojang.com/browse/MC-267315)
+- glass_pane from [MC-267315](https://bugs.mojang.com/browse/MC/issues/MC-267315)
 
 ### Version 4.1
 
-- Dragon egg is not fixed so I add it back 
+- Dragon egg is not fixed so I add it back
 - Remove candle no shading
 - Torch fix (but lower performance), also change repeater, comparator
 - Iron Bars improvements
@@ -144,7 +154,7 @@ Add Credits.md
 ### Version 4.2
 
 - Improve Iron Bars again
-- remove fence from [MC-267281](https://bugs.mojang.com/browse/MC-267281) by [Connor Steppie](https://bugs.mojang.com/secure/ViewProfile.jspa?name=Awesoman3000) because it's unsafe for new varient
+- remove fence from [MC-267281](https://bugs.mojang.com/browse/MC/issues/MC-267281) by [Connor Steppie](https://bugs.mojang.com/secure/ViewProfile.jspa?name=Awesoman3000) because it's unsafe for new varient
 - Rail is on ground now
 
 ### Version 4.3
@@ -154,10 +164,10 @@ Add Credits.md
 
 ### Version 4.4
 
-- Fix spawner in [MC-266463](https://bugs.mojang.com/browse/MC-266463)
-- Fix glow_lichen in [MC-249079](https://bugs.mojang.com/browse/MC-249079)
-- Fix redstone_torch in [MC-129108](https://bugs.mojang.com/browse/MC-129108)
-- Fix very confusing lever in [MC-141291](https://bugs.mojang.com/browse/MC-141291), [MC-262864](https://bugs.mojang.com/browse/MC-262864), [MC-262865](https://bugs.mojang.com/browse/MC-262865)
+- Fix spawner in [MC-266463](https://bugs.mojang.com/browse/MC/issues/MC-266463)
+- Fix glow_lichen in [MC-249079](https://bugs.mojang.com/browse/MC/issues/MC-249079)
+- Fix redstone_torch in [MC-129108](https://bugs.mojang.com/browse/MC/issues/MC-129108)
+- Fix very confusing lever in [MC-141291](https://bugs.mojang.com/browse/MC/issues/MC-141291), [MC-262864](https://bugs.mojang.com/browse/MC/issues/MC-262864), [MC-262865](https://bugs.mojang.com/browse/MC/issues/MC-262865)
 
 ### Version 4.5
 
@@ -182,19 +192,19 @@ Add Credits.md
 
 Fixes
 
-- [MC-226453](https://bugs.mojang.com/browse/MC-226453) Potted Azalea is incorrectly shaded when smooth lighting is enabled
-- [MC-262694](https://bugs.mojang.com/browse/MC-262694) Inner planes of azaleas are shaded
-- [MC-262695](https://bugs.mojang.com/browse/MC-262695) Inner planes of potted azaleas are shaded
-- [MC-262696](https://bugs.mojang.com/browse/MC-262696) Potted mangrove propagules appear darker than they should due to shading not being disabled
-- [MC-267895](https://bugs.mojang.com/browse/MC-267895) Anvil's texture is mapped very strangely
-- [MC-224392](https://bugs.mojang.com/browse/MC-224392) Big dripleaves are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
-- [MC-236374](https://bugs.mojang.com/browse/MC-236374) Chains are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
-- [MC-262598](https://bugs.mojang.com/browse/MC-262598) Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block
-- [MC-234089](https://bugs.mojang.com/browse/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
-- [MC-234087](https://bugs.mojang.com/browse/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- [MC-226453](https://bugs.mojang.com/browse/MC/issues/MC-226453) Potted Azalea is incorrectly shaded when smooth lighting is enabled
+- [MC-262694](https://bugs.mojang.com/browse/MC/issues/MC-262694) Inner planes of azaleas are shaded
+- [MC-262695](https://bugs.mojang.com/browse/MC/issues/MC-262695) Inner planes of potted azaleas are shaded
+- [MC-262696](https://bugs.mojang.com/browse/MC/issues/MC-262696) Potted mangrove propagules appear darker than they should due to shading not being disabled
+- [MC-267895](https://bugs.mojang.com/browse/MC/issues/MC-267895) Anvil's texture is mapped very strangely
+- [MC-224392](https://bugs.mojang.com/browse/MC/issues/MC-224392) Big dripleaves are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- [MC-236374](https://bugs.mojang.com/browse/MC/issues/MC-236374) Chains are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- [MC-262598](https://bugs.mojang.com/browse/MC/issues/MC-262598) Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block
+- [MC-234089](https://bugs.mojang.com/browse/MC/issues/MC-234089) Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- [MC-234087](https://bugs.mojang.com/browse/MC/issues/MC-234087) Extinguished campfires are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 - Make the item model of Nether Sprouts matches Amethyst Bud
-- [MC-214625](https://bugs.mojang.com/browse/MC-214625) Unlit redstone torches are unaffected by block shading / are evenly lit on all sides
-- [MC-172852](https://bugs.mojang.com/browse/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
+- [MC-214625](https://bugs.mojang.com/browse/MC/issues/MC-214625) Unlit redstone torches are unaffected by block shading / are evenly lit on all sides
+- [MC-172852](https://bugs.mojang.com/browse/MC/issues/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
 - Bell ambient occlusion is disabled
 - (Readded) Button item model tweaks
 
@@ -205,7 +215,7 @@ Fixes
 
 Fixes
 
-- [MC-175626](https://bugs.mojang.com/browse/MC-175626) Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
+- [MC-175626](https://bugs.mojang.com/browse/MC/issues/MC-175626) Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled
 
 ### Version 4.10
 
@@ -225,6 +235,8 @@ Fixes
 - Fix [#5](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/5) missing texture on redstone torch.
 - 1.21.2 changed some model, so this version will be archived, the pack above 1.21.2 is version 5.
 - Lite version has no changes
+
+## Version 5
 
 ### Version 5.0
 
@@ -282,8 +294,42 @@ Fixes
 - Update pack format.
 - Clean unused files, use `gen.py` to merge files, also packing Extra variant.
 - Fix hopper and cauldron display.
-  
+
 ### Version 5.9
 
 - Fix missing block model in `base` floder ([#6](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/6)).
 - Remove unstable variants.
+
+### Version 5.10
+
+- Fix `gen.py` [#7](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/7)
+- Fix [MC-279521](https://bugs.mojang.com/browse/MC/issues/MC-279521 "Up & down faces of resin clumps, sculk veins, vines & glow lichen are not mirrored from behind") and cull back face of them ([#8](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/8)).
+
+<!-- endregion -->
+
+### Version 5.11
+
+- Fix [MC-236474](https://bugs.mojang.com/browse/MC/issues/MC-236474 "Melon and pumpkin stems appear much darker than they should
+")
+- Fix around mangrove propagule ("Previous" is previous version of Resource Fixes, "Now" is expected):
+
+  | Mangrove propagule                                                                                                                                                             | Vanilla | Previous | Now   |
+  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | -------- | ----- |
+  | Shade (for cross faces) [MC-279521](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled") | true    | true     | false |
+
+  | Potted mangrove propagule                                                                                                                                                             | Vanilla | Previous | Now   |
+  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | ----- |
+  | Shade (for cross faces) [MC-262696](https://bugs.mojang.com/browse/MC/issues/MC-262696 "Potted mangrove propagules appear darker than they should due to shading not being disabled") | true    | false    | false |
+
+  | Hanging mangrove propagule (The worst model)                                                                                                                                   | Vanilla | Previous | Now      |
+  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- | -------- | -------- |
+  | Ambient Occlusion                                                                                                                                                              | true    | true     | false    |
+  | Rescale (for cross faces)                                                                                                                                                      | false   | false    | true     |
+  | Shade (for cross faces) [MC-262676](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled") | true    | true     | false    |
+  | Invisble faces [MC-262689](https://bugs.mojang.com/browse/MC/issues/MC-262689 "Hanging mangrove propagule models are comically unoptimized")                                   | have    | may have | not have |
+- Remove Fix of [MC-262865](https://bugs.mojang.com/browse/MC/issues/MC-262865 "Lever handle is shaded").
+- Fix lighting rod on using lighting rod texture.
+- Coarse Dirt and Gravel random rotate is now in Lite variant.
+- Fix incorrect Tripwire hook inventory display.
+- Fix incorrect Big Dripleaf top cullface.
+- Fix bamboo fence texture mapping.

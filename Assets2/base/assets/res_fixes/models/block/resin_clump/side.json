@@ -1,0 +1,6 @@
+{
+	"parent": "res_fixes:block/template/faces/side",
+	"textures": {
+		"texture": "block/resin_clump"
+	}
+}

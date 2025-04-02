@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "minecraft:block/tripwire_center"
+        "model": "res_fixes:block/tripwire/center"
       },
       "when": {
         "attached": "false"
@@ -10,7 +10,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_side"
+        "model": "res_fixes:block/tripwire/side"
       },
       "when": {
         "OR": [
@@ -30,7 +30,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_side_alt"
+        "model": "res_fixes:block/tripwire/side_alt"
       },
       "when": {
         "OR": [
@@ -50,7 +50,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_side",
+        "model": "res_fixes:block/tripwire/side",
         "y": -90
       },
       "when": {
@@ -60,7 +60,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_side_alt",
+        "model": "res_fixes:block/tripwire/side_alt",
         "y": -90
       },
       "when": {
@@ -70,7 +70,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_noside"
+        "model": "res_fixes:block/tripwire/noside"
       },
       "when": {
         "attached": "false",
@@ -82,7 +82,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_noside_alt"
+        "model": "res_fixes:block/tripwire/noside_alt"
       },
       "when": {
         "attached": "false",
@@ -94,7 +94,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_noside",
+        "model": "res_fixes:block/tripwire/noside",
         "y": -90
       },
       "when": {
@@ -107,7 +107,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_noside_alt",
+        "model": "res_fixes:block/tripwire/noside_alt",
         "y": -90
       },
       "when": {
@@ -120,7 +120,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_center"
+        "model": "res_fixes:block/tripwire/attached_center"
       },
       "when": {
         "attached": "true"
@@ -128,7 +128,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_side"
+        "model": "res_fixes:block/tripwire/attached_side"
       },
       "when": {
         "OR": [
@@ -148,7 +148,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_side_alt"
+        "model": "res_fixes:block/tripwire/attached_side_alt"
       },
       "when": {
         "OR": [
@@ -168,7 +168,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_side",
+        "model": "res_fixes:block/tripwire/attached_side",
         "y": -90
       },
       "when": {
@@ -178,7 +178,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_side_alt",
+        "model": "res_fixes:block/tripwire/attached_side_alt",
         "y": -90
       },
       "when": {
@@ -188,7 +188,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_noside"
+        "model": "res_fixes:block/tripwire/attached_noside"
       },
       "when": {
         "attached": "true",
@@ -200,7 +200,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_noside_alt"
+        "model": "res_fixes:block/tripwire/attached_noside_alt"
       },
       "when": {
         "attached": "true",
@@ -212,7 +212,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_noside",
+        "model": "res_fixes:block/tripwire/attached_noside",
         "y": -90
       },
       "when": {
@@ -225,7 +225,7 @@
     },
     {
       "apply": {
-        "model": "minecraft:block/tripwire_attached_noside_alt",
+        "model": "res_fixes:block/tripwire/attached_noside_alt",
         "y": -90
       },
       "when": {

@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/fire/floor_side_alt",
+  "textures": {
+    "fire": "minecraft:block/fire_1"
+  }
+}

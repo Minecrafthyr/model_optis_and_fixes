@@ -1,0 +1,73 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "res_fixes:block/resin_clump/full"
+      },
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false",
+        "down": "false"
+      }
+    },
+    {
+      "apply": {
+        "model": "res_fixes:block/resin_clump/side"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "res_fixes:block/resin_clump/side",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "res_fixes:block/resin_clump/side",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "res_fixes:block/resin_clump/side",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "res_fixes:block/resin_clump/top"
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "res_fixes:block/resin_clump/top",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "down": "true"
+      }
+    }
+  ]
+}

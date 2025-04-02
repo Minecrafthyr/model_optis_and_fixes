@@ -1,9 +1,8 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "block/block",
 	"textures": {
-		"particle": "block/lightning_rod",
-		"texture": "block/lightning_rod"
+		"particle": "block/lightning_rod_on",
+		"texture": "block/lightning_rod_on"
 	},
 	"elements": [
 		{
@@ -31,15 +30,5 @@
 				"down": {"uv": [0, 4, 2, 6], "texture": "#texture", "cullface": "down"}
 			}
 		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"translation": [0, 2, 0.5],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"head": {
-			"rotation": [-180, 0, 0],
-			"translation": [8.5, 4, 0]
-		}
-	}
+	]
 }

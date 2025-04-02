@@ -1,0 +1,232 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/floor0"
+        },
+        {
+          "model": "res_fixes:block/fire/floor1"
+        }
+      ],
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/side0"
+        },
+        {
+          "model": "res_fixes:block/fire/side1"
+        },
+        {
+          "model": "res_fixes:block/fire/side_alt0"
+        },
+        {
+          "model": "res_fixes:block/fire/side_alt1"
+        }
+      ],
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/floor_side0"
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side1"
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side_alt0"
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side_alt1"
+        }
+      ],
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/side0",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/fire/side1",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/fire/side_alt0",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/fire/side_alt1",
+          "y": 90
+        }
+      ],
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/floor_side0",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side1",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side_alt0",
+          "y": 90
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side_alt1",
+          "y": 90
+        }
+      ],
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/side0",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/fire/side1",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/fire/side_alt0",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/fire/side_alt1",
+          "y": 180
+        }
+      ],
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/floor_side0",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side1",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side_alt0",
+          "y": 180
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side_alt1",
+          "y": 180
+        }
+      ],
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/side0",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/fire/side1",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/fire/side_alt0",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/fire/side_alt1",
+          "y": 270
+        }
+      ],
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/floor_side0",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side1",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side_alt0",
+          "y": 270
+        },
+        {
+          "model": "res_fixes:block/fire/floor_side_alt1",
+          "y": 270
+        }
+      ],
+      "when": {
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "res_fixes:block/fire/up0"
+        },
+        {
+          "model": "res_fixes:block/fire/up1"
+        },
+        {
+          "model": "res_fixes:block/fire/up_alt0"
+        },
+        {
+          "model": "res_fixes:block/fire/up_alt1"
+        }
+      ],
+      "when": {
+        "up": "true"
+      }
+    }
+  ]
+}

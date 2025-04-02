@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/template_item_frame_map",
+    "textures": {
+        "texture": "res_fixes:block/item_frame_map"
+    }
+}
