@@ -305,8 +305,6 @@ Fixes
 - Fix `gen.py` [#7](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/7)
 - Fix [MC-279521](https://bugs.mojang.com/browse/MC/issues/MC-279521 "Up & down faces of resin clumps, sculk veins, vines & glow lichen are not mirrored from behind") and cull back face of them ([#8](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/8)).
 
-<!-- endregion -->
-
 ### Version 5.11
 
 - Fix [MC-236474](https://bugs.mojang.com/browse/MC/issues/MC-236474 "Melon and pumpkin stems appear much darker than they should
@@ -327,9 +325,18 @@ Fixes
   | Rescale (for cross faces)                                                                                                                                                      | false   | false    | true     |
   | Shade (for cross faces) [MC-262676](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled") | true    | true     | false    |
   | Invisble faces [MC-262689](https://bugs.mojang.com/browse/MC/issues/MC-262689 "Hanging mangrove propagule models are comically unoptimized")                                   | have    | may have | not have |
+
 - Remove Fix of [MC-262865](https://bugs.mojang.com/browse/MC/issues/MC-262865 "Lever handle is shaded").
 - Fix lighting rod on using lighting rod texture.
 - Coarse Dirt and Gravel random rotate is now in Lite variant.
 - Fix incorrect Tripwire hook inventory display.
 - Fix incorrect Big Dripleaf top cullface.
 - Fix bamboo fence texture mapping.
+
+<!-- endregion -->
+
+### Version 5.12
+
+- Move shadeless lantern model to `tweak_shadeless_lights`.
+- Fix [MC-262460](https://bugs.mojang.com/browse/MC/issues/MC-262460 "Unneeded face in hanging lantern model
+").
