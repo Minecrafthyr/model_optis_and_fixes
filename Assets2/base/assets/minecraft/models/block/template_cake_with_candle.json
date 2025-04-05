@@ -36,7 +36,7 @@
 			"shade": false,
             "faces": {
                 "north": {"uv": [0, 5, 1, 6], "texture": "#candle"},
-                "south": {"uv": [0, 5, 1, 6], "texture": "#candle"}
+                "south": {"uv": [1, 5, 0, 6], "texture": "#candle"}
             }
         },
         {
@@ -46,7 +46,7 @@
 			"shade": false,
             "faces": {
                 "north": {"uv": [0, 5, 1, 6], "texture": "#candle"},
-                "south": {"uv": [0, 5, 1, 6], "texture": "#candle"}
+                "south": {"uv": [1, 5, 0, 6], "texture": "#candle"}
             }
         }
     ]

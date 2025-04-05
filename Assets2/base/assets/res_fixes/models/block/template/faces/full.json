@@ -40,7 +40,6 @@
 		{
 			"from": [0, 15.9, 0],
 			"to": [16, 15.9, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
 			"faces": {
 				"up": {"uv": [0, 16, 16, 0], "texture": "#texture", "cullface": "up"},
 				"down": {"uv": [0, 0, 16, 16], "texture": "#texture"}

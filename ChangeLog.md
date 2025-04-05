@@ -337,6 +337,8 @@ Fixes
 
 ### Version 5.12
 
-- Move shadeless lantern model to `tweak_shadeless_lights`.
-- Fix [MC-262460](https://bugs.mojang.com/browse/MC/issues/MC-262460 "Unneeded face in hanging lantern model
-").
+- `tweak_shadeless_lights`(Extra): Lightsource blocks are shadeless. Shadeless lantern/end rod models are moved to here.
+- Fix [MC-262460](https://bugs.mojang.com/browse/MC/issues/MC-262460 "Unneeded face in hanging lantern model").
+- Correctly fix [MC-221851](https://bugs.mojang.com/browse/MC/issues/MC-221851 "Tilted big dripleaf texture mirrored incorrectly from underneath").
+- Fix [MC-214700](https://bugs.mojang.com/browse/MC/issues/MC-214700 "Spore blossom top leaf texture is not mirrored correctly from behind").
+- Fix [MC-227330](https://bugs.mojang.com/browse/MC/issues/MC-227330 "The bottom texture of bars are flipped 180° and do not match the top").

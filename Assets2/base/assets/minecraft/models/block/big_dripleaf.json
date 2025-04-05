@@ -27,9 +27,9 @@
 			"shade": false,
 			"faces": {
 				"east": {"uv": [0, 4, 16, 0], "texture": "#side"},
-				"south": {"uv": [16, 4, 0, 0], "texture": "#tip"},
+				"south": {"uv": [0, 4, 16, 0], "texture": "#tip"},
 				"west": {"uv": [16, 4, 0, 0], "texture": "#side"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#top"}
+				"down": {"uv": [16, 0, 0, 16], "texture": "#top"}
 			}
 		},
 		{
