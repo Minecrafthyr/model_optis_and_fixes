@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:transparent",
 	"ambientocclusion": false,
 	"textures": {
 		"hook": "block/tripwire_hook",
@@ -9,7 +10,7 @@
 	},
 	"elements": [
 		{
-			"from": [7.75, 1.25, 0],
+			"from": [7.75, 1.25, 0.4],
 			"to": [8.25, 1.25, 7],
 			"shade": false,
 			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 0, 0], "rescale": true},

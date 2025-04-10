@@ -19,14 +19,14 @@
 		},
 		{
 			"name": "cage_inverted_faces",
-			"from": [15.99, 15.99, 15.99],
-			"to": [0.01, 3.01, 0.01],
+			"from": [0.01, 15.99, 0.01],
+			"to": [15.99, 3.01, 15.99],
 			"faces": {
 				"north": {"uv": [0, 13, 16, 0], "texture": "#side"},
 				"east": {"uv": [0, 13, 16, 0], "texture": "#side"},
 				"south": {"uv": [0, 13, 16, 0], "texture": "#front"},
 				"west": {"uv": [0, 13, 16, 0], "texture": "#side"},
-				"up": {"uv": [16, 0, 0, 16], "texture": "#bottom"},
+				"up": {"uv": [0, 16, 16, 0], "texture": "#bottom"},
 				"down": {"uv": [16, 0, 0, 16], "texture": "#top"}
 			}
 		}

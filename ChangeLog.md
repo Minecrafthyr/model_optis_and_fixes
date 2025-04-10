@@ -333,8 +333,6 @@ Fixes
 - Fix incorrect Big Dripleaf top cullface.
 - Fix bamboo fence texture mapping.
 
-<!-- endregion -->
-
 ### Version 5.12
 
 - `tweak_shadeless_lights`(Extra): Lightsource blocks are shadeless. Shadeless lantern/end rod models are moved to here.
@@ -342,3 +340,23 @@ Fixes
 - Correctly fix [MC-221851](https://bugs.mojang.com/browse/MC/issues/MC-221851 "Tilted big dripleaf texture mirrored incorrectly from underneath").
 - Fix [MC-214700](https://bugs.mojang.com/browse/MC/issues/MC-214700 "Spore blossom top leaf texture is not mirrored correctly from behind").
 - Fix [MC-227330](https://bugs.mojang.com/browse/MC/issues/MC-227330 "The bottom texture of bars are flipped 180° and do not match the top").
+
+### Version 5.13
+
+- \[Extra variant\] Fix missing texture in Glow Lichen.
+- \[Full variant\] A smaller Chorus Plant item model.
+
+<!-- endregion -->
+
+### Version 5.14
+
+Lite variant
+
+- Remove shade of attached stem (unattached stem shade has been removed in 5.11).
+- Remove fix of [MC-234089](https://bugs.mojang.com/browse/MC/issues/MC-234089 "Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled").
+
+
+Extra variant
+
+- Torches shade on handle.
+- Add 3D Ladder and 3D Rails block model.

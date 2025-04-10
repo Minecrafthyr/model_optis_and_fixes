@@ -2,7 +2,7 @@
 
 Optimize block models and fix bugs in vanilla resources.
 
-- Version: 5.12
+- Version: 5.14
 - Game versions: 1.20.2 - 1.21.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
@@ -18,7 +18,7 @@ Optimize block models and fix bugs in vanilla resources.
 
 ## Variants
 
-Download in Modrinth: [Version](https://modrinth.com/resourcepack/model-optimizations-and-fixes/version/5.11) => Files
+Download in Modrinth: [Version](https://modrinth.com/resourcepack/model-optimizations-and-fixes/version/5.14) => Files
 
 Lite < Full(no suffix) < Textured < Extra
 
@@ -55,7 +55,7 @@ Lite < Full(no suffix) < Textured < Extra
 - Tripwire (Hook) ([MC-262172](https://bugs.mojang.com/browse/MC/issues/MC-262172 "Tripwire hook model incorrect - stick does not attach to ring symmetrically"), [MC-262173](https://bugs.mojang.com/browse/MC/issues/MC-262173 "The tripwire hook model uses the oak planks texture for the stick, rather than the tripwire hook item texture"), [MC-262174](https://bugs.mojang.com/browse/MC/issues/MC-262174 "The section of tripwire that is attached to a tripwire hook is stretched"), [MC-262546](https://bugs.mojang.com/browse/MC/issues/MC-262546 "Texture mapping on tripwire hook rings appears to be wrong"), [MC-262598](https://bugs.mojang.com/browse/MC/issues/MC-262598 'Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block'), [MC-262600](https://bugs.mojang.com/browse/MC/issues/MC-262600 "Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently"))
 - Spawner ([MC-266463](https://bugs.mojang.com/browse/MC/issues/MC-266463 "The interior north and south faces of trial spawners are culled incorrectly"))
 - Stonecutter ([MC-164741](https://bugs.mojang.com/browse/MC/issues/MC-164741 "Stonecutter blades are much brighter when north/south than east/west"))
-- Lightning Rod ([MC-234089](https://bugs.mojang.com/browse/MC/issues/MC-234089 "Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"), [MC-277766](https://bugs.mojang.com/browse/MC/issues/MC-277766 '"On" lightning rod bottom texture is still mapped incorrectly')， [MC-277767](https://bugs.mojang.com/browse/MC/issues/MC-277767 '"On" lightning rods still use ambient occlusion'))
+- Lightning Rod ([MC-277766](https://bugs.mojang.com/browse/MC/issues/MC-277766 '"On" lightning rod bottom texture is still mapped incorrectly')， [MC-277767](https://bugs.mojang.com/browse/MC/issues/MC-277767 '"On" lightning rods still use ambient occlusion'))
 - Trapdoors ([MC-175626](https://bugs.mojang.com/browse/MC/issues/MC-175626 "Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
 - \*Blocks randomly rotate correction (A part of [MC-144914](https://bugs.mojang.com/browse/MC/issues/MC-144914 "Some blocks don't randomly rotate correctly"))
 - Resin Clumps, Sculk Vein, Vine & Glow Lichen[MC-279521](https://bugs.mojang.com/browse/MC/issues/MC-279521 "Up & down faces of resin clumps, sculk veins, vines & glow lichen are not mirrored from behind")
@@ -95,7 +95,8 @@ Lite < Full(no suffix) < Textured < Extra
 - Square shadow.
 - Better effect particle.
 - Light source blocks are shadeless. ([Luminous No Shading](https://modrinth.com/mod/luminous-no-shading) does better in inventory.)
+- 3D Ladder and 3D Rails block model.
 
 ### Planned (not yet implemented)
 
-- 3D models (It's difficult to implement).
+- 3D block models (It's difficult to implement).

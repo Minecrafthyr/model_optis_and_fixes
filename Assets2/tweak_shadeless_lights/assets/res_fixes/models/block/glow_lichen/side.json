@@ -1,6 +1,7 @@
 {
 	"ambientocclusion": false,
 	"textures": {
+		"texture": "block/glow_lichen",
 			"particle": "#texture"
 	},
 	"elements": [
