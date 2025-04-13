@@ -1,6 +1,6 @@
 # Resource Fixes
 
-Optimize block models and fix bugs in vanilla resources.
+Optimize block models and fix bugs in Default vanilla resources.
 
 - Version: 5.15
 - Game versions: 1.20.2 - 1.21.5
@@ -24,9 +24,9 @@ Lite < Full(no suffix) < Textured < Extra
 
 - "Lite" variant  
   Removes some features that may affect modified gameplay or conflict to texture-only resourcepack.
-- "Full" variant  
-  Default downloading.  
-  You can use \*[Respackopts](https://modrinth.com/mod/TiF5QWZY) mod config this and downside variant.
+- "Full" variant (Default download)  
+  Visually improve item models.  
+  You can use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod config this and downside variant.
 - "Textured" variant  
   The textured variant is using texture may conflict to other resourcepack.  
   Should be work in vanilla.
@@ -103,3 +103,11 @@ Lite < Full(no suffix) < Textured < Extra
 ### Planned (not yet implemented)
 
 - 3D block models (It's difficult to implement).
+
+### Something I wan't to say
+
+At first, I just want to fix the visual bug like Iron Bars z-fighting.
+
+But after long time looking for models I thought that Default resource has too many bugs, and Mojang Studios did not specifically fix them. Count with Lite variant, There are over 150 files contains bug.
+
+So you can use this pack anywhere (remember it may contains errors because I wrote it by myself), even pull to Sodium or report to Mojang Studios (do not report to bugs.mojang.com, they already have reports).
