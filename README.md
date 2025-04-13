@@ -108,6 +108,6 @@ Lite < Full(no suffix) < Textured < Extra
 
 At first, I just want to fix the visual bug like Iron Bars z-fighting.
 
-But after long time looking for models I thought that Default resource has too many bugs, and Mojang Studios did not specifically fix them. Count with Lite variant, There are over 150 files contains bug.
+But after long time looking for models I thought that Default resource has too many bugs, and Mojang Studios did not specifically try fix them. Count with Lite variant, There are over 150 files contains bug.
 
 So you can use this pack anywhere (remember it may contains errors because I wrote it by myself), even pull to Sodium or report to Mojang Studios (do not report to bugs.mojang.com, they already have reports).
