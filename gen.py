@@ -142,13 +142,7 @@ def copy_files(src_folder: str, dest_folder: str) -> bool:
     for item in os.listdir(src_folder):
         src_path = os.path.join(src_folder, item)
         dest_path = os.path.join(dest_folder, item)
-        if os.path.isfile(src_path):
-            if os.path.exists(dest_path):
-                shutil.move(src_path, dest_path)
-            else:
-                shutil.copy2(src_path, dest_path)
-        elif os.path.isdir(src_path):
-            copy_files(src_path, dest_path)
+        shutil.copy(src_path, dest_path)
     return True
 
 
