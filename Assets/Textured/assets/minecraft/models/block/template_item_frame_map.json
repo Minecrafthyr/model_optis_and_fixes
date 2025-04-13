@@ -1,0 +1,20 @@
+{
+	"credit": "Made with Blockbench by Minecraft_hyr",
+	"textures": {
+		"particle": "block/birch_planks"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 15],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#texture"},
+				"east": {"uv": [15, 0, 16, 16], "texture": "#texture", "cullface": "east"},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#texture", "cullface": "south"},
+				"west": {"uv": [0, 0, 1, 16], "texture": "#texture", "cullface": "west"},
+				"up": {"uv": [16, 0, 0, 1], "texture": "#texture", "cullface": "up"},
+				"down": {"uv": [16, 15, 0, 16], "texture": "#texture", "cullface": "down"}
+			}
+		}
+	]
+}

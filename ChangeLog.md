@@ -346,8 +346,6 @@ Fixes
 - \[Extra variant\] Fix missing texture in Glow Lichen.
 - \[Full variant\] A smaller Chorus Plant item model.
 
-<!-- endregion -->
-
 ### Version 5.14
 
 Lite variant
@@ -360,3 +358,17 @@ Extra variant
 
 - Torches shade on handle.
 - Add 3D Ladder and 3D Rails block model.
+
+<!-- endregion -->
+
+### Version 5.15
+
+Lite variant
+
+- Fix Default resource duplicate 1 flower in `flowerbed_2.json`.
+- Fix Bamboo Fence mapping inconsistent with Default resource.
+
+Extra variant
+
+- Shadeless Lights will be disabled by Luminous No Shading if RespackOpts is installed.
+- Visualize Farmland "moisture" state 0 - 7.

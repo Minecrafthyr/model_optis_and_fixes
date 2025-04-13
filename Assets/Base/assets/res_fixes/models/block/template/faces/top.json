@@ -1,0 +1,17 @@
+{
+	"credit": "Made with Blockbench by Minecraft_hyr",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "#texture"
+	},
+	"elements": [
+		{
+			"from": [0, 15.9, 0],
+			"to": [16, 15.9, 16],
+			"faces": {
+				"up": {"uv": [0, 16, 16, 0], "texture": "#texture", "cullface": "up"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#texture"}
+			}
+		}
+	]
+}

@@ -2,12 +2,16 @@ import zipfile
 import os
 import shutil
 
+type zip_temp_dict = dict[str, bytes]
 
-def put_into(folder: str, target: dict[str, str] = {}):
-    if not os.path.exists(folder) and not os.path.isdir(folder):
+
+def put_into(folder: str, target: zip_temp_dict = {}):
+    if not os.path.exists(folder) or not os.path.isdir(folder):
         return None
     for root, _, files in os.walk(folder):
         for file in files:
+            if os.path.splitext(file)[1] == ".py":
+                continue
             file_path = os.path.join(root, file)
             relative_path = os.path.relpath(file_path, start=folder)
             with open(file_path, "rb") as f:
@@ -15,74 +19,139 @@ def put_into(folder: str, target: dict[str, str] = {}):
     return target
 
 
-def multizip(folder_paths: list[str], zip_path: str, temp: dict[str, str] = {}):
-    for folder_path in folder_paths:
-        if put_into(folder_path, temp) is None:
-            print(f"{folder_path}无效!")
-            continue
+def zip(
+    folder_paths: list[str] | str,
+    zip_path: str,
+    temp: zip_temp_dict = {},
+    remove_if_exists: bool = True,
+):
+    if isinstance(folder_paths, str):
+        if put_into(folder_paths, temp) is None:
+            print(f"{folder_paths} 无效!")
+    else:
+        for folder_path in folder_paths:
+            if put_into(folder_path, temp) is None:
+                print(f"{folder_path} 无效!")
+
+    if os.path.exists(zip_path):
+        if remove_if_exists:
+            os.remove(zip_path)
+        else:
+            print(f"{zip_path} 已存在, 请删除后重试。")
+            return
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zipf:
         for relative_path, file_content in temp.items():
             zipf.writestr(relative_path, file_content)
-    print(f"所有文件夹的内容已成功压缩到 {zip_path}")
+    print(f"{zip_path} 已压缩完毕。")
 
 
-def multizips(inputs: list[tuple[list[str], str]]):
-    temp: dict = {}
-    for input in inputs:
-        multizip(input[0], input[1], temp)
+type tree_pack_list = tuple[list[str] | str, str, tree_pack_list | None] | list[
+    tuple[list[str] | str, str, tree_pack_list | None]
+]
 
 
-def multipack(source, target):
-    multizip([os.path.join("Assets2", s) for s in source], f"ZippedPacks\\{target}.zip")
+def tree_pack_zip(
+    input: tuple[list[str] | str, str, tree_pack_list | None],
+    input_prefix: str,
+    output_prefix: str,
+    temp: zip_temp_dict = {},
+):
+    path: list[str] | str
+
+    if isinstance(input[0], list):
+        path = [(input_prefix + s) for s in input[0]]
+    else:
+        path = input_prefix + input[0]
+
+    zip(
+        path,
+        output_prefix + input[1] + ".zip",
+        temp,
+    )
+    if input[2] is not None:
+        tree_pack(input[2], input_prefix, output_prefix, temp)
 
 
-def multipacks(inputs: list[tuple[list[str], str]]):
-    temp: dict = {}
-    for input in inputs:
-        multizip(
-            [os.path.join("Assets2", s) for s in input[0]],
-            f"ZippedPacks\\{input[1]}.zip",
+def tree_pack(
+    inputs: tree_pack_list,
+    input_prefix: str,
+    output_prefix: str,
+    temp: zip_temp_dict = {},
+):
+    if not os.path.exists(output_prefix):
+        os.mkdir(output_prefix)
+    if isinstance(inputs, tuple):
+        tree_pack_zip(
+            inputs,
+            input_prefix,
+            output_prefix,
             temp,
         )
+    elif isinstance(inputs, list):
+        for input in inputs:
+            tree_pack_zip(
+                input,
+                input_prefix,
+                output_prefix,
+                temp,
+            )
+    else:
+        print(f"inputs '{inputs}' must be a tuple or a list")
 
 
-if os.path.exists("ZippedPacks"):
-    shutil.rmtree("ZippedPacks")
-os.mkdir("ZippedPacks")
-
-# pack(["base"], "Resource Fixes Lite")
-# pack(["base", "full"], "Resource Fixes")
-# pack(["base", "full", "textured"], "Resource Fixes Textured")
-# pack(
-#    [
-#        "base",
-#        "full",
-#        "textured",
-#        "tweaks",
-#        "tweak_3d",
-#        "tweak_animation",
-#        "tweak_fire",
-#        "tweak_shadeless_lights",
-#        "tweak_wide_bamboo",
-#    ],
-#    "Resource Fixes Extra",
-# )
-
-multipacks(
-    [
-        (["base"], "Resource Fixes Lite"),
-        (["full"], "Resource Fixes"),
-        (["textured"], "Resource Fixes Textured"),
+tree_pack(
+    (
+        "Base",
+        "Resource Fixes Lite",
         (
-            [
-                "tweaks",
-                "tweak_3d",
-                "tweak_animation",
-                "tweak_fire",
-                "tweak_shadeless_lights",
-                "tweak_wide_bamboo",
-            ],
-            "Resource Fixes Extra",
+            "Full",
+            "Resource Fixes",
+            (
+                "Textured",
+                "Resource Fixes Textured",
+                (
+                    [
+                        "Tweak 3D",
+                        "Tweak Animation",
+                        "Tweak Block States",
+                        "Tweak Fire",
+                        "Tweak Shadeless Lights",
+                        "Tweak Wide Bamboo",
+                        "Tweaks",
+                    ],
+                    "Resource Fixes Extra",
+                    (
+                        "Simplify",
+                        "Resource Fixes Extra [Simplified]",
+                        None,
+                    ),
+                ),
+            ),
         ),
-    ]
+    ),
+    "Assets/",
+    "ZippedPacks/",
+)
+
+
+def copy_files(src_folder: str, dest_folder: str) -> bool:
+    if not os.path.exists(src_folder) or not os.path.isdir(src_folder):
+        return False
+    if not os.path.exists(dest_folder) or not os.path.isdir(dest_folder):
+        return False
+    for item in os.listdir(src_folder):
+        src_path = os.path.join(src_folder, item)
+        dest_path = os.path.join(dest_folder, item)
+        if os.path.isfile(src_path):
+            if os.path.exists(dest_path):
+                shutil.move(src_path, dest_path)
+            else:
+                shutil.copy2(src_path, dest_path)
+        elif os.path.isdir(src_path):
+            copy_files(src_path, dest_path)
+    return True
+
+
+copy_files(
+    "ZippedPacks/", "C:/PCL2/.minecraft/versions/Dev 1.21.5 Fabric/resourcepacks"
 )

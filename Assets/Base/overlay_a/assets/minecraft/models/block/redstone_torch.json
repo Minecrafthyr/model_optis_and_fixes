@@ -1,0 +1,70 @@
+{
+	"credit": "Made with Blockbench by Minecraft_hyr",
+	"parent": "minecraft:block/template_torch",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "block/redstone_torch",
+		"torch": "block/redstone_torch"
+	},
+	"elements": [
+		{
+			"from": [9, 8, 6],
+			"to": [9, 11, 10],
+			"shade": false,
+			"faces": {
+				"east": {"uv": [6, 5, 10, 8], "texture": "#torch"},
+				"west": {"uv": [6, 5, 10, 8], "texture": "#torch"}
+			}
+		},
+		{
+			"from": [6, 8, 7],
+			"to": [10, 11, 7],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [6, 5, 10, 8], "texture": "#torch"},
+				"south": {"uv": [6, 5, 10, 8], "texture": "#torch"}
+			}
+		},
+		{
+			"from": [7, 8, 6],
+			"to": [7, 11, 10],
+			"shade": false,
+			"faces": {
+				"east": {"uv": [6, 5, 10, 8], "texture": "#torch"},
+				"west": {"uv": [6, 5, 10, 8], "texture": "#torch"}
+			}
+		},
+		{
+			"from": [6, 8, 9],
+			"to": [10, 11, 9],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [6, 5, 10, 8], "texture": "#torch"},
+				"south": {"uv": [6, 5, 10, 8], "texture": "#torch"}
+			}
+		},
+		{
+			"from": [7, 0, 7],
+			"to": [9, 10, 9],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [7, 6, 9, 16], "texture": "#torch"},
+				"east": {"uv": [7, 6, 9, 16], "texture": "#torch"},
+				"south": {"uv": [7, 6, 9, 16], "texture": "#torch"},
+				"west": {"uv": [7, 6, 9, 16], "texture": "#torch"},
+				"up": {"uv": [7, 6, 9, 8], "texture": "#torch"},
+				"down": {"uv": [7, 13, 9, 15], "texture": "#torch", "cullface": "down"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"shade": false,
+			"children": [0, 1, 2, 3]
+		},
+		4
+	]
+}

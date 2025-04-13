@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "moisture=0": {
+      "model": "res_fixes:block/farmland/dry"
+    },
+    "moisture=1": {
+      "model": "res_fixes:block/farmland/moist_1"
+    },
+    "moisture=2": {
+      "model": "res_fixes:block/farmland/moist_2"
+    },
+    "moisture=3": {
+      "model": "res_fixes:block/farmland/moist_3"
+    },
+    "moisture=4": {
+      "model": "res_fixes:block/farmland/moist_4"
+    },
+    "moisture=5": {
+      "model": "res_fixes:block/farmland/moist_5"
+    },
+    "moisture=6": {
+      "model": "res_fixes:block/farmland/moist_6"
+    },
+    "moisture=7": {
+      "model": "res_fixes:block/farmland/moist_7"
+    }
+  }
+}

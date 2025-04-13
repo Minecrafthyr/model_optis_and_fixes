@@ -1,0 +1,3 @@
+{
+    "condition": "!version('luminous-no-shading', '*')"
+}
