@@ -2,6 +2,8 @@ import zipfile
 import os
 import shutil
 
+# region functions
+
 type zip_temp_dict = dict[str, bytes]
 
 
@@ -99,6 +101,20 @@ def tree_pack(
         print(f"inputs '{inputs}' must be a tuple or a list")
 
 
+def copy_files(src_folder: str, dest_folder: str) -> bool:
+    if not os.path.exists(src_folder) or not os.path.isdir(src_folder):
+        return False
+    if not os.path.exists(dest_folder) or not os.path.isdir(dest_folder):
+        return False
+    for item in os.listdir(src_folder):
+        src_path = os.path.join(src_folder, item)
+        dest_path = os.path.join(dest_folder, item)
+        shutil.copy(src_path, dest_path)
+    return True
+
+
+# endregion
+
 tree_pack(
     (
         "Base",
@@ -120,11 +136,7 @@ tree_pack(
                         "Tweaks",
                     ],
                     "Resource Fixes Extra",
-                    (
-                        "Simplify",
-                        "Resource Fixes Extra [Simplified]",
-                        None,
-                    ),
+                    None,
                 ),
             ),
         ),
@@ -132,18 +144,6 @@ tree_pack(
     "Assets/",
     "ZippedPacks/",
 )
-
-
-def copy_files(src_folder: str, dest_folder: str) -> bool:
-    if not os.path.exists(src_folder) or not os.path.isdir(src_folder):
-        return False
-    if not os.path.exists(dest_folder) or not os.path.isdir(dest_folder):
-        return False
-    for item in os.listdir(src_folder):
-        src_path = os.path.join(src_folder, item)
-        dest_path = os.path.join(dest_folder, item)
-        shutil.copy(src_path, dest_path)
-    return True
 
 
 copy_files(

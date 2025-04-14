@@ -2,7 +2,7 @@
 
 Optimize block models and fix bugs in Default vanilla resources.
 
-- Version: 5.15
+- Version: 5.16
 - Game versions: 1.20.2 - 1.21.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
@@ -12,13 +12,13 @@ Optimize block models and fix bugs in Default vanilla resources.
 
 ### Suggestions / Compatibilities
 
-- [Model Gap Fix](https://modrinth.com/mod/modelfix) mod
 - [Enhanced Block Entities](https://modrinth.com/mod/ebe) mod
+- [Model Gap Fix](https://modrinth.com/mod/modelfix) mod
 - [Sodium](https://modrinth.com/mod/sodium) mod
 
 ## Variants
 
-Download in Modrinth: [Version](https://modrinth.com/resourcepack/model-optimizations-and-fixes/version/5.15) => Files
+Download in Modrinth: [Version](https://modrinth.com/resourcepack/model-optimizations-and-fixes/version/5.16) => Files
 
 Lite < Full(no suffix) < Textured < Extra
 
@@ -65,7 +65,7 @@ Lite < Full(no suffix) < Textured < Extra
 - Stonecutter ([MC-164741](https://bugs.mojang.com/browse/MC/issues/MC-164741 "Stonecutter blades are much brighter when north/south than east/west"))
 - Sunflower ([MC-90566](https://bugs.mojang.com/browse/MC/issues/MC-90566 "The plants of sunflowers don't connect to their stems"), [MC-122701](https://bugs.mojang.com/browse/MC/issues/MC-122701 "Sunflowers are stretched"), [MC-201760](https://bugs.mojang.com/browse/MC/issues/MC-201760 "Sunflower top half cross model is not mirrored on the back"))
 - Trapdoors ([MC-175626](https://bugs.mojang.com/browse/MC/issues/MC-175626 "Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
-- Tripwire (Hook) ([MC-262172](https://bugs.mojang.com/browse/MC/issues/MC-262172 "Tripwire hook model incorrect - stick does not attach to ring symmetrically"), [MC-262173](https://bugs.mojang.com/browse/MC/issues/MC-262173 "The tripwire hook model uses the oak planks texture for the stick, rather than the tripwire hook item texture"), [MC-262174](https://bugs.mojang.com/browse/MC/issues/MC-262174 "The section of tripwire that is attached to a tripwire hook is stretched"), [MC-262546](https://bugs.mojang.com/browse/MC/issues/MC-262546 "Texture mapping on tripwire hook rings appears to be wrong"), [MC-262598](https://bugs.mojang.com/browse/MC/issues/MC-262598 'Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block'), [MC-262600](https://bugs.mojang.com/browse/MC/issues/MC-262600 "Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently"))
+- Tripwire (Hook) ([MC-262172](https://bugs.mojang.com/browse/MC/issues/MC-262172 "Tripwire hook model incorrect - stick does not attach to ring symmetrically"), [MC-262174](https://bugs.mojang.com/browse/MC/issues/MC-262174 "The section of tripwire that is attached to a tripwire hook is stretched"), [MC-262546](https://bugs.mojang.com/browse/MC/issues/MC-262546 "Texture mapping on tripwire hook rings appears to be wrong"), [MC-262598](https://bugs.mojang.com/browse/MC/issues/MC-262598 'Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block'), [MC-262600](https://bugs.mojang.com/browse/MC/issues/MC-262600 "Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently"))
 - Wildflowers and Pink Petals has 1 duplicate face.
 
 ### Full
@@ -103,11 +103,3 @@ Lite < Full(no suffix) < Textured < Extra
 ### Planned (not yet implemented)
 
 - 3D block models (It's difficult to implement).
-
-### Something I wan't to say
-
-At first, I just want to fix the visual bug like Iron Bars z-fighting.
-
-But after long time looking for models I thought that Default resource has too many bugs, and Mojang Studios did not specifically try fix them. Count with Lite variant, There are over 150 files contains bug.
-
-So you can use this pack anywhere (remember it may contains errors because I wrote it by myself), even pull to Sodium or report to Mojang Studios (do not report to bugs.mojang.com, they already have reports).

@@ -359,8 +359,6 @@ Extra variant
 - Torches shade on handle.
 - Add 3D Ladder and 3D Rails block model.
 
-<!-- endregion -->
-
 ### Version 5.15
 
 Lite variant
@@ -372,3 +370,17 @@ Extra variant
 
 - Shadeless Lights will be disabled by Luminous No Shading if RespackOpts is installed.
 - Visualize Farmland "moisture" state 0 - 7.
+- 3D Redstone Dust from **Just 3D** by sniffercraft34 (modified).
+
+<!-- endregion -->
+
+### Version 5.16
+
+Lite variant
+
+- Fix `template_azalea.json` has wrong texture mapping.
+
+Extra variant
+
+- Remove Luminous No Shading disabling in 5.15 because that actully doesn't work.
+- 3D Pointed Dripstone (using Dripstone Block texture).
