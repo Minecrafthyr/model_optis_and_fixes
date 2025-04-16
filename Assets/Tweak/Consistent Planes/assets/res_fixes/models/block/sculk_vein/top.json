@@ -1,0 +1,6 @@
+{
+	"parent": "res_fixes:block/template/shadeless_plane/top",
+	"textures": {
+		"texture": "block/sculk_vein"
+	}
+}

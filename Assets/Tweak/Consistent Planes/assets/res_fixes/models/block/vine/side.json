@@ -1,0 +1,6 @@
+{
+	"parent": "res_fixes:block/template/tinted_shadeless_plane/side",
+	"textures": {
+		"texture": "block/vine"
+	}
+}

@@ -1,5 +1,5 @@
 {
-	"parent": "res_fixes:block/template/faces/top",
+	"parent": "res_fixes:block/template/plane/top",
 	"textures": {
 		"texture": "block/sculk_vein"
 	}

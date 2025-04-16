@@ -353,7 +353,6 @@ Lite variant
 - Remove shade of attached stem (unattached stem shade has been removed in 5.11).
 - Remove fix of [MC-234089](https://bugs.mojang.com/browse/MC/issues/MC-234089 "Lightning rods are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled").
 
-
 Extra variant
 
 - Torches shade on handle.
@@ -372,8 +371,6 @@ Extra variant
 - Visualize Farmland "moisture" state 0 - 7.
 - 3D Redstone Dust from **Just 3D** by sniffercraft34 (modified).
 
-<!-- endregion -->
-
 ### Version 5.16
 
 Lite variant
@@ -384,3 +381,27 @@ Extra variant
 
 - Remove Luminous No Shading disabling in 5.15 because that actully doesn't work.
 - 3D Pointed Dripstone (using Dripstone Block texture).
+
+<!-- endregion -->
+
+### Version 6.0
+
+Lite variant
+
+- Leaf Litter, Lily Pad is shadeless now.
+- Small Dripleaf is now mirrored from behind, double side leaf, no AO.
+- Fence Inventory model is consistent with fence block model.
+
+Full variant
+
+- Redstone is moved to Extra variant `Tweak Consistent Planes`.
+- Thin block translation in gui is higher, less obscured by item count.
+
+Extra variant
+
+- `3D`: Better 3D Pointed Dripstone models perfectly match texture. At the cost, it is no longer matching the selection box.
+- `Block States`: Unlit Redstone Ores has darker texture.
+- New `Better Cross`
+- New `Grasses`: Reduce 1 pixel height of Short Grass and Tall Seagrass Top texture.
+- New `Consistent Planes`: Sore plane-like models are now not floating, shadeless, has cullface.
+- Remove Glow Lichen in `Shadeless Lights`, now it's in `Consistent Planes`.

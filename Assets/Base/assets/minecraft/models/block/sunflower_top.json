@@ -1,1 +1,42 @@
-{"ambientocclusion":false,"elements":[{"faces":{"north":{"texture":"#cross","uv":[0,6,16,16]},"south":{"texture":"#cross","uv":[16,6,0,16]}},"from":[0.8,0,8],"rotation":{"angle":45,"axis":"y","origin":[8,8,8],"rescale":true},"shade":false,"to":[15.2,10,8]},{"faces":{"east":{"texture":"#cross","uv":[16,6,0,16]},"west":{"texture":"#cross","uv":[0,6,16,16]}},"from":[8,0,0.8],"rotation":{"angle":45,"axis":"y","origin":[8,8,8],"rescale":true},"shade":false,"to":[8,10,15.2]},{"faces":{"east":{"texture":"#front","uv":[0,0,16,16]},"west":{"texture":"#back","uv":[0,0,16,16]}},"from":[9.6,0,1],"rotation":{"angle":22.5,"axis":"z","origin":[8,8,8],"rescale":false},"shade":false,"to":[9.6,16,15]}],"textures":{"back":"block/sunflower_back","cross":"block/sunflower_top","front":"block/sunflower_front","particle":"block/sunflower_front"}}
+{
+  "credit": "Made with Blockbench by Minecraft_hyr",
+  "ambientocclusion": false,
+  "textures": {
+    "back": "block/sunflower_back",
+    "cross": "block/sunflower_top",
+    "particle": "block/sunflower_front",
+    "front": "block/sunflower_front"
+  },
+  "elements": [
+    {
+      "from": [0.8, 0, 8],
+      "to": [15.2, 10, 8],
+      "shade": false,
+      "rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+      "faces": {
+        "north": {"uv": [0, 6, 16, 16], "texture": "#cross"},
+        "south": {"uv": [16, 6, 0, 16], "texture": "#cross"}
+      }
+    },
+    {
+      "from": [8, 0, 0.8],
+      "to": [8, 10, 15.2],
+      "shade": false,
+      "rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+      "faces": {
+        "east": {"uv": [16, 6, 0, 16], "texture": "#cross"},
+        "west": {"uv": [0, 6, 16, 16], "texture": "#cross"}
+      }
+    },
+    {
+      "from": [9.6, 0, 1],
+      "to": [9.6, 16, 15],
+      "shade": false,
+      "rotation": {"angle": 22.5, "axis": "z", "origin": [8, 8, 8]},
+      "faces": {
+        "east": {"uv": [0, 0, 16, 16], "texture": "#front"},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#back"}
+      }
+    }
+  ]
+}

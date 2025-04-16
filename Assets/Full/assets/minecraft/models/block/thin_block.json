@@ -19,7 +19,7 @@
     "gui": {
       "rotation": [30, 225, 0],
       "scale": [0.625, 0.625, 0.625],
-      "translation": [0, 1, 0]
+      "translation": [0, 3, 0]
     },
     "thirdperson_righthand": {
       "rotation": [75, 45, 0],

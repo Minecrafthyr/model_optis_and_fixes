@@ -43,7 +43,7 @@
 			}
 		},
 		{
-			"name": "Lower horizontal bar of left-hand gate door",
+			"name": "Lower horizontal bar of gate door",
 			"from": [2, 6, 7],
 			"to": [14, 9, 9],
 			"faces": {
@@ -54,7 +54,7 @@
 			}
 		},
 		{
-			"name": "Upper horizontal bar of left-hand gate door",
+			"name": "Upper horizontal bar of gate door",
 			"from": [2, 12, 7],
 			"to": [14, 15, 9],
 			"faces": {

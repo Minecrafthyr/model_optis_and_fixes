@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "res_fixes:block/redstone_ore_unlit"
+  }
+}
