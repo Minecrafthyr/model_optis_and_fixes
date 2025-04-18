@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "res_fixes:block/waterlogged/acacia_leaves"
+  }
+}

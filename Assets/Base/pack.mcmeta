@@ -2,7 +2,7 @@
   "pack": {
     "description": "v6.0 for 1.20.2+ by Minecraft_hyr",
     "pack_format": 55,
-    "supported_formats": [16, 55]
+    "supported_formats": [16, 57]
   },
   "overlays": {
     "entries": [

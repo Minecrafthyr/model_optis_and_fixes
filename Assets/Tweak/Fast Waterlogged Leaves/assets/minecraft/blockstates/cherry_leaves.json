@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "minecraft:block/cherry_leaves"
+    },
+    "waterlogged=true": {
+      "model": "res_fixes:block/waterlogged/cherry_leaves"
+    }
+  }
+}

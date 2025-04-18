@@ -1,5 +1,5 @@
 {
-  "parent": "res_fixes:block/template/tinted_cross/left_0.5px",
+  "parent": "res_fixes:block/template/tinted_cross_left_0.5px",
   "textures": {
     "cross": "block/fern"
   }

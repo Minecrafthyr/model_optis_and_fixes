@@ -1,6 +1,7 @@
 {
 	"credit": "Made with Blockbench by Minecraft_hyr",
 	"parent": "block/block",
+	"gui_light": "front",
 	"textures": {
 		"amethyst": "block/calibrated_sculk_sensor_amethyst",
 		"particle": "block/sculk_sensor_bottom",
@@ -26,7 +27,6 @@
 		{
 			"from": [-1, 8, 3],
 			"to": [7, 16, 3],
-			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [3, 12, 3]},
 			"faces": {
 				"north": {"uv": [4, 8, 12, 16], "texture": "#tendrils"},
@@ -36,7 +36,6 @@
 		{
 			"from": [9, 8, 3],
 			"to": [17, 16, 3],
-			"shade": false,
 			"rotation": {"angle": -45, "axis": "y", "origin": [13, 12, 3]},
 			"faces": {
 				"north": {"uv": [4, 8, 12, 16], "texture": "#tendrils"},
@@ -46,7 +45,6 @@
 		{
 			"from": [9, 8, 13],
 			"to": [17, 16, 13],
-			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [13, 12, 13]},
 			"faces": {
 				"north": {"uv": [12, 8, 4, 16], "texture": "#tendrils"},
@@ -56,7 +54,6 @@
 		{
 			"from": [-1, 8, 13],
 			"to": [7, 16, 13],
-			"shade": false,
 			"rotation": {"angle": -45, "axis": "y", "origin": [3, 12, 13]},
 			"faces": {
 				"north": {"uv": [12, 8, 4, 16], "texture": "#tendrils"},
@@ -66,7 +63,6 @@
 		{
 			"from": [8, 8, 0],
 			"to": [8, 20, 16],
-			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 9, 8], "rescale": true},
 			"faces": {
 				"east": {"uv": [0, 4, 16, 16], "texture": "#amethyst"},
@@ -76,7 +72,6 @@
 		{
 			"from": [0, 8, 8],
 			"to": [16, 20, 8],
-			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 9, 8], "rescale": true},
 			"faces": {
 				"north": {"uv": [0, 4, 16, 16], "texture": "#amethyst"},
@@ -84,7 +79,6 @@
 			}
 		}
 	],
-	"gui_light": "front",
 	"display": {
 		"thirdperson_lefthand": {
 			"rotation": [75, -45, 0],

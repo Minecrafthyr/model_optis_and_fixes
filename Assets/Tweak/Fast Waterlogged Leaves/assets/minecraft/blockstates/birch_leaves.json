@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "minecraft:block/birch_leaves"
+    },
+    "waterlogged=true": {
+      "model": "res_fixes:block/waterlogged/birch_leaves"
+    }
+  }
+}

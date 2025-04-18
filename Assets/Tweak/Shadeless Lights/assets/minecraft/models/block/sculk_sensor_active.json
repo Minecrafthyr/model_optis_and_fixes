@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench by Minecraft_hyr",
-	"parent": "block/block",
+	"parent": "res_fixes:block/shadeless/block",
 	"textures": {
 		"particle": "block/sculk_sensor_bottom",
 		"bottom": "block/sculk_sensor_bottom",

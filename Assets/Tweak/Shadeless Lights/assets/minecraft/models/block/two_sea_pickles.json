@@ -1,5 +1,5 @@
 {
-    "parent": "block/block",
+    "parent": "res_fixes:block/shadeless/block",
     "textures": {
         "particle": "block/sea_pickle",
         "all": "block/sea_pickle"

@@ -1,5 +1,5 @@
 {
-	"parent": "block/block",
+	"parent": "res_fixes:block/shadeless/block",
 	"textures": {
 			"particle": "#lantern"
 	},

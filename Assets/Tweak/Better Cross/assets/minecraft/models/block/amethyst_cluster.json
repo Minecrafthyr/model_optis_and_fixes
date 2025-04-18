@@ -1,6 +1,0 @@
-{
-  "parent": "res_fixes:block/template/cross/left_0.5px",
-  "textures": {
-    "cross": "block/amethyst_cluster"
-  }
-}

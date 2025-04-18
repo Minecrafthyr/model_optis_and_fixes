@@ -1,4 +1,5 @@
-{   "parent": "block/block",
+{
+    "parent": "res_fixes:block/shadeless/block",
     "textures": {
         "particle": "block/end_portal_frame_side",
         "bottom": "block/end_stone",

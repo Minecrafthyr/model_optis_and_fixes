@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "res_fixes:block/waterlogged/birch_leaves"
+  }
+}

@@ -7,8 +7,13 @@ Optimize block models and fix bugs in Default vanilla resources.
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
+
+Notice
+
 - Old name: Model Optimizations and Fixes
-- (May contains errors. Some bugs can't be fix by resourepack.)
+- May contains errors.
+- Some bugs can't be solve by a resourepack.
+- Galley does not updated to version 6.0.
 
 ### Suggestions / Compatibilities
 
@@ -56,10 +61,11 @@ Lite < Full(no suffix) < Textured < Extra
 - Lantern ([MC-262460](https://bugs.mojang.com/browse/MC/issues/MC-262460 "Unneeded face in hanging lantern model"))
 - Lever ([MC-141291](https://bugs.mojang.com/browse/MC/issues/MC-141291 "lever state blockstate json backwards"), [MC-262864](https://bugs.mojang.com/browse/MC/issues/MC-262864 "Lever base texture is mapped upside-down"))
 - Lightning Rod ([MC-277766](https://bugs.mojang.com/browse/MC/issues/MC-277766 '"On" lightning rod bottom texture is still mapped incorrectly')， [MC-277767](https://bugs.mojang.com/browse/MC/issues/MC-277767 '"On" lightning rods still use ambient occlusion'))
-- Mangrove Propagules ([MC-262676](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled"), [MC-262689](https://bugs.mojang.com/browse/MC/issues/MC-262689 "Hanging mangrove propagule models are comically unoptimized") , [MC-262696](https://bugs.mojang.com/browse/MC/issues/MC-262696 "Potted mangrove propagules appear darker than they should due to shading not being disabled"), [MC-279521](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled"))
+- Mangrove Propagules ([MC-262676](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled"), [MC-262689](https://bugs.mojang.com/browse/MC/issues/MC-262689 "Hanging mangrove propagule models are comically unoptimized") , [MC-262696](https://bugs.mojang.com/browse/MC/issues/MC-262696 "Potted mangrove propagules appear darker than they should due to shading not being disabled"), [MC-279521](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled"))  
+  ![Mangrove Propagules](Pictures/Mangrove%20Propagules.png)
 - Melon and pumpkin stems ([MC-236474](https://bugs.mojang.com/browse/MC/issues/MC-236474 "Melon and pumpkin stems appear much darker than they should"))
 - Resin Clumps, Sculk Vein, Vine & Glow Lichen[MC-279521](https://bugs.mojang.com/browse/MC/issues/MC-279521 "Up & down faces of resin clumps, sculk veins, vines & glow lichen are not mirrored from behind")
-- Sculk Sensors UV fix & shadeless tendril.
+- Sculk Sensors tendril UV fix.
 - Spawner ([MC-266463](https://bugs.mojang.com/browse/MC/issues/MC-266463 "The interior north and south faces of trial spawners are culled incorrectly"))
 - Spore Blossom ([MC-214700](https://bugs.mojang.com/browse/MC/issues/MC-214700 "Spore blossom top leaf texture is not mirrored correctly from behind"), [MC-224195](https://bugs.mojang.com/browse/MC/issues/MC-224195 "Parity issue: Differences in the spore blossom model in JE/BE"))
 - Stairs ([MC-262461](https://bugs.mojang.com/browse/MC/issues/MC-262461 "Stair models are unoptimized and can cause rendering lag"))
@@ -72,13 +78,16 @@ Lite < Full(no suffix) < Textured < Extra
 
 ### Full
 
+![GUI](Pictures/GUI.png)
+
 - 3D Hopper, Cauldron, Comparator, Repeater, Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg, Flower Pot, Brewing Stand.
 - Block is a bit bigger in item frame.
-- Chorus Plant improvements.
+- Smaller Chorus Plant item.
 - End Rod matches 3D Torch style.
 - Handheld Arrow in [MC-201808](https://bugs.mojang.com/browse/MC/issues/MC-201808).
-- Redstone Dust optimization.
+- Use front gui light on Conduit, Torches, End Rod, Lanterns.
 - Thin block, Conduit display above the head.
+- Thin block translation in gui is higher, less obscured by item count.
 
 ### Textured
 
@@ -86,35 +95,50 @@ Lite < Full(no suffix) < Textured < Extra
 - Further hopper and cauldron optimization & remove unused texture ([MC-262454](https://bugs.mojang.com/browse/MC/issues/MC-262454 "Unused pixels in hopper top texture and hopper side texture")).
 - Make Particle Tweaks mod's ripple particle transparent.
 - Modern texture for spectator GUI.
+- Reduce 1 pixel height on Tall Seagrass Top texture.
 
 ### Extra
 
-3D (block model)
+3D (Blocks)
 
-- Ladder, Rails, Pointed Dripstone.
+![3D Blocks](Pictures/3D%20Blocks.png)
 
-4 pixel wide Bamboo and wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691))!
+- Ladder
+- Rails
+- Pointed Dripstone (for matching texture, model is bigger than collision box)
 
 Animation
 
 - Animation of flowing lava is now faster then still lava.
 - Kelp animation is slower.
 
+Better Cross
+
+- Centered Fern.
+
 Block States
 
 - Visualize Farmland "moisture" state 0 - 7.
+- Visualize Leaves "waterlogged" state.
 - Redstone Ore is darker on unlit state.
 
-Consistent Planes: Sore plane-like models are now not floating, shadeless, has cullface.
+Consistent Planes
+
+- Sore plane-like models are now not floating, shadeless, has cullface.
 
 Fire
 
 - Fire texture is transparent on body (it's cutout on block because of render type).
 - Sides of floor fire is lower than before (center has not changes).
 
-Grasses: Reduce 1 pixel height of Short Grass and Tall Seagrass Top texture.
+Shadeless Lights: Light source blocks are shadeless and use front GUI light.
 
-Shadeless Lights: Light source blocks are shadeless. ([Luminous No Shading](https://modrinth.com/mod/luminous-no-shading) does better in inventory.)
+Wide Bamboo
+
+- 4 pixel wide Bamboo.
+- Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691)).
+
+![Wide Bamboo](Pictures/Wide%20Bamboo.png)
 
 Misc
 

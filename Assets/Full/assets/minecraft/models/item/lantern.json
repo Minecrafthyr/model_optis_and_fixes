@@ -1,4 +1,6 @@
-{"parent":"minecraft:block/lantern",
+{
+    "gui_light": "front",
+    "parent":"minecraft:block/lantern",
 "display": {
   "thirdperson_righthand": {
     "rotation": [75, 45, 0],

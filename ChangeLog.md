@@ -45,7 +45,7 @@
 - Replace my fence_gate model with MC-262953
 - Remove 3D ladder block model
 - Fix a mangrove_roots bug
-- Fix a campfire gui bug in v2.1
+- Fix a campfire GUI bug in v2.1
 - ... more fixes (I actually realized this resourcepack has so many bugs)
 
 ### Version 2.3
@@ -389,19 +389,28 @@ Extra variant
 Lite variant
 
 - Leaf Litter, Lily Pad is shadeless now.
-- Small Dripleaf is now mirrored from behind, double side leaf, no AO.
+- Small Dripleaf is now mirrored from behind, leaf can see from both side, no ambient occlusion.
 - Fence Inventory model is consistent with fence block model.
+- Add Sculk Sensors shade back to match brightness of base.
 
 Full variant
 
 - Redstone is moved to Extra variant `Tweak Consistent Planes`.
-- Thin block translation in gui is higher, less obscured by item count.
+- Thin block translation in GUI is higher, less obscured by item count.
+- Use front GUI light on Conduit, Torches, End Rod, Lanterns.
+- Improve Lever item model display in GUI.
+- Repeater and Comparator in GUI in maching vanilla facing.
+- Cactus can be see from both side.
+
+Textured variant
+
+- Reduce 1 pixel height on Tall Seagrass Top texture.
 
 Extra variant
 
 - `3D`: Better 3D Pointed Dripstone models perfectly match texture. At the cost, it is no longer matching the selection box.
-- `Block States`: Unlit Redstone Ores has darker texture.
-- New `Better Cross`
-- New `Grasses`: Reduce 1 pixel height of Short Grass and Tall Seagrass Top texture.
+- `Block States`: Unlit Redstone Ores has darker texture. Visualize Leaves "waterlogged" state.
+- New `Better Cross`: Fern is centered.
 - New `Consistent Planes`: Sore plane-like models are now not floating, shadeless, has cullface.
 - Remove Glow Lichen in `Shadeless Lights`, now it's in `Consistent Planes`.
+- Use front GUI light on `Shadeless Lights` items.

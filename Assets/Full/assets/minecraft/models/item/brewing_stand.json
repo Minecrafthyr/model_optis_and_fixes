@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench by Minecraft_hyr",
-	"parent": "block/block",
+	"parent": "res_fixes:block/shadeless/block",
 	"textures": {
 		"base": "block/brewing_stand_base",
 		"stand": "block/brewing_stand",
