@@ -388,10 +388,10 @@ Extra variant
 
 Lite variant
 
-- Leaf Litter, Lily Pad is shadeless now.
 - Small Dripleaf is now mirrored from behind, leaf can see from both side, no ambient occlusion.
 - Fence Inventory model is consistent with fence block model.
-- Add Sculk Sensors shade back to match brightness of base.
+- Fix [MC-276566](https://bugs.mojang.com/browse/MC/issues/MC-276566 "Inconsistency: Decorated pot items use entity/decorated_pot/decorated_pot_side for particles, but blocks do not") by set block particle = side texture
+- Fix Dried Ghast model
 
 Full variant
 
@@ -400,7 +400,16 @@ Full variant
 - Use front GUI light on Conduit, Torches, End Rod, Lanterns.
 - Improve Lever item model display in GUI.
 - Repeater and Comparator in GUI in maching vanilla facing.
-- Cactus can be see from both side.
+- Cactus thorn can be see from both side.
+- Move Sculk Sensors tendril improvement from Lite variant to here.
+- Leaf Litter, Lily Pad is shadeless now.
+- Try solving [MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")
+  - `block.json`
+  - `thin_block.json`
+  - `template_anvil.json`
+  - `repeater_1tick.json`
+  - `comparator.json`
+- End Rod item onground is smaller.
 
 Textured variant
 

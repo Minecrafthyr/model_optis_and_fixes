@@ -1,13 +1,8 @@
 {
   "gui_light": "side",
   "display": {
-    "firstperson_lefthand": {
-      "rotation": [0, 225, 0],
-      "scale": [0.4, 0.4, 0.4],
-      "translation": [0, 0.5, 0]
-    },
     "firstperson_righthand": {
-      "rotation": [0, 45, 0],
+      "rotation": [0, 135, 0],
       "scale": [0.4, 0.4, 0.4],
       "translation": [0, 0.5, 0]
     },

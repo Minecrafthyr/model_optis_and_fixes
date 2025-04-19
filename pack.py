@@ -13,26 +13,20 @@ tree: tree_pack_tuple = (
             "Resource Fixes Textured",
             (
                 [
-                    "Tweak/Consistent Planes",
-                    "Tweak/3D",
-                    "Tweak/Animation",
-                    "Tweak/Better Cross",
-                    "Tweak/Block States",
-                    "Tweak/Fast Waterlogged Leaves",
-                    "Tweak/Fire",
-                    "Tweak/Shadeless Lights",
-                    "Tweak/Wide Bamboo",
-                    "Tweak/Misc",
+                    "Extra/Consistent Planes",
+                    "Extra/3D",
+                    "Extra/Animation",
+                    "Extra/Better Cross",
+                    "Extra/Block States",
+                    "Extra/Fast Waterlogged Leaves",
+                    "Extra/Fire",
+                    "Extra/Shadeless Lights",
+                    "Extra/Wide Bamboo",
+                    "Extra/Misc",
                 ],
                 "Resource Fixes Extra",
                 None,
             ),
         ),
     ),
-)
-
-pack = tree_pack_input_data(
-    tree,
-    "Assets/",
-    "ZippedPacks/",
 )
