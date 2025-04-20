@@ -206,7 +206,7 @@ Fixes
 - [MC-214625](https://bugs.mojang.com/browse/MC/issues/MC-214625) Unlit redstone torches are unaffected by block shading / are evenly lit on all sides
 - [MC-172852](https://bugs.mojang.com/browse/MC/issues/MC-172852) Doors aren't affected by ambient occlusion/smooth lighting
 - Bell ambient occlusion is disabled
-- (Readded) Button item model tweaks
+- (Re-added) Button item model tweaks
 
 ### Version 4.9
 
@@ -220,7 +220,7 @@ Fixes
 ### Version 4.10
 
 - Cull vault, heavy core downside.
-- Ambient occlusion is enabled again for bell floor, extinguished campfire, grindstone (they are a bit dark but maybe is intented).
+- Ambient occlusion is enabled again for bell floor, extinguished campfire, grindstone (they are a bit dark but maybe is intended).
 - Update pack format to 34.
 
 ### Version 4.11
@@ -335,7 +335,7 @@ Fixes
 
 ### Version 5.12
 
-- `tweak_shadeless_lights`(Extra): Lightsource blocks are shadeless. Shadeless lantern/end rod models are moved to here.
+- `tweak_shadeless_lights`(Extra): Light source blocks are shadeless. Shadeless lantern/end rod models are moved to here.
 - Fix [MC-262460](https://bugs.mojang.com/browse/MC/issues/MC-262460 "Unneeded face in hanging lantern model").
 - Correctly fix [MC-221851](https://bugs.mojang.com/browse/MC/issues/MC-221851 "Tilted big dripleaf texture mirrored incorrectly from underneath").
 - Fix [MC-214700](https://bugs.mojang.com/browse/MC/issues/MC-214700 "Spore blossom top leaf texture is not mirrored correctly from behind").
@@ -379,7 +379,7 @@ Lite variant
 
 Extra variant
 
-- Remove Luminous No Shading disabling in 5.15 because that actully doesn't work.
+- Remove Luminous No Shading disabling in 5.15 because that actually doesn't work.
 - 3D Pointed Dripstone (using Dripstone Block texture).
 
 <!-- endregion -->
@@ -391,25 +391,33 @@ Lite variant
 - Small Dripleaf is now mirrored from behind, leaf can see from both side, no ambient occlusion.
 - Fence Inventory model is consistent with fence block model.
 - Fix [MC-276566](https://bugs.mojang.com/browse/MC/issues/MC-276566 "Inconsistency: Decorated pot items use entity/decorated_pot/decorated_pot_side for particles, but blocks do not") by set block particle = side texture
-- Fix Dried Ghast model
+- Fix issues in Dried Ghast model
 
 Full variant
 
-- Redstone is moved to Extra variant `Tweak Consistent Planes`.
+- Split source file folders.
+- Redstone is moved to Extra variant Consistent Planes.
 - Thin block translation in GUI is higher, less obscured by item count.
 - Use front GUI light on Conduit, Torches, End Rod, Lanterns.
 - Improve Lever item model display in GUI.
-- Repeater and Comparator in GUI in maching vanilla facing.
+- Repeater and Comparator in GUI in matching vanilla facing.
 - Cactus thorn can be see from both side.
 - Move Sculk Sensors tendril improvement from Lite variant to here.
 - Leaf Litter, Lily Pad is shadeless now.
-- Try solving [MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")
+- Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
+- Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).  
+  Work in process, completed:
   - `block.json`
   - `thin_block.json`
   - `template_anvil.json`
   - `repeater_1tick.json`
   - `comparator.json`
-- End Rod item onground is smaller.
+  - `template_glazed_terracotta.json`
+  - `observer.json`
+  - `decorated_pot.json`
+  - `end_portal_frame.json`
+  - `big_dripleaf.json`
+- End Rod item on ground is smaller.
 
 Textured variant
 
@@ -423,3 +431,4 @@ Extra variant
 - New `Consistent Planes`: Sore plane-like models are now not floating, shadeless, has cullface.
 - Remove Glow Lichen in `Shadeless Lights`, now it's in `Consistent Planes`.
 - Use front GUI light on `Shadeless Lights` items.
+- The medium bright pixels in sun texture is brighter, so when sun down it will have light yellow instead of yellow edge.

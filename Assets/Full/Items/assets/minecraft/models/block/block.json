@@ -7,9 +7,7 @@
       "translation": [0, 0.5, 0]
     },
     "fixed": {
-      "rotation": [0, 0, 0],
-      "scale": [0.75, 0.75, 0.75],
-      "translation": [0, 0, 0]
+      "scale": [0.75, 0.75, 0.75]
     },
     "ground": {
       "rotation": [0, 0, 0],
@@ -18,8 +16,7 @@
     },
     "gui": {
       "rotation": [30, 225, 0],
-      "scale": [0.625, 0.625, 0.625],
-      "translation": [0, 0, 0]
+      "scale": [0.625, 0.625, 0.625]
     },
     "thirdperson_righthand": {
       "rotation": [75, 45, 0],

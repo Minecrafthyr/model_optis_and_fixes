@@ -1,6 +1,5 @@
-
-.mypy_cache
 Gen
+.mypy_cache
 private_gen.py
 private_autogen.py
 remove_prefix.py

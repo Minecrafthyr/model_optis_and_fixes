@@ -63,6 +63,7 @@
 		{
 			"from": [8, 8, 0],
 			"to": [8, 20, 16],
+			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 9, 8], "rescale": true},
 			"faces": {
 				"east": {"uv": [0, 4, 16, 16], "texture": "#amethyst"},
@@ -72,6 +73,7 @@
 		{
 			"from": [0, 8, 8],
 			"to": [16, 20, 8],
+			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 9, 8], "rescale": true},
 			"faces": {
 				"north": {"uv": [0, 4, 16, 16], "texture": "#amethyst"},

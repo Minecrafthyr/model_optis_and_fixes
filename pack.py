@@ -6,7 +6,7 @@ tree: tree_pack_tuple = (
     "Base",
     "Resource Fixes Lite",
     (
-        "Full",
+        ["Full/Items", "Full/Misc", "Full/Random Rotate", "Full/Respackopts"],
         "Resource Fixes",
         (
             "Textured",

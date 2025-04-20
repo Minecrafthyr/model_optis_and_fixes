@@ -1,5 +1,5 @@
 {
-    "parent": "res_fixes:block/shadeless/block",
+    "parent": "block/block",
     "display":{
         "firstperson_righthand": {
             "rotation": [0, 315, 0],
@@ -16,7 +16,6 @@
     "elements": [
         {   "from": [ 0, 0, 0 ],
             "to": [ 16, 13, 16 ],
-            "shade": false,
             "faces": {
                 "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "cullface": "down" },
                 "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#top" },
