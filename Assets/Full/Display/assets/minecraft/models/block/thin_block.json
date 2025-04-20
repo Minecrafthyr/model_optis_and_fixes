@@ -6,6 +6,11 @@
       "scale": [0.4, 0.4, 0.4],
       "translation": [0, 4.2, 0]
     },
+    "thirdperson_righthand": {
+      "rotation": [75, 135, 0],
+      "scale": [0.4, 0.4, 0.4],
+      "translation": [0, 2.5, 2]
+    },
     "head": {
       "translation": [0, 14.5, 0]
     },
@@ -13,11 +18,6 @@
       "rotation": [30, 225, 0],
       "scale": [0.625, 0.625, 0.625],
       "translation": [0, 3, 0]
-    },
-    "thirdperson_righthand": {
-      "rotation": [75, 45, 0],
-      "scale": [0.4, 0.4, 0.4],
-      "translation": [0, 2.5, 2]
     }
   }
 }

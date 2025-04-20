@@ -35,7 +35,7 @@ Lite < Full(no suffix) < Textured < Extra
 
 ### Lite
 
-<details><summary> All the 43 bugs fixed in Lite variant</summary>
+<details><summary>All the 43 bugs fixed in Lite variant</summary>
 
 1. [MC-90566](https://bugs.mojang.com/browse/MC/issues/MC-90566 "The plants of sunflowers don't connect to their stems")
 2. A part of [MC-109087](https://bugs.mojang.com/browse/MC/issues/MC-109087 "Faces of some blocks are not at all culled when said face is hidden by a solid, opaque block")
@@ -131,13 +131,7 @@ Lite < Full(no suffix) < Textured < Extra
 - Sculk Sensors tendril improvement.
 - Leaf Litter, Lily Pad is shadeless now.
 - Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
-- Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).  
-  Work in process, completed:
-  - `block.json`
-  - `thin_block.json`
-  - `template_anvil.json`
-  - `repeater_1tick.json`
-  - `comparator.json`
+- Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).
 
 ### Textured
 

@@ -384,6 +384,8 @@ Extra variant
 
 <!-- endregion -->
 
+## Version 6
+
 ### Version 6.0
 
 Lite variant
@@ -396,28 +398,19 @@ Lite variant
 Full variant
 
 - Split source file folders.
-- Redstone is moved to Extra variant Consistent Planes.
-- Thin block translation in GUI is higher, less obscured by item count.
-- Use front GUI light on Conduit, Torches, End Rod, Lanterns.
-- Improve Lever item model display in GUI.
-- Repeater and Comparator in GUI in matching vanilla facing.
-- Cactus thorn can be see from both side.
-- Move Sculk Sensors tendril improvement from Lite variant to here.
-- Leaf Litter, Lily Pad is shadeless now.
-- Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
-- Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).  
-  Work in process, completed:
-  - `block.json`
-  - `thin_block.json`
-  - `template_anvil.json`
-  - `repeater_1tick.json`
-  - `comparator.json`
-  - `template_glazed_terracotta.json`
-  - `observer.json`
-  - `decorated_pot.json`
-  - `end_portal_frame.json`
-  - `big_dripleaf.json`
-- End Rod item on ground is smaller.
+
+- `Display`:
+  - Use front GUI light on Conduit, Torches, End Rod, Lanterns.
+  - Thin block translation in GUI is higher, less obscured by item count.
+  - Improve Lever item model display in GUI.
+  - Repeater and Comparator in GUI in matching vanilla facing.
+  - Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
+  - Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).
+  - End Rod item on ground is smaller.
+- `Misc`:
+  - Cactus thorn can be see from both side.
+  - Move Sculk Sensors tendril improvement from Lite variant to here.
+  - Leaf Litter, Lily Pad is shadeless now.
 
 Textured variant
 
@@ -428,7 +421,7 @@ Extra variant
 - `3D`: Better 3D Pointed Dripstone models perfectly match texture. At the cost, it is no longer matching the selection box.
 - `Block States`: Unlit Redstone Ores has darker texture. Visualize Leaves "waterlogged" state.
 - New `Better Cross`: Fern is centered.
-- New `Consistent Planes`: Sore plane-like models are now not floating, shadeless, has cullface.
+- New `Consistent Planes`: Sore plane-like models are now not floating, shadeless, has cullface, Redstone is moved here.
 - Remove Glow Lichen in `Shadeless Lights`, now it's in `Consistent Planes`.
 - Use front GUI light on `Shadeless Lights` items.
 - The medium bright pixels in sun texture is brighter, so when sun down it will have light yellow instead of yellow edge.

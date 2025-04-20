@@ -8,7 +8,6 @@
 		{
 			"from": [0, 4.3333, 14.3333],
 			"to": [16, 12.3333, 15.66663],
-			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 15]},
 			"faces": {
 				"north": {"uv": [0.5, 1, 6.5, 7], "texture": "#sign"},
 				"east": {"uv": [0, 1, 0.5, 7], "texture": "#sign", "cullface": "east"},
