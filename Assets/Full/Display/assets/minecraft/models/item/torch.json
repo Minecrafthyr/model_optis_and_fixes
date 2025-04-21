@@ -3,16 +3,9 @@
   "parent":"block/torch",
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [0, 0, 0],
 			"translation": [0, 6, 2]
 		},
 		"firstperson_righthand": {
-			"rotation": [355, 30, 5],
-			"translation": [2, 3.5, 0],
-			"scale": [0.6, 0.6, 0.6]
-		},
-		"firstperson_lefthand": {
-			"rotation": [355, 210, 355],
 			"translation": [2, 3.5, 0],
 			"scale": [0.6, 0.6, 0.6]
 		},

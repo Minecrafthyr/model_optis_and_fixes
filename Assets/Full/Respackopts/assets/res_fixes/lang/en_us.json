@@ -2,12 +2,6 @@
   "rpo.res_fixes.title": "Resource Fixes",
   "rpo.res_fixes.fixes.title": "Fixes",
   "rpo.res_fixes.fixes.handheld_arrow": "Handheld Arrow",
-
-  "rpo.res_fixes.fixes.buttons": "Buttons",
-  "rpo.res_fixes.fixes.iron_bars": "Iron Bars",
-  "rpo.res_fixes.fixes.sculk_sensor": "Sculk Sensors",
-  "rpo.res_fixes.fixes.dripleaf": "Big Dripleaf",
-  "rpo.res_fixes.fixes.stonecutter": "Stonecutter",
   "rpo.res_fixes.fixes.random_rotate": "Block random rotate",
 
   "rpo.res_fixes.improvements.title": "Improvements",
@@ -22,8 +16,7 @@
   "rpo.res_fixes.improvements.candle": "3D Candles",
   "rpo.res_fixes.improvements.cauldron": "3D Cauldron",
   "rpo.res_fixes.improvements.hopper": "3D Hopper",
-  "rpo.res_fixes.improvements.comparator": "3D Comparator",
-  "rpo.res_fixes.improvements.repeater": "3D Repeater",
+  "rpo.res_fixes.improvements.comparator_and_repeater": "3D Comparator & Repeater",
   "rpo.res_fixes.improvements.lever": "3D Lever",
   "rpo.res_fixes.improvements.cake": "3D Cake",
   "rpo.res_fixes.improvements.sniffer_egg": "3D Sniffer Egg",
@@ -31,6 +24,5 @@
   "rpo.res_fixes.improvements.brewing_stand": "3D Brewing Stand",
   
   "rpo.res_fixes.optimizations": "Optimizations",
-  "rpo.res_fixes.optimizations.redstone_dust": "Redstone Dust",
   "rpo.res_fixes.optimizations.mod_ebe": "Mod Enhanced Block Entities"
 }

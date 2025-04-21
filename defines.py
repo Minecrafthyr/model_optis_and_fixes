@@ -10,7 +10,7 @@ class zip_temp_dict(Dict[str, bytes]):
         if os.path.isdir(folder):
             for root, _, files in os.walk(folder):
                 for file in files:
-                    if not file.endswith(".py"):
+                    if not file.endswith((".py", ".backup")):
                         file_path = os.path.join(root, file)
                         try:
                             with open(file_path, "rb") as f:
@@ -24,9 +24,7 @@ type tree_pack_tuple = Tuple[List[str] | str, str, Optional[tree_pack_list]]
 type tree_pack_list = tree_pack_tuple | List[tree_pack_tuple]
 
 
-def put_into_zip(
-    path: str, target=zip_temp_dict()
- ) -> bool:
+def put_into_zip(path: str, target=zip_temp_dict()) -> bool:
     try:
         with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as zipf:
             for k, v in target.items():
@@ -40,6 +38,7 @@ def put_into_zip(
     except Exception as e:
         print(f"🚫 {path}: Error {e}")
         return False
+
 
 def zip(
     folder_paths: List[str] | str,
@@ -120,12 +119,19 @@ class tree_pack_input_data(tuple):
     inputs: tree_pack_list
     input_prefix: str
     output_prefix: List[str] | str
-    def __new__(cls, inputs: tree_pack_list, input_prefix: str, output_prefix: List[str] | str):
+
+    def __new__(
+        cls, inputs: tree_pack_list, input_prefix: str, output_prefix: List[str] | str
+    ):
         return super().__new__(cls, (inputs, input_prefix, output_prefix))
-    def __init__(self, inputs: tree_pack_list, input_prefix: str, output_prefix: List[str] | str):
+
+    def __init__(
+        self, inputs: tree_pack_list, input_prefix: str, output_prefix: List[str] | str
+    ):
         self.inputs = inputs
         self.input_prefix = input_prefix
         self.output_prefix = output_prefix
+
     def run(self):
         print()
         tree_pack(self[0], self[1], self[2], zip_temp_dict())

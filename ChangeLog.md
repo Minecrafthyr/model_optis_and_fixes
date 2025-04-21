@@ -406,7 +406,7 @@ Full variant
   - Repeater and Comparator in GUI in matching vanilla facing.
   - Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
   - Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).
-  - End Rod item on ground is smaller.
+  - Tweak Torches, End Rod, Candle, Lanterns display again.
 - `Misc`:
   - Cactus thorn can be see from both side.
   - Move Sculk Sensors tendril improvement from Lite variant to here.
@@ -421,7 +421,6 @@ Extra variant
 - `3D`: Better 3D Pointed Dripstone models perfectly match texture. At the cost, it is no longer matching the selection box.
 - `Block States`: Unlit Redstone Ores has darker texture. Visualize Leaves "waterlogged" state.
 - New `Better Cross`: Fern is centered.
-- New `Consistent Planes`: Sore plane-like models are now not floating, shadeless, has cullface, Redstone is moved here.
-- Remove Glow Lichen in `Shadeless Lights`, now it's in `Consistent Planes`.
-- Use front GUI light on `Shadeless Lights` items.
-- The medium bright pixels in sun texture is brighter, so when sun down it will have light yellow instead of yellow edge.
+- New `Consistent Planes`: Sore plane-like models are now not floating, shadeless, has cullface, Redstone and Glow Lichen is moved here.
+- `Shadeless Lights` Use front GUI light on items.
+- The medium bright pixels in sun texture is brighter, so when sun down it have light yellow (instead of yellow) edge.

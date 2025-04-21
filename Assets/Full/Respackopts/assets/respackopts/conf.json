@@ -6,14 +6,10 @@
 	],
 	"conf": {
 		"fixes": {
-			"buttons": true,
-			"iron_bars": true,
-			"sculk_sensor": true,
 			"random_rotate": true,
 			"handheld_arrow": true
 		},
 		"optimizations": {
-			"redstone_dust": true,
 			"mod_ebe": true
 		},
 		"improvements": {
@@ -25,8 +21,7 @@
 			"conduit": true,
 			"cauldron": true,
 			"hopper": true,
-			"comparator": true,
-			"repeater": true,
+			"comparator_and_repeater": true,
 			"lever": true,
 			"cake": true,
 			"chorus_plant": true,

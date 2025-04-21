@@ -33,9 +33,99 @@ Lite < Full(no suffix) < Textured < Extra
 - "Extra" variant  
   Contains significant visual changes that I subjectively believe are better, not normal fixes.
 
+### License and Credits
+
+License: Unlicense, means you can modify or distribute, use it anywhere.
+
+Credits:
+
+`Extra/3D`
+
+From [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by sniffercraft34 (modified), License MIT:
+
+<details>
+
+assets/minecraft/models/block/
+
+- redstone_dust_dot.json
+- redstone_dust_side_alt.json
+- redstone_dust_side.json
+- redstone_dust_up.json
+
+</details>
+
+<br>
+
+`Extra/Misc`
+
+From ItemHoldFix by [Vanilla Tweaks](https://vanillatweaks.net/) (modified):
+
+<details>
+
+assets/res_fixes/models/item/
+
+- bowl.json
+- iron_nugget.json
+- music_disc.json
+- nugget.json
+- seeds1.json
+- seeds2.json
+
+assets/minecraft/models/item/
+
+- beetroot_seeds.json
+- beetroot_soup.json
+- black_dye.json
+- blue_dye.json
+- bowl.json
+- breeze_rod.json
+- brown_dye.json
+- cyan_dye.json
+- disc_fragment_5.json
+- gold_nugget.json
+- gray_dye.json
+- green_dye.json
+- iron_nugget.json
+- light_blue_dye.json
+- light_gray_dye.json
+- lime_dye.json
+- magenta_dye.json
+- melon_seeds.json
+- mushroom_stew.json
+- music_disc_5.json
+- music_disc_11.json
+- music_disc_13.json
+- music_disc_blocks.json
+- music_disc_cat.json
+- music_disc_chirp.json
+- music_disc_far.json
+- music_disc_mall.json
+- music_disc_mellohi.json
+- music_disc_otherside.json
+- music_disc_pigstep.json
+- music_disc_stal.json
+- music_disc_strad.json
+- music_disc_wait.json
+- music_disc_ward.json
+- nether_wart.json
+- orange_dye.json
+- pink_dye.json
+- pumpkin_seeds.json
+- purple_dye.json
+- rabbit_stew.json
+- red_dye.json
+- scute.json
+- sunflower.json
+- suspicious_stew.json
+- wheat_seeds.json
+- white_dye.json
+- yellow_dye.json
+
+</details>
+
 ### Lite
 
-<details><summary>All the 43 bugs fixed in Lite variant</summary>
+<details><summary>All the 43 (4 partial fix) bugs fixed in Lite variant</summary>
 
 1. [MC-90566](https://bugs.mojang.com/browse/MC/issues/MC-90566 "The plants of sunflowers don't connect to their stems")
 2. A part of [MC-109087](https://bugs.mojang.com/browse/MC/issues/MC-109087 "Faces of some blocks are not at all culled when said face is hidden by a solid, opaque block")
