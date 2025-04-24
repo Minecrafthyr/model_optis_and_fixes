@@ -13,16 +13,9 @@
             "translation": [2, 3.5, 0],
             "scale": [0.6, 0.6, 0.6]
         },
-        "ground": {
-            "translation": [0, 2, 0],
-            "scale": [0.4, 0.4, 0.4]
-        },
         "gui": {
             "rotation": [30, 225, 0],
             "scale": [0.75, 0.75, 0.75]
-        },
-        "fixed": {
-            "scale": [0.625, 0.625, 0.625]
         }
     },
     "textures": {

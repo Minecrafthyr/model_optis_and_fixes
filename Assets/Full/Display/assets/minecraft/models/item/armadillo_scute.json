@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:item/down_2",
+  "textures": {
+    "layer0": "minecraft:item/armadillo_scute"
+  }
+}

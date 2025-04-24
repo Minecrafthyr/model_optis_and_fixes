@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench by Minecraft_hyr",
+  "parent":"block/block",
 	"ambientocclusion": false,
 	"textures": {
 		"hook": "block/tripwire_hook",

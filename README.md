@@ -2,7 +2,7 @@
 
 Optimize block models and fix bugs in Default vanilla resources.
 
-- Version: 6.0
+- Version: 6.1
 - Game versions: 1.20.2 - 1.21.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
@@ -13,12 +13,11 @@ Optimize block models and fix bugs in Default vanilla resources.
 ### Suggestions / Compatibilities
 
 - [Enhanced Block Entities](https://modrinth.com/mod/ebe) mod
-- [Model Gap Fix](https://modrinth.com/mod/modelfix) (or [Stfu](https://modrinth.com/mod/shuttfup)) mod
 - [Sodium](https://modrinth.com/mod/sodium) mod
 
 ## Variants
 
-Download in Modrinth: [Version](https://modrinth.com/resourcepack/xq2isoUl/version/6.0) => Files
+Download in Modrinth: [Version](https://modrinth.com/resourcepack/xq2isoUl/version/6.1) => Files
 
 Lite < Full(no suffix) < Textured < Extra
 
@@ -51,75 +50,6 @@ assets/minecraft/models/block/
 - redstone_dust_side_alt.json
 - redstone_dust_side.json
 - redstone_dust_up.json
-
-</details>
-
-<br>
-
-`Extra/Misc`
-
-From ItemHoldFix by [Vanilla Tweaks](https://vanillatweaks.net/) (modified):
-
-<details>
-
-assets/res_fixes/models/item/
-
-- bowl.json
-- iron_nugget.json
-- music_disc.json
-- nugget.json
-- seeds1.json
-- seeds2.json
-
-assets/minecraft/models/item/
-
-- beetroot_seeds.json
-- beetroot_soup.json
-- black_dye.json
-- blue_dye.json
-- bowl.json
-- breeze_rod.json
-- brown_dye.json
-- cyan_dye.json
-- disc_fragment_5.json
-- gold_nugget.json
-- gray_dye.json
-- green_dye.json
-- iron_nugget.json
-- light_blue_dye.json
-- light_gray_dye.json
-- lime_dye.json
-- magenta_dye.json
-- melon_seeds.json
-- mushroom_stew.json
-- music_disc_5.json
-- music_disc_11.json
-- music_disc_13.json
-- music_disc_blocks.json
-- music_disc_cat.json
-- music_disc_chirp.json
-- music_disc_far.json
-- music_disc_mall.json
-- music_disc_mellohi.json
-- music_disc_otherside.json
-- music_disc_pigstep.json
-- music_disc_stal.json
-- music_disc_strad.json
-- music_disc_wait.json
-- music_disc_ward.json
-- nether_wart.json
-- orange_dye.json
-- pink_dye.json
-- pumpkin_seeds.json
-- purple_dye.json
-- rabbit_stew.json
-- red_dye.json
-- scute.json
-- sunflower.json
-- suspicious_stew.json
-- wheat_seeds.json
-- white_dye.json
-- yellow_dye.json
 
 </details>
 
@@ -222,6 +152,7 @@ assets/minecraft/models/item/
 - Leaf Litter, Lily Pad is shadeless now.
 - Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
 - Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).
+- Tweak some items display, they are not floating on hand or head now.
 
 ### Textured
 
@@ -261,11 +192,12 @@ Consistent Planes
 Fire
 
 - Fire texture is a bit transparent on body (it's cutout on block because of render type).
-- Sides of floor fire is lower than before (center has not changes).
+- Sides of floor fire is lower than before (center does not change).
 
 Shadeless Lights
 
-- Light source blocks are shadeless and use front GUI light. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
+- Light source blocks are shadeless. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
+- Light source items are using front GUI light.
 
 Wide Bamboo
 
@@ -276,5 +208,5 @@ Misc
 
 - Better effect particle.
 - Mirrored pumpkin blur.
-- Some items are not floating on hand now.
 - Square shadow.
+- Lightning Rod Lit is using very bright Lightning Rod texture instead of full white.

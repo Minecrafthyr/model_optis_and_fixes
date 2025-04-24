@@ -382,7 +382,6 @@ Extra variant
 - Remove Luminous No Shading disabling in 5.15 because that actually doesn't work.
 - 3D Pointed Dripstone (using Dripstone Block texture).
 
-<!-- endregion -->
 
 ## Version 6
 
@@ -424,3 +423,18 @@ Extra variant
 - New `Consistent Planes`: Sore plane-like models are now not floating, shadeless, has cullface, Redstone and Glow Lichen is moved here.
 - `Shadeless Lights` Use front GUI light on items.
 - The medium bright pixels in sun texture is brighter, so when sun down it have light yellow (instead of yellow) edge.
+
+
+<!-- endregion -->
+
+### Version 6.1
+
+Lite variant
+
+- Replace pack.png
+- Tweaks to custom fence and wall item display, makes it consistent to fence item
+
+Full variant
+
+- Display
+  - Tweaks more item display. Floating item fix in Extra/Misc is now here, and use my implementation replace ItemHoldFix by [Vanilla Tweaks](https://vanillatweaks.net/), credits removed.
