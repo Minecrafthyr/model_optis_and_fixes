@@ -2,10 +2,11 @@
 
 Optimize block models and fix bugs in Default vanilla resources.
 
-- Version: 6.1
+- Version: 6.2
 - Game versions: 1.20.2 - 1.21.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
+  - [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/resource-fixes)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
 - Old name: Model Optimizations and Fixes
 - (May contains errors. Some bugs can't be fix by resourepack.)
@@ -17,8 +18,6 @@ Optimize block models and fix bugs in Default vanilla resources.
 
 ## Variants
 
-Download in Modrinth: [Version](https://modrinth.com/resourcepack/xq2isoUl/version/6.1) => Files
-
 Lite < Full(no suffix) < Textured < Extra
 
 - "Lite" variant  
@@ -28,7 +27,7 @@ Lite < Full(no suffix) < Textured < Extra
   You can use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod config this and downside variant.
 - "Textured" variant  
   Using texture may conflict to other resourcepack.  
-  Should be work in vanilla.
+  Disigned works with Default resource.
 - "Extra" variant  
   Contains significant visual changes that I subjectively believe are better, not normal fixes.
 
@@ -38,20 +37,9 @@ License: Unlicense, means you can modify or distribute, use it anywhere.
 
 Credits:
 
-`Extra/3D`
+Extra/3D: (modified) 4 file from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34), under MIT License.
 
-From [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by sniffercraft34 (modified), License MIT:
-
-<details>
-
-assets/minecraft/models/block/
-
-- redstone_dust_dot.json
-- redstone_dust_side_alt.json
-- redstone_dust_side.json
-- redstone_dust_up.json
-
-</details>
+Extra/New Torches: (modified) 4 file from [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under MIT License.
 
 ### Lite
 

@@ -18,9 +18,11 @@ tree: tree_pack_tuple = (
                     "Extra/Animation",
                     "Extra/Better Cross",
                     "Extra/Block States",
+                    "Extra/Display"
                     "Extra/Fast Waterlogged Leaves",
                     "Extra/Fire",
                     "Extra/Shadeless Lights",
+                    "Extra/New Torches",
                     "Extra/Wide Bamboo",
                     "Extra/Misc",
                 ],

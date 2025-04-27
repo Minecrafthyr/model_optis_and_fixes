@@ -1,5 +1,3 @@
-<!-- region -->
-
 ## Version 1
 
 ### Version 1.0
@@ -438,3 +436,18 @@ Full variant
 
 - Display
   - Tweaks more item display. Floating item fix in Extra/Misc is now here, and use my implementation replace ItemHoldFix by [Vanilla Tweaks](https://vanillatweaks.net/), credits removed.
+
+### Version 6.2
+
+Lite variant
+
+- Modify pack.png now it is 1:1 ratio.
+
+Full variant
+
+- Block on ground size is reverted, and moved to Extra.
+
+Extra variant
+
+- New [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under MIT License (modified).
+- `Display`: Block on ground size is larger than Default.
