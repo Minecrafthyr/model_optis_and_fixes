@@ -14,7 +14,9 @@ tree: tree_pack_tuple = (
             (
                 [
                     "Extra/Consistent Planes",
-                    "Extra/3D",
+                    "Extra/3D Ladder", # After Consistent Planes
+                    "Extra/3D Rails", # After Consistent Planes
+                    "Extra/3D Redstone Dust", # After Consistent Planes
                     "Extra/Animation",
                     "Extra/Better Cross",
                     "Extra/Block States",

@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/torch_wall_unlit",
+  "textures": {
+    "torch": "res_fixes:block/redstone_torch_off"
+  }
+}

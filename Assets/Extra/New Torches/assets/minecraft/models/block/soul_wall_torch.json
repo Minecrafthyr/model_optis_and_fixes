@@ -1,6 +1,6 @@
 {
-  "parent": "res_fixes:block/template/torch_lit_wall",
+  "parent": "res_fixes:block/template/torch_wall_lit",
   "textures": {
-    "torch": "minecraft:block/soul_torch"
+    "torch": "res_fixes:block/soul_torch"
   }
 }

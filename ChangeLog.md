@@ -380,7 +380,6 @@ Extra variant
 - Remove Luminous No Shading disabling in 5.15 because that actually doesn't work.
 - 3D Pointed Dripstone (using Dripstone Block texture).
 
-
 ## Version 6
 
 ### Version 6.0
@@ -422,7 +421,6 @@ Extra variant
 - `Shadeless Lights` Use front GUI light on items.
 - The medium bright pixels in sun texture is brighter, so when sun down it have light yellow (instead of yellow) edge.
 
-
 <!-- endregion -->
 
 ### Version 6.1
@@ -445,9 +443,21 @@ Lite variant
 
 Full variant
 
-- Block on ground size is reverted, and moved to Extra.
+- Block on ground size is moved to Extra.
 
 Extra variant
 
 - New [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under MIT License (modified).
-- `Display`: Block on ground size is larger than Default.
+- New `Display`: Block on ground size is larger than Default.
+
+### Version 6.3
+
+Extra variant
+
+- New Torches
+  - Handle of Torches is smoother.
+  - Top of Torches is using a better texture.
+- 3D Redstone Dust: Re-added missing 3D Redstone Dust.
+- 3D Rails: Split from 3D.
+- 3D Ladder: Split from 3D.
+- Misc: Remove sun texture change in v6.0.
