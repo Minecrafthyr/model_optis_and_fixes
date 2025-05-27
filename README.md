@@ -22,7 +22,7 @@ Lite < Full(no suffix) < Textured < Extra
   You can use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod config this and downside variant.
 - "Textured" variant  
   Using texture may conflict to other resourcepack.  
-  Disigned works with Default resource.
+  Designed works with Default resources.
 - "Extra" variant  
   Contains significant visual changes that I subjectively believe are better, not normal fixes.
 
@@ -97,7 +97,6 @@ Lite < Full(no suffix) < Textured < Extra
 
 3D Redstone Dust
 
-
 Animation
 
 - Animation of flowing lava is now faster then still lava.
@@ -105,12 +104,11 @@ Animation
 
 Better Cross
 
-- Centered Fern.
+- Centered Fern, Oxeye Daisy.
 
 Block States
 
 - Visualize Farmland "moisture" state 0 - 7.
-- Visualize Leaves "waterlogged" state on fast graphics (color isn't really well).
 - Redstone Ore is darker on unlit state.
 
 Consistent Planes

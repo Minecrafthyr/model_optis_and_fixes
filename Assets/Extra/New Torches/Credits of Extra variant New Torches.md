@@ -1,4 +1,4 @@
-(modified) 4 files from [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under MIT License:
+Modified 4 files from [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under MIT License:
 
 Assets/Extra/New Torches/assets/res_fixes/textures/block
 

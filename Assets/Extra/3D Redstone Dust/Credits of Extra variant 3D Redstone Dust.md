@@ -1,4 +1,4 @@
-(modified) 4 files from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under MIT License:
+Modified 4 files from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under MIT License:
 
 assets/minecraft/models/block/
 

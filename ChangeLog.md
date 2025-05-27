@@ -452,8 +452,11 @@ Extra variant
 
 ### Version 6.3
 
+What should I add into this pack ..?
+
 Extra variant
 
+- ~~Fast Waterlogged Leaves~~: Use Vanilla Tweaks instead.
 - New Torches
   - Handle of Torches is smoother.
   - Top of Torches is using a better texture.
@@ -461,3 +464,4 @@ Extra variant
 - 3D Rails: Split from 3D.
 - 3D Ladder: Split from 3D.
 - Misc: Remove sun texture change in v6.0.
+- Better Cross: Centered Oxeye Daisy texture.

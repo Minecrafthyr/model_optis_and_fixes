@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "res_fixes:block/waterlogged/azalea_leaves"
-  }
-}
