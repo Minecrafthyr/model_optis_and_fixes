@@ -1,0 +1,9 @@
+{
+	"__comment":"Designed by GeForceLegend",
+	"parent":"block/cube_bottom_top",
+	"textures":{
+		"bottom":"block/sculk_catalyst_bottom",
+		"side":"block/sculk_catalyst_side",
+		"top":"block/sculk"
+	}
+}

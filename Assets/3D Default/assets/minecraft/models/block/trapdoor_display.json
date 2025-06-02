@@ -1,0 +1,5 @@
+{
+	"__comment":"Designed by GeForceLegend",
+	"parent":"minecraft:block/thin_block",
+	"ambientocclusion":false
+}

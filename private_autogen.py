@@ -50,10 +50,5 @@ while True:
 
     count = 0
     last = current.copy()
-
-    # with open("Assets/Base/pack.mcmeta", "r") as f:
-    #    j = json.loads(f.read())
-    #    j["pack"]["description"][1] = str(int(j["pack"]["description"][1]) + 1)
-    # with open("Assets/Base/pack.mcmeta", "w") as f:
-    #    f.write(json.dumps(j, indent=2))
+    
     data.run()

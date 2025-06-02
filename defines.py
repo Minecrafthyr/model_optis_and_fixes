@@ -10,13 +10,13 @@ class zip_temp_dict(Dict[str, bytes]):
         if os.path.isdir(folder):
             for root, _, files in os.walk(folder):
                 for file in files:
-                    if not file.endswith((".py", ".backup")):
+                    if not file.endswith((".py", ".backup", ".temp")):
                         file_path = os.path.join(root, file)
                         try:
                             with open(file_path, "rb") as f:
                                 self[os.path.relpath(file_path, folder)] = f.read()
                         except Exception as e:
-                            print(f"🚫 {file_path}: Error {e}")
+                            print(f"[Fail] {file_path}: Error {e}")
         return self
 
 
@@ -30,13 +30,13 @@ def put_into_zip(path: str, target=zip_temp_dict()) -> bool:
             for k, v in target.items():
                 zipf.writestr(k, v)
         print(
-            f"✅ {os.path.basename(path)} ({len(target)}📄, {os.stat(path).st_size>>10}Kib)",
+            f"[OK] {os.path.basename(path)} ({len(target)} files, {os.stat(path).st_size>>10}Kib)",
             end="",
             flush=True,
         )
         return True
     except Exception as e:
-        print(f"🚫 {path}: Error {e}")
+        print(f"[Fail] {path}: Error {e}")
         return False
 
 
@@ -48,22 +48,22 @@ def zip(
 ) -> bool:
     if isinstance(folder_paths, str):
         if temp.load_from_folder(folder_paths) is None:
-            print(f"❓ {folder_paths}: not found or invalid")
+            print(f"[Fail] {folder_paths}: not found or invalid")
             return False
     else:
         for folder_path in folder_paths:
             if temp.load_from_folder(folder_path) is None:
-                print(f"❓ {folder_path}: not found or invalid")
+                print(f"[?] {folder_path}: not found or invalid")
                 return False
     if os.path.exists(zip_path):
         if remove_if_exists:
             try:
                 os.remove(zip_path)
             except Exception as e:
-                print(f"🚫 {zip_path}: Error {e}")
+                print(f"[?] {zip_path}: Error {e}")
                 return False
         else:
-            print(f"🔒 {zip_path}: already exists")
+            print(f"[Lock] {zip_path}: already exists")
             return False
     return put_into_zip(zip_path, temp)
 
@@ -93,9 +93,9 @@ def tree_pack_zip(
                 outpath = outprefix + input[1] + ".zip"
                 try:
                     shutil.copy(first_out_path, outpath)
-                    print("📋 ", end="", flush=True)
+                    print("[Copy]", end="", flush=True)
                 except Exception as e:
-                    print(f"📋 🚫 {outpath}: {e}")
+                    print(f"[Copy][Fail] {outpath}: {e}")
         print()
 
     if input[2] is not None:

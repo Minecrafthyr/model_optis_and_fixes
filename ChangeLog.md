@@ -447,21 +447,42 @@ Full variant
 
 Extra variant
 
-- New [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under MIT License (modified).
+- New [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html) (modified).
 - New `Display`: Block on ground size is larger than Default.
 
 ### Version 6.3
 
-What should I add into this pack ..?
+Base variant
+
+- Update pack format
+- Fix Flower Pot wrong texture mapping.
+
+Full variant
+
+- Supported [Copper Hopper](https://modrinth.com/mod/copper-hopper) mod.
+
+Textured variant
+
+- Remove unstable Flower Pot & Cauldron model & texture.
 
 Extra variant
 
-- ~~Fast Waterlogged Leaves~~: Use Vanilla Tweaks instead.
+- ~~Fast Waterlogged Leaves~~: Use Vanilla Tweaks as replace.
 - New Torches
+  - Torch texture is also left top bright.
   - Handle of Torches is smoother.
   - Top of Torches is using a better texture.
 - 3D Redstone Dust: Re-added missing 3D Redstone Dust.
 - 3D Rails: Split from 3D.
 - 3D Ladder: Split from 3D.
 - Misc: Remove sun texture change in v6.0.
-- Better Cross: Centered Oxeye Daisy texture.
+- Better Cross: Centered Oxeye Daisy texture. (Todo: **Flower Pot**)
+
+3D Default variant
+
+- Using GPL-3.0-only License.
+- Modified contents:
+  - Use Res Fixes "Extra/New Torches" feature.
+  - Use Res Fixes "Full/Display" thin block feature.
+  - Modified Shovel item model.
+  - Removed Tripwire.

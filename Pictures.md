@@ -13,3 +13,7 @@ Extra variant 3D Blocks
 Extra variant Wide Bamboo
 
 ![Wide Bamboo](Pictures/Wide%20Bamboo.png)
+
+Extra variant New Torches
+
+![New Torches](Pictures/New%20Torches.png)

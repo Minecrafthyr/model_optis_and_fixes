@@ -1,0 +1,12 @@
+{
+	"__comment":"Designed by GeForceLegend",
+	"animation":{
+		"frametime":8,
+		"interpolate":true,
+		"frames":[
+			0,
+			1,
+			2
+		]
+	}
+}
