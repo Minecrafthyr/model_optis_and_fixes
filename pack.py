@@ -15,11 +15,11 @@ tree: tree_pack_tuple = (
                 [
                     "Extra/Consistent Planes",
                     "Extra/3D Ladder", # After Consistent Planes
-                    "Extra/3D Rails", # After Consistent Planes
+                    # "Extra/3D Rails", # After Consistent Planes
                     "Extra/3D Redstone Dust", # After Consistent Planes
                     "Extra/Animation",
                     "Extra/Better Cross",
-                    "Extra/Better Effect Particles",
+                    "Extra/Better Particles",
                     "Extra/Block States",
                     "Extra/Clean Water",
                     "Extra/Display",
@@ -33,8 +33,8 @@ tree: tree_pack_tuple = (
                 ],
                 "Resource Fixes Extra",
                 (
-                    "3D Default",
-                    "Resource Fixes Extra with 3D Default",
+                    "External/3D Default",
+                    "Resource Fixes External",
                     None,
                 ),
             ),

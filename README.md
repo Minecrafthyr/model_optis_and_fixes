@@ -2,7 +2,7 @@
 
 Optimize block models and fix bugs in Default vanilla resources.
 
-- Version: 6.3
+- Version: 7.0
 - Game versions: 1.20.2 - 1.21.5
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
@@ -13,7 +13,7 @@ Optimize block models and fix bugs in Default vanilla resources.
 
 ## Variants
 
-Lite < Full(no suffix) < Textured < Extra < Extra with 3D Default
+Lite < Full(no suffix) < Textured < Extra < External
 
 - "Lite" variant  
   Consistent with Default resource look, fixes only.
@@ -25,9 +25,9 @@ Lite < Full(no suffix) < Textured < Extra < Extra with 3D Default
   Designed works with Default resources.
 - "Extra" variant  
   Contains significant visual changes that I subjectively believe are better, not normal fixes.
-- "Extra with 3D Default" variant  
-  Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default) with compatibility tweaks. 
-
+- "External" variant  
+  Include and make compatibility tweaks with external pack.  
+  Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
 
 ### Lite
 
@@ -107,7 +107,10 @@ Better Cross
 
 - Centered Fern, Oxeye Daisy.
 
-Better Effect Particles
+Better Particles
+
+- Transparent Effect particles.
+- Heart, Damage, Golden Heart texture is hollowed.
 
 Block States
 
@@ -162,4 +165,6 @@ Extra/3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/res
 
 Extra/New Torches: Modified 4 files from [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html).
 
-3D Default: Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html).
+Extra/Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Custom License](https://vanillatweaks.net/terms/)
+
+External/3D Default: Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html).

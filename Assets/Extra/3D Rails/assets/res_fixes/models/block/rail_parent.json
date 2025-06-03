@@ -1,0 +1,14 @@
+{
+  "ambientocclusion": false,
+	"parent": "block/thin_block",
+  "textures": {
+    "particle": "#rail"
+  },
+  "display": {
+    "gui": {
+      "rotation": [30, 225, 0],
+      "scale": [0.75, 0.75, 0.75],
+      "translation": [0, 2, 0]
+    }
+  }
+}

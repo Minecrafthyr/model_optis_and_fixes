@@ -93,9 +93,9 @@ def tree_pack_zip(
                 outpath = outprefix + input[1] + ".zip"
                 try:
                     shutil.copy(first_out_path, outpath)
-                    print("[Copy]", end="", flush=True)
+                    print("[C]", end="", flush=True)
                 except Exception as e:
-                    print(f"[Copy][Fail] {outpath}: {e}")
+                    print(f"[Copy Failed] {outpath}: {e}")
         print()
 
     if input[2] is not None:

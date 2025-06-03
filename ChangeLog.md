@@ -152,7 +152,7 @@ Add Credits.md
 ### Version 4.2
 
 - Improve Iron Bars again
-- remove fence from [MC-267281](https://bugs.mojang.com/browse/MC/issues/MC-267281) by [Connor Steppie](https://bugs.mojang.com/secure/ViewProfile.jspa?name=Awesoman3000) because it's unsafe for new varient
+- remove fence from [MC-267281](https://bugs.mojang.com/browse/MC/issues/MC-267281) by [Connor Steppie](https://bugs.mojang.com/secure/ViewProfile.jspa?name=Awesoman3000) because it's unsafe for new variant
 - Rail is on ground now
 
 ### Version 4.3
@@ -295,7 +295,7 @@ Fixes
 
 ### Version 5.9
 
-- Fix missing block model in `base` floder ([#6](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/6)).
+- Fix missing block model in `base` folder ([#6](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/6)).
 - Remove unstable variants.
 
 ### Version 5.10
@@ -322,7 +322,7 @@ Fixes
   | Ambient Occlusion                                                                                                                                                              | true    | true     | false    |
   | Rescale (for cross faces)                                                                                                                                                      | false   | false    | true     |
   | Shade (for cross faces) [MC-262676](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled") | true    | true     | false    |
-  | Invisble faces [MC-262689](https://bugs.mojang.com/browse/MC/issues/MC-262689 "Hanging mangrove propagule models are comically unoptimized")                                   | have    | may have | not have |
+  | invisible faces [MC-262689](https://bugs.mojang.com/browse/MC/issues/MC-262689 "Hanging mangrove propagule models are comically unoptimized")                                   | have    | may have | not have |
 
 - Remove Fix of [MC-262865](https://bugs.mojang.com/browse/MC/issues/MC-262865 "Lever handle is shaded").
 - Fix lighting rod on using lighting rod texture.
@@ -450,11 +450,14 @@ Extra variant
 - New [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html) (modified).
 - New `Display`: Block on ground size is larger than Default.
 
-### Version 6.3
+
+## Version 7
+
+### Version 7.0
 
 Base variant
 
-- Update pack format
+- Update pack format.
 - Fix Flower Pot wrong texture mapping.
 
 Full variant
@@ -473,16 +476,17 @@ Extra variant
   - Handle of Torches is smoother.
   - Top of Torches is using a better texture.
 - 3D Redstone Dust: Re-added missing 3D Redstone Dust.
-- 3D Rails: Split from 3D.
+- 3D Rails: Temporarily removed. Split from 3D.
 - 3D Ladder: Split from 3D.
 - Misc: Remove sun texture change in v6.0.
 - Better Cross: Centered Oxeye Daisy texture. (Todo: **Flower Pot**)
 
-3D Default variant
+External variant
 
-- Using GPL-3.0-only License.
-- Modified contents:
+- This is a new variant included external pack. Using GPL-3.0-only License.
+- 3D Default modified contents:
   - Use Res Fixes "Extra/New Torches" feature.
   - Use Res Fixes "Full/Display" thin block feature.
+  - Use Res Fixes "Lite" "Full/Display" Tripwire Hook feature.
   - Modified Shovel item model.
-  - Removed Tripwire.
+  - Emissive block is shadeless.
