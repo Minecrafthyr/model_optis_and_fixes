@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/tinted_flower_pot_cross_l",
+  "textures": {
+    "plant": "minecraft:block/fern"
+  }
+}

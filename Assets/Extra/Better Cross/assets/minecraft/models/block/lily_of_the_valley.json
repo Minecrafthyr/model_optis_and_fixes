@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/cross_r",
+  "textures": {
+    "cross": "minecraft:block/lily_of_the_valley"
+  }
+}

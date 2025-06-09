@@ -6,13 +6,14 @@ tree: tree_pack_tuple = (
     "Base",
     "Resource Fixes Lite",
     (
-        ["Full/Display", "Full/Misc", "Full/Random Rotate", "Full/Respackopts"],
+        ["Full/Display", "Full/Glass", "Full/Misc", "Full/Random Rotate", "Full/Respackopts"],
         "Resource Fixes",
         (
             "Textured",
             "Resource Fixes Textured",
             (
                 [
+                    "Extra/3D Iron Bars",
                     "Extra/Consistent Planes",
                     "Extra/3D Ladder", # After Consistent Planes
                     # "Extra/3D Rails", # After Consistent Planes

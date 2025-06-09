@@ -32,7 +32,6 @@
         {
             "from": [ 6, 0, 6 ],
             "to": [ 10, 1, 10 ],
-            "shade": false,
             "faces": {
                 "down":  { "uv": [ 6, 6, 2, 2 ], "texture": "#end_rod", "cullface": "down" },
                 "up":    { "uv": [ 2, 2, 6, 6 ], "texture": "#end_rod" },

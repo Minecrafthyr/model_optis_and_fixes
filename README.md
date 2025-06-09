@@ -156,8 +156,8 @@ Wide Bamboo
 
 License:
 
-- 3D Default variant: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
-- Others variant: Unlicense, means you can modify or distribute, use it anywhere.
+- External variant: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
+- Others variant: [Unlicense](https://spdx.org/licenses/Unlicense.html), means you can modify or distribute, use it anywhere.
 
 Credits:
 

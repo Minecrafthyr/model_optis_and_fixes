@@ -1,5 +1,5 @@
 {
-  "parent": "res_fixes:block/template/cross_left_0.5px",
+  "parent": "res_fixes:block/template/cross_l",
   "textures": {
     "cross": "minecraft:block/pink_tulip"
   }

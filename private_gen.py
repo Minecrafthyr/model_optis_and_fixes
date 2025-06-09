@@ -8,6 +8,7 @@ tree_pack_input_data(
         "ZippedPacks/",
         "C:/PCL2/.minecraft/resourcepacks/",
         "C:/PCL2/.minecraft/versions/Dev 1.21.5 Fabric/resourcepacks/",
+        "C:/PCL2/.minecraft/versions/Mec 1.21.5 Fabric/resourcepacks/",
         "C:/PCL2/.minecraft/versions/Dev 1.21.5 NeoForge/resourcepacks/",
     ],
 ).run()

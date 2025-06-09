@@ -462,31 +462,35 @@ Base variant
 
 Full variant
 
-- Supported [Copper Hopper](https://modrinth.com/mod/copper-hopper) mod.
+- 3D Hopper item supported [Copper Hopper](https://modrinth.com/mod/copper-hopper), [Faster Hopper](https://modrinth.com/mod/faster-hopper) mod.
+- Some item display tweaks.
 
 Textured variant
 
-- Remove unstable Flower Pot & Cauldron model & texture.
+- Remove unstable Flower Pot & Cauldron models.
 
 Extra variant
 
+- 3D Redstone Dust: Re-added missing 3D Redstone Dust.
+- ~~3D Rails~~: Temporarily removed. Split from 3D.
+- 3D Ladder: Split from 3D.
+- 3D Iron Bars \[New\]
+- Better Cross: Using same implement as GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
+- Better Particles: Transparent heart particles.
+- Better Leaves: Render back face of leaves.
 - ~~Fast Waterlogged Leaves~~: Use Vanilla Tweaks as replace.
 - New Torches
   - Torch texture is also left top bright.
   - Handle of Torches is smoother.
   - Top of Torches is using a better texture.
-- 3D Redstone Dust: Re-added missing 3D Redstone Dust.
-- 3D Rails: Temporarily removed. Split from 3D.
-- 3D Ladder: Split from 3D.
 - Misc: Remove sun texture change in v6.0.
-- Better Cross: Centered Oxeye Daisy texture. (Todo: **Flower Pot**)
 
 External variant
 
 - This is a new variant included external pack. Using GPL-3.0-only License.
-- 3D Default modified contents:
-  - Use Res Fixes "Extra/New Torches" feature.
-  - Use Res Fixes "Full/Display" thin block feature.
-  - Use Res Fixes "Lite" "Full/Display" Tripwire Hook feature.
+- GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default) modified contents:
+  - Use Res Fixes "Extra/New Torches", "Full/Display" thin block, "Lite" & "Full/Display" Tripwire Hook, "Extra/3D Iron Bars" feature.
   - Modified Shovel item model.
   - Emissive block is shadeless.
+  - Cull Glass Pane (In full variant).
+  - Edited Brewing Stand model.

@@ -1,0 +1,7 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "texture": "minecraft:block/iron_bars",
+    "particle": "#texture"
+  }
+}

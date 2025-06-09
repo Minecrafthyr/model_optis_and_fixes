@@ -8,6 +8,8 @@ Mangrove Propagule (Hanging Mangrove Propagule is the worst model I've seen, con
 
 GUI ![GUI](Pictures/GUI.png)
 
+Hopper Item ![Hopper Item](Pictures/Hopper%20Item.png)
+
 ## Extra variant
 
 3D Blocks ![3D Blocks](Pictures/3D%20Blocks.png)

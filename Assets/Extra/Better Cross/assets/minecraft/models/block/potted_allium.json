@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/flower_pot_cross_l",
+  "textures": {
+    "plant": "minecraft:block/allium"
+  }
+}
