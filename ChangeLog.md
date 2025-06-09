@@ -500,7 +500,7 @@ External variant
 Extra variant 
 
 - Moist Farmland: Split from Block States.
-- New Torches: better texture color.
+- New Torches: better texture color, use same texture on top and side.
 - Unlit Redstone Ore: Split from Block States.
 
 External variant
