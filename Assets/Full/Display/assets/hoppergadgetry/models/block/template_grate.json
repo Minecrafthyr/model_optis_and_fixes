@@ -1,0 +1,49 @@
+{
+  "credit": "Made by sargunv",
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "from": [
+        2,
+        14,
+        2
+      ],
+      "to": [
+        14,
+        14,
+        14
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#texture"
+        }
+      }
+    }
+  ],
+  "display": {
+    "firstperson_lefthand": {
+      "rotation":[0,225,0],
+      "scale":[0.375,0.375,0.375]
+    },
+    "firstperson_righthand": {
+      "rotation":[0,45,0],
+      "scale":[0.375,0.375,0.375]
+    },
+    "thirdperson_righthand": {
+      "rotation":[75,45,0],
+      "scale":[0.375,0.375,0.375],
+      "translation":[0,0,-2.5]
+    },
+    "head": {
+      "rotation": [180, 0, 0],
+      "translation": [0, 10, 0],
+      "scale": [1.09, 1.09, 1.09]
+    }
+  }
+}

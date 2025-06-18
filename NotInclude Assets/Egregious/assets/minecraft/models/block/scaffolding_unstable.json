@@ -1,0 +1,82 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"sidens": "block/scaffolding_unstable_side_ns",
+		"sideew": "block/scaffolding_unstable_side_ew",
+		"sidee": "block/scaffolding_unstable_side_e",
+		"siden": "block/scaffolding_unstable_side_n",
+		"particle": "block/scaffolding_top",
+		"top": "block/scaffolding_top",
+		"bottom": "block/scaffolding_bottom"
+	},
+	"elements": [
+		{
+			"name": "top",
+			"from": [0, 15.99, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top", "cullface": "up"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#top"}
+			}
+		},
+		{
+			"name": "bottomtop",
+			"from": [0, 1.99, 0],
+			"to": [16, 2, 16],
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 16, 16, 0], "texture": "#top", "cullface": "down"}
+			}
+		},
+		{
+			"name": "shell",
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#sidens", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#sideew", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#sidens", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#sideew", "cullface": "west"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom", "cullface": "down"}
+			}
+		},
+		{
+			"from": [0, 0, 2],
+			"to": [16, 16, 2],
+			"faces": {
+				"south": {"uv": [0, 0, 16, 16], "texture": "#siden"}
+			}
+		},
+		{
+			"from": [0, 0, 14],
+			"to": [16, 16, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 14]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#sideew"}
+			}
+		},
+		{
+			"from": [2, 0, 0],
+			"to": [2, 16, 16],
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#sidens"}
+			}
+		},
+		{
+			"from": [14, 0, 0],
+			"to": [14, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 0, 0]},
+			"faces": {
+				"west": {"uv": [0, 0, 16, 16], "texture": "#sidee"}
+			}
+		},
+		{
+			"name": "topbottom",
+			"from": [0, 14, 0],
+			"to": [16, 14, 16],
+			"faces": {
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom"}
+			}
+		}
+	]
+}

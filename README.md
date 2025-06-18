@@ -3,7 +3,7 @@
 Optimize block models and fix bugs in Default vanilla resources.
 
 - Version: 7.0
-- Game versions: 1.20.2 - 1.21.5
+- Game versions: 1.20.2 - 1.21.6
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
   - [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/resource-fixes)
@@ -90,81 +90,49 @@ Lite < Full(no suffix) < Textured < Extra < External
 
 ### Extra
 
-3D Ladder
+- 3D Ladder
+- 3D Pointed Dripstone (for matching texture, model is bigger than collision box)
+- 3D Redstone Dust
+- Animation
+  - Animation of flowing lava is now faster then still lava.
+  - Kelp animation is slower.
+- Better Cross
+  - Centered Fern, Oxeye Daisy.
+- Better Particles
+  - Transparent Effect particles.
+  - Heart, Damage, Golden Heart texture is hollowed.
+- Block States
+  - Visualize Farmland "moisture" state 0 - 7.
+  - Redstone Ore is darker on unlit state.
+- Consistent Planes
+  - Sore plane-like models are now not floating, shadeless, has cullface.
+- Clean Water
+- Fire
+  - Fire texture is a bit transparent on body (it's cutout on block because of render type).
+  - Sides of floor fire is lower than before (center does not change).
+- Mirrored Pumpkin Blur
+- New Torches
+  - Torch texture is also left top bright.
+  - Handle of Torches is smoother.
+  - Top of Torches is using a better texture.
+- Shadeless Lights
+  - Light source blocks are shadeless. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
+  - Light source items are using front GUI light.
+- Square Shadow
+- Textured Lighting Rod
+  - Lightning Rod Lit is using very bright Lightning Rod texture instead of full white.
+- Wide Bamboo
+  - 4 pixel wide Bamboo.
+  - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")).
 
-3D Rails
-
-3D Pointed Dripstone (for matching texture, model is bigger than collision box)
-
-3D Redstone Dust
-
-Animation
-
-- Animation of flowing lava is now faster then still lava.
-- Kelp animation is slower.
-
-Better Cross
-
-- Centered Fern, Oxeye Daisy.
-
-Better Particles
-
-- Transparent Effect particles.
-- Heart, Damage, Golden Heart texture is hollowed.
-
-Block States
-
-- Visualize Farmland "moisture" state 0 - 7.
-- Redstone Ore is darker on unlit state.
-
-Consistent Planes
-
-- Sore plane-like models are now not floating, shadeless, has cullface.
-
-Clean Water
-
-Fire
-
-- Fire texture is a bit transparent on body (it's cutout on block because of render type).
-- Sides of floor fire is lower than before (center does not change).
-
-Mirrored Pumpkin Blur
-
-New Torches
-
-- Torch texture is also left top bright.
-- Handle of Torches is smoother.
-- Top of Torches is using a better texture.
-
-Shadeless Lights
-
-- Light source blocks are shadeless. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
-- Light source items are using front GUI light.
-
-Square Shadow
-
-Textured Lighting Rod
-
-- Lightning Rod Lit is using very bright Lightning Rod texture instead of full white.
-
-Wide Bamboo
-
-- 4 pixel wide Bamboo.
-- Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")).
-
-## License and Credits
-
-License:
+## License
 
 - External variant: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
 - Others variant: [Unlicense](https://spdx.org/licenses/Unlicense.html), means you can modify or distribute, use it anywhere.
 
-Credits:
+## Credits
 
-Extra/3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34), under [MIT License](https://spdx.org/licenses/MIT.html).
-
-Extra/New Torches: Modified 4 files from [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html).
-
-Extra/Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Custom License](https://vanillatweaks.net/terms/)
-
-External/3D Default: Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html).
+- Extra/3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34), under [MIT License](https://spdx.org/licenses/MIT.html).
+- Extra/New Torches: Modified 4 files from [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html).
+- Extra/Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Custom License](https://vanillatweaks.net/terms/)
+- External/3D Default: Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html).

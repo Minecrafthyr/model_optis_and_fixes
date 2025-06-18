@@ -472,7 +472,7 @@ Textured variant
 Extra variant
 
 - 3D Redstone Dust: Re-added missing 3D Redstone Dust.
-- ~~3D Rails~~: Temporarily removed. Split from 3D.
+- ~~3D Rails~~: Temporarily removed.
 - 3D Ladder: Split from 3D.
 - 3D Iron Bars \[New\]
 - Better Cross: Using same implement as GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
@@ -487,10 +487,10 @@ Extra variant
 
 External variant
 
-- This is a new variant included external pack. Using GPL-3.0-only License.
-- GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default) modified contents:
-  - Use Res Fixes "Extra/New Torches", "Full/Display" thin block, "Lite" & "Full/Display" Tripwire Hook, "Extra/3D Iron Bars" feature.
-  - Modified Shovel item model.
+- This is a new variant included external pack. Using GPL-3.0-only License. Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
+- Modifies:
+  - Use Res Fixes "Extra/New Torches", "Full/Display" thin block, "Lite" & "Full/Display" Anvil | Tripwire Hook, "Extra/3D Iron Bars" feature.
+  - Modified Shovel item model: Middle thin.
   - Emissive block is shadeless.
   - Cull Glass Pane (In full variant).
   - Edited Brewing Stand model.
