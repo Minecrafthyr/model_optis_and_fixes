@@ -6,31 +6,43 @@ tree: tree_pack_tuple = (
     "Base",
     "Resource Fixes Lite",
     (
-        ["Full/Display", "Full/Glass", "Full/Misc", "Full/Random Rotate", "Full/Respackopts"],
+        [
+            "Full/Display",
+            "Full/Glass",
+            "Full/Misc",
+            "Full/Random Rotate",
+            "Full/Respackopts",
+        ],
         "Resource Fixes",
         (
-            "Textured",
+            [
+                "Textured/Item Frame",
+                "Textured/Misc",
+                "Textured/Modern Spectator GUI",
+                "Textured/Tall Seagrass Fix",
+            ],
             "Resource Fixes Textured",
             (
                 [
                     "Extra/3D Iron Bars",
                     "Extra/Consistent Planes",
-                    "Extra/3D Ladder", # After Consistent Planes
+                    "Extra/3D Ladder",  # After Consistent Planes
                     # "Extra/3D Rails", # After Consistent Planes
-                    "Extra/3D Pointed Dripstone", # After Consistent Planes
-                    "Extra/3D Redstone Dust", # After Consistent Planes
+                    "Extra/3D Pointed Dripstone",  # After Consistent Planes
+                    "Extra/3D Redstone Dust",  # After Consistent Planes
                     "Extra/Animation",
                     "Extra/Better Cross",
                     "Extra/Better Particles",
-                    "Extra/Block States",
                     "Extra/Clean Water",
                     "Extra/Display",
                     "Extra/Fire",
                     "Extra/Mirrored Pumpkin Blur",
+                    "Extra/Moist Farmland",
                     "Extra/New Torches",
                     "Extra/Shadeless Lights",
                     "Extra/Square Shadow",
                     "Extra/Textured Lighting Rod",
+                    "Extra/Unlit Redstone Ore",
                     "Extra/Wide Bamboo",
                 ],
                 "Resource Fixes Extra",

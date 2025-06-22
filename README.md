@@ -2,7 +2,7 @@
 
 Optimize block models and fix bugs in Default vanilla resources.
 
-- Version: 7.0
+- Version: 7.1
 - Game versions: 1.20.2 - 1.21.6
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
@@ -84,9 +84,14 @@ Lite < Full(no suffix) < Textured < Extra < External
 
 ### Textured
 
-- Make Particle Tweaks mod's ripple particle transparent.
-- Modern texture for spectator GUI.
-- Reduce 1 pixel height on Tall Seagrass Top texture.
+- Item Frame
+  - Optimize Item Frame with Texture change.
+- Misc
+  - Make Particle Tweaks mod's ripple particle transparent.
+  - Rabbit Stew Height is consistent with other bowled items.
+- Modern Spectator GUI
+- Tall Seagrass Fix
+  - \-1 pixel height on Tall Seagrass Top texture to avoid it visually goes out of water.
 
 ### Extra
 
@@ -101,9 +106,6 @@ Lite < Full(no suffix) < Textured < Extra < External
 - Better Particles
   - Transparent Effect particles.
   - Heart, Damage, Golden Heart texture is hollowed.
-- Block States
-  - Visualize Farmland "moisture" state 0 - 7.
-  - Redstone Ore is darker on unlit state.
 - Consistent Planes
   - Sore plane-like models are now not floating, shadeless, has cullface.
 - Clean Water
@@ -111,16 +113,20 @@ Lite < Full(no suffix) < Textured < Extra < External
   - Fire texture is a bit transparent on body (it's cutout on block because of render type).
   - Sides of floor fire is lower than before (center does not change).
 - Mirrored Pumpkin Blur
+- Moist Farmland
+  - Visualize Farmland "moisture" state 0 - 7.
 - New Torches
-  - Torch texture is also left top bright.
+  - All Torch has glowing outline model.
+  - Better texture color.
   - Handle of Torches is smoother.
-  - Top of Torches is using a better texture.
 - Shadeless Lights
   - Light source blocks are shadeless. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
   - Light source items are using front GUI light.
 - Square Shadow
 - Textured Lighting Rod
   - Lightning Rod Lit is using very bright Lightning Rod texture instead of full white.
+- Unlit Redstone Ore
+  - Redstone Ore is darker on unlit state.
 - Wide Bamboo
   - 4 pixel wide Bamboo.
   - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")).

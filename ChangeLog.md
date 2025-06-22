@@ -494,3 +494,16 @@ External variant
   - Emissive block is shadeless.
   - Cull Glass Pane (In full variant).
   - Edited Brewing Stand model.
+
+### Version 7.1
+
+Extra variant 
+
+- Moist Farmland: Split from Block States.
+- New Torches: better texture color.
+- Unlit Redstone Ore: Split from Block States.
+
+External variant
+
+- 3D Default
+  - Enable ambient occlusion for (Carved) Pumpkin, Hay Block
