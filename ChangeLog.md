@@ -506,5 +506,6 @@ Extra variant
 External variant
 
 - 3D Default
-  - Enable ambient occlusion for (Carved) Pumpkin, Hay Block
+  - Fix compass_16 is missing.
+  - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
   - Updated to v1.12.0
