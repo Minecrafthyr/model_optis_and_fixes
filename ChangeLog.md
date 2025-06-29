@@ -489,15 +489,18 @@ External variant
 
 - This is a new variant included external pack. Using GPL-3.0-only License. Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
 - Modifies:
-  - Use Res Fixes "Extra/New Torches", "Full/Display" thin block, "Lite" & "Full/Display" Anvil | Tripwire Hook, "Extra/3D Iron Bars" feature.
+  - Use Res Fixes "Extra/New Torches",  
+    "Full/Display" Thin block,  
+    "Lite" & "Full/Display" Anvil | Tripwire Hook,  
+    "Extra/3D Iron Bars" feature.
   - Modified Shovel item model: Middle thin.
-  - Emissive block is shadeless.
-  - Cull Glass Pane (In full variant).
+  - Emissive blocks are shadeless.
+  - Cull Glass Pane.
   - Edited Brewing Stand model.
 
 ### Version 7.1
 
-Extra variant 
+Extra variant
 
 - Moist Farmland: Split from Block States.
 - New Torches: better texture color.
@@ -509,3 +512,23 @@ External variant
   - Fix compass_16 is missing.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
   - Updated to v1.12.0
+
+### Version 7.2
+
+Extra variant
+
+- Fire: Offset fire side model to avoid z-fighting in short distance.
+- New Torches: Fix Comparator & Repeater.
+
+### Version 7.3
+
+Full variant
+
+- Display: Fix Turtle Egg item.
+
+External variant
+
+- 3D Default
+  - Brewing Stand item model.
+  - Use Res Fixes "Full/Display" Flower Pot, Candle,  
+    "Extra/Unlit Redstone Ore".
