@@ -532,3 +532,9 @@ External variant
   - Brewing Stand item model.
   - Use Res Fixes "Full/Display" Flower Pot, Candle,  
     "Extra/Unlit Redstone Ore".
+
+### Version 7.4
+
+Base variant
+
+- Update pack format to 64.

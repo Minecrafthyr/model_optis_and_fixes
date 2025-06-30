@@ -2,8 +2,8 @@
 
 Optimize block models and fix bugs in Default vanilla resources.
 
-- Version: 7.3
-- Game versions: 1.20.2 - 1.21.6
+- Version: 7.4
+- Game versions: 1.20.2 - 1.21.7
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
   - [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/resource-fixes)

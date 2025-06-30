@@ -1,10 +1,10 @@
 {
   "pack": {
-    "description": "v7.3 for 1.20.2+ by Minecraft_hyr",
+    "description": "v7.4 for 1.20.2+ by Minecraft_hyr",
     "pack_format": 55,
     "supported_formats": [
       16,
-      63
+      64
     ]
   },
   "overlays": {
