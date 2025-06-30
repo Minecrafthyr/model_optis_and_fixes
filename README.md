@@ -2,8 +2,8 @@
 
 Optimize block models and fix bugs in Default vanilla resources.
 
-- Version: 7.1
-- Game versions: 1.20.2 - 1.21.6
+- Version: 7.4
+- Game versions: 1.20.2 - 1.21.7
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
   - [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/resource-fixes)
@@ -68,7 +68,7 @@ Lite < Full(no suffix) < Textured < Extra < External
 
 ### Full
 
-- 3D Hopper, Cauldron, Comparator, Repeater, Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg, Flower Pot, Brewing Stand.
+- 3D Hopper, Cauldron, Comparator, Repeater, Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg Turtle Egg, Flower Pot, Brewing Stand.
 - Block is a bit bigger in item frame.
 - Smaller Chorus Plant item.
 - End Rod matches 3D Torch style.
@@ -117,7 +117,7 @@ Lite < Full(no suffix) < Textured < Extra < External
   - Visualize Farmland "moisture" state 0 - 7.
 - New Torches
   - All Torch has glowing outline model.
-  - Better texture color.
+  - Better texture.
   - Handle of Torches is smoother.
 - Shadeless Lights
   - Light source blocks are shadeless. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
@@ -130,6 +130,26 @@ Lite < Full(no suffix) < Textured < Extra < External
 - Wide Bamboo
   - 4 pixel wide Bamboo.
   - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")).
+
+### External
+
+- [3D Default](https://modrinth.com/resourcepack/3d-default)
+  - Use Res Fixes "Extra/New Torches",  
+    "Full/Display" Thin block | Flower Pot | Candle,  
+    "Lite" & "Full/Display" Anvil | Tripwire Hook,  
+    "Extra/3D Iron Bars",  
+    "Extra/Unlit Redstone Ore" feature.
+  - Modified Shovel item model: Middle thin.
+  - Emissive blocks are shadeless.
+  - Cull Glass Pane.
+  - Edited Brewing Stand model.
+  - Fix compass_16 is missing.
+  - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
+
+## Suggestions
+
+- [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp).
+- [Better Ores 3D](https://modrinth.com/resourcepack/better-ores-3d).
 
 ## License
 
