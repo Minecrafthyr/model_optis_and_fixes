@@ -542,6 +542,8 @@ Base variant
 Extra variant
 
 - Textured Lighting Rod: +25% Brighter.
+- Better Weather \[New\]
+- Better Particles: Light blue Splash particle.
 
 External variant
 

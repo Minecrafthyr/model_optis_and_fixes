@@ -103,8 +103,12 @@ Lite < Full(no suffix) < Textured < Extra < External
   - Kelp animation is slower.
 - Better Cross
   - Centered Fern, Oxeye Daisy.
+- Better Weather
+  - White and light blue and more transparent rain.
+  - Less snow.
 - Better Particles
-  - Transparent Effect particles.
+  - Better Effect particles.
+  - Light blue Splash particle.
   - Heart, Damage, Golden Heart texture is hollowed.
 - Consistent Planes
   - Sore plane-like models are now not floating, shadeless, has cullface.
@@ -148,15 +152,22 @@ Lite < Full(no suffix) < Textured < Extra < External
 
 ## Suggestions
 
-- [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp).
+Mods
+
+- [Stfu](https://modrinth.com/mod/shuttfup)
+- ...
+
+Resourcepacks
+
+- [3D Particles](https://modrinth.com/resourcepack/3d-particles)
+- [AL's 3D Potions](https://modrinth.com/resourcepack/als-3d-potions)
 - [Better Ores 3D](https://modrinth.com/resourcepack/better-ores-3d)
-- FireFly Bush Fix
-- Smooth Bow Animation
-- Smoother Glowing
-- Visual Armor Trims
-- Side Shield
-- AL's 3D Potions
-- 3D Particles
+- [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp).
+- [Fix FireFly Bush](https://modrinth.com/resourcepack/firefly-bush-fix)
+- [Smaller Side Shield](https://modrinth.com/resourcepack/smaller-side-shield)
+- [Smooth Bow Animations](https://modrinth.com/resourcepack/smooth-bow-animations)
+- [Smoother Glowing](https://modrinth.com/shader/smoother-glowing) shader
+- [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
 
 ## License
 

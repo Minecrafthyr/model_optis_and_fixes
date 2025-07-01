@@ -1,9 +1,8 @@
 import os
 import sys
 from time import sleep
-from defines import *
 import threading
-from pack import *
+from private_gen import *
 
 exiting = False
 
@@ -17,20 +16,9 @@ def input_thread():
 
 threading.Thread(None, input_thread, daemon=True).start()
 
-data = tree_pack_input_data(
-    tree,
-    "Assets/",
-    [
-        "ZippedPacks/",
-        "C:/PCL2/.minecraft/resourcepacks/",
-        "C:/PCL2/.minecraft/versions/Dev 1.21.5 Fabric/resourcepacks/",
-        "C:/PCL2/.minecraft/versions/Mec 1.21.5 Fabric/resourcepacks/",
-        "C:/PCL2/.minecraft/versions/Shadow 1.21.6/resourcepacks/",
-    ],
-)
-
 count: int = 0
 last: dict[str, float] = {}
+entered: bool = False
 
 while True:
     while True:
@@ -52,4 +40,7 @@ while True:
     count = 0
     last = current.copy()
     
-    data.run()
+    if not entered:
+        entered = True
+    else:
+        data.run()

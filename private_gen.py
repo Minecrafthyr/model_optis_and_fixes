@@ -1,7 +1,7 @@
 from defines import *
 from pack import *
 
-tree_pack_input_data(
+data = tree_pack_input_data(
     tree,
     "Assets/",
     [
@@ -11,4 +11,6 @@ tree_pack_input_data(
         "C:/PCL2/.minecraft/versions/Mec 1.21.5 Fabric/resourcepacks/",
         "C:/PCL2/.minecraft/versions/Shadow 1.21.6/resourcepacks/",
     ],
-).run()
+)
+
+data.run()

@@ -32,6 +32,7 @@ tree: tree_pack_tuple = (
                     "Extra/3D Redstone Dust",  # After Consistent Planes
                     "Extra/Animation",
                     "Extra/Better Cross",
+                    "Extra/Better Weather",
                     "Extra/Better Particles",
                     "Extra/Clean Water",
                     "Extra/Display",
