@@ -135,7 +135,7 @@ Lite < Full(no suffix) < Textured < Extra < External
 
 - [3D Default](https://modrinth.com/resourcepack/3d-default)
   - Use Res Fixes "Extra/New Torches",  
-    "Full/Display" Thin block | Flower Pot | Candle,  
+    "Full/Display" Thin block | Flower Pot | Candle | Lightning Rod,  
     "Lite" & "Full/Display" Anvil | Tripwire Hook,  
     "Extra/3D Iron Bars",  
     "Extra/Unlit Redstone Ore" feature.
@@ -149,7 +149,14 @@ Lite < Full(no suffix) < Textured < Extra < External
 ## Suggestions
 
 - [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp).
-- [Better Ores 3D](https://modrinth.com/resourcepack/better-ores-3d).
+- [Better Ores 3D](https://modrinth.com/resourcepack/better-ores-3d)
+- FireFly Bush Fix
+- Smooth Bow Animation
+- Smoother Glowing
+- Visual Armor Trims
+- Side Shield
+- AL's 3D Potions
+- 3D Particles
 
 ## License
 

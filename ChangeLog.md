@@ -76,7 +76,7 @@ Fix some bugs in v2.0.
 - glow_lichen
 - sculk_vein
 - calibrated_sculk_sensor shade uv fix
-- Update pack format.
+- Updated pack format.
 - ... small fixes.
 
 ### Version 2.9
@@ -209,7 +209,7 @@ Fixes
 ### Version 4.9
 
 - Remove fixes of MC-172852. (It caused doors too dark)
-- Update pack format to 32.
+- Updated pack format to 32.
 
 Fixes
 
@@ -219,7 +219,7 @@ Fixes
 
 - Cull vault, heavy core downside.
 - Ambient occlusion is enabled again for bell floor, extinguished campfire, grindstone (they are a bit dark but maybe is intended).
-- Update pack format to 34.
+- Updated pack format to 34.
 
 ### Version 4.11
 
@@ -238,7 +238,7 @@ Fixes
 
 ### Version 5.0
 
-- Update pack format.
+- Updated pack format.
 - Correction Spawner and Vault UV (now mirrored from back).
 - Remove (Redstone) Torch, Dragon Egg, Small Dripleaves, Comparator, Repeater. Mojang Studios fix them in 1.21.2.
 - Remove lectern because it basically affects nothing.
@@ -248,7 +248,7 @@ Fixes
 
 ### Version 5.1
 
-- Update pack format.
+- Updated pack format.
 - Rename the overlay folders.
 - Move some files to overlays.
 - Re-added missing Shadeless End Rod, Hopper and Cauldron display upside-down on head..
@@ -289,7 +289,7 @@ Fixes
 
 ### Version 5.8
 
-- Update pack format.
+- Updated pack format.
 - Clean unused files, use `gen.py` to merge files, also packing Extra variant.
 - Fix hopper and cauldron display.
 
@@ -457,7 +457,7 @@ Extra variant
 
 Base variant
 
-- Update pack format.
+- Updated pack format.
 - Fix Flower Pot wrong texture mapping.
 
 Full variant
@@ -537,4 +537,15 @@ External variant
 
 Base variant
 
-- Update pack format to 64.
+- Updated pack format.
+
+Extra variant
+
+- Textured Lighting Rod: +25% Brighter.
+
+External variant
+
+- 3D Default
+  - Brewing Stand item model.
+  - Use Res Fixes "Full/Display" Lightning Rod.
+  - Updated to v1.12.1
