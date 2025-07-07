@@ -1,7 +1,7 @@
 {
 	"pack": {
-		"description": "v7.4 for 1.20.2+ by Minecraft_hyr",
-		"pack_format": 55,
+		"description": "v7.5 for 1.20.2+ by Minecraft_hyr",
+		"pack_format": 64,
 		"supported_formats": [
 			16,
 			64
@@ -10,19 +10,29 @@
 	"overlays": {
 		"entries": [
 			{
-				"formats": [
-					16,
-					32
-				],
-				"directory": "overlay_a"
-			},
-			{
-				"formats": [
-					16,
-					43
-				],
-				"directory": "overlay_c"
-			},
+        "formats": [
+          0,
+          35
+        ],
+        "directory": "overlay_a",
+        "__comment": "old block model fixes"
+      },
+      {
+        "formats": [
+          0,
+          43
+        ],
+        "directory": "overlay_c",
+        "__comment": "item model type doesn't exists"
+      },
+      {
+        "formats": [
+          0,
+          50
+        ],
+        "directory": "overlay_..50",
+        "__comment": "block model rotation limit"
+      },
 			{
 				"directory": "1_21_4",
 				"formats": [

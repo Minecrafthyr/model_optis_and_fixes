@@ -16,6 +16,8 @@ tree: tree_pack_tuple = (
         "Resource Fixes",
         (
             [
+                "Textured/End Portal Frame Fix",
+                "Textured/Firefly Bush Fix",
                 "Textured/Item Frame",
                 "Textured/Misc",
                 "Textured/Modern Spectator GUI",
@@ -31,9 +33,11 @@ tree: tree_pack_tuple = (
                     "Extra/3D Pointed Dripstone",  # After Consistent Planes
                     "Extra/3D Redstone Dust",  # After Consistent Planes
                     "Extra/Animation",
+                    "Extra/Bedrock Slot Highlight",
                     "Extra/Better Cross",
-                    "Extra/Better Weather",
+                    "Extra/Better Leaves",
                     "Extra/Better Particles",
+                    "Extra/Better Weather",
                     "Extra/Clean Water",
                     "Extra/Display",
                     "Extra/Fire",
@@ -55,4 +59,31 @@ tree: tree_pack_tuple = (
             ),
         ),
     ),
+)
+
+packs_tree: tree_pack_tuple = (
+    "Packs/pack.mcmeta",
+    None,
+    [
+        ("Textured/End Portal Frame Fix", "End Portal Frame Fix", None),
+        ("Textured/Firefly Bush Fix", "Firefly Bush Fix", None),
+        ("Textured/Modern Spectator GUI", "Modern Spectator GUI", None),
+        ("Textured/Tall Seagrass Fix", "Tall Seagrass Fix", None),
+        ("Extra/3D Iron Bars", "3D Iron Bars", None),
+        ("Extra/3D Ladder", "3D Ladder", None),
+        ("Extra/3D Pointed Dripstone", "3D Pointed Dripstone", None),
+        ("Extra/3D Redstone Dust", "3D Redstone Dust", None),
+        ("Extra/Better Leaves", "Better Leaves", None),
+        ("Extra/Better Weather", "Better Weather", None),
+        ("Extra/Better Particles", "Better Particles", None),
+        ("Extra/Better Cross", "Better Cross", None),
+        ("Extra/Clean Water", "Clean Water", None),
+        ("Extra/Mirrored Pumpkin Blur", "Mirrored Pumpkin Blur", None),
+        ("Extra/Moist Farmland", "Moist Farmland", None),
+        ("Extra/Textured Lighting Rod", "Textured Lighting Rod", None),
+        ("Extra/New Torches", "New Torches", None),
+        ("Extra/Square Shadow", "Square Shadow", None),
+        ("Extra/Unlit Redstone Ore", "Unlit Redstone Ore", None),
+        ("Extra/Wide Bamboo", "Wide Bamboo", None),
+    ],
 )

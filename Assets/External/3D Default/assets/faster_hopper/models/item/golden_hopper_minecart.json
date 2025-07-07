@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/hopper_minecart",
+  "textures": {
+    "top": "faster_hopper:block/golden_hopper_top",
+    "side": "faster_hopper:block/golden_hopper_outside",
+    "inside": "faster_hopper:block/golden_hopper_inside"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves_notint",
+  "textures": {
+    "all": "block/azalea_leaves_waterlogged"
+  }
+}

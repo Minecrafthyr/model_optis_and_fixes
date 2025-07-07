@@ -10,6 +10,9 @@
         },
         {
           "model": "minecraft:block/bamboo3_age0"
+        },
+        {
+          "model": "minecraft:block/bamboo4_age0"
         }
       ],
       "when": {
@@ -26,6 +29,9 @@
         },
         {
           "model": "minecraft:block/bamboo3_age1"
+        },
+        {
+          "model": "minecraft:block/bamboo4_age1"
         }
       ],
       "when": {

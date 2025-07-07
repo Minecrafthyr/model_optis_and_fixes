@@ -1,16 +1,4 @@
-from defines import *
-from pack import *
-
-data = tree_pack_input_data(
-    tree,
-    "Assets/",
-    [
-        "ZippedPacks/",
-        "C:/PCL2/.minecraft/resourcepacks/",
-        "C:/PCL2/.minecraft/versions/Dev 1.21.5 Fabric/resourcepacks/",
-        "C:/PCL2/.minecraft/versions/Mec 1.21.5 Fabric/resourcepacks/",
-        "C:/PCL2/.minecraft/versions/Shadow 1.21.6/resourcepacks/",
-    ],
-)
+from private_data import *
 
 data.run()
+packs_data.run()

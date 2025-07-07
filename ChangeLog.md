@@ -543,7 +543,6 @@ Extra variant
 
 - Textured Lighting Rod: +25% Brighter.
 - Better Weather \[New\]
-- Better Particles: Light blue Splash particle.
 
 External variant
 
@@ -551,3 +550,32 @@ External variant
   - Brewing Stand item model.
   - Use Res Fixes "Full/Display" Lightning Rod.
   - Updated to v1.12.1
+
+### Version 7.5
+
+Improved source code `defines.py`. Pack some features, you can download them from source code [`ZippedPacks/`](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/ZippedPacks).
+
+Base variant
+
+- More fixes around Big Dripleaf.
+- Use new Default resource redstone torch on 1.21.2-. Not tested yet.
+
+Extra variant
+
+- Bedrock Slot Highlight \[New\]: Unmodified 2 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/BedrockSlotHighlight" under [Custom License](https://vanillatweaks.net/terms/)
+- Better Weather: Improved again.
+- Better Particles:
+  - Splash: whiter and light blue (rain splash and fishing splash).
+  - Dripping water: only 1 pixel. Used to be 4 pixel.
+- Better Leaves (in v7.0 doesn't work)
+  - Add inner back face.
+  - Fast leaves waterlogged texture.
+  - Unmodified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Custom License](https://vanillatweaks.net/terms/)
+- Clean Water: Increase water transparency.
+- Wide Bamboo: 4 (instead of 3) texture variants.
+
+External variant
+
+- 3D Default
+  - Fix Fishing Rod display.
+  - Use Res Fixes "Full/Display" | Comparator | Repeater.

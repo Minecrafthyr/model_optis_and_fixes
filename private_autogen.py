@@ -2,10 +2,9 @@ import os
 import sys
 from time import sleep
 import threading
-from private_gen import *
+from private_data import *
 
 exiting = False
-
 
 def input_thread():
     global exiting
@@ -13,12 +12,10 @@ def input_thread():
     exiting = True
     sys.exit(0)
 
-
 threading.Thread(None, input_thread, daemon=True).start()
 
 count: int = 0
 last: dict[str, float] = {}
-entered: bool = False
 
 while True:
     while True:
@@ -39,8 +36,5 @@ while True:
 
     count = 0
     last = current.copy()
-    
-    if not entered:
-        entered = True
-    else:
-        data.run()
+
+    data.run()

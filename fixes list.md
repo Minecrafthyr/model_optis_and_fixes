@@ -1,4 +1,4 @@
-## All the 43 (4 partial fix) bugs fixed in Lite variant
+#### All the 43 (4 partial fix) bugs fixed in Lite variant
 
 1. [MC-90566](https://bugs.mojang.com/browse/MC/issues/MC-90566) The plants of sunflowers don't connect to their stems
 2. (Partial) [MC-109087](https://bugs.mojang.com/browse/MC/issues/MC-109087) Faces of some blocks are not at all culled when said face is hidden by a solid, opaque block
@@ -44,18 +44,18 @@
 42. [MC-277767](https://bugs.mojang.com/browse/MC/issues/MC-277767 '"On" lightning rods still use ambient occlusion')
 43. [MC-279521](https://bugs.mojang.com/browse/MC/issues/MC-279521) Up & down faces of resin clumps, sculk veins, vines & glow lichen are not mirrored from behind
 
-## All the 3 bugs fixed in Full variant
+#### All the 3 bugs fixed in Full variant
 
 - [MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869) Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view
 - [MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274) The rotation of some blocks in hand/GUI does not match rotation when placed
 - [MC-201808](https://bugs.mojang.com/browse/MC/issues/MC-201808) Arrows are held awkwardly in entities' hands
 
-## All the 2 bugs fixed in Textured variant
+#### All the 2 bugs fixed in Textured variant
 
 - [MC-262427](https://bugs.mojang.com/browse/MC/issues/MC-262427) Flower pots and potted objects have very poorly optimized models and strange texture mapping
 - [MC-262454](https://bugs.mojang.com/browse/MC/issues/MC-262454) Unused pixels in hopper top texture and hopper side texture
 
-## All the 2 bugs fixed in Extra variant
+#### All the 2 (1 partial fix) bugs fixed in Extra variant
 
-- [MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027) Certain Light-Emitting Blocks Lack Internal Glow in Java Edition
+- (Partial) [MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027) Certain Light-Emitting Blocks Lack Internal Glow in Java Edition
 - [MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691) The leaves planes in bamboo aren't as wide as they should be
