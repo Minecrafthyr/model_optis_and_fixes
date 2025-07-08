@@ -562,11 +562,10 @@ Base variant
 
 Extra variant
 
-- Bedrock Slot Highlight \[New\]: Unmodified 2 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/BedrockSlotHighlight" under [Custom License](https://vanillatweaks.net/terms/)
 - Better Weather: Improved again.
 - Better Particles:
   - Splash: whiter and light blue (rain splash and fishing splash).
-  - Dripping water: only 1 pixel. Used to be 4 pixel.
+  - Dripping water: 1 (instead of 4) pixel.
 - Better Leaves (in v7.0 doesn't work)
   - Add inner back face.
   - Fast leaves waterlogged texture.

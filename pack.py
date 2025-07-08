@@ -33,7 +33,6 @@ tree: tree_pack_tuple = (
                     "Extra/3D Pointed Dripstone",  # After Consistent Planes
                     "Extra/3D Redstone Dust",  # After Consistent Planes
                     "Extra/Animation",
-                    "Extra/Bedrock Slot Highlight",
                     "Extra/Better Cross",
                     "Extra/Better Leaves",
                     "Extra/Better Particles",

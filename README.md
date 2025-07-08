@@ -2,7 +2,7 @@
 
 Optimize block models and fix bugs in Default resources.
 
-- Version: 7.4
+- Version: 7.5
 - Game versions: 1.20.2 - 1.21.7
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
@@ -29,20 +29,20 @@ Menu
 
 Lite < Full(no suffix) < Textured < Extra < External
 
-Download variants in additional files, Full is default file.
+Full is Primary file. Download variants in additional files or [Github Source](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/Zipped).
 
 - Lite variant  
   Consistent with Default resource look, fixes only.
 - Full variant  
   Visually improve item models or display.  
-  You can use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod config this and downside variant.
+  Config use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod (not suggested, it just disable files).
 - Textured variant  
   Using texture may conflict to other resourcepack.  
   Designed works with Default resources.
 - Extra variant  
-  Contains significant visual changes that I subjectively believe are better, not normal fixes.
+  Contains significant visual changes that I subjectively believe are better, not normal fixes, see [Modrinth Gallery](https://modrinth.com/resourcepack/model-optimizations-and-fixes/gallery).
 - External variant  
-  Include and make compatibility tweaks with external pack.  
+  Include and tweaks with external pack.  
   Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
 
 ### Lite
@@ -173,11 +173,6 @@ Download variants in additional files, Full is default file.
   - Fix Fishing Rod display.
 
 ## Suggestions
-
-Mods
-
-- [Stfu](https://modrinth.com/mod/shuttfup)
-- ...
 
 Resourcepacks
 
