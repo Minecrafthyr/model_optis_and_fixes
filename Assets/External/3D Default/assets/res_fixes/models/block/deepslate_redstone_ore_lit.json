@@ -1,0 +1,6 @@
+{
+	"parent": "res_fixes:block/redstone_ore_lit",
+	"textures": {
+		"all": "block/deepslate_redstone_ore"
+	}
+}

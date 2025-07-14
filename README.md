@@ -1,29 +1,29 @@
-# Resource Fixes
-
 Optimize block models and fix bugs in Default resources.
 
-- Version: 7.5
+- Version: 7.6
 - Game versions: 1.20.2 - 1.21.7
 - Project Links:
-  - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl)
-  - [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/resource-fixes)
+  - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
+  - [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/resource-fixes)
 - Old name: Model Optimizations and Fixes
 - (May contains errors. Some bugs can't be fix by resourepack.)
+- Document Links:
+  - [English](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/README.md)
+  - [简体中文](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/README_zh.md)
 
 Menu
 
-- [Resource Fixes](#resource-fixes)
-  - [Variants](#variants)
-    - [Lite](#lite)
-    - [Full](#full)
-    - [Textured](#textured)
-    - [Extra](#extra)
-    - [External](#external)
-  - [Suggestions](#suggestions)
-  - [Included Features](#included-features)
-  - [License](#license)
-  - [Credits](#credits)
+- [Variants](#variants)
+  - [Lite](#lite)
+  - [Full](#full)
+  - [Textured](#textured)
+  - [Extra](#extra)
+  - [External](#external)
+- [Suggestions](#suggestions)
+- [Included Features](#included-features)
+- [License](#license)
+- [Credits](#credits)
 
 ## Variants
 
@@ -32,7 +32,7 @@ Lite < Full(no suffix) < Textured < Extra < External
 Full is Primary file. Download variants in additional files or [Github Source](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/Zipped).
 
 - Lite variant  
-  Consistent with Default resource look, fixes only.
+  Optimization & Fixes only, compatible with texture only resourcepacks.
 - Full variant  
   Visually improve item models or display.  
   Config use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod (not suggested, it just disable files).
@@ -40,7 +40,7 @@ Full is Primary file. Download variants in additional files or [Github Source](h
   Using texture may conflict to other resourcepack.  
   Designed works with Default resources.
 - Extra variant  
-  Contains significant visual changes that I subjectively believe are better, not normal fixes, see [Modrinth Gallery](https://modrinth.com/resourcepack/model-optimizations-and-fixes/gallery).
+  Contains significant visual changes that I thought better, not normal fixes.
 - External variant  
   Include and tweaks with external pack.  
   Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
@@ -84,20 +84,26 @@ Full is Primary file. Download variants in additional files or [Github Source](h
 
 ### Full
 
-- 3D Hopper, Cauldron, Comparator, Repeater, Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg Turtle Egg, Flower Pot, Brewing Stand.
-- Block is a bit bigger in item frame.
-- Cull Glass Pane.
-- End Rod matches 3D Torch style.
-- Handheld Arrow in [MC-201808](https://bugs.mojang.com/browse/MC/issues/MC-201808 "Arrows are held awkwardly in entities' hands").
-- Leaf Litter, Lily Pad is shadeless now.
-- Sculk Sensors tendril improvement.
-- Smaller Chorus Plant item.
-- Thin block translation in GUI is higher, less obscured by item count.
-- Thin block, Conduit display above the head.
-- Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).
-- Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
-- Tweak some items display, they are not floating on hand or head now.
-- Use front GUI light on Conduit, Torches, End Rod, Lanterns.
+- Better Sculk Sensor Swing
+- Cull Glass
+  - This cause gap in some cases, but it's worth.
+- Display
+  - 3D Hopper, Cauldron, Comparator, Repeater, Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg Turtle Egg, Flower Pot, Brewing Stand.
+  - Block is a bit bigger in item frame.
+  - End Rod matches 3D Torch style.
+  - Handheld Arrow in [MC-201808](https://bugs.mojang.com/browse/MC/issues/MC-201808 "Arrows are held awkwardly in entities' hands").
+  - Smaller Chorus Plant item.
+  - Thin block translation in GUI is higher, less obscured by item count.
+  - Thin block (and more blocks) display above the head instead of inside.
+  - Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).
+  - Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
+  - Tweak some items display, they are not floating on hand or head now.
+  - Use front GUI light on Conduit, Torches, End Rod, Lanterns.
+- Shadeless Planes
+  - Lily Pad and Leaf Litter is shadeless.
+  - If you like full consistency, see Extra/Consistent Planes.
+- Small Backfaces
+  - Cactus and small dripleaf has some pixels backface.
 
 ### Textured
 
@@ -118,9 +124,12 @@ Full is Primary file. Download variants in additional files or [Github Source](h
 - Animation
   - Animation of flowing lava is now faster then still lava.
   - Kelp animation is slower.
-- Bedrock Slot Highlight
 - Better Cross
   - Centered Fern, Oxeye Daisy.
+- Better Fire
+  - Fire texture is a bit transparent on body.
+  - Sides of floor fire is lower than before (center does not change).
+  - Sides of fire are tilted.
 - Better Leaves
   - Add inner back face.
   - Fast leaves waterlogged texture.
@@ -135,9 +144,11 @@ Full is Primary file. Download variants in additional files or [Github Source](h
 - Consistent Planes
   - Sore plane-like models are now not floating, shadeless, has cullface.
 - Clean Water
-- Fire
-  - Fire texture is a bit transparent on body.
-  - Sides of floor fire is lower than before (center does not change).
+- Display
+  - Block item is a bit bigger on ground.
+- Fast Better Grass
+  - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
+  - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths)!
 - Mirrored Pumpkin Blur
 - Moist Farmland
   - Visualize Farmland "moisture" state 0 - 7.
@@ -149,6 +160,7 @@ Full is Primary file. Download variants in additional files or [Github Source](h
   - Light source blocks are shadeless. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
   - Light source items are using front GUI light.
 - Square Shadow
+  - Square entity shadow.
 - Textured Lighting Rod
   - Lightning Rod Lit is using very bright Lightning Rod texture instead of full white.
 - Unlit Redstone Ore
@@ -188,7 +200,7 @@ Resourcepacks
 
 ## Included Features
 
-May not 100% consistent to them.
+These features are included so you don't need to install them again. May not 100% consistent to them.
 
 Textured variant
 
@@ -200,6 +212,7 @@ Extra variant
 
 - [3D Ladders](https://modrinth.com/resourcepack/3d-ladders)
 - [CLEAN WATER](https://modrinth.com/resourcepack/clean-water)|[Clear Water!](https://modrinth.com/resourcepack/clear-water!)|[Clearer Water](https://modrinth.com/resourcepack/clearer-water)
+- [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass)
 - [Glowing Blocks Fix](https://modrinth.com/resourcepack/glowing-blocks-fix)
 
 External variant
@@ -208,8 +221,10 @@ External variant
 
 ## License
 
+Notice: you also need to follow license of specify files in [Credits](#Credits).
+
 - External variant: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
-- Other variants: [Unlicense](https://spdx.org/licenses/Unlicense.html), means you can modify, distribute, split, use it anywhere.
+- Others: [Unlicense](https://spdx.org/licenses/Unlicense.html), means you can modify, distribute, split, use it anywhere.
 
 ## Credits
 
@@ -219,10 +234,10 @@ Textured variant
 
 Extra variant
 
-- 3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34), under [MIT License](https://spdx.org/licenses/MIT.html).
-- Bedrock Slot Highlight: Unmodified 2 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/BedrockSlotHighlight" under [Custom License](https://vanillatweaks.net/terms/)
+- 3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT.html).
 - Better Leaves: Unmodified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Custom License](https://vanillatweaks.net/terms/).
 - Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Custom License](https://vanillatweaks.net/terms/).
+- Fast Better Grass: Modified 8 files from [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html).
 - New Torches: Modified 4 files from [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html).
 
 External variant

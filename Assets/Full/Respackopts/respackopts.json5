@@ -1,0 +1,34 @@
+{
+	"id": "res_fixes",
+	"version": 13,
+	"capabilities": [
+		"FileFilter"
+	],
+	"conf": {
+		"fixes": {
+			"random_rotate": true,
+			"handheld_arrow": true
+		},
+		"optimizations": {
+			"mod_ebe": true
+		},
+		"improvements": {
+			"flower_pot": true,
+			"brewing_stand": true,
+			"block": true,
+			"end_rod": true,
+			"candle": true,
+			"conduit": true,
+			"cauldron": true,
+			"hopper": true,
+			"comparator_and_repeater": true,
+			"lever": true,
+			"cake": true,
+			"chorus_plant": true,
+			"sniffer_egg": true,
+			"tripwire_hook": true,
+			"torch": true,
+			"lantern": true
+		}
+	}
+}

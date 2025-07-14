@@ -1,0 +1,30 @@
+{
+  "format_version": "1.21.6",
+  "credit": "Made with Blockbench by Minecraft_hyr",
+  "parent": "block/block",
+  "textures": {
+    "particle": "block/dirt",
+    "bottom": "block/dirt",
+    "top": "block/farmland"
+  },
+  "elements": [
+    {
+      "from": [-0.01, -1, -0.01],
+      "to": [16.01, 15, 16.01],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#top", "cullface": "north"},
+        "east": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#top", "cullface": "east"},
+        "south": {"uv": [0, 0, 16, 16], "texture": "#top", "cullface": "south"},
+        "west": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#top", "cullface": "west"},
+        "up": {"uv": [0, 0, 16, 16], "texture": "#top"}
+      }
+    },
+    {
+      "from": [0, 0, 0],
+      "to": [16, 15, 16],
+      "faces": {
+        "down": {"uv": [0, 0, 16, 16], "texture": "#bottom", "cullface": "down"}
+      }
+    }
+  ]
+}

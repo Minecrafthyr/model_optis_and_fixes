@@ -54,7 +54,7 @@ def put_into_zip(path: str, target: Optional[zip_temp_dict] = None) -> bool:
     if target is None:
         target = zip_temp_dict()
     try:
-        with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as zipf:
+        with zipfile.ZipFile(path, "w", zipfile.ZIP_STORED) as zipf:
             for k, v in target.items():
                 zipf.writestr(k, v)
         print(
