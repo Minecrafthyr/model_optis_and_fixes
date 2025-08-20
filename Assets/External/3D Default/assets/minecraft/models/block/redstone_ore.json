@@ -2,7 +2,7 @@
 	"__comment":"Designed by GeForceLegend",
 	"parent":"block/cube_all",
 	"textures":{
-		"all":"res_fixes:block/redstone_ore_unlit"
+		"all":"block/redstone_ore"
 	},
 	"elements":[
 		{

@@ -1,9 +1,6 @@
 {
   "credit": "Made with Blockbench by Minecraft_hyr",
-  "ambientocclusion": false,
-  "textures": {
-    "particle": "#torch"
-  },
+  "parent": "res_fixes:block/template/display",
   "elements": [
     {
       "from": [-1, 3.5, 7],

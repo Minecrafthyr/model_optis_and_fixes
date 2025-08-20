@@ -1,9 +1,11 @@
-### Version 7.6
+### Version 8.0
 
 <!--Changelog has been flipped by AI.-->
+New `build.py` and `config.json` to custom build.
 
 Lite variant
 
+- Internal separated.
 - Move small backfaces of small dripleaf to Full/Small Backfaces.
 - Optimize [Farmer's Delight Refabricated](https://modrinth.com/mod/farmers-delight-refabricated) block models. Won't notify in Readme because it's pretty tiny.
 
@@ -25,16 +27,22 @@ Textures variant
 Extra variant
 
 - Better Weather: Even more white rain.
+- Better Particles
+  - Flame, Soul Flame, Lava particle improvements.
+  - Explosion particles 15 -> 12 frames.
 - Fast Better Grass:
   - Modified 8 files from [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html).
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
   - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths)!
 - Better Fire (renamed): Fix fire on Z axis is wider.
+- ~~Textured Lighting Rod~~: Removed.
 
 External variant
 
 - 3D Default
-  - Fix lit Redstone Ore does not use 3D model
+  - Always use overlay to make sure it works.
+  - Separate Modifies and Source.
+  - Fix lit Redstone Ore does not use 3D model.
 
 ### Version 7.5
 

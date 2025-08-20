@@ -1,6 +1,6 @@
 {
 	"__comment":"Designed by GeForceLegend",
-	"parent":"minecraft:block/block",
+	"ambientocclusion":false,
 	"textures":{
 		"end":"block/pumpkin_top",
 		"side":"block/pumpkin_side",

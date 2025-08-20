@@ -1,44 +1,14 @@
 {
-	"pack": {
-		"description": "v7.6 for 1.20.2+ by Minecraft_hyr",
-		"pack_format": 64,
-		"supported_formats": [
-			16,
-			64
-		]
+	"pack":{
+		"pack_format":35,
+		"supported_formats":[35,64],
+		"description":"3D Default by GeForceLegend"
 	},
-	"overlays": {
-		"entries": [
+	"overlays":{
+		"entries":[
 			{
-        "formats": [
-          0,
-          35
-        ],
-        "directory": "overlay_a",
-        "__comment": "old block model fixes"
-      },
-      {
-        "formats": [
-          0,
-          43
-        ],
-        "directory": "overlay_c",
-        "__comment": "item model type doesn't exists"
-      },
-      {
-        "formats": [
-          0,
-          50
-        ],
-        "directory": "overlay_..50",
-        "__comment": "block model rotation limit"
-      },
-			{
-				"directory": "1_21_4",
-				"formats": [
-					44,
-					55
-				]
+				"directory":"1_21_4",
+				"formats":[44,64]
 			}
 		]
 	}

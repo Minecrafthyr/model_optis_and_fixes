@@ -1,0 +1,238 @@
+{
+  "variants": {
+    "input_prefix": "Assets/",
+    "output_prefix": [
+      "Zipped/",
+      "C:/PCL2/.minecraft/resourcepacks",
+      "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks"
+    ],
+    "ignored_files": [
+      "External/3D Default/assets/minecraft/models/block/flower_pot_cross.json",
+      "External/3D Default/assets/minecraft/models/block/flower_pot.json",
+      "External/3D Default/assets/minecraft/models/block/lightning_rod_on.json",
+      "External/3D Default/assets/minecraft/models/block/lightning_rod.json",
+      "External/3D Default/assets/minecraft/models/block/potted_allium.json",
+      "External/3D Default/assets/minecraft/models/block/potted_azure_bluet.json",
+      "External/3D Default/assets/minecraft/models/block/potted_blue_orchid.json",
+      "External/3D Default/assets/minecraft/models/block/potted_cornflower.json",
+      "External/3D Default/assets/minecraft/models/block/potted_fern.json",
+      "External/3D Default/assets/minecraft/models/block/potted_lily_of_the_valley.json",
+      "External/3D Default/assets/minecraft/models/block/potted_orange_tulip.json",
+      "External/3D Default/assets/minecraft/models/block/potted_oxeye_daisy.json",
+      "External/3D Default/assets/minecraft/models/block/potted_pink_tulip.json",
+      "External/3D Default/assets/minecraft/models/block/potted_poppy.json",
+      "External/3D Default/assets/minecraft/models/block/potted_red_tulip.json",
+      "External/3D Default/assets/minecraft/models/block/potted_white_tulip.json",
+      "External/3D Default/assets/minecraft/models/block/potted_wither_rose.json",
+      "External/3D Default/assets/minecraft/models/item/black_candle.json",
+      "External/3D Default/assets/minecraft/models/item/blue_candle.json",
+      "External/3D Default/assets/minecraft/models/item/brown_candle.json",
+      "External/3D Default/assets/minecraft/models/item/candle.json",
+      "External/3D Default/assets/minecraft/models/item/comparator.json",
+      "External/3D Default/assets/minecraft/models/item/cyan_candle.json",
+      "External/3D Default/assets/minecraft/models/item/flower_pot.json",
+      "External/3D Default/assets/minecraft/models/item/gray_candle.json",
+      "External/3D Default/assets/minecraft/models/item/green_candle.json",
+      "External/3D Default/assets/minecraft/models/item/light_blue_candle.json",
+      "External/3D Default/assets/minecraft/models/item/light_gray_candle.json",
+      "External/3D Default/assets/minecraft/models/item/lightning_rod.json",
+      "External/3D Default/assets/minecraft/models/item/lime_candle.json",
+      "External/3D Default/assets/minecraft/models/item/magenta_candle.json",
+      "External/3D Default/assets/minecraft/models/item/orange_candle.json",
+      "External/3D Default/assets/minecraft/models/item/pink_candle.json",
+      "External/3D Default/assets/minecraft/models/item/repeater.json",
+      "External/3D Default/assets/minecraft/models/block/template_redstone_torch.json",
+      "External/3D Default/assets/minecraft/models/block/template_redstone_torch_wall.json",
+      "External/3D Default/assets/minecraft/models/item/torch.json",
+      "External/3D Default/assets/minecraft/models/item/soul_torch.json",
+      "External/3D Default/assets/minecraft/models/item/copper_torch.json",
+      "External/3D Default/assets/minecraft/models/item/redstone_torch.json",
+      "External/3D Default/assets/minecraft/models/block/redstone_ore_on.json",
+      "External/3D Default/assets/minecraft/models/block/deepslate_redstone_ore_on.json",
+      "External/3D Default/assets/minecraft/textures/block/redstone_ore_on.png",
+      "External/3D Default/assets/minecraft/textures/block/redstone_ore_on_s.png",
+      "External/3D Default/assets/minecraft/textures/block/deepslate_redstone_ore_on.png",
+      "External/3D Default/assets/minecraft/textures/block/deepslate_redstone_ore_on_s.png"
+    ],
+    "tree": {
+      "inputs": "Base",
+      "children": {
+        "inputs": [
+          "Lite/Bars Fix",
+          "Lite/Fence Fix",
+          "Lite/Lightning Rod Fix",
+          "Lite/Main",
+          "Lite/Mod/Farmer's Delight",
+          "lite/Plane Fix"
+        ],
+        "output": "Resource Fixes Lite",
+        "children": {
+          "inputs": [
+            "Normal/Better Sculk Sensor Swing",
+            "Normal/Cull Glass",
+            "Normal/Display",
+            "Normal/Random Rotate",
+            "Normal/Respackopts",
+            "Normal/Shadeless Planes",
+            "Normal/Small Backfaces"
+          ],
+          "output": "Resource Fixes",
+          "children": {
+            "inputs": [
+              "Textured/End Portal Frame Fix",
+              "Textured/Firefly Bush Fix",
+              "Textured/Item Frame",
+              "Textured/Misc",
+              "Textured/Modern Spectator GUI",
+              "Textured/New Default Torches",
+              "Textured/Tall Seagrass Fix"
+            ],
+            "output": "Resource Fixes Textured",
+            "children": {
+              "inputs": [
+                "Extra/3D Iron Bars",
+                "Extra/Consistent Planes",
+                "Extra/3D Ladder",
+                "Extra/3D Pointed Dripstone",
+                "Extra/3D Redstone Dust",
+                "Extra/Animation",
+                "Extra/Better Cross",
+                "Extra/Better Leaves",
+                "Extra/Better Particles",
+                "Extra/Better Weather",
+                "Extra/Clean Water",
+                "Extra/Display",
+                "Extra/Better Fire",
+                "Extra/Fast Better Grass",
+                "Extra/Mirrored Pumpkin Blur",
+                "Extra/Moist Farmland",
+                "Extra/New Torches",
+                "Extra/Shadeless Lights",
+                "Extra/Square Shadow",
+                "Extra/Unlit Redstone Ore",
+                "Extra/Wide Bamboo"
+              ],
+              "output": "Resource Fixes Extra",
+              "children": {
+                "inputs": [
+                  "External/3D Default",
+                  "External/3D Default Modifies"
+                ],
+                "output": "Resource Fixes External"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "separated": {
+    "input_prefix": "Assets/",
+    "output_prefix": [
+      "ZippedPacks/"
+    ],
+    "tree": [
+      {
+        "inputs": "Packs/pack.mcmeta",
+        "children": [
+          {
+            "inputs": "Normal/Better Sculk Sensor Swing",
+            "output": "Better Sculk Sensor Swing"
+          },
+          {
+            "inputs": "Normal/Cull Glass",
+            "output": "Cull Glass"
+          },
+          {
+            "inputs": "Normal/Shadeless Planes",
+            "output": "Shadeless Planes"
+          },
+          {
+            "inputs": "Normal/Small Backfaces",
+            "output": "Small Backfaces"
+          },
+          {
+            "inputs": "Textured/End Portal Frame Fix",
+            "output": "End Portal Frame Fix"
+          },
+          {
+            "inputs": "Textured/Firefly Bush Fix",
+            "output": "Firefly Bush Fix"
+          },
+          {
+            "inputs": "Textured/Modern Spectator GUI",
+            "output": "Modern Spectator GUI"
+          },
+          {
+            "inputs": "Textured/Tall Seagrass Fix",
+            "output": "Tall Seagrass Fix"
+          },
+          {
+            "inputs": "Extra/3D Iron Bars",
+            "output": "3D Iron Bars"
+          },
+          {
+            "inputs": "Extra/3D Ladder",
+            "output": "3D Ladder"
+          },
+          {
+            "inputs": "Extra/3D Pointed Dripstone",
+            "output": "3D Pointed Dripstone"
+          },
+          {
+            "inputs": "Extra/3D Redstone Dust",
+            "output": "3D Redstone Dust"
+          },
+          {
+            "inputs": "Extra/Better Leaves",
+            "output": "Better Leaves"
+          },
+          {
+            "inputs": "Extra/Better Weather",
+            "output": "Better Weather"
+          },
+          {
+            "inputs": "Extra/Better Particles",
+            "output": "Better Particles"
+          },
+          {
+            "inputs": "Extra/Better Cross",
+            "output": "Better Cross"
+          },
+          {
+            "inputs": "Extra/Clean Water",
+            "output": "Clean Water"
+          },
+          {
+            "inputs": "Extra/Fast Better Grass",
+            "output": "Fast Better Grass"
+          },
+          {
+            "inputs": "Extra/Mirrored Pumpkin Blur",
+            "output": "Mirrored Pumpkin Blur"
+          },
+          {
+            "inputs": "Extra/Moist Farmland",
+            "output": "Moist Farmland"
+          },
+          {
+            "inputs": "Extra/New Torches",
+            "output": "New Torches"
+          },
+          {
+            "inputs": "Extra/Square Shadow",
+            "output": "Square Shadow"
+          },
+          {
+            "inputs": "Extra/Unlit Redstone Ore",
+            "output": "Unlit Redstone Ore"
+          },
+          {
+            "inputs": "Extra/Wide Bamboo",
+            "output": "Wide Bamboo"
+          }
+        ]
+      }
+    ]
+  }
+}

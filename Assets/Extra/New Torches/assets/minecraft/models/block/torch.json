@@ -1,6 +1,6 @@
 {
   "parent": "res_fixes:block/template/torch_lit",
   "textures": {
-    "torch": "block/torch"
+    "torch": "minecraft:block/torch"
   }
 }

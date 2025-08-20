@@ -8,15 +8,12 @@ Optimize block models and fix bugs in Default resources.
   - [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/resource-fixes)
 - Old name: Model Optimizations and Fixes
 - (May contains errors. Some bugs can't be fix by resourepack.)
-- Document Links:
-  - [English](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/README.md)
-  - [简体中文](https://github.com/Minecrafthyr/model_optis_and_fixes/blob/main/README_zh.md)
 
 Menu
 
 - [Variants](#variants)
   - [Lite](#lite)
-  - [Full](#full)
+  - [Normal](#normal)
   - [Textured](#textured)
   - [Extra](#extra)
   - [External](#external)
@@ -27,13 +24,13 @@ Menu
 
 ## Variants
 
-Lite < Full(no suffix) < Textured < Extra < External
+Lite < Normal(no suffix) < Textured < Extra < External
 
-Full is Primary file. Download variants in additional files or [Github Source](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/Zipped).
+Normal is Primary file. Download variants in additional files or [Github Source](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/Zipped).
 
 - Lite variant  
   Optimization & Fixes only, compatible with texture only resourcepacks.
-- Full variant  
+- Normal variant  
   Visually improve item models or display.  
   Config use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod (not suggested, it just disable files).
 - Textured variant  
@@ -82,7 +79,7 @@ Full is Primary file. Download variants in additional files or [Github Source](h
 - Trapdoors ([MC-175626](https://bugs.mojang.com/browse/MC/issues/MC-175626 "Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
 - Tripwire (Hook) ([MC-262172](https://bugs.mojang.com/browse/MC/issues/MC-262172 "Tripwire hook model incorrect - stick does not attach to ring symmetrically"), [MC-262174](https://bugs.mojang.com/browse/MC/issues/MC-262174 "The section of tripwire that is attached to a tripwire hook is stretched"), [MC-262546](https://bugs.mojang.com/browse/MC/issues/MC-262546 "Texture mapping on tripwire hook rings appears to be wrong"), [MC-262598](https://bugs.mojang.com/browse/MC/issues/MC-262598 'Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block'), [MC-262600](https://bugs.mojang.com/browse/MC/issues/MC-262600 "Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently"))
 
-### Full
+### Normal
 
 - Better Sculk Sensor Swing
 - Cull Glass
@@ -161,8 +158,6 @@ Full is Primary file. Download variants in additional files or [Github Source](h
   - Light source items are using front GUI light.
 - Square Shadow
   - Square entity shadow.
-- Textured Lighting Rod
-  - Lightning Rod Lit is using very bright Lightning Rod texture instead of full white.
 - Unlit Redstone Ore
   - Redstone Ore is darker on unlit state.
 - Wide Bamboo
@@ -173,14 +168,13 @@ Full is Primary file. Download variants in additional files or [Github Source](h
 
 - [3D Default](https://modrinth.com/resourcepack/3d-default)
   - Use Res Fixes "Extra/New Torches",  
-    "Full/Display" Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater,  
-    "Lite" & "Full/Display" Anvil | Tripwire Hook,  
+    "Normal/Display" Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater,  
+    "Lite" & "Normal/Display" Anvil | Tripwire Hook,  
     "Extra/3D Iron Bars",  
     "Extra/Unlit Redstone Ore" feature.
   - Modified Shovel item model: Middle thin.
   - Emissive blocks are shadeless.
   - Edited Brewing Stand model.
-  - Fix compass_16 is missing.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
   - Fix Fishing Rod display.
 
