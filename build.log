@@ -1,31 +1,181 @@
-[2025-08-26 06:53:14][INFO] == Config "variants" ==
-[2025-08-26 06:53:14][INFO] Success: "Resource Fixes Lite.zip" (180 files, 343 KiB)
-[2025-08-26 06:53:15][INFO] Success: "Resource Fixes.zip" (411 files, 490 KiB)
-[2025-08-26 06:53:15][INFO] Success: "Resource Fixes Textured.zip" (466 files, 579 KiB)
-[2025-08-26 06:53:16][INFO] Success: "Resource Fixes Extra.zip" (901 files, 970 KiB)
-[2025-08-26 06:53:18][INFO] Success: "Resource Fixes External.zip" (2196 files, 4015 KiB)
-[2025-08-26 06:53:18][INFO] == Config "separated" ==
-[2025-08-26 06:53:18][INFO] Success: "Better Sculk Sensor Swing.zip" (3 files, 5 KiB)
-[2025-08-26 06:53:18][INFO] Success: "Cull Glass.zip" (10 files, 6 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Shadeless Planes.zip" (6 files, 3 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Small Backfaces.zip" (3 files, 8 KiB)
-[2025-08-26 06:53:19][INFO] Success: "End Portal Frame Fix.zip" (2 files, 0 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Firefly Bush Fix.zip" (4 files, 1 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Modern Spectator GUI.zip" (4 files, 2 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Tall Seagrass Fix.zip" (3 files, 1 KiB)
-[2025-08-26 06:53:19][INFO] Success: "3D Iron Bars.zip" (1 files, 0 KiB)
-[2025-08-26 06:53:19][INFO] Success: "3D Ladder.zip" (3 files, 3 KiB)
-[2025-08-26 06:53:19][INFO] Success: "3D Pointed Dripstone.zip" (11 files, 25 KiB)
-[2025-08-26 06:53:19][INFO] Success: "3D Redstone Dust.zip" (6 files, 21 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Better Leaves.zip" (51 files, 29 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Better Weather.zip" (3 files, 3 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Better Particles.zip" (44 files, 19 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Better Cross.zip" (34 files, 19 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Clean Water.zip" (6 files, 15 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Fast Better Grass.zip" (12 files, 5 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Mirrored Pumpkin Blur.zip" (3 files, 15 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Moist Farmland.zip" (15 files, 8 KiB)
-[2025-08-26 06:53:19][INFO] Success: "New Torches.zip" (22 files, 12 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Square Shadow.zip" (3 files, 0 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Unlit Redstone Ore.zip" (9 files, 3 KiB)
-[2025-08-26 06:53:19][INFO] Success: "Wide Bamboo.zip" (16 files, 13 KiB)
+[2025-08-28 09:47:35][INFO] == Config "variants" ==
+[2025-08-28 09:47:35][DEBUG] Reading cost: 0.0021982192993164062s
+[2025-08-28 09:47:35][DEBUG] Reading cost: 0.09174799919128418s
+[2025-08-28 09:47:35][DEBUG] Zipping cost: 0.021699905395507812s
+[2025-08-28 09:47:35][INFO] Success: "Resource Fixes Lite.zip" (180 files, 343 KiB)
+[2025-08-28 09:47:35][DEBUG] Successfully copied to C:/PCL2/.minecraft/resourcepacks.
+[2025-08-28 09:47:35][DEBUG] Successfully copied to C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks.
+[2025-08-28 09:47:35][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:35][DEBUG] Ignored "assets\minecraft\models\block\template_sculk_shrieker.json.backup"
+[2025-08-28 09:47:35][DEBUG] Ignored "assets\minecraft\models\block\paths.temp"
+[2025-08-28 09:47:35][DEBUG] Reading cost: 0.12682843208312988s
+[2025-08-28 09:47:36][DEBUG] Zipping cost: 0.04600787162780762s
+[2025-08-28 09:47:36][INFO] Success: "Resource Fixes.zip" (411 files, 490 KiB)
+[2025-08-28 09:47:36][DEBUG] Successfully copied to C:/PCL2/.minecraft/resourcepacks.
+[2025-08-28 09:47:36][DEBUG] Successfully copied to C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks.
+[2025-08-28 09:47:36][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:36][DEBUG] Reading cost: 0.039832115173339844s
+[2025-08-28 09:47:36][DEBUG] Zipping cost: 0.05848360061645508s
+[2025-08-28 09:47:36][INFO] Success: "Resource Fixes Textured.zip" (466 files, 579 KiB)
+[2025-08-28 09:47:36][DEBUG] Successfully copied to C:/PCL2/.minecraft/resourcepacks.
+[2025-08-28 09:47:36][DEBUG] Successfully copied to C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks.
+[2025-08-28 09:47:36][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:36][DEBUG] Reading cost: 0.29439520835876465s
+[2025-08-28 09:47:36][DEBUG] Zipping cost: 0.12708592414855957s
+[2025-08-28 09:47:36][INFO] Success: "Resource Fixes Extra.zip" (897 files, 968 KiB)
+[2025-08-28 09:47:36][DEBUG] Successfully copied to C:/PCL2/.minecraft/resourcepacks.
+[2025-08-28 09:47:36][DEBUG] Successfully copied to C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks.
+[2025-08-28 09:47:36][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:36][DEBUG] Ignored "pack.mcmeta"
+[2025-08-28 09:47:36][DEBUG] Ignored "README.md"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\bamboo_large_leaves.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\bamboo_small_leaves.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\deepslate_redstone_ore_on.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\flower_pot.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\flower_pot_cross.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\lightning_rod.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\lightning_rod_on.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_allium.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_azure_bluet.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_blue_orchid.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_cornflower.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_fern.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_lily_of_the_valley.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_orange_tulip.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_oxeye_daisy.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_pink_tulip.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_poppy.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_red_tulip.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_white_tulip.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\potted_wither_rose.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\redstone_ore_on.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\template_redstone_torch.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\block\template_redstone_torch_wall.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\item\black_candle.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\item\blue_candle.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\item\brown_candle.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\item\candle.json"
+[2025-08-28 09:47:36][DEBUG] Ignored "assets\minecraft\models\item\comparator.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\cyan_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\flower_pot.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\gray_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\green_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\lightning_rod.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\light_blue_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\light_gray_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\lime_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\magenta_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\orange_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\pink_candle.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\redstone_torch.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\repeater.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\soul_torch.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\models\item\torch.json"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\textures\block\deepslate_redstone_ore_on.png"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\textures\block\deepslate_redstone_ore_on_s.png"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\textures\block\redstone_ore_on.png"
+[2025-08-28 09:47:37][DEBUG] Ignored "assets\minecraft\textures\block\redstone_ore_on_s.png"
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.9693381786346436s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.2940077781677246s
+[2025-08-28 09:47:37][INFO] Success: "Resource Fixes External.zip" (2191 files, 4011 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to C:/PCL2/.minecraft/resourcepacks.
+[2025-08-28 09:47:37][DEBUG] Successfully copied to C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks.
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][INFO] == Config "separated" ==
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.0008935928344726562s
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.002626657485961914s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0015377998352050781s
+[2025-08-28 09:47:37][INFO] Success: "Better Sculk Sensor Swing.zip" (3 files, 5 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.005426883697509766s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.003696441650390625s
+[2025-08-28 09:47:37][INFO] Success: "Cull Glass.zip" (10 files, 6 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.004603147506713867s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0019185543060302734s
+[2025-08-28 09:47:37][INFO] Success: "Shadeless Planes.zip" (6 files, 3 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.0033059120178222656s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0017750263214111328s
+[2025-08-28 09:47:37][INFO] Success: "Small Backfaces.zip" (3 files, 8 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.0022809505462646484s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0011563301086425781s
+[2025-08-28 09:47:37][INFO] Success: "End Portal Frame Fix.zip" (2 files, 0 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.003315448760986328s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0013446807861328125s
+[2025-08-28 09:47:37][INFO] Success: "Firefly Bush Fix.zip" (4 files, 1 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.004289388656616211s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.002308368682861328s
+[2025-08-28 09:47:37][INFO] Success: "Modern Spectator GUI.zip" (4 files, 2 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.0024814605712890625s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0010800361633300781s
+[2025-08-28 09:47:37][INFO] Success: "Tall Seagrass Fix.zip" (3 files, 1 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.0004620552062988281s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0011398792266845703s
+[2025-08-28 09:47:37][INFO] Success: "3D Iron Bars.zip" (1 files, 0 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.0037391185760498047s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0016541481018066406s
+[2025-08-28 09:47:37][INFO] Success: "3D Ladder.zip" (3 files, 3 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.007018327713012695s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.002939939498901367s
+[2025-08-28 09:47:37][INFO] Success: "3D Pointed Dripstone.zip" (11 files, 25 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.003980875015258789s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.002384662628173828s
+[2025-08-28 09:47:37][INFO] Success: "3D Redstone Dust.zip" (6 files, 21 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.020464420318603516s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.005549430847167969s
+[2025-08-28 09:47:37][INFO] Success: "Better Leaves.zip" (51 files, 29 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.002028226852416992s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0015132427215576172s
+[2025-08-28 09:47:37][INFO] Success: "Better Weather.zip" (3 files, 3 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:37][DEBUG] Reading cost: 0.02076125144958496s
+[2025-08-28 09:47:37][DEBUG] Zipping cost: 0.0055277347564697266s
+[2025-08-28 09:47:37][INFO] Success: "Better Particles.zip" (44 files, 19 KiB)
+[2025-08-28 09:47:37][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.026173114776611328s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.0052073001861572266s
+[2025-08-28 09:47:38][INFO] Success: "Better Cross.zip" (34 files, 19 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.006421327590942383s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.002576589584350586s
+[2025-08-28 09:47:38][INFO] Success: "Clean Water.zip" (6 files, 15 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.011525392532348633s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.0031061172485351562s
+[2025-08-28 09:47:38][INFO] Success: "Fast Better Grass.zip" (12 files, 5 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.002249002456665039s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.0011708736419677734s
+[2025-08-28 09:47:38][INFO] Success: "Mirrored Pumpkin Blur.zip" (3 files, 15 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.009699583053588867s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.0034232139587402344s
+[2025-08-28 09:47:38][INFO] Success: "Moist Farmland.zip" (15 files, 8 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.013427972793579102s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.002978801727294922s
+[2025-08-28 09:47:38][INFO] Success: "New Torches.zip" (22 files, 12 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.002814054489135742s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.0016891956329345703s
+[2025-08-28 09:47:38][INFO] Success: "Square Shadow.zip" (3 files, 0 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.006013631820678711s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.0018236637115478516s
+[2025-08-28 09:47:38][INFO] Success: "Unlit Redstone Ore.zip" (9 files, 3 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
+[2025-08-28 09:47:38][DEBUG] Reading cost: 0.009083271026611328s
+[2025-08-28 09:47:38][DEBUG] Zipping cost: 0.0034427642822265625s
+[2025-08-28 09:47:38][INFO] Success: "Wide Bamboo.zip" (16 files, 13 KiB)
+[2025-08-28 09:47:38][DEBUG] Successfully copied to directories.
