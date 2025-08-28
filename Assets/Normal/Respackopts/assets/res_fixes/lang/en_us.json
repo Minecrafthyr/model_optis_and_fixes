@@ -3,13 +3,11 @@
   "rpo.res_fixes.fixes.title": "Fixes",
   "rpo.res_fixes.fixes.handheld_arrow": "Handheld Arrow",
   "rpo.res_fixes.fixes.random_rotate": "Block random rotate",
-
   "rpo.res_fixes.improvements.title": "Improvements",
   "rpo.res_fixes.improvements.block": "Blocks",
   "rpo.res_fixes.improvements.end_rod": "End Rod",
   "rpo.res_fixes.improvements.chorus_plant": "Chorus Plant",
   "rpo.res_fixes.improvements.conduit": "Conduit",
-
   "rpo.res_fixes.improvements.torch": "3D Torches",
   "rpo.res_fixes.improvements.tripwire_hook": "3D Tripwire Hook",
   "rpo.res_fixes.improvements.lantern": "3D Lanterns",
@@ -22,7 +20,8 @@
   "rpo.res_fixes.improvements.sniffer_egg": "3D Sniffer Egg",
   "rpo.res_fixes.improvements.flower_pot": "3D Flower Pot",
   "rpo.res_fixes.improvements.brewing_stand": "3D Brewing Stand",
-  
-  "rpo.res_fixes.optimizations": "Optimizations",
-  "rpo.res_fixes.optimizations.mod_ebe": "Mod Enhanced Block Entities"
+  "rpo.res_fixes.mod_optimization": "Mod Optimization",
+  "rpo.res_fixes.mod_optimization.ebe": "Enhanced Block Entities",
+  "rpo.res_fixes.mod_optimization.farmers_delight": "Farmer's Delight",
+  "rpo.res_fixes.extra": "Extra variant"
 }

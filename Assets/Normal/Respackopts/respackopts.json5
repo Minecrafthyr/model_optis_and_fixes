@@ -9,8 +9,9 @@
 			"random_rotate": true,
 			"handheld_arrow": true
 		},
-		"optimizations": {
-			"mod_ebe": true
+		"mod_optimization": {
+			"ebe": true,
+			"farmers_delight": true
 		},
 		"improvements": {
 			"flower_pot": true,

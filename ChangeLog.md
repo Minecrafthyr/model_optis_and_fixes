@@ -1,16 +1,23 @@
+### Planned
+
+- Separate Lite and Base for trying add features into Sodium mod.
+- Overlay new version features for support older versions.
+- Support 1.21.9.
+
+---
+
 ### Version 8.0
 
 <!--Changelog has been flipped by AI.-->
-New `build.py` and `config.json` to custom build.
+New `config.json` to custom build.
 
 Lite variant
 
-- Internal separated.
-- Move small backfaces of small dripleaf to Full/Small Backfaces.
-- Optimize [Farmer's Delight Refabricated](https://modrinth.com/mod/farmers-delight-refabricated) block models. Won't notify in Readme because it's pretty tiny.
+- Move small backfaces of small dripleaf to Normal/Small Backfaces.
 
-Full variant
+Normal variant
 
+- "Full" variant is renamed to "Normal".
 - Better Sculk Sensor Swing: Split from Misc.
 - Cull Glass: Split from Misc.
 - Display
@@ -18,6 +25,8 @@ Full variant
   - Moved Button display here from Lite.
 - Shadeless Planes: Split from Misc.
 - Small Backfaces: Split from Misc.
+- Mod/Farmer's Delight: Optimize [Farmer's Delight Refabricated](https://modrinth.com/mod/farmers-delight-refabricated) block models, you can disable this feature use RespackOpts mod.
+- Mod/EBE: Moved EBE optimization here.
 - Use New RespackOpts format.
 
 Textures variant
@@ -26,23 +35,26 @@ Textures variant
 
 Extra variant
 
-- Better Weather: Even more white rain.
+- Better Weather: Even whiter rain.
 - Better Particles
   - Flame, Soul Flame, Lava particle improvements.
   - Explosion particles 15 -> 12 frames.
 - Fast Better Grass:
   - Modified 8 files from [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html).
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
-  - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths)!
-- Better Fire (renamed): Fix fire on Z axis is wider.
+  - A RespackOpts option to disable this feature.
+  - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths).
+- Better Fire (renamed from Fire): Fix fire on Z axis is wider.
 - ~~Textured Lighting Rod~~: Removed.
+- Wide Bamboo: Rotate bamboo leaves 5° (in supported MC version) to avoid z-fighting.
 
 External variant
 
 - 3D Default
-  - Always use overlay to make sure it works.
-  - Separate Modifies and Source.
+  - Always use overlay to make sure it works on version it does not support.
   - Fix lit Redstone Ore does not use 3D model.
+  - Separate Modifies and Source.
+  - Removed bamboo leaves.
 
 ### Version 7.5
 

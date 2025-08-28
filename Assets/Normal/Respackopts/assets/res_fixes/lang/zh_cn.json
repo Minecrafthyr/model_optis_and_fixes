@@ -3,13 +3,11 @@
   "rpo.res_fixes.fixes.title": "修复",
   "rpo.res_fixes.fixes.handheld_arrow": "手持箭",
   "rpo.res_fixes.fixes.random_rotate": "方块随机旋转",
-
   "rpo.res_fixes.improvements.title": "改进",
   "rpo.res_fixes.improvements.block": "方块",
   "rpo.res_fixes.improvements.end_rod": "末地烛",
   "rpo.res_fixes.improvements.chorus_plant": "紫颂植物",
   "rpo.res_fixes.improvements.conduit": "潮涌核心",
-
   "rpo.res_fixes.improvements.torch": "3D 火把",
   "rpo.res_fixes.improvements.tripwire_hook": "3D 绊线钩",
   "rpo.res_fixes.improvements.lantern": "3D 灯笼",
@@ -23,8 +21,8 @@
   "rpo.res_fixes.improvements.sniffer_egg": "3D 嗅探兽蛋",
   "rpo.res_fixes.improvements.flower_pot": "3D 花盆",
   "rpo.res_fixes.improvements.brewing_stand": "3D 炼药台",
-
-  "rpo.res_fixes.optimizations": "优化",
-  "rpo.res_fixes.optimizations.redstone_dust": "红石粉",
-  "rpo.res_fixes.optimizations.mod_ebe": "方块实体增强(Enhanced Block Entities)模组"
+  "rpo.res_fixes.mod_optimization": "模组优化",
+  "rpo.res_fixes.mod_optimization.ebe": "方块实体增强(Enhanced Block Entities)",
+  "rpo.res_fixes.mod_optimization.farmers_delight": "农夫乐事(Farmer's Delight)",
+  "rpo.res_fixes.extra": "Extra变体"
 }

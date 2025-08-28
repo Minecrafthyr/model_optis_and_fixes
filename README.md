@@ -17,10 +17,10 @@ Menu
   - [Textured](#textured)
   - [Extra](#extra)
   - [External](#external)
-- [Suggestions](#suggestions)
 - [Included Features](#included-features)
 - [License](#license)
 - [Credits](#credits)
+- [Suggestions](#suggestions)
 
 ## Variants
 
@@ -41,6 +41,8 @@ Normal is Primary file. Download variants in additional files or [Github Source]
 - External variant  
   Include and tweaks with external pack.  
   Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
+
+<details>
 
 ### Lite
 
@@ -126,7 +128,7 @@ Normal is Primary file. Download variants in additional files or [Github Source]
 - Better Fire
   - Fire texture is a bit transparent on body.
   - Sides of floor fire is lower than before (center does not change).
-  - Sides of fire are tilted.
+  - Sides of fire are tilted (in supported MC version).
 - Better Leaves
   - Add inner back face.
   - Fast leaves waterlogged texture.
@@ -145,7 +147,7 @@ Normal is Primary file. Download variants in additional files or [Github Source]
   - Block item is a bit bigger on ground.
 - Fast Better Grass
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
-  - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths)!
+  - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths).
 - Mirrored Pumpkin Blur
 - Moist Farmland
   - Visualize Farmland "moisture" state 0 - 7.
@@ -163,6 +165,7 @@ Normal is Primary file. Download variants in additional files or [Github Source]
 - Wide Bamboo
   - 4 pixel wide Bamboo.
   - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")).
+  - Rotate bamboo leaves 5° (in supported MC version) to avoid z-fighting.
 
 ### External
 
@@ -176,21 +179,9 @@ Normal is Primary file. Download variants in additional files or [Github Source]
   - Emissive blocks are shadeless.
   - Edited Brewing Stand model.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
-  - Fix Fishing Rod display.
+  - Removed bamboo leaves.
 
-## Suggestions
-
-Resourcepacks
-
-- [3D Particles](https://modrinth.com/resourcepack/3d-particles)
-- [AL's 3D Potions](https://modrinth.com/resourcepack/als-3d-potions)
-- [Better Ores 3D](https://modrinth.com/resourcepack/better-ores-3d)
-- [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp)
-- [Smaller Side Shield](https://modrinth.com/resourcepack/smaller-side-shield)
-- [Smooth Bow Animations](https://modrinth.com/resourcepack/smooth-bow-animations)
-- [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
-- [Tasty Items](https://modrinth.com/resourcepack/tasty-items)
-- [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
+</details>
 
 ## Included Features
 
@@ -215,7 +206,7 @@ External variant
 
 ## License
 
-Notice: you also need to follow license of specify files in [Credits](#Credits).
+Please also check license in ./Credits folder for specific files.
 
 - External variant: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
 - Others: [Unlicense](https://spdx.org/licenses/Unlicense.html), means you can modify, distribute, split, use it anywhere.
@@ -237,3 +228,17 @@ Extra variant
 External variant
 
 - 3D Default: Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html).
+
+## Suggestions
+
+Resourcepacks
+
+- [3D Particles](https://modrinth.com/resourcepack/3d-particles)
+- [AL's 3D Potions](https://modrinth.com/resourcepack/als-3d-potions)
+- [Better Ores 3D](https://modrinth.com/resourcepack/better-ores-3d)
+- [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp)
+- [Smaller Side Shield](https://modrinth.com/resourcepack/smaller-side-shield)
+- [Smooth Bow Animations](https://modrinth.com/resourcepack/smooth-bow-animations)
+- [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
+- [Tasty Items](https://modrinth.com/resourcepack/tasty-items)
+- [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
