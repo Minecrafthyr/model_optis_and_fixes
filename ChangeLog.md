@@ -1,10 +1,24 @@
-### Planned
 
-- Separate Lite and Base for trying add features into Sodium mod.
-- Overlay new version features for support older versions.
-- Support 1.21.9.
+### Version 8.1
 
----
+- `config.json`: Private output support, run `python build.py --private`
+- `build.py`: Logging error when input path not found.
+- Overlay new version features for support older versions (down to 1.14).
+
+Lite variant
+
+- Moved Crimson Nylium and Warped Nylium random rotate here from Normal variant.
+- Move New Default Torches here to solve torch display issue.
+- Fix Plane Fix not working.
+
+Textured variant
+
+- Use interpolate in Firefly Bush Fix.
+- Modern Redstone Torch Texture.
+
+Extra variant
+
+- Fix Wide Bamboo leaves (in no rotate support MC version).
 
 ### Version 8.0
 

@@ -7,10 +7,9 @@
   },
   "elements": [
     {
-      "from": [0, 0, 0],
-      "to": [16, 16, 0],
+      "from": [0, 0, 0.1],
+      "to": [16, 16, 0.1],
       "shade": false,
-      "rotation": {"angle": 7.5, "axis": "x", "origin": [0, 0, 0]},
       "faces": {
         "north": {"uv": [16, 0, 0, 16], "texture": "#fire"},
         "south": {"uv": [0, 0, 16, 16], "texture": "#fire"}

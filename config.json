@@ -1,10 +1,11 @@
 {
   "variants": {
     "input_prefix": "Assets/",
-    "output_prefix": [
-      "Zipped/",
+    "output_prefix": "Zipped/",
+    "private_output_prefix": [
       "C:/PCL2/.minecraft/resourcepacks",
-      "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks"
+      "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks",
+      "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks"
     ],
     "ignored_files": [
       {
@@ -86,7 +87,8 @@
           "Lite/Fence Fix",
           "Lite/Lightning Rod Fix",
           "Lite/Main",
-          "lite/Plane Fix"
+          "Lite/Modern Torch",
+          "Lite/Plane Fix"
         ],
         "output": "Resource Fixes Lite",
         "children": {
@@ -108,8 +110,9 @@
               "Textured/Firefly Bush Fix",
               "Textured/Item Frame",
               "Textured/Misc",
+              "Textured/Modern Recipe Button",
+              "Textured/Modern Redstone Torch Texture",
               "Textured/Modern Spectator GUI",
-              "Textured/New Default Torches",
               "Textured/Tall Seagrass Fix"
             ],
             "output": "Resource Fixes Textured",

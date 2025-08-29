@@ -9,23 +9,32 @@ import os
 debug = False
 
 
-def tree_pack_json(data: dict):
+def tree_pack_json(data: dict, private: bool):
     tree = data["tree"]
     input_prefix = data["input_prefix"]
+    
     output_prefix = (
         data["output_prefix"]
         if isinstance(data["output_prefix"], list)
         else [data["output_prefix"]]
     )
+    if private:
+        _pop = data.get("private_output_prefix")
+        if _pop != None:
+            output_prefix.extend(
+                _pop
+                if isinstance(_pop, list)
+                else [_pop]
+            )
     storage: dict[str, bytes] = {}
     ignored_files = set()  # 保持为相对路径
-    
+
     # 处理忽略文件配置
     def process_ignored_files(items, base_prefix=""):
         for item in items:
             if isinstance(item, str):
                 path = os.path.normpath(os.path.join(base_prefix, item))
-                ignored_files.add(path.replace(os.sep, '/'))
+                ignored_files.add(path.replace(os.sep, "/"))
             elif isinstance(item, dict):
                 if "prefix" in item and "files" in item:
                     current_prefix = os.path.join(base_prefix, item["prefix"])
@@ -34,7 +43,7 @@ def tree_pack_json(data: dict):
                     process_ignored_files(item["files"], base_prefix)
 
     process_ignored_files(data.get("ignored_files", []))
-    
+
     ignored_ext = tuple(data.get("ignored_ext", [".py", ".backup", ".temp"]))
 
     def process_path(path: str, storage: dict[str, bytes]):
@@ -44,21 +53,23 @@ def tree_pack_json(data: dict):
             if os.path.isfile(path):
                 with open(path, "rb") as f:
                     storage[os.path.basename(path)] = f.read()
-            if os.path.isdir(path):
+            elif os.path.isdir(path):
                 for root, dirs, files in os.walk(path):
                     for file in files:
                         rpath = os.path.join(root, file)
                         relpath = os.path.relpath(rpath, path)
-                        
+
                         if (
                             file.endswith(ignored_ext)
-                            or os.path.relpath(rpath).replace(os.sep, '/')
+                            or os.path.relpath(rpath).replace(os.sep, "/")
                             in ignored_files
                         ):
                             logging.debug(f'Ignored "{relpath}"')
                             continue
                         with open(rpath, "rb") as f:
                             storage[relpath] = f.read()
+            else:
+                logging.error(f"Path {path} not found!")
         finally:
             os.chdir(original_cwd)
 
@@ -96,7 +107,7 @@ def tree_pack_json(data: dict):
     process_tree(tree, storage)
 
 
-def load_json_build_cfg(path="config.json"):
+def load_json_build_cfg(path="config.json", private: bool = False):
     if not os.path.exists(path):
         logging.error(f'Not found: "{path}"')
         return
@@ -105,16 +116,19 @@ def load_json_build_cfg(path="config.json"):
         if isinstance(json_data, dict):
             for k, v in json_data.items():
                 logging.info(f'== Config "{k}" ==')
-                tree_pack_json(v)
+                tree_pack_json(v, private)
 
 
 if __name__ == "__main__":
     debug = False
+    private = False
     cfgPath = "config.json"
+    if "--debug" in sys.argv:
+        debug = True
+    if "--private" in sys.argv:
+        private = True
     for arg in sys.argv[1:]:
-        if arg.startswith("--debug"):
-            debug = True
-        elif arg.startswith("--cfgPath:"):
+        if arg.startswith("--cfgPath:"):
             cfgPath = arg[len("--cfgPath:") :]
 
     with open("build.log", "w") as f:
@@ -124,6 +138,4 @@ if __name__ == "__main__":
             format="[%(asctime)s][%(levelname)s] %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S",
         )
-        load_json_build_cfg()
-
-# python build.py --debug
+        load_json_build_cfg(private=private)

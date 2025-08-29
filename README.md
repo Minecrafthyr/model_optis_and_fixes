@@ -1,7 +1,9 @@
+# Resource Fixes
+
 Optimize block models and fix bugs in Default resources.
 
-- Version: 7.6
-- Game versions: 1.20.2 - 1.21.7
+- Version: 8.1
+- Game versions: 1.20.2 - 1.21.8
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -11,16 +13,19 @@ Optimize block models and fix bugs in Default resources.
 
 Menu
 
-- [Variants](#variants)
-  - [Lite](#lite)
-  - [Normal](#normal)
-  - [Textured](#textured)
-  - [Extra](#extra)
-  - [External](#external)
-- [Included Features](#included-features)
-- [License](#license)
-- [Credits](#credits)
-- [Suggestions](#suggestions)
+- [Resource Fixes](#resource-fixes)
+  - [Variants](#variants)
+    - [Lite](#lite)
+    - [Normal](#normal)
+    - [Textured](#textured)
+    - [Extra](#extra)
+    - [External](#external)
+  - [Included Features](#included-features)
+  - [License](#license)
+  - [Credits](#credits)
+  - [Planned](#planned)
+  - [Suggestions](#suggestions)
+  - [Custom Build](#custom-build)
 
 ## Variants
 
@@ -39,7 +44,7 @@ Normal is Primary file. Download variants in additional files or [Github Source]
 - Extra variant  
   Contains significant visual changes that I thought better, not normal fixes.
 - External variant  
-  Include and tweaks with external pack.  
+  Include and tweaks external pack.  
   Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
 
 <details>
@@ -124,7 +129,7 @@ Normal is Primary file. Download variants in additional files or [Github Source]
   - Animation of flowing lava is now faster then still lava.
   - Kelp animation is slower.
 - Better Cross
-  - Centered Fern, Oxeye Daisy.
+  - Flowers and fern is rescaled correctly.
 - Better Fire
   - Fire texture is a bit transparent on body.
   - Sides of floor fire is lower than before (center does not change).
@@ -213,10 +218,6 @@ Please also check license in ./Credits folder for specific files.
 
 ## Credits
 
-Textured variant
-
-- Firefly Bush Fix: Unmodified 2 files from [Fix Firefly Bush](https://modrinth.com/resourcepack/firefly-bush-fix) under [MIT License](https://spdx.org/licenses/MIT.html).
-
 Extra variant
 
 - 3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT.html).
@@ -228,6 +229,12 @@ Extra variant
 External variant
 
 - 3D Default: Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html).
+
+## Planned
+
+- Separate Lite and Base for trying merge into Sodium mod.
+- Support 1.21.9.
+- Implement [Flower fix](https://modrinth.com/resourcepack/flower-fix), [Particles +](https://modrinth.com/resourcepack/particles%2B), [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures)。
 
 ## Suggestions
 
@@ -242,3 +249,12 @@ Resourcepacks
 - [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
 - [Tasty Items](https://modrinth.com/resourcepack/tasty-items)
 - [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
+
+## Custom Build
+
+1. Clone Github Repository
+2. Config `config.json`
+3. Enter path `cd <the path>`
+4. Then run: `python build.py`
+   - `--private` arg also output builds to paths in `variants.private_output_prefix`.
+   - `--debug` arg show debug details in `build.log`.
