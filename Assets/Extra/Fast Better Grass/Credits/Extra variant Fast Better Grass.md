@@ -1,6 +1,8 @@
-Modified 8 files from [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html):
+Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html):
 
-Assets/Extra/Fast Better Grass/assets/minecraft/models/block
+### Files
+
+assets/minecraft/models/block
 
 - crimson_nylium.json
 - dirt_path.json
@@ -10,4 +12,16 @@ Assets/Extra/Fast Better Grass/assets/minecraft/models/block
 - podzol.json
 - warped_nylium.json
 
-Assets/Extra/Fast Better Grass/assets/res_fixes/models/block/fast_better_grass.json
+assets/res_fixes/models/block/fast_better_grass.json
+
+### License
+
+      MIT License
+
+      Copyright (c) 2025 robotkoer
+
+      Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the " Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+      The above copyright notice and this permission notice (including the next paragraph) shall be included in all copies or substantial portions of the Software.
+
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

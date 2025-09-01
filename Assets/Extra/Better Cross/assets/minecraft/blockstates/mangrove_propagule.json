@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/mangrove_propagule"
+      },
+      {
+        "model": "minecraft:block/mangrove_propagule",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/mangrove_propagule",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/mangrove_propagule",
+        "y": 270
+      }
+    ]
+  }
+}

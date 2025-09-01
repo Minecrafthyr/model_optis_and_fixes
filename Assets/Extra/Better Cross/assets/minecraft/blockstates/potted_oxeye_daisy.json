@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/potted_oxeye"
+      },
+      {
+        "model": "minecraft:block/potted_oxeye",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/potted_oxeye",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/potted_oxeye",
+        "y": 270
+      }
+    ]
+  }
+}

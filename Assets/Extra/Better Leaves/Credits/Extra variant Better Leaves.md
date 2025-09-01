@@ -1,6 +1,8 @@
 Unmodified 45 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Custom License](https://vanillatweaks.net/terms/):
 
-Assets/Extra/Better Leaves/assets/minecraft/blockstates
+### Files
+
+assets/minecraft/blockstates
 
 - acacia_leaves.json
 - azalea_leaves.json
@@ -14,7 +16,7 @@ Assets/Extra/Better Leaves/assets/minecraft/blockstates
 - pale_oak_leaves.json
 - spruce_leaves.json
 
-Assets/Extra/Better Leaves/assets/minecraft/models/block
+assets/minecraft/models/block
 
 - acacia_leaves_waterlogged.json
 - azalea_leaves_waterlogged.json
@@ -28,7 +30,7 @@ Assets/Extra/Better Leaves/assets/minecraft/models/block
 - pale_oak_leaves_waterlogged.json
 - spruce_leaves_waterlogged.json
 
-Assets/Extra/Better Leaves/assets/minecraft/textures/block/
+assets/minecraft/textures/block
 
 - acacia_leaves.png
 - acacia_leaves_waterlogged.png

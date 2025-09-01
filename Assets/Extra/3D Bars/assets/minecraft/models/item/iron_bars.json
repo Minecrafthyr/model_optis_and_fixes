@@ -1,6 +1,10 @@
 {
   "credit": "Made with Blockbench by Minecraft_hyr",
-  "parent": "res_fixes:block/iron_bars/parent",
+  "ambientocclusion": false,
+  "textures": {
+    "texture": "minecraft:block/iron_bars",
+    "particle": "#texture"
+  },
   "elements": [
     {
       "from": [7, 0, 7],

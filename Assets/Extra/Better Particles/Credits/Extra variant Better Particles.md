@@ -1,6 +1,8 @@
 Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Custom License](https://vanillatweaks.net/terms/):
 
-Assets/Extra/Better Particles/assets/minecraft/textures/particle
+### Files
+
+assets/minecraft/textures/particle
 
 - effect_0.png
 - effect_1.png

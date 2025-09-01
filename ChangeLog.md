@@ -1,3 +1,35 @@
+### Version 8.2
+
+- `config.json`: Now exclude in `inputs`.
+- `build.py`: Improved logging and show some information, warnings and errors in terminal.
+- Include copies of license in credit file.
+
+Lite variant
+
+- Mirrored Potted Azalea Bush branches alike standard model.
+- Fix Potted Cactus has dirt inside model.
+- Fix Potted Azalea Bush plant model is missing in old Minecraft versions (Default resource changed).
+
+Normal variant
+
+- Fix Banner model is missing in older versions of Minecraft due to item model changes at format 44.
+
+Textured variant
+
+- Add [Fix Firefly Bush](https://modrinth.com/project/FE7VLrn4) back, but frame time is 2x longer.
+
+Extra variant
+
+- Better Cross:
+  - Modify vanilla cross model, it's now has mirrored backface.
+  - Add random rotation for 1 block tall (standard and potted) cross model.
+- 3D Bars: Fixed texture missing.
+- New Torches: Improve texture again, reverted lit torch model to full shadeless.
+
+External variant
+
+- 3D Default
+  - Remove 3D redstone dust (using Extra/3D Redstone Dust).
 
 ### Version 8.1
 

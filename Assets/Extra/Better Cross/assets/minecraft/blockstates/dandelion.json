@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/dandelion"
+      },
+      {
+        "model": "minecraft:block/dandelion",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/dandelion",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/dandelion",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/potted_torchflower"
+      },
+      {
+        "model": "minecraft:block/potted_torchflower",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/potted_torchflower",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/potted_torchflower",
+        "y": 270
+      }
+    ]
+  }
+}

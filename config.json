@@ -7,78 +7,6 @@
       "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks",
       "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks"
     ],
-    "ignored_files": [
-      {
-        "prefix": "External/3D Default",
-        "files": [
-          "README.md",
-          "pack.mcmeta"
-        ]
-      },
-      {
-        "prefix": "External/3D Default/assets/minecraft/models/block",
-        "files": [
-          "flower_pot_cross.json",
-          "flower_pot.json",
-          "lightning_rod_on.json",
-          "lightning_rod.json",
-          "potted_allium.json",
-          "potted_azure_bluet.json",
-          "potted_blue_orchid.json",
-          "potted_cornflower.json",
-          "potted_fern.json",
-          "potted_lily_of_the_valley.json",
-          "potted_orange_tulip.json",
-          "potted_oxeye_daisy.json",
-          "potted_pink_tulip.json",
-          "potted_poppy.json",
-          "potted_red_tulip.json",
-          "potted_white_tulip.json",
-          "potted_wither_rose.json",
-          "template_redstone_torch.json",
-          "template_redstone_torch_wall.json",
-          "redstone_ore_on.json",
-          "deepslate_redstone_ore_on.json",
-          "bamboo_large_leaves.json",
-          "bamboo_small_leaves.json"
-        ]
-      },
-      {
-        "prefix": "External/3D Default/assets/minecraft/models/item",
-        "files": [
-          "black_candle.json",
-          "blue_candle.json",
-          "brown_candle.json",
-          "candle.json",
-          "comparator.json",
-          "cyan_candle.json",
-          "flower_pot.json",
-          "gray_candle.json",
-          "green_candle.json",
-          "light_blue_candle.json",
-          "light_gray_candle.json",
-          "lightning_rod.json",
-          "lime_candle.json",
-          "magenta_candle.json",
-          "orange_candle.json",
-          "pink_candle.json",
-          "repeater.json",
-          "torch.json",
-          "soul_torch.json",
-          "copper_torch.json",
-          "redstone_torch.json"
-        ]
-      },
-      {
-        "prefix": "External/3D Default/assets/minecraft/textures/block",
-        "files": [
-          "redstone_ore_on.png",
-          "redstone_ore_on_s.png",
-          "deepslate_redstone_ore_on.png",
-          "deepslate_redstone_ore_on_s.png"
-        ]
-      }
-    ],
     "tree": {
       "inputs": "Base",
       "children": {
@@ -87,8 +15,13 @@
           "Lite/Fence Fix",
           "Lite/Lightning Rod Fix",
           "Lite/Main",
-          "Lite/Modern Torch",
-          "Lite/Plane Fix"
+          "Lite/Modern Torches",
+          "Lite/Plane Fix",
+          "Lite/Handheld Arrow",
+          "Lite/Flower Pot Fix",
+          "Lite/Mangrove Propagule Fix",
+          "Lite/Tripwire Fix",
+          "Lite/Lever Fix"
         ],
         "output": "Resource Fixes Lite",
         "children": {
@@ -108,11 +41,11 @@
             "inputs": [
               "Textured/End Portal Frame Fix",
               "Textured/Firefly Bush Fix",
-              "Textured/Item Frame",
+              "Textured/Item Frame Tweaks",
               "Textured/Misc",
-              "Textured/Modern Recipe Button",
+              "Textured/Modern Recipe Button Texture",
               "Textured/Modern Redstone Torch Texture",
-              "Textured/Modern Spectator GUI",
+              "Textured/Modern Spectator GUI Texture",
               "Textured/Tall Seagrass Fix"
             ],
             "output": "Resource Fixes Textured",
@@ -123,7 +56,7 @@
                 "Extra/3D Ladder",
                 "Extra/3D Pointed Dripstone",
                 "Extra/3D Redstone Dust",
-                "Extra/Animation",
+                "Extra/Better Animation",
                 "Extra/Better Cross",
                 "Extra/Better Leaves",
                 "Extra/Better Particles",
@@ -144,7 +77,84 @@
               "output": "Resource Fixes Extra",
               "children": {
                 "inputs": [
-                  "External/3D Default",
+                  {
+                    "path": "External/3D Default",
+                    "exclude": [
+                      "README.md",
+                      "pack.mcmeta",
+                      {
+                        "prefix": "assets/minecraft/models/block",
+                        "files": [
+                          "flower_pot_cross.json",
+                          "flower_pot.json",
+                          "lightning_rod_on.json",
+                          "lightning_rod.json",
+                          "potted_allium.json",
+                          "potted_azure_bluet.json",
+                          "potted_blue_orchid.json",
+                          "potted_cornflower.json",
+                          "potted_fern.json",
+                          "potted_lily_of_the_valley.json",
+                          "potted_orange_tulip.json",
+                          "potted_oxeye_daisy.json",
+                          "potted_pink_tulip.json",
+                          "potted_poppy.json",
+                          "potted_red_tulip.json",
+                          "potted_white_tulip.json",
+                          "potted_wither_rose.json",
+                          "template_redstone_torch.json",
+                          "template_redstone_torch_wall.json",
+                          "redstone_ore_on.json",
+                          "deepslate_redstone_ore_on.json",
+                          "bamboo_large_leaves.json",
+                          "bamboo_small_leaves.json",
+                          "redstone_dust_dot.json",
+                          "redstone_dust_side.json",
+                          "redstone_dust_side0.json",
+                          "redstone_dust_side1.json",
+                          "redstone_dust_side_alt.json",
+                          "redstone_dust_side_alt0.json",
+                          "redstone_dust_side_alt1.json",
+                          "redstone_dust_up.json"
+                        ]
+                      },
+                      {
+                        "prefix": "assets/minecraft/models/item",
+                        "files": [
+                          "black_candle.json",
+                          "blue_candle.json",
+                          "brown_candle.json",
+                          "candle.json",
+                          "comparator.json",
+                          "cyan_candle.json",
+                          "flower_pot.json",
+                          "gray_candle.json",
+                          "green_candle.json",
+                          "light_blue_candle.json",
+                          "light_gray_candle.json",
+                          "lightning_rod.json",
+                          "lime_candle.json",
+                          "magenta_candle.json",
+                          "orange_candle.json",
+                          "pink_candle.json",
+                          "repeater.json",
+                          "torch.json",
+                          "soul_torch.json",
+                          "copper_torch.json",
+                          "redstone_torch.json"
+                        ]
+                      },
+                      {
+                        "prefix": "assets/minecraft/textures/block",
+                        "files": [
+                          "redstone_ore_on.png",
+                          "redstone_ore_on_s.png",
+                          "deepslate_redstone_ore_on.png",
+                          "deepslate_redstone_ore_on_s.png"
+                        ]
+                      }
+                    ]
+                  },
                   "External/3D Default Modifies"
                 ],
                 "output": "Resource Fixes External"
@@ -157,13 +167,38 @@
   },
   "separated": {
     "input_prefix": "Assets/",
-    "output_prefix": [
-      "ZippedPacks/"
-    ],
+    "output_prefix": "ZippedPacks/",
     "tree": [
       {
         "inputs": "Packs/pack.mcmeta",
         "children": [
+          {
+            "inputs": "Lite/Handheld Arrow",
+            "output": "Handheld Arrow"
+          },
+          {
+            "inputs": "Lite/Handheld Arrow",
+            "output": "Handheld Arrow"
+          },
+          {
+            "inputs": "Lite/Fence Fix",
+            "output": "Fence (Gate) Fix"
+          },
+          {
+            "inputs": "Lite/Lightning Rod Fix",
+            "output": "Lightning Rod Fix"
+          },
+          {
+            "inputs": "Lite/Plane Fix",
+            "output": "Plane Fix"
+          },
+          {
+            "inputs": [
+              "Lite/Modern Torches",
+              "Textured/Modern Redstone Torch Texture"
+            ],
+            "output": "Modern Torches"
+          },
           {
             "inputs": "Normal/Better Sculk Sensor Swing",
             "output": "Better Sculk Sensor Swing"
@@ -189,8 +224,12 @@
             "output": "Firefly Bush Fix"
           },
           {
-            "inputs": "Textured/Modern Spectator GUI",
-            "output": "Modern Spectator GUI"
+            "inputs": "Textured/Modern Spectator GUI Texture",
+            "output": "Modern Spectator GUI Texture"
+          },
+          {
+            "inputs": "Textured/Modern Recipe Button Texture",
+            "output": "Modern Recipe Button Texture"
           },
           {
             "inputs": "Textured/Tall Seagrass Fix",

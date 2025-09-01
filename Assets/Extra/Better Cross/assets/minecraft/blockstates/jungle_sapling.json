@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/jungle_sapling"
+      },
+      {
+        "model": "minecraft:block/jungle_sapling",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/jungle_sapling",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/jungle_sapling",
+        "y": 270
+      }
+    ]
+  }
+}

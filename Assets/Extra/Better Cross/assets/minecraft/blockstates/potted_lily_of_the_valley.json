@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/potted_lily_of_the_valley"
+      },
+      {
+        "model": "minecraft:block/potted_lily_of_the_valley",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/potted_lily_of_the_valley",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/potted_lily_of_the_valley",
+        "y": 270
+      }
+    ]
+  }
+}

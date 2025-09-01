@@ -3,7 +3,7 @@
 Optimize block models and fix bugs in Default resources.
 
 - Version: 8.1
-- Game versions: 1.20.2 - 1.21.8
+- Game versions: 1.14.4 - 1.21.8
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -103,20 +103,26 @@ Normal is Primary file. Download variants in additional files or [Github Source]
   - Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
   - Tweak some items display, they are not floating on hand or head now.
   - Use front GUI light on Conduit, Torches, End Rod, Lanterns.
-- Shadeless Planes
-  - Lily Pad and Leaf Litter is shadeless.
-  - If you like full consistency, see Extra/Consistent Planes.
+- Modern Recipe Button Texture
+- Modern Redstone Torch Texture
+- Modern Spectator GUI Texture
 - Small Backfaces
   - Cactus and small dripleaf has some pixels backface.
 
 ### Textured
 
-- Item Frame
+- End Portal Frame Fix
+  - Now you can see where it facing.
+- Firefly Bush Fix
+  - Add smooth translation in Firefly Bush animation.
+- Item Frame Tweaks
   - Optimize Item Frame with Texture change.
 - Misc
   - Make Particle Tweaks mod's ripple particle transparent.
   - Rabbit Stew Height is consistent with other bowled items.
-- Modern Spectator GUI
+- Modern Recipe Button Texture
+- Modern Redstone Torch Texture
+- Modern Spectator GUI Texture
 - Tall Seagrass Fix
   - \-1 pixel height on Tall Seagrass Top texture to avoid it visually goes out of water.
 
@@ -130,6 +136,8 @@ Normal is Primary file. Download variants in additional files or [Github Source]
   - Kelp animation is slower.
 - Better Cross
   - Flowers and fern is rescaled correctly.
+  - Cross models are now has mirrored backface.
+  - Add random rotation for 1 block tall (standard and potted) cross model.
 - Better Fire
   - Fire texture is a bit transparent on body.
   - Sides of floor fire is lower than before (center does not change).
@@ -160,6 +168,8 @@ Normal is Primary file. Download variants in additional files or [Github Source]
   - All Torch has glowing outline model.
   - Better texture.
   - Handle of Torches is smoother.
+- Respackopts
+  - Config Fast Better Grass.
 - Shadeless Lights
   - Light source blocks are shadeless. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
   - Light source items are using front GUI light.
@@ -175,16 +185,18 @@ Normal is Primary file. Download variants in additional files or [Github Source]
 ### External
 
 - [3D Default](https://modrinth.com/resourcepack/3d-default)
-  - Use Res Fixes "Extra/New Torches",  
-    "Normal/Display" Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater,  
-    "Lite" & "Normal/Display" Anvil | Tripwire Hook,  
-    "Extra/3D Iron Bars",  
-    "Extra/Unlit Redstone Ore" feature.
+  - Use Res Fixes features:
+    - "Extra/New Torches",  
+    - "Normal/Display" Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater,  
+    - "Lite" & "Normal/Display" Anvil | Tripwire Hook,  
+    - "Extra/3D Iron Bars",  
+    - "Extra/Unlit Redstone Ore",
+    - "Extra/Wide Bamboo",
+    - "Extra/3D Redstone Dust".
   - Modified Shovel item model: Middle thin.
   - Emissive blocks are shadeless.
   - Edited Brewing Stand model.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
-  - Removed bamboo leaves.
 
 </details>
 
@@ -218,13 +230,17 @@ Please also check license in ./Credits folder for specific files.
 
 ## Credits
 
+Textured variant
+
+- Firefly Bush Fix: Unmodified 1 files from [Fix Firefly Bush](https://modrinth.com/project/FE7VLrn4) by [BizCub](https://modrinth.com/user/BizCub) under [MIT License](https://spdx.org/licenses/MIT.html).
+
 Extra variant
 
-- 3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/resourcepack/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT.html).
+- 3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT.html).
 - Better Leaves: Unmodified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Custom License](https://vanillatweaks.net/terms/).
 - Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Custom License](https://vanillatweaks.net/terms/).
-- Fast Better Grass: Modified 8 files from [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html).
-- New Torches: Modified 4 files from [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html).
+- Fast Better Grass: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html).
+- New Torches: Modified 4 files from [New Torches](https://modrinth.com/project/Hrl26TBG) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html).
 
 External variant
 
@@ -234,7 +250,8 @@ External variant
 
 - Separate Lite and Base for trying merge into Sodium mod.
 - Support 1.21.9.
-- Implement [Flower fix](https://modrinth.com/resourcepack/flower-fix), [Particles +](https://modrinth.com/resourcepack/particles%2B), [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures)。
+- Implement [Particles +](https://modrinth.com/resourcepack/particles%2B), [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures) (really difficult, delayed).
+- Random rotate flowers in Extra/Better Cross.
 
 ## Suggestions
 
@@ -244,11 +261,14 @@ Resourcepacks
 - [AL's 3D Potions](https://modrinth.com/resourcepack/als-3d-potions)
 - [Better Ores 3D](https://modrinth.com/resourcepack/better-ores-3d)
 - [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp)
+- [Emissive Trims](https://modrinth.com/resourcepack/emissive-trims)
 - [Smaller Side Shield](https://modrinth.com/resourcepack/smaller-side-shield)
 - [Smooth Bow Animations](https://modrinth.com/resourcepack/smooth-bow-animations)
 - [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
 - [Tasty Items](https://modrinth.com/resourcepack/tasty-items)
 - [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
+- [Particles +](https://modrinth.com/resourcepack/particles%2B)
+- [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures)
 
 ## Custom Build
 

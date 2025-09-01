@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/fern"
+      },
+      {
+        "model": "minecraft:block/fern",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/fern",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/fern",
+        "y": 270
+      }
+    ]
+  }
+}

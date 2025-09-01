@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/potted_closed_eyeblossom"
+      },
+      {
+        "model": "minecraft:block/potted_closed_eyeblossom",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/potted_closed_eyeblossom",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/potted_closed_eyeblossom",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "v8.1 for 1.20.2+ by Minecraft_hyr",
+    "description": "v8.2 for 1.20.2+ by Minecraft_hyr",
     "min_format": 4,
     "max_format": [64, 0],
     "pack_format": 64,
@@ -13,27 +13,34 @@
         "max_format": 9999,
         "formats": [36, 9999],
         "directory": "overlay_a",
-        "__comment": "some block model fixed by vanilla"
+        "__comment": "Some block model fixed by vanilla"
       },
       {
         "min_format": 44,
         "max_format": 9999,
         "formats": [44, 9999],
         "directory": "overlay_44",
-        "__comment": "item model type"
+        "__comment": "Item model type"
       },
       {
         "min_format": 51,
         "max_format": 9999,
         "formats": [51, 9999],
         "directory": "overlay_51",
-        "__comment": "block model rotation unlimit"
+        "__comment": "Block model rotation unlimit"
       },
       {
         "directory": "1_21_4",
         "min_format": 44,
         "max_format": 9999,
         "formats": [44, 9999]
+      },
+      {
+        "min_format": [65, 1],
+        "max_format": 9999,
+        "formats": [65, 9999],
+        "directory": "overlay_65.1",
+        "__comment": "Copper Age updates"
       }
     ]
   }

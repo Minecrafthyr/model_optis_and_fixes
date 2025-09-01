@@ -2,5 +2,8 @@
   "cSpell.words": [
     "blockstate",
     "Respackopts"
-  ]
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

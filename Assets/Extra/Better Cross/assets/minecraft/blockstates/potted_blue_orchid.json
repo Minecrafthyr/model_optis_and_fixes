@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/potted_blue_orchid"
+      },
+      {
+        "model": "minecraft:block/potted_blue_orchid",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/potted_blue_orchid",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/potted_blue_orchid",
+        "y": 270
+      }
+    ]
+  }
+}
