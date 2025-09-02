@@ -2,7 +2,7 @@
 
 Optimize block models and fix bugs in Default resources.
 
-- Version: 8.1
+- Version: 8.3
 - Game versions: 1.14.4 - 1.21.8
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
@@ -103,6 +103,7 @@ Normal is Primary file. Download variants in additional files or [Github Source]
   - Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
   - Tweak some items display, they are not floating on hand or head now.
   - Use front GUI light on Conduit, Torches, End Rod, Lanterns.
+  - Spore Blossom upside down on ground.
 - Modern Recipe Button Texture
 - Modern Redstone Torch Texture
 - Modern Spectator GUI Texture
@@ -186,10 +187,10 @@ Normal is Primary file. Download variants in additional files or [Github Source]
 
 - [3D Default](https://modrinth.com/resourcepack/3d-default)
   - Use Res Fixes features:
-    - "Extra/New Torches",  
-    - "Normal/Display" Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater,  
-    - "Lite" & "Normal/Display" Anvil | Tripwire Hook,  
-    - "Extra/3D Iron Bars",  
+    - "Extra/New Torches",
+    - "Normal/Display" Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater,
+    - "Lite" & "Normal/Display" Anvil | Tripwire Hook,
+    - "Extra/3D Iron Bars",
     - "Extra/Unlit Redstone Ore",
     - "Extra/Wide Bamboo",
     - "Extra/3D Redstone Dust".
@@ -248,10 +249,10 @@ External variant
 
 ## Planned
 
-- Separate Lite and Base for trying merge into Sodium mod.
-- Support 1.21.9.
+- Separate Lite and Base for request pull into Sodium mod.
+- Support 1.21.9 (WIP: on_shelf display).
 - Implement [Particles +](https://modrinth.com/resourcepack/particles%2B), [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures) (really difficult, delayed).
-- Random rotate flowers in Extra/Better Cross.
+- More random rotate & fixes models in Extra/Better Cross.
 
 ## Suggestions
 
@@ -278,3 +279,4 @@ Resourcepacks
 4. Then run: `python build.py`
    - `--private` arg also output builds to paths in `variants.private_output_prefix`.
    - `--debug` arg show debug details in `build.log`.
+   - `--cfgPath:<path>` arg change the config path (doesn't change execution path).

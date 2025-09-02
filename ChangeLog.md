@@ -1,3 +1,15 @@
+### Version 8.3
+
+Normal variant
+
+- Modern Torches: solve redstone torch display issue (v8.1 only solve normal torch), and there are use front gui light again.
+- Display: Spore Blossom upside down on ground again (this is a feature in v2.0 but lost somewhere).
+
+Extra variant
+
+- 3D Bars: support 1.21.9.
+- Better Cross: Tweak Oak Sapling model, Fix oxeye daisy model missing.
+
 ### Version 8.2
 
 - `config.json`: Now exclude in `inputs`.

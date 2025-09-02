@@ -1,10 +1,10 @@
 {
   "pack": {
-    "description": "v8.2 for 1.20.2+ by Minecraft_hyr",
-    "min_format": 4,
-    "max_format": [64, 0],
+    "description": "v8.3 for 1.20.2+ by Minecraft_hyr",
+    "min_format": 5,
+    "max_format": [67, 0],
     "pack_format": 64,
-    "supported_formats": [4, 64]
+    "supported_formats": [5, 67]
   },
   "overlays": {
     "entries": [

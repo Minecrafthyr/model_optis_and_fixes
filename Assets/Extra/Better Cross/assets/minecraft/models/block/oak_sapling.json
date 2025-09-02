@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/cross_l",
+  "textures": {
+    "cross": "minecraft:block/oak_sapling"
+  }
+}

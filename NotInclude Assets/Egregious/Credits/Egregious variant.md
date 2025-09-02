@@ -1,1 +1,0 @@
-Modified files from [Egregious Model Optimizations](https://modrinth.com/resourcepack/egregious-model-optimizations) by [Wildeditour](https://modrinth.com/user/Wildeditour) under [GPL-2.1-only](https://spdx.org/licenses/GPL-2.1-only.html).

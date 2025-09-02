@@ -2,12 +2,12 @@
   "multipart": [
     {
       "apply": {
-        "model": "res_fixes:block/waxed_exposed_copper_bars/center"
+        "model": "res_fixes:block/exposed_copper_bars/center"
       }
     },
     {
       "apply": {
-        "model": "res_fixes:block/waxed_exposed_copper_bars/left"
+        "model": "res_fixes:block/exposed_copper_bars/left"
       },
       "when": {
         "north": "true"
@@ -15,7 +15,7 @@
     },
     {
       "apply": {
-        "model": "res_fixes:block/waxed_exposed_copper_bars/left",
+        "model": "res_fixes:block/exposed_copper_bars/left",
         "y": 90
       },
       "when": {
@@ -24,7 +24,7 @@
     },
     {
       "apply": {
-        "model": "res_fixes:block/waxed_exposed_copper_bars/right"
+        "model": "res_fixes:block/exposed_copper_bars/right"
       },
       "when": {
         "south": "true"
@@ -32,7 +32,7 @@
     },
     {
       "apply": {
-        "model": "res_fixes:block/waxed_exposed_copper_bars/right",
+        "model": "res_fixes:block/exposed_copper_bars/right",
         "y": 90
       },
       "when": {

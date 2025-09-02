@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/bars/left",
+  "textures": {
+    "texture": "minecraft:block/weathered_copper_bars"
+  }
+}

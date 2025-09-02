@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/bars/center",
+  "textures": {
+    "texture": "minecraft:block/exposed_copper_bars"
+  }
+}
