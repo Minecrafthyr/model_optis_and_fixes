@@ -1,8 +1,9 @@
-{
-  "variants": {
-    "input_prefix": "Assets/",
-    "output_prefix": "Zipped/",
-    "private_output_prefix": [
+[
+  {
+    "name": "variants",
+    "src_dir": "Assets/",
+    "out_dir": "Zipped/",
+    "extra_out_dirs": [
       "C:/PCL2/.minecraft/resourcepacks",
       "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks",
       "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks"
@@ -165,142 +166,142 @@
       }
     }
   },
-  "separated": {
-    "input_prefix": "Assets/",
-    "output_prefix": "ZippedPacks/",
-    "tree": [
-      {
-        "inputs": "Packs/pack.mcmeta",
-        "children": [
-          {
-            "inputs": "Lite/Handheld Arrow",
-            "output": "Handheld Arrow"
-          },
-          {
-            "inputs": "Lite/Handheld Arrow",
-            "output": "Handheld Arrow"
-          },
-          {
-            "inputs": "Lite/Fence Fix",
-            "output": "Fence (Gate) Fix"
-          },
-          {
-            "inputs": "Lite/Lightning Rod Fix",
-            "output": "Lightning Rod Fix"
-          },
-          {
-            "inputs": "Lite/Plane Fix",
-            "output": "Plane Fix"
-          },
-          {
-            "inputs": [
-              "Lite/Modern Torches",
-              "Textured/Modern Redstone Torch Texture"
-            ],
-            "output": "Modern Torches"
-          },
-          {
-            "inputs": "Normal/Better Sculk Sensor Swing",
-            "output": "Better Sculk Sensor Swing"
-          },
-          {
-            "inputs": "Normal/Cull Glass",
-            "output": "Cull Glass"
-          },
-          {
-            "inputs": "Normal/Shadeless Planes",
-            "output": "Shadeless Planes"
-          },
-          {
-            "inputs": "Normal/Small Backfaces",
-            "output": "Small Backfaces"
-          },
-          {
-            "inputs": "Textured/End Portal Frame Fix",
-            "output": "End Portal Frame Fix"
-          },
-          {
-            "inputs": "Textured/Firefly Bush Fix",
-            "output": "Firefly Bush Fix"
-          },
-          {
-            "inputs": "Textured/Modern Spectator GUI Texture",
-            "output": "Modern Spectator GUI Texture"
-          },
-          {
-            "inputs": "Textured/Modern Recipe Button Texture",
-            "output": "Modern Recipe Button Texture"
-          },
-          {
-            "inputs": "Textured/Tall Seagrass Fix",
-            "output": "Tall Seagrass Fix"
-          },
-          {
-            "inputs": "Extra/3D Bars",
-            "output": "3D Bars"
-          },
-          {
-            "inputs": "Extra/3D Ladder",
-            "output": "3D Ladder"
-          },
-          {
-            "inputs": "Extra/3D Pointed Dripstone",
-            "output": "3D Pointed Dripstone"
-          },
-          {
-            "inputs": "Extra/3D Redstone Dust",
-            "output": "3D Redstone Dust"
-          },
-          {
-            "inputs": "Extra/Better Leaves",
-            "output": "Better Leaves"
-          },
-          {
-            "inputs": "Extra/Better Weather",
-            "output": "Better Weather"
-          },
-          {
-            "inputs": "Extra/Better Particles",
-            "output": "Better Particles"
-          },
-          {
-            "inputs": "Extra/Better Cross",
-            "output": "Better Cross"
-          },
-          {
-            "inputs": "Extra/Clean Water",
-            "output": "Clean Water"
-          },
-          {
-            "inputs": "Extra/Fast Better Grass",
-            "output": "Fast Better Grass"
-          },
-          {
-            "inputs": "Extra/Mirrored Pumpkin Blur",
-            "output": "Mirrored Pumpkin Blur"
-          },
-          {
-            "inputs": "Extra/Moist Farmland",
-            "output": "Moist Farmland"
-          },
-          {
-            "inputs": "Extra/New Torches",
-            "output": "New Torches"
-          },
-          {
-            "inputs": "Extra/Square Shadow",
-            "output": "Square Shadow"
-          },
-          {
-            "inputs": "Extra/Unlit Redstone Ore",
-            "output": "Unlit Redstone Ore"
-          },
-          {
-            "inputs": "Extra/Wide Bamboo",
-            "output": "Wide Bamboo"
-          }
-        ]
-      }
-    ]
+  {
+    "name": "separated",
+    "src_dir": "Assets/",
+    "out_dir": "ZippedPacks/",
+    "debug": false,
+    "tree": {
+      "inputs": "Packs/pack.mcmeta",
+      "children": [
+        {
+          "inputs": "Lite/Handheld Arrow",
+          "output": "Handheld Arrow"
+        },
+        {
+          "inputs": "Lite/Handheld Arrow",
+          "output": "Handheld Arrow"
+        },
+        {
+          "inputs": "Lite/Fence Fix",
+          "output": "Fence (Gate) Fix"
+        },
+        {
+          "inputs": "Lite/Lightning Rod Fix",
+          "output": "Lightning Rod Fix"
+        },
+        {
+          "inputs": "Lite/Plane Fix",
+          "output": "Plane Fix"
+        },
+        {
+          "inputs": [
+            "Lite/Modern Torches",
+            "Textured/Modern Redstone Torch Texture"
+          ],
+          "output": "Modern Torches"
+        },
+        {
+          "inputs": "Normal/Better Sculk Sensor Swing",
+          "output": "Better Sculk Sensor Swing"
+        },
+        {
+          "inputs": "Normal/Cull Glass",
+          "output": "Cull Glass"
+        },
+        {
+          "inputs": "Normal/Shadeless Planes",
+          "output": "Shadeless Planes"
+        },
+        {
+          "inputs": "Normal/Small Backfaces",
+          "output": "Small Backfaces"
+        },
+        {
+          "inputs": "Textured/End Portal Frame Fix",
+          "output": "End Portal Frame Fix"
+        },
+        {
+          "inputs": "Textured/Firefly Bush Fix",
+          "output": "Firefly Bush Fix"
+        },
+        {
+          "inputs": "Textured/Modern Spectator GUI Texture",
+          "output": "Modern Spectator GUI Texture"
+        },
+        {
+          "inputs": "Textured/Modern Recipe Button Texture",
+          "output": "Modern Recipe Button Texture"
+        },
+        {
+          "inputs": "Textured/Tall Seagrass Fix",
+          "output": "Tall Seagrass Fix"
+        },
+        {
+          "inputs": "Extra/3D Bars",
+          "output": "3D Bars"
+        },
+        {
+          "inputs": "Extra/3D Ladder",
+          "output": "3D Ladder"
+        },
+        {
+          "inputs": "Extra/3D Pointed Dripstone",
+          "output": "3D Pointed Dripstone"
+        },
+        {
+          "inputs": "Extra/3D Redstone Dust",
+          "output": "3D Redstone Dust"
+        },
+        {
+          "inputs": "Extra/Better Leaves",
+          "output": "Better Leaves"
+        },
+        {
+          "inputs": "Extra/Better Weather",
+          "output": "Better Weather"
+        },
+        {
+          "inputs": "Extra/Better Particles",
+          "output": "Better Particles"
+        },
+        {
+          "inputs": "Extra/Better Cross",
+          "output": "Better Cross"
+        },
+        {
+          "inputs": "Extra/Clean Water",
+          "output": "Clean Water"
+        },
+        {
+          "inputs": "Extra/Fast Better Grass",
+          "output": "Fast Better Grass"
+        },
+        {
+          "inputs": "Extra/Mirrored Pumpkin Blur",
+          "output": "Mirrored Pumpkin Blur"
+        },
+        {
+          "inputs": "Extra/Moist Farmland",
+          "output": "Moist Farmland"
+        },
+        {
+          "inputs": "Extra/New Torches",
+          "output": "New Torches"
+        },
+        {
+          "inputs": "Extra/Square Shadow",
+          "output": "Square Shadow"
+        },
+        {
+          "inputs": "Extra/Unlit Redstone Ore",
+          "output": "Unlit Redstone Ore"
+        },
+        {
+          "inputs": "Extra/Wide Bamboo",
+          "output": "Wide Bamboo"
+        }
+      ]
+    }
   }
-}
+]

@@ -277,6 +277,5 @@ Resourcepacks
 2. Config `config.json`
 3. Enter path `cd <the path>`
 4. Then run: `python build.py`
-   - `--private` arg also output builds to paths in `variants.private_output_prefix`.
-   - `--debug` arg show debug details in `build.log`.
-   - `--cfgPath:<path>` arg change the config path (doesn't change execution path).
+   - `--cfg:<path>` arg change the config path (doesn't change execution path).
+  

@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+import datetime
 import zipfile
 import shutil
 import json
@@ -5,155 +7,214 @@ import logging
 import sys
 import time
 import os
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
-def log_info(s: str):
-    logging.info(s)
-    print(s)
+@dataclass
+class entry_info:
+    src_dir: str
+    out_dir: str
+    extra_out_dirs: str | list[str]
+    exclude_ext: tuple
+    default_exclude: set
+    debug: bool
 
 
-def log_warning(s: str):
-    logging.warning(s)
-    print(s)
-
-
-def log_error(s: str):
-    logging.error(s)
-    print(s)
-
-
-def tree_pack_json(data: dict, private: bool):
-    tree = data["tree"]
-    input_prefix = data["input_prefix"]
-
-    output_prefix = (
-        data["output_prefix"]
-        if isinstance(data["output_prefix"], list)
-        else [data["output_prefix"]]
-    )
-    
-    if private:
-        _pop = data.get("private_output_prefix")
-        if _pop != None:
-            output_prefix.extend(_pop if isinstance(_pop, list) else [_pop])
-    storage: dict[str, bytes] = {}
-    ignored_ext = tuple(data.get("ignored_ext", [".py", ".backup", ".temp"]))
-
-    def process_path(path: str | dict, storage: dict[str, bytes]) -> int:
-        original_cwd = os.getcwd()
+def process_exclude_files(
+    items: list, exclude_files: set | None = None, base_prefix=""
+) -> set:
+    if exclude_files is None:
         exclude_files = set()
-        if isinstance(path, dict):
 
-            def process_exclude_files(items, base_prefix=""):
-                for item in items:
-                    if isinstance(item, str):
-                        path = os.path.normpath(os.path.join(base_prefix, item))
-                        exclude_files.add(path.replace(os.sep, "/"))
-                    elif isinstance(item, dict):
-                        if "prefix" in item and "files" in item:
-                            current_prefix = os.path.join(base_prefix, item["prefix"])
-                            process_exclude_files(item["files"], current_prefix)
-                        elif "files" in item:
-                            process_exclude_files(item["files"], base_prefix)
-
-            process_exclude_files(path.get("exclude_files", []))
-            path = path["path"]
-        try:
-            os.chdir(str(input_prefix))
-            if os.path.isfile(path):
-                with open(path, "rb") as f:
-                    storage[os.path.basename(path)] = f.read()
-            elif os.path.isdir(path):
-                for root, dirs, files in os.walk(path):
-                    for file in files:
-                        rpath = os.path.join(root, file)
-                        relpath = os.path.relpath(rpath, path)
-
-                        if file.endswith(ignored_ext):
-                            logging.debug(f'Ignored "{relpath}"')
-                        elif len(exclude_files) != 0:
-                            _p = relpath.replace(os.sep, "/")
-                            if _p in exclude_files:
-                                logging.debug(f'Ignored "{relpath}"')
-                                exclude_files.remove(_p)
-                        else:
-                            with open(rpath, "rb") as f:
-                                storage[relpath] = f.read()
-            else:
-                log_error(f"Path {path} not found!")
-        finally:
-            os.chdir(original_cwd)
-        if len(exclude_files) != 0:
-            log_warning(
-                f"{len(exclude_files)} files in {path} not excluded: {exclude_files}"
-            )
-
-    def process_tree(tree, storage: dict[str, bytes]) -> int:
-        if isinstance(tree, list):
-            for item in tree:
-                process_tree(item, storage.copy())
-        elif isinstance(tree, dict):
-            inputs = tree["inputs"]
-            inputs = inputs if isinstance(inputs, list) else [inputs]
-            tp = time.time()
-            for path in inputs:
-                process_path(path, storage)
-            logging.debug(f"Reading cost: {time.time()-tp}s")
-            output = f"{tree['output']}.zip" if "output" in tree else None
-            if output:
-                first_out_path = os.path.join(output_prefix[0], output)
-                tp = time.time()
-                with zipfile.ZipFile(first_out_path, "w", zipfile.ZIP_STORED) as zipf:
-                    for k, v in storage.items():
-                        zipf.writestr(k, v)
-                logging.debug(f"Zipping cost: {time.time()-tp}s")
-                logging.info(
-                    f'Success: "{os.path.basename(first_out_path)}" ({len(storage)} files, {os.path.getsize(first_out_path)>>10} KiB)'
-                )
-                for outprefix in output_prefix[1:]:
-                    out_path = os.path.join(outprefix, output)
-                    shutil.copy(first_out_path, out_path)
-                    logging.debug(f"Successfully copied to {outprefix}.")
-                logging.debug(f"Successfully copied to directories.")
-            if "children" in tree:
-                process_tree(tree["children"], storage)
+    for item in items:
+        if isinstance(item, str):
+            path = os.path.normpath(os.path.join(base_prefix, item))
+            exclude_files.add(path.replace(os.sep, "/"))
+        elif isinstance(item, dict):
+            if "prefix" in item and "files" in item:
+                current_prefix = os.path.join(base_prefix, item["prefix"])
+                process_exclude_files(item["files"], exclude_files, current_prefix)
+            elif "files" in item:
+                process_exclude_files(item["files"], exclude_files, base_prefix)
         else:
-            log_error(f"Tree {tree} is not a list or a dict.")
+            logging.warning(f"Invalid exclude item type: {type(item)} - {item}")
+    return exclude_files
 
-    process_tree(tree, storage)
+
+def process_path(
+    path: str | dict,
+    storage: dict[str, bytes],
+    info: entry_info,
+):
+    original_cwd = os.getcwd()
+    exclude: set = set()
+    if isinstance(path, dict):
+        exclude = process_exclude_files(path.get("exclude", []))
+        path = str(path["path"])
+    try:
+        os.chdir(info.src_dir)
+        if os.path.isfile(path):
+            with open(path, "rb") as f:
+                storage[os.path.basename(path)] = f.read()
+        elif os.path.isdir(path):
+            files_to_process = []
+            for root, dirs, files in os.walk(path):
+                for file in files:
+                    rpath = os.path.join(root, file)
+                    relpath = os.path.relpath(rpath, path)
+
+                    _p = relpath.replace(os.sep, "/")
+                    if file.endswith(info.exclude_ext):
+                        logging.debug(f'Ignored "{relpath}" by extension')
+                    elif _p in exclude:
+                        logging.debug(f'Ignored "{relpath}" by relative path')
+                        exclude.remove(_p)
+                    elif _p in info.default_exclude:
+                        logging.debug(f'Ignored "{relpath}" by default')
+                    else:
+                        files_to_process.append((rpath, relpath))
+
+            # Use multithreading only when there are more than 128 files
+            if len(files_to_process) > 128:
+                # Thread-safe storage for multithreading
+                thread_storage = {}
+                lock = threading.Lock()
+
+                def read_file(rpath, relpath):
+                    with open(rpath, "rb") as f:
+                        content = f.read()
+                    with lock:
+                        thread_storage[relpath] = content
+
+                with ThreadPoolExecutor() as executor:
+                    futures = []
+                    for rpath, relpath in files_to_process:
+                        futures.append(executor.submit(read_file, rpath, relpath))
+
+                    for future in as_completed(futures):
+                        try:
+                            future.result()
+                        except Exception as e:
+                            logging.error(f"Error reading file: {e}")
+
+                # Merge thread storage into main storage
+                storage.update(thread_storage)
+            else:
+                # Original sequential processing for small number of files
+                for rpath, relpath in files_to_process:
+                    with open(rpath, "rb") as f:
+                        storage[relpath] = f.read()
+        else:
+            logging.error(f"Path {path} not found!")
+    finally:
+        os.chdir(original_cwd)
+    if len(exclude) != 0:
+        logging.warning(f"{len(exclude)} files in {path} not excluded: {exclude}")
 
 
-def load_json_build_cfg(path="config.json", private: bool = False):
-    if not os.path.exists(path):
-        log_error(f"Config {path} not found!")
+def process_tree(
+    info: entry_info,
+    tree: dict | list[dict],
+    storage: dict[str, bytes],
+):
+    if isinstance(tree, list):
+        for item in tree:
+            process_tree(
+                info,
+                item,
+                storage.copy(),  # Necessary Copy
+            )
+    elif isinstance(tree, dict):
+        inputs = tree["inputs"]
+        inputs = list[str](inputs if isinstance(inputs, list) else [inputs])
+        if info.debug:
+            tp = time.time()
+        for path in inputs:
+            process_path(path, storage, info)
+        if info.debug:
+            logging.debug(f"Reading cost: {time.time()-tp}s")
+        out_fn = f"{tree['output']}.zip" if "output" in tree else None
+        if out_fn:
+            out_f = os.path.join(info.out_dir, out_fn)
+            if info.debug:
+                tp = time.time()
+            with zipfile.ZipFile(out_f, "w", zipfile.ZIP_STORED) as zipf:
+                for k, v in storage.items():
+                    zipf.writestr(k, v)
+            if info.debug:
+                logging.debug(f"Zipping cost: {time.time()-tp}s")
+            logging.info(
+                f'Success: "{os.path.basename(out_f)}" \
+({len(storage)} files, {os.path.getsize(out_f)>>10} KiB)'
+            )
+            if isinstance(info.extra_out_dirs, str):
+                shutil.copy(out_f, os.path.join(info.extra_out_dirs, out_fn))
+            else:
+                for extra_out_dir in info.extra_out_dirs:
+                    shutil.copy(out_f, os.path.join(extra_out_dir, out_fn))
+        if "children" in tree:
+            process_tree(info, tree["children"], storage)
+    else:
+        logging.error(f"Tree {tree} is not a list or a dict.")
+
+
+def tree_pack_json(data: list | dict):
+    if isinstance(data, list):
+        for item in data:
+            tree_pack_json(item)
         return
-    with open(path, "r", encoding="utf-8") as f:
-        json_data = json.load(f)
-        if isinstance(json_data, dict):
-            for k, v in json_data.items():
-                log_info(f'== Config "{k}" ==')
-                tree_pack_json(v, private)
+    ef = process_exclude_files(
+        data.get("default_exclude", []),
+    )
+    logging.info(f'== Config "{data.get("name") or "<unnamed>"}" ==')
+    process_tree(
+        info=entry_info(
+            data["src_dir"],
+            data["out_dir"],
+            data.get("extra_out_dirs") or [],
+            tuple(data.get("exclude_ext", (".py", ".backup", ".temp"))),
+            ef,
+            data.get("debug", True),
+        ),
+        tree=data["tree"],
+        storage=dict(),
+    )
 
 
 if __name__ == "__main__":
-    debug = False
-    private = False
-    cfgPath = "config.json"
-    if "--debug" in sys.argv:
-        debug = True
-    if "--private" in sys.argv:
-        private = True
-    for arg in sys.argv[1:]:
-        if arg.startswith("--cfgPath:"):
-            cfgPath = arg[len("--cfgPath:") :]
+    cfg_path = "config.json"
+    for arg in sys.argv:
+        if arg.startswith("--cfg:"):
+            cfg_path = arg[len("--cfg:") :]
 
-    with open("build.log", "w") as f:
-        logging.basicConfig(
-            stream=f,
-            level=logging.DEBUG if debug else logging.INFO,
-            format="[%(asctime)s][%(levelname)s] %(message)s",
+    # 设置日志配置
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(
+        logging.Formatter(
+            "[%(asctime)s] [%(levelname)s] %(message)s", datefmt="%H:%M:%S"
+        )
+    )
+
+    file_handler = logging.FileHandler("build.log", encoding="utf-8", mode="w")
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(
+        logging.Formatter(
+            "[%(asctime)s.%(msecs)03d] [%(levelname)s] %(message)s",
             datefmt="%H:%M:%S",
         )
-        log_info(f"Build starts at {time.strftime("%Y-%m-%d, %H:%M:%S")}.")
-        load_json_build_cfg(private=private)
-        log_info(f"Build stops at {time.strftime("%Y-%m-%d, %H:%M:%S")}.")
+    )
+
+    logger.addHandler(console_handler)
+    logger.addHandler(file_handler)
+
+    start_time_point = datetime.datetime.now()
+    logging.info(f"Build starts at {datetime.datetime.now()}.")
+    tree_pack_json(json.load(open(cfg_path)))
+    logging.info(
+        f"Build stops at {datetime.datetime.now()}, total cost {datetime.datetime.now()-start_time_point}."
+    )
