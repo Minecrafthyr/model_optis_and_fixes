@@ -146,7 +146,7 @@ Normal is Primary file. Download variants in additional files or [Github Source]
 - Better Leaves
   - Add inner back face.
   - Fast leaves waterlogged texture.
-  - Better with [More Culling](https://modrinth.com/mod/moreculling)
+  - Better with [More Culling](https://modrinth.com/mod/moreculling)|[Cull Leaves](https://modrinth.com/mod/cull-leaves)
 - Better Weather
   - White and light blue and more transparent rain.
   - Less snow.
@@ -268,8 +268,6 @@ Resourcepacks
 - [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
 - [Tasty Items](https://modrinth.com/resourcepack/tasty-items)
 - [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
-- [Particles +](https://modrinth.com/resourcepack/particles%2B)
-- [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures)
 
 ## Custom Build
 
