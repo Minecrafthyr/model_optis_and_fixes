@@ -1,5 +1,5 @@
 {
-  "parent": "res_fixes:block/template/cross_l",
+  "parent": "res_fixes:block/template/cross_r",
   "textures": {
     "cross": "minecraft:block/oak_sapling"
   }
