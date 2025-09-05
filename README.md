@@ -2,8 +2,8 @@
 
 Optimize block models and fix bugs in Default resources.
 
-- Version: 8.3
-- Game versions: 1.14.4 - 1.21.8
+- Version: 8.4
+- Game versions: 1.14.4 - 1.21.8 - 25w36b (1.21.9 snapshot)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -167,7 +167,7 @@ Normal is Primary file. Download variants in additional files or [Github Source]
   - Visualize Farmland "moisture" state 0 - 7.
 - New Torches
   - All Torch has glowing outline model.
-  - Better texture.
+  - Use lantern texture.
   - Handle of Torches is smoother.
 - Respackopts
   - Config Fast Better Grass.
@@ -231,6 +231,8 @@ Please also check license in ./Credits folder for specific files.
 
 ## Credits
 
+(Unmodified: directly copy. Modified: may modified. Used: used a part of texture.)
+
 Textured variant
 
 - Firefly Bush Fix: Unmodified 1 files from [Fix Firefly Bush](https://modrinth.com/project/FE7VLrn4) by [BizCub](https://modrinth.com/user/BizCub) under [MIT License](https://spdx.org/licenses/MIT.html).
@@ -241,16 +243,14 @@ Extra variant
 - Better Leaves: Unmodified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Custom License](https://vanillatweaks.net/terms/).
 - Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Custom License](https://vanillatweaks.net/terms/).
 - Fast Better Grass: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html).
-- New Torches: Modified 4 files from [New Torches](https://modrinth.com/project/Hrl26TBG) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html).
+- New Torches: Unmodified 5 files from [New Torch Style](https://modrinth.com/project/LIqTBoPg) by [Uanderson_test3](https://modrinth.com/user/Uanderson_test3) under [MIT License](https://spdx.org/licenses/MIT.html).
 
 External variant
 
-- 3D Default: Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html).
+- 3D Default: Modified files (unmodified in source code) from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html).
 
 ## Planned
 
-- Separate Lite and Base for request pull into Sodium mod.
-- Support 1.21.9 (WIP: on_shelf display).
 - Implement [Particles +](https://modrinth.com/resourcepack/particles%2B), [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures) (really difficult, delayed).
 - More random rotate & fixes models in Extra/Better Cross.
 
@@ -273,7 +273,33 @@ Resourcepacks
 
 1. Clone Github Repository
 2. Config `config.json`
+    - (list): list to place multiple dict.
+    - (dict):  
+      `src_dir: str` is the root path of inputs.  
+      `out_dir: str` is the root path of outputs.  
+      `extra_out_dirs: list | None` is for copy files into other directories.  
+      `debug: bool | None = True` is for show debug message in log.  
+      `clear: bool | None = True` is for clear output directory (used for renamed output).  
+      `default_exclude: list | None` default excluding files.  
+      `tree: list[dict] | dict` config tree.
+      - (list): list to place multiple dict
+      - (dict):  
+        `inputs: list[dict | str] | str` is the relative path (dir or file) of inputs.  
+        - (str): a single path (dir or file).
+        - (dict):  
+          `path: str`: a single path (dir or file).  
+          `zip_mode: bool | None = True` read zip data into current storage.  
+          `exclude: list | None` excluding files.
+          - (str): a single file
+          - (dict):  
+            `prefix: str` relative path to exclude.  
+            `files: list[dict | str]`  
+            - (str): a single file  
+            - (dict): nesting dict.  
+        `output: str | None` is the relative path of output.  
+        `children: list[str] | dict` new config based on this storage.
 3. Enter path `cd <the path>`
 4. Then run: `python build.py`
-   - `--cfg:<path>` arg change the config path (doesn't change execution path).
-  
+  - `--dir:<path>` arg change the current directory path.
+  - `--cfg:<path>` arg change the config path.
+  - `--log:<path>` arg change the log path.

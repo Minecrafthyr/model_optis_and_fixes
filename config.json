@@ -22,7 +22,9 @@
           "Lite/Flower Pot Fix",
           "Lite/Mangrove Propagule Fix",
           "Lite/Tripwire Fix",
-          "Lite/Lever Fix"
+          "Lite/Lever Fix",
+          "Lite/Chain Fix",
+          "Lite/Random Rotate"
         ],
         "output": "Resource Fixes Lite",
         "children": {
@@ -79,7 +81,7 @@
               "children": {
                 "inputs": [
                   {
-                    "path": "External/3D Default",
+                    "path": "External/3D Default 1.21.2+ v1.12.1.zip",
                     "exclude": [
                       "README.md",
                       "pack.mcmeta",
@@ -141,7 +143,6 @@
                           "repeater.json",
                           "torch.json",
                           "soul_torch.json",
-                          "copper_torch.json",
                           "redstone_torch.json"
                         ]
                       },
@@ -174,10 +175,6 @@
     "tree": {
       "inputs": "Packs/pack.mcmeta",
       "children": [
-        {
-          "inputs": "Lite/Handheld Arrow",
-          "output": "Handheld Arrow"
-        },
         {
           "inputs": "Lite/Handheld Arrow",
           "output": "Handheld Arrow"

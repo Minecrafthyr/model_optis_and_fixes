@@ -1,7 +1,0 @@
-{
-	"__comment":"Designed by GeForceLegend",
-	"parent":"block/template_copper_bulb",
-	"textures":{
-		"all":"block/exposed_copper_bulb_lit_powered"
-	}
-}

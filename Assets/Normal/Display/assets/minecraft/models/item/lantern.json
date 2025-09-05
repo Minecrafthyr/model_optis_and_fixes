@@ -1,4 +1,3 @@
 {
-    "gui_light": "front",
-    "parent":"minecraft:block/lantern"
-  }
+  "parent": "minecraft:block/lantern"
+}

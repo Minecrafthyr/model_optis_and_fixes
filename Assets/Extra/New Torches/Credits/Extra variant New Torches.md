@@ -1,19 +1,21 @@
-Modified 4 files from [New Torches](https://modrinth.com/project/Hrl26TBG) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html):
+Unmodified 5 files from [New Torch Style](https://modrinth.com/project/LIqTBoPg) by [Uanderson_test3](https://modrinth.com/user/Uanderson_test3) under [MIT License](https://spdx.org/licenses/MIT.html).
 
 ### Files
 
-assets/res_fixes/textures/block
+assets/minecraft/textures/block/
 
-- redstone_torch_off.png
 - redstone_torch.png
+- redstone_torch_off.png
 - soul_torch.png
 - torch.png
+
+overlay_65.1/assets/minecraft/textures/block/copper_torch.png
 
 ### License
 
       MIT License
 
-      Copyright (c) 2024 Waradu
+      Copyright (c) 2025 Uanderson_test3
 
       Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the " Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

@@ -3,6 +3,7 @@
     "textures": {
         "particle": "#lantern"
     },
+    "gui_light": "front",
     "elements": [
         {   "from": [ 5, 0, 5 ],
             "to": [ 11, 7, 11 ],

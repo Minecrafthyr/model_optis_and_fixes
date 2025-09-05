@@ -1,4 +1,4 @@
-Unmodified 1 files from [Fix Firefly Bush](https://modrinth.com/project/FE7VLrn4) by [BizCub](https://modrinth.com/user/BizCub) under [MIT License](https://spdx.org/licenses/MIT.html):
+Unmodified 1 files from [Fix Firefly Bush](https://modrinth.com/project/FE7VLrn4) by [BizCub](https://modrinth.com/user/BizCub) under [MIT License](https://spdx.org/licenses/MIT.html).
 
 ## Files
 

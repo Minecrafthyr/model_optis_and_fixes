@@ -1,3 +1,16 @@
+### Version 8.4
+
+- Improve build system again and again: support loads Zip file and more.
+- Support 25w36b (1.21.9 snapshot) in all variants except External.
+
+Normal variant
+
+- Fix item skull or head disappear in older versions.
+
+Extra variant
+
+- New Torches: use textures from [New Torch Style](https://modrinth.com/project/LIqTBoPg) by [Uanderson_test3](https://modrinth.com/user/Uanderson_test3).
+
 ### Version 8.3
 
 - Improve build system again.
@@ -69,6 +82,7 @@ Extra variant
 ### Version 8.0
 
 <!--Changelog has been flipped by AI.-->
+
 New `config.json` to custom build.
 
 Lite variant
@@ -257,7 +271,6 @@ Extra variant
 - New [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html) (modified).
 - New `Display`: Block on ground size is larger than Default.
 
-
 ### Version 6.1
 
 Lite variant
@@ -377,7 +390,7 @@ Extra variant
   | Ambient Occlusion                                                                                                                                                              | true    | true     | false    |
   | Rescale (for cross faces)                                                                                                                                                      | false   | false    | true     |
   | Shade (for cross faces) [MC-262676](https://bugs.mojang.com/browse/MC/issues/MC-262676 "Mangrove propagules appear darker than they should due to shading not being disabled") | true    | true     | false    |
-  | invisible faces [MC-262689](https://bugs.mojang.com/browse/MC/issues/MC-262689 "Hanging mangrove propagule models are comically unoptimized")                                   | have    | may have | not have |
+  | invisible faces [MC-262689](https://bugs.mojang.com/browse/MC/issues/MC-262689 "Hanging mangrove propagule models are comically unoptimized")                                  | have    | may have | not have |
 
 - Remove Fix of [MC-262865](https://bugs.mojang.com/browse/MC/issues/MC-262865 "Lever handle is shaded").
 - Fix lighting rod on using lighting rod texture.
