@@ -1,109 +1,109 @@
-[11:03:12.665] [INFO] Build starts at 2025-09-05 11:03:12.665079.
-[11:03:12.670] [INFO] == Config "variants" ==
-[11:03:12.812] [DEBUG] Reading cost: 0.02599620819091797s
-[11:03:12.959] [DEBUG] Reading cost: 0.14611268043518066s
-[11:03:12.999] [DEBUG] Zipping cost: 0.04037928581237793s
-[11:03:13.000] [INFO] Success: "Resource Fixes Lite.zip" (218 files, 177 KiB)
-[11:03:13.039] [DEBUG] Ignored "assets/minecraft/models/block/template_sculk_shrieker.json.backup" by extension
-[11:03:13.104] [DEBUG] Ignored "assets/minecraft/models/block/paths.temp" by extension
-[11:03:13.134] [DEBUG] Reading cost: 0.12563228607177734s
-[11:03:13.212] [DEBUG] Zipping cost: 0.07779645919799805s
-[11:03:13.212] [INFO] Success: "Resource Fixes.zip" (451 files, 249 KiB)
-[11:03:13.248] [DEBUG] Reading cost: 0.029274463653564453s
-[11:03:13.343] [DEBUG] Zipping cost: 0.09479832649230957s
-[11:03:13.343] [INFO] Success: "Resource Fixes Textured.zip" (474 files, 262 KiB)
-[11:03:13.644] [DEBUG] Reading cost: 0.2928502559661865s
-[11:03:13.820] [DEBUG] Zipping cost: 0.17536616325378418s
-[11:03:13.820] [INFO] Success: "Resource Fixes Extra.zip" (986 files, 525 KiB)
-[11:03:13.865] [DEBUG] Ignored "assets/minecraft/models/block/bamboo_large_leaves.json" by relative path
-[11:03:13.865] [DEBUG] Ignored "assets/minecraft/models/block/bamboo_small_leaves.json" by relative path
-[11:03:13.882] [DEBUG] Ignored "assets/minecraft/models/block/deepslate_redstone_ore_on.json" by relative path
-[11:03:13.888] [DEBUG] Ignored "assets/minecraft/models/block/flower_pot.json" by relative path
-[11:03:13.888] [DEBUG] Ignored "assets/minecraft/models/block/flower_pot_cross.json" by relative path
-[11:03:13.893] [DEBUG] Ignored "assets/minecraft/models/block/lightning_rod.json" by relative path
-[11:03:13.893] [DEBUG] Ignored "assets/minecraft/models/block/lightning_rod_on.json" by relative path
-[11:03:13.900] [DEBUG] Ignored "assets/minecraft/models/block/potted_allium.json" by relative path
-[11:03:13.901] [DEBUG] Ignored "assets/minecraft/models/block/potted_azure_bluet.json" by relative path
-[11:03:13.901] [DEBUG] Ignored "assets/minecraft/models/block/potted_blue_orchid.json" by relative path
-[11:03:13.901] [DEBUG] Ignored "assets/minecraft/models/block/potted_cornflower.json" by relative path
-[11:03:13.901] [DEBUG] Ignored "assets/minecraft/models/block/potted_fern.json" by relative path
-[11:03:13.902] [DEBUG] Ignored "assets/minecraft/models/block/potted_lily_of_the_valley.json" by relative path
-[11:03:13.902] [DEBUG] Ignored "assets/minecraft/models/block/potted_orange_tulip.json" by relative path
-[11:03:13.902] [DEBUG] Ignored "assets/minecraft/models/block/potted_oxeye_daisy.json" by relative path
-[11:03:13.902] [DEBUG] Ignored "assets/minecraft/models/block/potted_pink_tulip.json" by relative path
-[11:03:13.902] [DEBUG] Ignored "assets/minecraft/models/block/potted_poppy.json" by relative path
-[11:03:13.902] [DEBUG] Ignored "assets/minecraft/models/block/potted_red_tulip.json" by relative path
-[11:03:13.903] [DEBUG] Ignored "assets/minecraft/models/block/potted_white_tulip.json" by relative path
-[11:03:13.903] [DEBUG] Ignored "assets/minecraft/models/block/potted_wither_rose.json" by relative path
-[11:03:13.905] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_dot.json" by relative path
-[11:03:13.906] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side.json" by relative path
-[11:03:13.906] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side0.json" by relative path
-[11:03:13.906] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side1.json" by relative path
-[11:03:13.906] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side_alt.json" by relative path
-[11:03:13.906] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side_alt0.json" by relative path
-[11:03:13.906] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side_alt1.json" by relative path
-[11:03:13.906] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_up.json" by relative path
-[11:03:13.907] [DEBUG] Ignored "assets/minecraft/models/block/redstone_ore_on.json" by relative path
-[11:03:13.914] [DEBUG] Ignored "assets/minecraft/models/block/template_redstone_torch.json" by relative path
-[11:03:13.914] [DEBUG] Ignored "assets/minecraft/models/block/template_redstone_torch_wall.json" by relative path
-[11:03:13.921] [DEBUG] Ignored "assets/minecraft/models/item/black_candle.json" by relative path
-[11:03:13.921] [DEBUG] Ignored "assets/minecraft/models/item/blue_candle.json" by relative path
-[11:03:13.921] [DEBUG] Ignored "assets/minecraft/models/item/brown_candle.json" by relative path
-[11:03:13.922] [DEBUG] Ignored "assets/minecraft/models/item/candle.json" by relative path
-[11:03:13.928] [DEBUG] Ignored "assets/minecraft/models/item/comparator.json" by relative path
-[11:03:13.931] [DEBUG] Ignored "assets/minecraft/models/item/cyan_candle.json" by relative path
-[11:03:13.933] [DEBUG] Ignored "assets/minecraft/models/item/flower_pot.json" by relative path
-[11:03:13.934] [DEBUG] Ignored "assets/minecraft/models/item/gray_candle.json" by relative path
-[11:03:13.935] [DEBUG] Ignored "assets/minecraft/models/item/green_candle.json" by relative path
-[11:03:13.938] [DEBUG] Ignored "assets/minecraft/models/item/lightning_rod.json" by relative path
-[11:03:13.938] [DEBUG] Ignored "assets/minecraft/models/item/light_blue_candle.json" by relative path
-[11:03:13.939] [DEBUG] Ignored "assets/minecraft/models/item/light_gray_candle.json" by relative path
-[11:03:13.939] [DEBUG] Ignored "assets/minecraft/models/item/lime_candle.json" by relative path
-[11:03:13.939] [DEBUG] Ignored "assets/minecraft/models/item/magenta_candle.json" by relative path
-[11:03:13.941] [DEBUG] Ignored "assets/minecraft/models/item/orange_candle.json" by relative path
-[11:03:13.942] [DEBUG] Ignored "assets/minecraft/models/item/pink_candle.json" by relative path
-[11:03:13.947] [DEBUG] Ignored "assets/minecraft/models/item/redstone_torch.json" by relative path
-[11:03:13.948] [DEBUG] Ignored "assets/minecraft/models/item/repeater.json" by relative path
-[11:03:13.949] [DEBUG] Ignored "assets/minecraft/models/item/soul_torch.json" by relative path
-[11:03:13.951] [DEBUG] Ignored "assets/minecraft/models/item/torch.json" by relative path
-[11:03:13.970] [DEBUG] Ignored "assets/minecraft/textures/block/deepslate_redstone_ore_on.png" by relative path
-[11:03:13.970] [DEBUG] Ignored "assets/minecraft/textures/block/deepslate_redstone_ore_on_s.png" by relative path
-[11:03:13.977] [DEBUG] Ignored "assets/minecraft/textures/block/redstone_ore_on.png" by relative path
-[11:03:13.978] [DEBUG] Ignored "assets/minecraft/textures/block/redstone_ore_on_s.png" by relative path
-[11:03:13.998] [DEBUG] Ignored "pack.mcmeta" by relative path
-[11:03:13.998] [DEBUG] Ignored "README.md" by relative path
-[11:03:14.024] [DEBUG] Reading cost: 0.1925668716430664s
-[11:03:14.456] [DEBUG] Zipping cost: 0.4310462474822998s
-[11:03:14.456] [INFO] Success: "Resource Fixes External.zip" (2248 files, 1208 KiB)
-[11:03:14.484] [INFO] == Config "separated" ==
-[11:03:14.520] [INFO] Success: "Handheld Arrow.zip" (4 files, 1 KiB)
-[11:03:14.541] [INFO] Success: "Fence (Gate) Fix.zip" (16 files, 9 KiB)
-[11:03:14.548] [INFO] Success: "Lightning Rod Fix.zip" (4 files, 1 KiB)
-[11:03:14.587] [INFO] Success: "Plane Fix.zip" (33 files, 12 KiB)
-[11:03:14.621] [INFO] Success: "Modern Torches.zip" (36 files, 18 KiB)
-[11:03:14.627] [INFO] Success: "Better Sculk Sensor Swing.zip" (3 files, 1 KiB)
-[11:03:14.638] [INFO] Success: "Cull Glass.zip" (10 files, 3 KiB)
-[11:03:14.646] [INFO] Success: "Shadeless Planes.zip" (6 files, 2 KiB)
-[11:03:14.652] [INFO] Success: "Small Backfaces.zip" (3 files, 1 KiB)
-[11:03:14.659] [INFO] Success: "End Portal Frame Fix.zip" (2 files, 1 KiB)
-[11:03:14.673] [INFO] Success: "Firefly Bush Fix.zip" (4 files, 2 KiB)
-[11:03:14.688] [INFO] Success: "Modern Spectator GUI Texture.zip" (5 files, 3 KiB)
-[11:03:14.694] [INFO] Success: "Modern Recipe Button Texture.zip" (2 files, 1 KiB)
-[11:03:14.702] [INFO] Success: "Tall Seagrass Fix.zip" (3 files, 1 KiB)
-[11:03:14.755] [INFO] Success: "3D Bars.zip" (40 files, 16 KiB)
-[11:03:14.762] [INFO] Success: "3D Ladder.zip" (3 files, 1 KiB)
-[11:03:14.786] [INFO] Success: "3D Pointed Dripstone.zip" (11 files, 6 KiB)
-[11:03:14.802] [INFO] Success: "3D Redstone Dust.zip" (6 files, 4 KiB)
-[11:03:14.848] [INFO] Success: "Better Leaves.zip" (51 files, 23 KiB)
-[11:03:14.856] [INFO] Success: "Better Weather.zip" (3 files, 3 KiB)
-[11:03:14.890] [INFO] Success: "Better Particles.zip" (42 files, 16 KiB)
-[11:03:14.964] [INFO] Success: "Better Cross.zip" (105 files, 32 KiB)
-[11:03:14.973] [INFO] Success: "Clean Water.zip" (6 files, 14 KiB)
-[11:03:14.987] [INFO] Success: "Fast Better Grass.zip" (12 files, 4 KiB)
-[11:03:14.993] [INFO] Success: "Mirrored Pumpkin Blur.zip" (3 files, 15 KiB)
-[11:03:15.010] [INFO] Success: "Moist Farmland.zip" (15 files, 6 KiB)
-[11:03:15.030] [INFO] Success: "New Torches.zip" (22 files, 8 KiB)
-[11:03:15.037] [INFO] Success: "Square Shadow.zip" (3 files, 1 KiB)
-[11:03:15.047] [INFO] Success: "Unlit Redstone Ore.zip" (9 files, 3 KiB)
-[11:03:15.064] [INFO] Success: "Wide Bamboo.zip" (16 files, 6 KiB)
-[11:03:15.064] [INFO] Build stops at 2025-09-05 11:03:15.064596, total cost 0:00:02.399645.
+[15:52:37.261] [INFO] Build starts at 2025-09-05 15:52:37.260806.
+[15:52:37.263] [INFO] == Config "variants" ==
+[15:52:37.274] [DEBUG] Reading cost: 0.0050792694091796875s
+[15:52:37.556] [DEBUG] Reading cost: 0.2817981243133545s
+[15:52:37.646] [DEBUG] Zipping cost: 0.08980512619018555s
+[15:52:37.647] [INFO] Success: "Resource Fixes Lite.zip" (218 files, 177 KiB)
+[15:52:37.724] [DEBUG] Ignored "assets/minecraft/models/block/template_sculk_shrieker.json.backup" by extension
+[15:52:37.873] [DEBUG] Ignored "assets/minecraft/models/block/paths.temp" by extension
+[15:52:37.923] [DEBUG] Reading cost: 0.2609384059906006s
+[15:52:38.066] [DEBUG] Zipping cost: 0.1432487964630127s
+[15:52:38.067] [INFO] Success: "Resource Fixes.zip" (451 files, 249 KiB)
+[15:52:38.142] [DEBUG] Reading cost: 0.06605696678161621s
+[15:52:38.245] [DEBUG] Zipping cost: 0.10263872146606445s
+[15:52:38.245] [INFO] Success: "Resource Fixes Textured.zip" (474 files, 262 KiB)
+[15:52:39.333] [DEBUG] Reading cost: 1.0713682174682617s
+[15:52:39.621] [DEBUG] Zipping cost: 0.28745484352111816s
+[15:52:39.621] [INFO] Success: "Resource Fixes Extra.zip" (986 files, 525 KiB)
+[15:52:39.684] [DEBUG] Ignored "assets/minecraft/models/block/bamboo_large_leaves.json" by relative path
+[15:52:39.684] [DEBUG] Ignored "assets/minecraft/models/block/bamboo_small_leaves.json" by relative path
+[15:52:39.712] [DEBUG] Ignored "assets/minecraft/models/block/deepslate_redstone_ore_on.json" by relative path
+[15:52:39.716] [DEBUG] Ignored "assets/minecraft/models/block/flower_pot.json" by relative path
+[15:52:39.717] [DEBUG] Ignored "assets/minecraft/models/block/flower_pot_cross.json" by relative path
+[15:52:39.726] [DEBUG] Ignored "assets/minecraft/models/block/lightning_rod.json" by relative path
+[15:52:39.726] [DEBUG] Ignored "assets/minecraft/models/block/lightning_rod_on.json" by relative path
+[15:52:39.738] [DEBUG] Ignored "assets/minecraft/models/block/potted_allium.json" by relative path
+[15:52:39.739] [DEBUG] Ignored "assets/minecraft/models/block/potted_azure_bluet.json" by relative path
+[15:52:39.740] [DEBUG] Ignored "assets/minecraft/models/block/potted_blue_orchid.json" by relative path
+[15:52:39.740] [DEBUG] Ignored "assets/minecraft/models/block/potted_cornflower.json" by relative path
+[15:52:39.741] [DEBUG] Ignored "assets/minecraft/models/block/potted_fern.json" by relative path
+[15:52:39.743] [DEBUG] Ignored "assets/minecraft/models/block/potted_lily_of_the_valley.json" by relative path
+[15:52:39.744] [DEBUG] Ignored "assets/minecraft/models/block/potted_orange_tulip.json" by relative path
+[15:52:39.744] [DEBUG] Ignored "assets/minecraft/models/block/potted_oxeye_daisy.json" by relative path
+[15:52:39.744] [DEBUG] Ignored "assets/minecraft/models/block/potted_pink_tulip.json" by relative path
+[15:52:39.744] [DEBUG] Ignored "assets/minecraft/models/block/potted_poppy.json" by relative path
+[15:52:39.744] [DEBUG] Ignored "assets/minecraft/models/block/potted_red_tulip.json" by relative path
+[15:52:39.744] [DEBUG] Ignored "assets/minecraft/models/block/potted_white_tulip.json" by relative path
+[15:52:39.745] [DEBUG] Ignored "assets/minecraft/models/block/potted_wither_rose.json" by relative path
+[15:52:39.747] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_dot.json" by relative path
+[15:52:39.747] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side.json" by relative path
+[15:52:39.747] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side0.json" by relative path
+[15:52:39.747] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side1.json" by relative path
+[15:52:39.747] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side_alt.json" by relative path
+[15:52:39.748] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side_alt0.json" by relative path
+[15:52:39.748] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_side_alt1.json" by relative path
+[15:52:39.748] [DEBUG] Ignored "assets/minecraft/models/block/redstone_dust_up.json" by relative path
+[15:52:39.748] [DEBUG] Ignored "assets/minecraft/models/block/redstone_ore_on.json" by relative path
+[15:52:39.759] [DEBUG] Ignored "assets/minecraft/models/block/template_redstone_torch.json" by relative path
+[15:52:39.759] [DEBUG] Ignored "assets/minecraft/models/block/template_redstone_torch_wall.json" by relative path
+[15:52:39.771] [DEBUG] Ignored "assets/minecraft/models/item/black_candle.json" by relative path
+[15:52:39.771] [DEBUG] Ignored "assets/minecraft/models/item/blue_candle.json" by relative path
+[15:52:39.772] [DEBUG] Ignored "assets/minecraft/models/item/brown_candle.json" by relative path
+[15:52:39.773] [DEBUG] Ignored "assets/minecraft/models/item/candle.json" by relative path
+[15:52:39.779] [DEBUG] Ignored "assets/minecraft/models/item/comparator.json" by relative path
+[15:52:39.789] [DEBUG] Ignored "assets/minecraft/models/item/cyan_candle.json" by relative path
+[15:52:39.793] [DEBUG] Ignored "assets/minecraft/models/item/flower_pot.json" by relative path
+[15:52:39.796] [DEBUG] Ignored "assets/minecraft/models/item/gray_candle.json" by relative path
+[15:52:39.797] [DEBUG] Ignored "assets/minecraft/models/item/green_candle.json" by relative path
+[15:52:39.802] [DEBUG] Ignored "assets/minecraft/models/item/lightning_rod.json" by relative path
+[15:52:39.803] [DEBUG] Ignored "assets/minecraft/models/item/light_blue_candle.json" by relative path
+[15:52:39.803] [DEBUG] Ignored "assets/minecraft/models/item/light_gray_candle.json" by relative path
+[15:52:39.803] [DEBUG] Ignored "assets/minecraft/models/item/lime_candle.json" by relative path
+[15:52:39.804] [DEBUG] Ignored "assets/minecraft/models/item/magenta_candle.json" by relative path
+[15:52:39.807] [DEBUG] Ignored "assets/minecraft/models/item/orange_candle.json" by relative path
+[15:52:39.809] [DEBUG] Ignored "assets/minecraft/models/item/pink_candle.json" by relative path
+[15:52:39.813] [DEBUG] Ignored "assets/minecraft/models/item/redstone_torch.json" by relative path
+[15:52:39.813] [DEBUG] Ignored "assets/minecraft/models/item/repeater.json" by relative path
+[15:52:39.814] [DEBUG] Ignored "assets/minecraft/models/item/soul_torch.json" by relative path
+[15:52:39.815] [DEBUG] Ignored "assets/minecraft/models/item/torch.json" by relative path
+[15:52:39.830] [DEBUG] Ignored "assets/minecraft/textures/block/deepslate_redstone_ore_on.png" by relative path
+[15:52:39.830] [DEBUG] Ignored "assets/minecraft/textures/block/deepslate_redstone_ore_on_s.png" by relative path
+[15:52:39.841] [DEBUG] Ignored "assets/minecraft/textures/block/redstone_ore_on.png" by relative path
+[15:52:39.841] [DEBUG] Ignored "assets/minecraft/textures/block/redstone_ore_on_s.png" by relative path
+[15:52:39.864] [DEBUG] Ignored "pack.mcmeta" by relative path
+[15:52:39.865] [DEBUG] Ignored "README.md" by relative path
+[15:52:39.912] [DEBUG] Reading cost: 0.27448439598083496s
+[15:52:40.662] [DEBUG] Zipping cost: 0.7498226165771484s
+[15:52:40.662] [INFO] Success: "Resource Fixes External.zip" (2248 files, 1208 KiB)
+[15:52:40.688] [INFO] == Config "separated" ==
+[15:52:40.741] [INFO] Success: "Handheld Arrow.zip" (4 files, 1 KiB)
+[15:52:40.755] [INFO] Success: "Fence (Gate) Fix.zip" (16 files, 9 KiB)
+[15:52:40.764] [INFO] Success: "Lightning Rod Fix.zip" (4 files, 1 KiB)
+[15:52:40.823] [INFO] Success: "Plane Fix.zip" (33 files, 12 KiB)
+[15:52:40.890] [INFO] Success: "Modern Torches.zip" (36 files, 18 KiB)
+[15:52:40.903] [INFO] Success: "Better Sculk Sensor Swing.zip" (3 files, 1 KiB)
+[15:52:40.919] [INFO] Success: "Cull Glass.zip" (10 files, 3 KiB)
+[15:52:40.931] [INFO] Success: "Shadeless Planes.zip" (6 files, 2 KiB)
+[15:52:40.942] [INFO] Success: "Small Backfaces.zip" (3 files, 1 KiB)
+[15:52:40.949] [INFO] Success: "End Portal Frame Fix.zip" (2 files, 1 KiB)
+[15:52:40.965] [INFO] Success: "Firefly Bush Fix.zip" (4 files, 2 KiB)
+[15:52:40.978] [INFO] Success: "Modern Spectator GUI Texture.zip" (5 files, 3 KiB)
+[15:52:40.991] [INFO] Success: "Modern Recipe Button Texture.zip" (2 files, 1 KiB)
+[15:52:41.001] [INFO] Success: "Tall Seagrass Fix.zip" (3 files, 1 KiB)
+[15:52:41.059] [INFO] Success: "3D Bars.zip" (40 files, 16 KiB)
+[15:52:41.069] [INFO] Success: "3D Ladder.zip" (3 files, 1 KiB)
+[15:52:41.082] [INFO] Success: "3D Pointed Dripstone.zip" (11 files, 6 KiB)
+[15:52:41.098] [INFO] Success: "3D Redstone Dust.zip" (6 files, 4 KiB)
+[15:52:41.188] [INFO] Success: "Better Leaves.zip" (51 files, 23 KiB)
+[15:52:41.200] [INFO] Success: "Better Weather.zip" (3 files, 3 KiB)
+[15:52:41.258] [INFO] Success: "Better Particles.zip" (42 files, 16 KiB)
+[15:52:41.348] [INFO] Success: "Better Cross.zip" (105 files, 32 KiB)
+[15:52:41.362] [INFO] Success: "Clean Water.zip" (6 files, 14 KiB)
+[15:52:41.388] [INFO] Success: "Fast Better Grass.zip" (12 files, 4 KiB)
+[15:52:41.398] [INFO] Success: "Mirrored Pumpkin Blur.zip" (3 files, 15 KiB)
+[15:52:41.414] [INFO] Success: "Moist Farmland.zip" (15 files, 6 KiB)
+[15:52:41.440] [INFO] Success: "New Torches.zip" (22 files, 8 KiB)
+[15:52:41.445] [INFO] Success: "Square Shadow.zip" (3 files, 1 KiB)
+[15:52:41.459] [INFO] Success: "Unlit Redstone Ore.zip" (9 files, 3 KiB)
+[15:52:41.500] [INFO] Success: "Wide Bamboo.zip" (16 files, 6 KiB)
+[15:52:41.503] [INFO] Build stops at 2025-09-05 15:52:41.503076, total cost 0:00:04.242329.

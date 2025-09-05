@@ -9,6 +9,7 @@ Normal variant
 
 Extra variant
 
+- 3D Pointed Dripstone: do not use cullface because it has a offset. 
 - New Torches: use textures from [New Torch Style](https://modrinth.com/project/LIqTBoPg) by [Uanderson_test3](https://modrinth.com/user/Uanderson_test3).
 
 ### Version 8.3
