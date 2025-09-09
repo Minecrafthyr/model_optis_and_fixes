@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "v8.4 for 1.20.2+ by Minecraft_hyr",
+    "description": "v8.5 for 1.14.4-1.21.9 (25w36b) by Minecraft_hyr",
     "min_format": 5,
     "max_format": [68, 0],
     "pack_format": 64,
@@ -9,38 +9,32 @@
   "overlays": {
     "entries": [
       {
-        "min_format": 36,
-        "max_format": 9999,
-        "formats": [36, 9999],
-        "directory": "overlay_a",
-        "__comment": "Some block model fixed by vanilla"
-      },
-      {
-        "min_format": 44,
-        "max_format": 9999,
-        "formats": [44, 9999],
         "directory": "overlay_44",
-        "__comment": "Item model type"
-      },
-      {
-        "min_format": 51,
-        "max_format": 9999,
-        "formats": [51, 9999],
-        "directory": "overlay_51",
-        "__comment": "Block model rotation unlimit"
-      },
-      {
-        "directory": "1_21_4",
+        "__comment": "Item model type",
         "min_format": 44,
         "max_format": 9999,
         "formats": [44, 9999]
       },
       {
+        "directory": "overlay_51",
+        "__comment": "Block model rotation unlimit",
+        "min_format": 51,
+        "max_format": 9999,
+        "formats": [51, 9999]
+      },
+      {
+        "directory": "overlay_65.1",
+        "__comment": "Copper Age updates",
         "min_format": [65, 1],
         "max_format": 9999,
-        "formats": [65, 9999],
-        "directory": "overlay_65.1",
-        "__comment": "Copper Age updates"
+        "formats": [65, 9999]
+      },
+      {
+        "directory": "1_21_4",
+        "__comment": "Default 3D overlay",
+        "min_format": 44,
+        "max_format": 9999,
+        "formats": [44, 9999]
       }
     ]
   }

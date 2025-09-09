@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/template/torch_lit",
+  "textures": {
+    "torch": "torcherino:block/double_compressed_torcherino"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "res_fixes:block/smooth_red_sandstone",
+    "side": "res_fixes:block/smooth_red_sandstone",
+    "top": "res_fixes:block/smooth_red_sandstone"
+  }
+}

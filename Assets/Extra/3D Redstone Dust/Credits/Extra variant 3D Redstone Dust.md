@@ -1,4 +1,4 @@
-Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT.html).
+Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT).
 
 ### Files
 

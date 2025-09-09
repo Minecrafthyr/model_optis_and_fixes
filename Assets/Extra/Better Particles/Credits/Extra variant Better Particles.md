@@ -1,4 +1,4 @@
-Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Custom License](https://vanillatweaks.net/terms/).
+Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
 
 ### Files
 

@@ -1,6 +1,0 @@
-{
-  "parent": "res_fixes:block/template/bars/left",
-  "textures": {
-    "texture": "minecraft:block/oxidized_copper_bars"
-  }
-}

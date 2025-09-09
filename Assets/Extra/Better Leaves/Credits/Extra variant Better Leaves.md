@@ -1,4 +1,4 @@
-Unmodified 45 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Custom License](https://vanillatweaks.net/terms/):
+Copied 45 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
 
 ### Files
 

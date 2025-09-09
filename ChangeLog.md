@@ -1,3 +1,51 @@
+### Version 8.5
+
+- Improve `build.py`, again!
+  - More abilities. (sorry, document is gone)
+  - Fix `zip_mode` does not work.
+  - Improve type lint with Pylint and Pylance checker.
+  - ...
+
+Lite variant
+
+- Bars Fix: Fixed. Seems it's a bit wrong when I port it to 1.21.9.
+- Language Fix (New): Enchantment|Potion Level Fix.
+- Handheld Arrow: Fixed ~~minrcraft~~minecraft.
+
+Normal variant
+
+- Display: 3D Torch item supported Torcherino
+
+Textured variant
+
+- [Rail Fix](https://modrinth.com/project/481jOCry) (New).
+
+Extra variant
+
+- 3D Bars: a vanilla-friendly implementation from [Simple 3D Iron Bars](https://modrinth.com/project/p5Kdm58p).
+- [Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants) (New).
+- Better Animation: Smooth Lava (updated but not in this changelog) & Lantern animation.
+- Better Cross: Added Cross Emissive (Firefly Bush).
+- Consistent Planes: Made compatibility with Textured variant Rail Fix.
+- Language Tweaks (New): Tweaks name of something.
+- Wide Bamboo: mirrored bamboo leaves back face.
+- New Torches: retextured and supported Torcherino.
+- ~~Display~~: removed bigger item display due to external texture pack or mods doesn't follow this size.
+- Sandstone Tweaks (New):
+  - Side using mixed (75% bottom/25% top) texture.
+  - Top using mixed (50% bottom/50% top) texture.
+  - Smooth/Cut/Chiseled using original top texture.
+- [Tasty Items](https://modrinth.com/project/yVNZK7l2) (New):
+  - Move Rabbit Stew up 1 pix el (feature in Textured/Misc)
+- Cull Glass Pane (moved from Normal variant).
+- Shadeless Lights: supported Torcherino.
+
+External variant
+
+- Fix Unlit Redstone Ore correctly. ~~blocktates~~blockstates.
+- Also enable ambient occlusion of horizontal Hay Block.
+- Cull Glass Pane in Extra variant.
+
 ### Version 8.4
 
 - Improve build system again and again: support loads Zip file and more.
@@ -9,7 +57,7 @@ Normal variant
 
 Extra variant
 
-- 3D Pointed Dripstone: do not use cullface because it has a offset. 
+- 3D Pointed Dripstone: do not use cullface because it has a offset.
 - New Torches: use textures from [New Torch Style](https://modrinth.com/project/LIqTBoPg) by [Uanderson_test3](https://modrinth.com/user/Uanderson_test3).
 
 ### Version 8.3
@@ -49,7 +97,7 @@ Textured variant
 Extra variant
 
 - Better Cross:
-  - Modify vanilla cross model, it's now has mirrored backface.
+  - Modify vanilla cross model, it's now has mirrored back face.
   - Add random rotation for 1 block tall (standard and potted) cross model.
 - 3D Bars: Fixed texture missing.
 - New Torches: Improve texture again, reverted lit torch model to full shadeless.
@@ -88,7 +136,7 @@ New `config.json` to custom build.
 
 Lite variant
 
-- Move small backfaces of small dripleaf to Normal/Small Backfaces.
+- Move small back faces of small dripleaf to Normal/Small Backfaces.
 
 Normal variant
 
@@ -115,7 +163,7 @@ Extra variant
   - Flame, Soul Flame, Lava particle improvements.
   - Explosion particles 15 -> 12 frames.
 - Fast Better Grass:
-  - Modified 8 files from [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT.html).
+  - Modified 8 files from [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
   - A RespackOpts option to disable this feature.
   - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths).
@@ -149,7 +197,7 @@ Extra variant
 - Better Leaves (in v7.0 doesn't work)
   - Add inner back face.
   - Fast leaves waterlogged texture.
-  - Unmodified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Custom License](https://vanillatweaks.net/terms/)
+  - Copied 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/)
 - Clean Water: Increase water transparency.
 - Wide Bamboo: 4 (instead of 3) texture variants.
 
@@ -246,7 +294,7 @@ Extra variant
 
 External variant
 
-- This is a new variant included external pack. Using GPL-3.0-only License. Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
+- This is a new variant included external pack. Using GPL-3.0-only License. Modified files from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only)
 - Modifies:
   - Use Res Fixes "Extra/New Torches",  
     "Full/Display" Thin block,  
@@ -269,7 +317,7 @@ Full variant
 
 Extra variant
 
-- New [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT.html) (modified).
+- New [New Torches](https://modrinth.com/resourcepack/new-torches) by [Waradu](https://modrinth.com/user/Waradu) under [MIT License](https://spdx.org/licenses/MIT) (modified).
 - New `Display`: Block on ground size is larger than Default.
 
 ### Version 6.1

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "axolotl_bucket_variants:item/axolotl_bucket/blue"
+  }
+}
