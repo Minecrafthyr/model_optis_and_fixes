@@ -389,18 +389,24 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
     logging.info('== Config "%s" == costs %s.', cfg.name, dt.now() - tp_start)
 
 
+def try_get_arg(s: str, d:str) -> str:
+    try:
+        i = sys.argv.index(s)
+        v = sys.argv[i + 1]
+        if v.startswith(("'", '"')) and v.endswith(("'", '"')):
+            return v[1:len(v)-2]
+        return v
+    except:
+        return d
+
+
 def main():
     """Main function."""
-    cfg_path = "config.json"
-    log_path = "build.log"
-    dir_path = op.dirname(__file__)
-    for arg in sys.argv[1:]:
-        if arg.startswith("--dir:"):
-            dir_path = arg[len("--dir:") :]
-        if arg.startswith("--cfg:"):
-            cfg_path = arg[len("--cfg:") :]
-        if arg.startswith("--log:"):
-            log_path = arg[len("--log:") :]
+    
+    dir_path = try_get_arg("--dir", op.dirname(__file__))
+    cfg_path = try_get_arg("--cfg", "config.json")
+    log_path = try_get_arg("--log", "build.log")
+
 
     os.chdir(dir_path)
 

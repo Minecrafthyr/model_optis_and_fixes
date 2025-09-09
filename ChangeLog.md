@@ -1,10 +1,10 @@
 ### Version 8.5
 
+- Update pack format to 69.0 (25w37a).
 - Improve `build.py`, again!
-  - More abilities. (sorry, document is gone)
+  - More custom entry (document not provided).
   - Fix `zip_mode` does not work.
   - Improve type lint with Pylint and Pylance checker.
-  - ...
 
 Lite variant
 

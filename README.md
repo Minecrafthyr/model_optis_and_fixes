@@ -3,7 +3,7 @@
 Optimize block models and fix bugs in Default resources.
 
 - Version: 8.5
-- Game versions: 1.14.4-1.21.9 (25w36b)
+- Game versions: 1.14.4-1.21.9 (25w37a)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -189,16 +189,12 @@ Normal is Primary file. Download variants in **additional files** or [Github Sou
 
 - [3D Default](https://modrinth.com/resourcepack/3d-default)
   - Use Res Fixes features:
-    - "Extra/New Torches",
-    - "Normal/Display" Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater,
-    - "Lite" & "Normal/Display" Anvil | Tripwire Hook,
-    - "Extra/3D Iron Bars",
-    - "Extra/Unlit Redstone Ore",
-    - "Extra/Wide Bamboo",
-    - "Extra/3D Redstone Dust".
+    - Normal variant Display: Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater
+    - Lite & Normal variant Display: Anvil | Tripwire Hook
+    - Extra variant New Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust, Cull Glass Pane
   - Modified Shovel item model: Middle thin.
+  - Modified Brewing Stand model.
   - Emissive blocks are shadeless.
-  - Edited Brewing Stand model.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
 
 </details>
@@ -276,6 +272,6 @@ Resourcepacks
 2. Config `config.json`
 3. Enter path `cd <the path>`
 4. Then run: `python build.py`
-  - `--dir:<path>` arg change the current directory path.
-  - `--cfg:<path>` arg change the config path.
-  - `--log:<path>` arg change the log path.
+  - `--dir <path>` arg change the current directory path.
+  - `--cfg <path>` arg change the config path.
+  - `--log <path>` arg change the log path.

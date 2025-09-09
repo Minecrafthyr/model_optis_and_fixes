@@ -11,26 +11,26 @@
       "children": {
         "inputs": {
           "path": "Lite",
-          "extras": ["Bars Fix", "Chain Fix", "Fence Fix", "Flower Pot Fix", "Handheld Arrow", "Language Fix", "Lever Fix", "Lightning Rod Fix", "Main", "Mangrove Propagule Fix", "Modern Torches", "Plane Fix", "Rail Fix", "Random Rotate", "Tripwire Fix"]
+          "extras": ["Bars Fix", "Chain Fix", "DripLeaf Fix", "Fence Fix", "Flower Pot Fix", "Handheld Arrow", "Language Fix", "Lever Fix", "Lightning Rod Fix", "Main", "Mangrove Propagule Fix", "Modern Torches", "Plane Fix", "Rail Fix", "Random Rotate", "Tripwire Fix"]
         },
         "output": "Resource Fixes Lite",
         "children": {
           "inputs": {
             "path": "Normal",
-            "extras": ["Better Sculk Sensor Swing", "Display", "Random Rotate", "Mod/EBE", "Mod/Farmer's Delight", "Respackopts", "Shadeless Planes", "Small Back Faces"]
+            "extras": ["Better Sculk Sensor Swing", "Display", "Mod/EBE", "Mod/Farmer's Delight", "Random Rotate", "Respackopts", "Shadeless Planes", "Small Back Faces"]
           },
           "output": "Resource Fixes",
           "children": {
             "inputs": {
               "path": "Textured",
-              "extras": ["End Portal Frame Fix", "Firefly Bush Fix", "Item Frame Tweaks", "Misc", "Modern Recipe Button Texture", "Modern Redstone Torch Texture", "Modern Spectator GUI Texture", "Tall Seagrass Fix", "Rail Fix", "Smooth Stone Slab Fix"]
+              "extras": ["End Portal Frame Fix", "Firefly Bush Fix", "Item Frame Tweaks", "Misc", "Modern Recipe Button Texture", "Modern Redstone Torch Texture", "Modern Spectator GUI Texture", "Rail Fix", "Smooth Stone Slab Fix", "Tall Seagrass Fix"]
             },
             "output": "Resource Fixes Textured",
             "children": {
               "inputs": [
                 {
                   "path": "Extra",
-                  "extras": ["3D Bars", "Consistent Planes", "3D Ladder", "3D Pointed Dripstone", "3D Redstone Dust", "Axolotl Bucket Variants", "Better Animation", "Better Cross", "Better Copper Grate", "Better Leaves", "Better Particles", "Better Weather", "Better Fire", "Clean Water", "Fast Better Grass", "Language Tweaks", "Mirrored Pumpkin Blur", "Moist Farmland", "New Torches", "Respackopts", "Sandstone Tweaks", "Shadeless Lights", "Square Shadow", "Unlit Redstone Ore", "Wide Bamboo", "Cull Glass Pane", { "path": "Tasty_Items-v1.2.zip", "excludes": ["credits.txt", "pack.png", "pack.mcmeta"] }]
+                  "extras": ["3D Bars", "Consistent Planes", "3D Ladder", "3D Pointed Dripstone", "3D Redstone Dust", "Axolotl Bucket Variants", "Better Animation", "Better Copper Grate", "Better Cross", "Better Fire", "Better Leaves", "Better Particles", "Better Weather", "Clean Water", "Cull Glass Pane", "Fast Better Grass", "Language Tweaks", "Mirrored Pumpkin Blur", "Moist Farmland", "New Torches", "Respackopts", "Sandstone Tweaks", "Shadeless Lights", "Square Shadow", "Unlit Redstone Ore", "Wide Bamboo", { "path": "Tasty_Items-v1.2.zip", "excludes": ["credits.txt", "pack.png", "pack.mcmeta"] }]
                 }
               ],
               "output": "Resource Fixes Extra",
