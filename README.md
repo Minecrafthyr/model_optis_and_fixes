@@ -1,7 +1,3 @@
-# Resource Fixes
-
-Optimize block models and fix bugs in Default resources.
-
 - Version: 8.5
 - Game versions: 1.14.4-1.21.9 (25w37a)
 - Project Links:
@@ -15,31 +11,44 @@ FAQ
 
 > FPS Boost?
 
-- Lite | Normal | Textured: ✔️ (in most cases)
-- Extra: ❔ (some models slow down, e.g. leaves with back face)
-- External: ❌️ (3D models slow down a lot; depends on block type)
+- Resource Fixes Lite | Normal | Textured: ✔️ (in most cases)
+- Resource Tweaks
+  - Normal: ❔ (some models slow down, e.g. leaves with back face)
+  - External: ❌️ (3D models slow down a lot; depends on block type)
 
 ## Variants
 
-Lite < Normal(no suffix) < Textured < Extra < External
+Resource Fixes Normal (Resource Fixes.zip) is Primary file. Download variants in **additional files** or [Github Source](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/out/Variants).
 
-Normal is Primary file. Download variants in **additional files** or [Github Source](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/Zipped).
+Resource Fixes (optimize and fixes)
 
 - Lite variant  
   Optimization & Fixes only, compatible with texture only resourcepacks.
 - Normal variant  
-  Visually improve item models or display.  
+  Visually improve item models (3D block item) or display.  
   Config use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod (not suggested, it just disable files).
 - Textured variant  
   Using texture may conflict to other resourcepack.  
-  Designed with Default style.
-- Extra variant  
+  Designed with Default resource style.
+
+Resource Tweaks (tweaks and improvements)
+
+- Normal variant  
   Contains significant visual tweaks that I thought better, not fixes.
 - External variant  
-  Include and tweaks external pack.  
+  Try compat with external pack.  
   Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
 
-<details>
+## License
+
+Please also check license in ./Credits folder (in source or pack) for specific files.
+
+- Resource Tweaks External: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
+- Others: [Unlicense](https://spdx.org/licenses/Unlicense), means you can modify, distribute, split, use it anywhere.
+
+## Resource Fixes
+
+Optimize block models and fix bugs in Default resources.
 
 ### Lite
 
@@ -55,7 +64,7 @@ Normal is Primary file. Download variants in **additional files** or [Github Sou
 - Chorus Flowers (one of [MC-109087](https://bugs.mojang.com/browse/MC/issues/MC-109087 "Faces of some blocks are not at all culled when said face is hidden by a solid, opaque block"), [MC-262641](https://bugs.mojang.com/browse/MC/issues/MC-262641 "Chorus flower models are incredibly unoptimized and cause serious rendering lag"))
 - Fence Gates ([MC-262936](https://bugs.mojang.com/browse/MC/issues/MC-262936 "Some pixels of open fence gates are stretched"), [MC-262953](https://bugs.mojang.com/browse/MC/issues/MC-262953 "Fence gate models are very unoptimized, causing lag among other issues"))
 - Fences (a part of [MC-279617](https://bugs.mojang.com/browse/MC/issues/MC-279617 "Bamboo fence multipart rendering optimization - requires texture mapping modification"), a part of [MC-267281](https://bugs.mojang.com/browse/MC/issues/MC-267281 "Fence multipart model system performance optimization"))
-- Flower Pot (A part of [MC-262427](https://bugs.mojang.com/browse/MC/issues/MC-262427 "Flower pots and potted objects have very poorly optimized models and strange texture mapping"))
+- Flower Pot (a part of [MC-262427](https://bugs.mojang.com/browse/MC/issues/MC-262427 "Flower pots and potted objects have very poorly optimized models and strange texture mapping"))
 - Four Turtle Egg (one of [MC-109087](https://bugs.mojang.com/browse/MC/issues/MC-109087 "Faces of some blocks are not at all culled when said face is hidden by a solid, opaque block"))
 - Heavy Core ([MC-269368](https://bugs.mojang.com/browse/MC/issues/MC-269368 "Heavy Core bottom face not culled by blocks below"))
 - Hopper ([MC-262452](https://bugs.mojang.com/browse/MC/issues/MC-262452 "Hopper models are unoptimized and cause rendering lag"))
@@ -95,6 +104,9 @@ Normal is Primary file. Download variants in **additional files** or [Github Sou
   - Tweak some items display, they are not floating on hand or head now.
   - Use front GUI light on Conduit, Torches, End Rod, Lanterns.
   - Spore Blossom upside down on ground.
+- Shadeless Lights
+  - Light source blocks are shadeless. (a part of [MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
+  - Light source items are using front GUI light.
 - Modern Recipe Button Texture
 - Modern Redstone Torch Texture
 - Modern Spectator GUI Texture
@@ -115,13 +127,20 @@ Normal is Primary file. Download variants in **additional files** or [Github Sou
 - Modern Recipe Button Texture
 - Modern Redstone Torch Texture
 - Modern Spectator GUI Texture
-- [Rail Fix](https://modrinth.com/project/481jOCry) 
-  - Raised rail is stretched better.
- texture.
+- [Rail Fix](https://modrinth.com/project/481jOCry)
+  - Raised rail is stretched better. texture.
 - Tall Seagrass Fix
   - \-1 pixel height on Tall Seagrass Top texture to avoid it visually goes out of water.
 
-### Extra
+#### Credits
+
+- Firefly Bush Fix: Copied 1 file from [Fix Firefly Bush Framerate](https://modrinth.com/project/FE7VLrn4) by [BizCub](https://modrinth.com/user/BizCub) under [MIT License](https://spdx.org/licenses/MIT).
+- Rail Fix: Modified 23 files from [Rail Fix](https://modrinth.com/project/481jOCry) by [Lad_Flaver](https://modrinth.com/user/Lad_Flaver) under [ARR with explicitly stated](https://modrinth.com/project/481jOCry).
+- Smooth Stone Slab Fix: Copied 1 file from [Smooth Stone Slab Fix](https://modrinth.com/project/QoUSM3q9) by [creep](https://modrinth.com/user/creep) under [MIT License](https://spdx.org/licenses/MIT).
+
+## Resource Tweaks
+
+### Normal
 
 - 3D Ladder
 - 3D Pointed Dripstone (for matching texture, model is bigger than collision box)
@@ -159,6 +178,9 @@ Normal is Primary file. Download variants in **additional files** or [Github Sou
 - Fast Better Grass
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
   - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths).
+- Glass Tweaks
+  - Inner faces for All Glass (Pane).
+  - Remove pixels in normal Glass (Pane) texture.
 - Mirrored Pumpkin Blur
 - Moist Farmland
   - Visualize Farmland "moisture" state 0 - 7.
@@ -171,9 +193,6 @@ Normal is Primary file. Download variants in **additional files** or [Github Sou
   - Side using mixed (75% bottom/25% top) texture.
   - Top using mixed (50% bottom/50% top) texture.
   - Smooth/Cut/Chiseled using original top texture.
-- Shadeless Lights
-  - Light source blocks are shadeless. ([MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
-  - Light source items are using front GUI light.
 - Square Shadow
   - Square entity shadow.
 - Unlit Redstone Ore
@@ -182,96 +201,69 @@ Normal is Primary file. Download variants in **additional files** or [Github Sou
   - 4 pixel wide Bamboo.
   - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")). With mirrored back face.
   - Rotate bamboo leaves 5° (in supported MC version) to avoid z-fighting.
-- [Tasty Items](https://modrinth.com/project/yVNZK7l2) 
+- [Tasty Items](https://modrinth.com/project/yVNZK7l2)
   - Move Rabbit Stew up 1 pixel (feature in Textured/Misc)
+
+#### Credits
+
+_Notice: may not contains all features in original pack because visual balance._
+
+- 3D Bars: Modified 6 files from [Simple 3D Iron Bars](https://modrinth.com/project/p5Kdm58p) by [poqbox](https://modrinth.com/user/poqbox) under [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause).
+- 3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT).
+- Axolotl Bucket Variants: Copied 11 files from [Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants) by [manyrandomthings](https://modrinth.com/user/manyrandomthings) under [LGPL-3.0-only](https://spdx.org/licenses/LGPL-3.0-only).
+- Better Leaves: Modified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
+- Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
+- Fast Better Grass: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
+- Tasty Items: Copied zip file from [Tasty Items](https://modrinth.com/project/yVNZK7l2) by [enchanted-games](https://modrinth.com/user/enchanted-games) under [CC-BY-NC-4.0](https://spdx.org/licenses/CC-BY-NC-4.0).
+
 
 ### External
 
 - [3D Default](https://modrinth.com/resourcepack/3d-default)
-  - Use Res Fixes features:
+  - Used Resource Fixes feature:
     - Normal variant Display: Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater
     - Lite & Normal variant Display: Anvil | Tripwire Hook
-    - Extra variant New Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust, Cull Glass Pane
+  - Used Resource Tweaks feature:
+    - Normal variant New Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust, Glass Tweaks
   - Modified Shovel item model: Middle thin.
   - Modified Brewing Stand model.
   - Emissive blocks are shadeless.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
 
-</details>
-
-## License
-
-Please also check license in [./Credits](#credits) folder for specific files.
-
-- External variant: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
-- Others: [Unlicense](https://spdx.org/licenses/Unlicense), means you can modify, distribute, split, use it anywhere.
-
-## Credits
-
-_Notice: may not contains all features in original pack due to visual balance._
-
-Textured variant
-
-- Firefly Bush Fix: Copied 1 file from [Fix Firefly Bush Framerate](https://modrinth.com/project/FE7VLrn4) by [BizCub](https://modrinth.com/user/BizCub) under [MIT License](https://spdx.org/licenses/MIT).
-- Rail Fix: Modified 23 files from [Rail Fix](https://modrinth.com/project/481jOCry) by [Lad_Flaver](https://modrinth.com/user/Lad_Flaver) under [ARR with explicitly stated](https://modrinth.com/project/481jOCry).
-- Smooth Stone Slab Fix: Copied 1 file from [Smooth Stone Slab Fix](https://modrinth.com/project/QoUSM3q9) by [creep](https://modrinth.com/user/creep) under [MIT License](https://spdx.org/licenses/MIT).
-
-Extra variant
-
-- 3D Bars: Modified 6 files from [Simple 3D Iron Bars](https://modrinth.com/project/p5Kdm58p) by [poqbox](https://modrinth.com/user/poqbox) under [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause).
-- 3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT).
-- Axolotl Bucket Variants: Copied 11 files from [Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants) by [manyrandomthings](https://modrinth.com/user/manyrandomthings) under [LGPL-3.0-only](https://spdx.org/licenses/LGPL-3.0-only).
-- Better Leaves: Copied 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
-- Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
-- Fast Better Grass: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
-- Tasty Items: Copied zip file from [Tasty Items](https://modrinth.com/project/yVNZK7l2) by [enchanted-games](https://modrinth.com/user/enchanted-games) under [CC-BY-NC-4.0](https://spdx.org/licenses/CC-BY-NC-4.0).
-
-External variant
+#### Credits
 
 - 3D Default: Copied zip file from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
 
+## More Information
 
-## Included Features
+- You can try resourcepack here, but may not compatible.
 
-Not using their implementation so may not 100% consistent to them. See also [Credits](#credits).
-
-Textured variant
-
-- [End Portal Frame Fix](https://modrinth.com/resourcepack/end-portal-frame-fix)
-- [Tall Seagrass Fix](https://modrinth.com/resourcepack/tall-seagrass-fix)
-
-Extra variant
-
-- [3D Ladders](https://modrinth.com/resourcepack/3d-ladders)
-- [CLEAN WATER](https://modrinth.com/resourcepack/clean-water)|[Clear Water!](https://modrinth.com/resourcepack/clear-water!)|[Clearer Water](https://modrinth.com/resourcepack/clearer-water)
-- [Glowing Blocks Fix](https://modrinth.com/resourcepack/glowing-blocks-fix)
-- [New Torches](https://modrinth.com/resourcepack/new-torches)|[New 3D Torches](https://modrinth.com/resourcepack/new-3d-torches)
-- [Flower fix](https://modrinth.com/resourcepack/flower-fix)
-
-## Planned
+Planned
 
 - More random rotate & fixes models in Extra/Better Cross.
-- Add more pack from outside.
+- Embedding or implementing outside packs (slowly).
+  - [Vanilla Tweaks](https://vanillatweaks.net/picker/resource-packs/)
+  - [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures)
+  - [Vary Me](https://modrinth.com/resourcepack/vary-me)
+  - [Smaller Side Shield](https://modrinth.com/resourcepack/smaller-side-shield)
+  - [Smooth Bow Animations](https://modrinth.com/resourcepack/smooth-bow-animations)
+  - [Blockstates +](https://modrinth.com/resourcepack/blockstates)
 
-## Suggestions
-
-Resourcepacks
+Suggestions
 
 - [3D Particles](https://modrinth.com/resourcepack/3d-particles)
 - [AL's 3D Potions](https://modrinth.com/resourcepack/als-3d-potions)
 - [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp)
-- [Smaller Side Shield](https://modrinth.com/resourcepack/smaller-side-shield)
-- [Smooth Bow Animations](https://modrinth.com/resourcepack/smooth-bow-animations)
 - [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
 - [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
-- [Vanilla Tweaks](https://vanillatweaks.net/picker/resource-packs/) Picker
 
 ## Custom Build
 
 1. Clone Github Repository
-2. Config `config.json`
+2. Config `config.json` following `config.md`
 3. Enter path `cd <the path>`
 4. Then run: `python build.py`
-  - `--dir <path>` arg change the current directory path.
-  - `--cfg <path>` arg change the config path.
-  - `--log <path>` arg change the log path.
+
+- `--dir <path>` arg change the current directory path.
+- `--cfg <path>` arg change the config path.
+- `--log <path>` arg change the log path.

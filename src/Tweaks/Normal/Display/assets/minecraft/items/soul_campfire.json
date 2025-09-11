@@ -1,0 +1,27 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "lit",
+    "cases": [
+      {
+        "when": "false",
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/soul_campfire_off"
+        }
+      },
+      {
+        "when": "true",
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/soul_campfire"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/soul_campfire"
+    }
+  }
+}

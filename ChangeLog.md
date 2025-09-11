@@ -1,3 +1,32 @@
+### Version 8.6
+
+- Tweaks to `build.py` `config.json`
+  - Rename Resource Fixes Extra to Resource Tweaks, Resource Fixes External to Resource Tweaks External. Source din't change.
+
+#### Fixes
+
+Lite variant
+
+- Cube Inner Faces Fix (New):
+  - Fixed Cube Inner Faces (Spawners) cull wrong face (my problem).
+  - Used in higher variant as a library. 
+
+Normal variant
+
+- Display: Lightning Rod is bigger in GUI.
+- Shadeless Lights (Moved from Tweaks/Normal):
+
+#### Tweaks
+
+Normal variant
+
+- Glass Tweaks (New)
+  - Inner faces for All Glass (Pane).
+  - Remove border in normal Glass (Pane) texture.
+- Particle Tweaks: Remove more pixels in Explosion particle texture.
+
+External variant
+
 ### Version 8.5
 
 - Update pack format to 69.0 (25w37a).

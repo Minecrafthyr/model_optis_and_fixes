@@ -1,0 +1,27 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "lit",
+    "cases": [
+      {
+        "when": "false",
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/redstone_lamp_on"
+        }
+      },
+      {
+        "when": "true",
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/redstone_lamp"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/redstone_lamp"
+    }
+  }
+}

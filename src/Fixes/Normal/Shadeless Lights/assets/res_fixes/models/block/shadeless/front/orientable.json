@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/shadeless/orientable_with_bottom",
+  "textures": {
+    "bottom": "#top"
+  }
+}

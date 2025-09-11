@@ -1,0 +1,12 @@
+{
+  "parent": "res_fixes:block/tinted_cube_inner_faces_no_stretch",
+  "textures": {
+    "particle": "#side",
+    "down": "#bottom",
+    "up": "#top",
+    "north": "#side",
+    "east": "#side",
+    "south": "#side",
+    "west": "#side"
+  }
+}

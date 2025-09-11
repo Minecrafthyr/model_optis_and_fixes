@@ -1,0 +1,50 @@
+{
+  "format_version": "1.21.6",
+  "credit": "Made with Blockbench by Minecraft_hyr",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "#pane"
+  },
+  "elements": [
+    {
+      "from": [7, 0, 15.99],
+      "to": [9, 16, 16],
+      "faces": {
+        "north": {"uv": [9, 0, 7, 16], "texture": "#pane", "cullface": "south"},
+        "south": {"uv": [7, 0, 9, 16], "texture": "#pane", "cullface": "south"}
+      }
+    },
+    {
+      "from": [7, 0, 9],
+      "to": [9, 0.01, 16],
+      "faces": {
+        "up": {"uv": [7, 9, 9, 16], "texture": "#edge", "cullface": "down"},
+        "down": {"uv": [7, 16, 9, 9], "texture": "#edge", "cullface": "down"}
+      }
+    },
+    {
+      "from": [7, 15.99, 9],
+      "to": [9, 16, 16],
+      "faces": {
+        "up": {"uv": [7, 9, 9, 16], "texture": "#edge", "cullface": "up"},
+        "down": {"uv": [7, 16, 9, 9], "texture": "#edge", "cullface": "up"}
+      }
+    },
+    {
+      "from": [9, 0, 9],
+      "to": [9, 16, 16],
+      "faces": {
+        "east": {"uv": [0, 0, 7, 16], "texture": "#pane"},
+        "west": {"uv": [7, 0, 0, 16], "texture": "#pane"}
+      }
+    },
+    {
+      "from": [7, 0, 9],
+      "to": [7, 16, 16],
+      "faces": {
+        "east": {"uv": [16, 0, 9, 16], "texture": "#pane"},
+        "west": {"uv": [9, 0, 16, 16], "texture": "#pane"}
+      }
+    }
+  ]
+}

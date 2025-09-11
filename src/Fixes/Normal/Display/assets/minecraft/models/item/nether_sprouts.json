@@ -1,0 +1,24 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:block/nether_sprouts"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [0, -90, 25],
+      "translation": [0, 6, 0],
+      "scale": [0.68, 0.68, 0.68]
+    },
+    "thirdperson_righthand": {
+      "translation": [0, 4, 1],
+      "scale": [0.55, 0.55, 0.55]
+    },
+    "gui": {
+      "translation": [0, 2, 0]
+    },
+    "fixed": {
+      "rotation": [0, 180, 0],
+      "translation": [0, 2, 0]
+    }
+  }
+}

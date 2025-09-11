@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/tinted_cube_all_inner_faces_no_stretch",
+  "textures": {
+    "all": "block/oak_leaves_waterlogged"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/shadeless/cube_all",
+  "textures": {
+    "all": "minecraft:block/redstone_lamp_on"
+  }
+}

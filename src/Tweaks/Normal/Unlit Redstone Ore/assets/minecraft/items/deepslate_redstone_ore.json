@@ -1,0 +1,27 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "lit",
+    "cases": [
+      {
+        "when": "false",
+        "model": {
+          "type": "minecraft:model",
+          "model": "minecraft:block/deepslate_redstone_ore"
+        }
+      },
+      {
+        "when": "true",
+        "model": {
+          "type": "minecraft:model",
+          "model": "res_fixes:block/deepslate_redstone_ore_lit"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/deepslate_redstone_ore"
+    }
+  }
+}

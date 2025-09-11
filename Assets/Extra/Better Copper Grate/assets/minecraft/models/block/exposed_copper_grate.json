@@ -1,6 +1,0 @@
-{
-  "parent": "res_fixes:block/template_copper_grate",
-  "textures": {
-    "all": "minecraft:block/exposed_copper_grate"
-  }
-}

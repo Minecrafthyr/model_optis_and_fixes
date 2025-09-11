@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:item/down_1",
+  "textures": {
+    "layer0": "minecraft:item/ink_sac"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "res_fixes:block/shadeless/template/three_candles",
+  "textures": {
+    "all": "minecraft:block/yellow_candle_lit",
+    "particle": "minecraft:block/yellow_candle_lit"
+  }
+}

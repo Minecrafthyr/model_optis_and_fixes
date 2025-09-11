@@ -1,6 +1,0 @@
-{
-  "parent": "res_fixes:block/shadeless/cube_all",
-  "textures": {
-    "all": "minecraft:block/weathered_copper_bulb_lit"
-  }
-}
