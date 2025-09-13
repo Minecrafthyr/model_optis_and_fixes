@@ -5,7 +5,7 @@
     "log_level": "INFO",
     "compression": 8,
     "compresslevel": 9,
-    "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks", "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks", "C:/PCL2/.minecraft/versions/Tinker's Construct Pack/resourcepacks"],
+    "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks", "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks", "C:/PCL2/.minecraft/versions/Tinker's Construct Pack/resourcepacks", "C:/PCL2/.minecraft/versions/Craft to Exile 2 (VR Support)/resourcepacks"],
     "tree": {
       "inputs": "Fixes/Base",
       "children": {
@@ -30,8 +30,8 @@
               "inputs": [
                 {
                   "path": "Tweaks/Normal",
-                  "reformat": { "indent": null, "separators": [",", ":"] },
-                  "extras": ["3D Bars", "Consistent Planes", "3D Ladder", "3D Pointed Dripstone", "3D Redstone Dust", "Axolotl Bucket Variants", "Better Animation", "Better Copper Grate", "Better Cross", "Better Fire", "Better Leaves", "Better Particles", "Better Weather", "Clean Water", "Display", "Fast Better Grass", "Glass Tweaks", "Language Tweaks", "Mirrored Pumpkin Blur", "Moist Farmland", "New Torches", "Respackopts", "Sandstone Tweaks", "Square Shadow", "Unlit Redstone Ore", "Wide Bamboo", { "path": "Tasty_Items-v1.2.zip", "excludes": ["credits.txt", "pack.png", "pack.mcmeta"] }]
+                  "reformat": {"indent": null, "separators": [",", ":"]},
+                  "extras": ["3D Bars", "Consistent Planes", "3D Ladder", "3D Pointed Dripstone", "3D Redstone Dust", "Axolotl Bucket Variants", "Better Animation", "Better Copper Grate", "Better Cross", "Better Fire", "Better Leaves", "Better Particles", "Better Weather", "Clean Water", "Display", "Fast Better Grass", "Glass Tweaks", "Language Tweaks", "Mirrored Pumpkin Blur", "Moist Farmland", "New Torches", "Respackopts", "Sandstone Tweaks", "Square Shadow", "Unlit Redstone Ore", "Wide Bamboo", {"path": "Tasty_Items-v1.2.zip", "excludes": ["credits.txt", "pack.png", "pack.mcmeta"]}]
                 }
               ],
               "output": "Resource Tweaks",
@@ -39,54 +39,17 @@
                 "inputs": [
                   {
                     "path": "Tweaks/External/3D Default 1.21.2+ v1.12.1.zip",
-                    "reformat": { "indent": null, "separators": [",", ":"] },
-                    "includes": [{ "path": "README.md", "out_path": "README/GeForceLegend's 3D Default.md" }],
+                    "reformat": {"indent": null, "separators": [",", ":"]},
+                    "includes": [{"path": "README.md", "out_path": "README/GeForceLegend's 3D Default.md"}],
                     "excludes": [
                       "pack.mcmeta",
                       {
                         "path": "assets/minecraft/models/block",
-                        "extras": [
-                          "bamboo_large_leaves.json",
-                          "bamboo_small_leaves.json",
-                          "deepslate_redstone_ore_on.json",
-                          "flower_pot_cross.json",
-                          "flower_pot.json",
-                          "lightning_rod_on.json",
-                          "lightning_rod.json",
-                          "potted_allium.json",
-                          "potted_azure_bluet.json",
-                          "potted_blue_orchid.json",
-                          "potted_cornflower.json",
-                          "potted_fern.json",
-                          "potted_lily_of_the_valley.json",
-                          "potted_orange_tulip.json",
-                          "potted_oxeye_daisy.json",
-                          "potted_pink_tulip.json",
-                          "potted_poppy.json",
-                          "potted_red_tulip.json",
-                          "potted_white_tulip.json",
-                          "potted_wither_rose.json",
-                          "redstone_dust_dot.json",
-                          "redstone_dust_side_alt.json",
-                          "redstone_dust_side_alt0.json",
-                          "redstone_dust_side_alt1.json",
-                          "redstone_dust_side.json",
-                          "redstone_dust_side0.json",
-                          "redstone_dust_side1.json",
-                          "redstone_dust_up.json",
-                          "redstone_ore_on.json",
-                          "template_campfire.json",
-                          "template_glass_pane_noside_alt.json",
-                          "template_glass_pane_noside.json",
-                          "template_glass_pane_side_alt.json",
-                          "template_glass_pane_side.json",
-                          "template_redstone_torch_wall.json",
-                          "template_redstone_torch.json"
-                        ]
+                        "extras": ["bamboo_large_leaves.json", "bamboo_small_leaves.json", "deepslate_redstone_ore_on.json", "flower_pot_cross.json", "flower_pot.json", "lightning_rod_on.json", "lightning_rod.json", "potted_allium.json", "potted_azure_bluet.json", "potted_blue_orchid.json", "potted_cornflower.json", "potted_fern.json", "potted_lily_of_the_valley.json", "potted_orange_tulip.json", "potted_oxeye_daisy.json", "potted_pink_tulip.json", "potted_poppy.json", "potted_red_tulip.json", "potted_white_tulip.json", "potted_wither_rose.json", "redstone_dust_dot.json", "redstone_dust_side_alt.json", "redstone_dust_side_alt0.json", "redstone_dust_side_alt1.json", "redstone_dust_side.json", "redstone_dust_side0.json", "redstone_dust_side1.json", "redstone_dust_up.json", "redstone_ore_on.json", "template_campfire.json", "template_redstone_torch_wall.json", "template_redstone_torch.json"]
                       },
                       {
                         "path": "assets/minecraft/models/item",
-                        "extras": ["black_candle.json", "blue_candle.json", "brown_candle.json", "candle.json", "comparator.json", "cyan_candle.json", "flower_pot.json", "gray_candle.json", "green_candle.json", "light_blue_candle.json", "light_gray_candle.json", "lightning_rod.json", "lime_candle.json", "magenta_candle.json", "orange_candle.json", "pink_candle.json", "repeater.json", "torch.json", "soul_torch.json", "redstone_torch.json"]
+                        "extras": ["black_candle.json", "blue_candle.json", "brown_candle.json", "candle.json", "comparator.json", "cyan_candle.json", "flower_pot.json", "gray_candle.json", "green_candle.json", "light_blue_candle.json", "light_gray_candle.json", "lightning_rod.json", "lime_candle.json", "magenta_candle.json", "orange_candle.json", "pink_candle.json", "repeater.json", "torch.json", "soul_torch.json", "redstone_torch.json", "lantern.json", "soul_lantern.json"]
                       },
                       {
                         "path": "assets/minecraft/textures/block",

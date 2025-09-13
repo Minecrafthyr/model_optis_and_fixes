@@ -1,4 +1,4 @@
-- Version: 8.5
+- Version: 8.6
 - Game versions: 1.14.4-1.21.9 (25w37a)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
@@ -92,9 +92,9 @@ Optimize block models and fix bugs in Default resources.
 
 - Better Sculk Sensor Swing
 - Display
-  - 3D Hopper, Cauldron, Comparator, Repeater, Candles, Torches, Lanterns, Lever, Cake, Sniffer Egg Turtle Egg, Flower Pot, Brewing Stand.
+  - 3D Brewing Stand, Cauldron, Comparator, Repeater, Campfires, Candles, Cake, Hopper, Torches, Lanterns, Lever, Sniffer Egg, Turtle Egg, Flower Pot,.
   - Block is a bit bigger in item frame.
-  - End Rod matches 3D Torch style.
+  - End Rod, Lightning Rod, All Shelf, Copper Golem is a bit bigger in GUI.
   - Handheld Arrow in [MC-201808](https://bugs.mojang.com/browse/MC/issues/MC-201808 "Arrows are held awkwardly in entities' hands").
   - Smaller Chorus Plant item.
   - Thin block translation in GUI is higher, less obscured by item count.
@@ -116,7 +116,7 @@ Optimize block models and fix bugs in Default resources.
 ### Textured
 
 - End Portal Frame Fix
-  - Now you can see where it facing.
+  - Now you can notice where it facing.
 - Firefly Bush Fix
   - Add smooth translation in Firefly Bush animation.
 - Item Frame Tweaks
@@ -202,7 +202,7 @@ Optimize block models and fix bugs in Default resources.
   - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")). With mirrored back face.
   - Rotate bamboo leaves 5° (in supported MC version) to avoid z-fighting.
 - [Tasty Items](https://modrinth.com/project/yVNZK7l2)
-  - Move Rabbit Stew up 1 pixel (feature in Textured/Misc)
+  - Move Rabbit Stew up 1 pixel (feature in Fixes/Textured/Misc)
 
 #### Credits
 
@@ -221,10 +221,9 @@ _Notice: may not contains all features in original pack because visual balance._
 
 - [3D Default](https://modrinth.com/resourcepack/3d-default)
   - Used Resource Fixes feature:
-    - Normal variant Display: Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater
-    - Lite & Normal variant Display: Anvil | Tripwire Hook
+    - Normal variant Display: Anvil, Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater | Tripwire Hook
   - Used Resource Tweaks feature:
-    - Normal variant New Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust, Glass Tweaks
+    - Normal variant New Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust, Glass Tweaks.
   - Modified Shovel item model: Middle thin.
   - Modified Brewing Stand model.
   - Emissive blocks are shadeless.
@@ -241,7 +240,7 @@ _Notice: may not contains all features in original pack because visual balance._
 Planned
 
 - More random rotate & fixes models in Extra/Better Cross.
-- Embedding or implementing outside packs (slowly).
+- Slowly embedding or implementing outside packs.
   - [Vanilla Tweaks](https://vanillatweaks.net/picker/resource-packs/)
   - [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures)
   - [Vary Me](https://modrinth.com/resourcepack/vary-me)

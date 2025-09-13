@@ -1,4 +1,5 @@
 from concurrent.futures import ThreadPoolExecutor
+from io import BytesIO
 from pathlib import Path
 from threading import Thread
 import shutil
@@ -24,7 +25,8 @@ AnyDict = dict[str, Any]
 BytesDict = dict[str, bytes]
 
 logger = logging.getLogger()
-release = False
+release: bool = False
+packsquash_path: str | None = None
 
 
 @dataclass(frozen=True)
@@ -345,15 +347,15 @@ def cfg_tree(
                     input_dir if ii.path_type == "dir" else input_file, storage, cfg, ii
                 )
 
-        def on_release_output():
+        def on_release_output():  # UNUSED NOW
             out_name = Path(tree["output"])
             mid_path = Path(cfg.mid_dir, out_name)
             out_path = Path(cfg.out_dir, out_name)
 
-            os.makedirs(os.path.dirname(out_path), exist_ok=True)
+            os.makedirs(op.dirname(out_path), exist_ok=True)
 
             shutil.rmtree(mid_path)
-            os.makedirs(os.path.dirname(mid_path))
+            os.makedirs(op.dirname(mid_path))
 
             for k, v in storage.items():
                 with (mid_path / k).open("wb") as f:
@@ -364,8 +366,8 @@ def cfg_tree(
                     if sub_process.stdin is not None:
                         data = bytes(
                             f"""pack_directory = {mid_path}
-output_file_path = {out_path}
-""",
+    output_file_path = {out_path}
+    """,
                             "utf-8",
                         )
 
@@ -374,24 +376,23 @@ output_file_path = {out_path}
                 cfg.log_exception("", e)
 
         def on_output():
-            if release:
-                on_release_output()
-                return
+            # if release:
+            #    on_release_output()
+            #    return
 
             filepath = Path(tree["output"] + ".zip")
             out_path = Path(cfg.out_dir, filepath)
 
-            os.makedirs(os.path.dirname(out_path), exist_ok=True)
+            os.makedirs(op.dirname(out_path), exist_ok=True)
             with Timer(cfg, "Zipping", filepath):
-
                 with zipfile.ZipFile(
                     out_path,
                     "w",
                     compression=cfg.compression,
                     compresslevel=cfg.compresslevel,
-                ) as zipf:
+                ) as zipm:
                     for k, v in storage.items():
-                        zipf.writestr(k, v)
+                        zipm.writestr(k, v)
             cfg.log_info(
                 '%s: "%s" completed (%s files, %s KiB)',
                 cfg.name,
@@ -484,18 +485,21 @@ if __name__ == "__main__":
         release = "--release" in sys.argv[1:]
         dir_path = try_get_arg("--dir", op.dirname(__file__))
         cfg_path = try_get_arg("--cfg", "config.json")
-        packsquash_path = try_get_arg("--packsquash", "packsquash.exe")
         log_path = try_get_arg("--log", "build.log")
+        packsquash_path = try_get_arg("--packsquash", "packsquash.exe")
 
         os.chdir(dir_path)
 
-        if os.path.isfile(log_path):
+        if op.isfile(log_path):
             os.makedirs("logs", exist_ok=True)
 
-            path = f"logs/{dt.fromtimestamp(os.stat(log_path).st_mtime).strftime("%Y-%m-%d_%H-%M-%S")} {os.path.basename(log_path)}"
             with open(log_path, "rb") as log:
-                with open(path, "xb") as log_archive:
+                with open(
+                    f"logs/{dt.fromtimestamp(os.stat(log_path).st_mtime).strftime("%Y-%m-%d_%H-%M-%S")} {op.basename(log_path)}",
+                    "xb",
+                ) as log_archive:
                     log_archive.write(log.read())
+        
 
         logger.setLevel(logging.DEBUG)
         console_handler = logging.StreamHandler(sys.stdout)

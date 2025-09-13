@@ -1,7 +1,10 @@
 ### Version 8.6
 
-- Tweaks to `build.py` `config.json`
-  - Rename Resource Fixes Extra to Resource Tweaks, Resource Fixes External to Resource Tweaks External. Source din't change.
+- Project Restructure:
+  - Tweaks to `build.py` `config.json`
+  - Rename Resource Fixes Extra to Resource Tweaks, Resource Fixes External to Resource Tweaks External.
+  - Mark as beta due to this change.
+
 
 #### Fixes
 
@@ -13,7 +16,9 @@ Lite variant
 
 Normal variant
 
-- Display: Lightning Rod is bigger in GUI.
+- Display:
+  - Lightning Rod, All Shelf, Copper Golem is bigger in GUI.
+  - 3D Campfires.
 - Shadeless Lights (Moved from Tweaks/Normal):
 
 #### Tweaks

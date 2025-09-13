@@ -1,6 +1,0 @@
-{
-  "parent": "res_fixes:block/cube_all_inner_faces_no_stretch",
-  "textures": {
-    "all": "minecraft:block/lime_stained_glass"
-  }
-}

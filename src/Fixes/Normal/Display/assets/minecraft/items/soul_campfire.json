@@ -8,7 +8,7 @@
         "when": "false",
         "model": {
           "type": "minecraft:model",
-          "model": "minecraft:block/soul_campfire_off"
+          "model": "minecraft:block/campfire_off"
         }
       },
       {
