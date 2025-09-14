@@ -1,3 +1,16 @@
+### Version 8.8
+
+- Improve `build.py` `build.md`
+
+#### Fixes
+
+#### Tweaks
+
+External variant
+
+- `3D_Default`
+  - Trapdoor use `Fixes.Normal.Display`: Thin Block.
+
 ### Version 8.7+fix1
 
 #### Tweaks
@@ -43,7 +56,7 @@ Lite variant
 
 - Cube Inner Faces Fix (New):
   - Fixed Cube Inner Faces (Spawners) cull wrong face (my problem).
-  - Used in higher variant as a library. 
+  - Used in higher variant as a library.
 
 Normal variant
 

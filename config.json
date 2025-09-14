@@ -27,13 +27,11 @@
             },
             "output": "Resource Fixes Textured",
             "children": {
-              "inputs": [
-                {
-                  "path": "Tweaks/Normal",
-                  "reformat": {"indent": null, "separators": [",", ":"]},
-                  "extras": ["3D_Bars", "Consistent_Planes", "3D_Ladder", "3D_Pointed_Dripstone", "3D_Redstone_Dust", "Axolotl_Bucket_Variants", "Better_Animation", "Better_Copper_Grate", "Better_Cross", "Better_Fire", "Better_Leaves", "Better_Particles", "Better_Weather", "Clean_Water", "Display", "Fast_Better_Grass", "Language_Tweaks", "Mirrored_Pumpkin_Blur", "Moist_Farmland", "New_Torches", "Respackopts", "Sandstone_Tweaks", "Square_Shadow", "Unlit_Redstone_Ore", "Wide_Bamboo", {"path": "Tasty_Items-v1.2.zip", "excludes": ["credits.txt", "pack.png", "pack.mcmeta"]}, "Tasty_Items"]
-                }
-              ],
+              "inputs": {
+                "path": "Tweaks/Normal",
+                "reformat": {"indent": null, "separators": [",", ":"]},
+                "extras": ["3D_Bars", "Consistent_Planes", "3D_Ladder", "3D_Pointed_Dripstone", "3D_Redstone_Dust", "Axolotl_Bucket_Variants", "Better_Animation", "Better_Copper_Grate", "Better_Cross", "Better_Fire", "Better_Leaves", "Better_Particles", "Better_Weather", "Clean_Water", "Display", "Fast_Better_Grass", "Language_Tweaks", "Mirrored_Pumpkin_Blur", "Moist_Farmland", "New_Torches", "Respackopts", "Sandstone_Tweaks", "Square_Shadow", "Unlit_Redstone_Ore", "Wide_Bamboo", {"path": "Tasty_Items-v1.2.zip", "excludes": ["credits.txt", "pack.png", "pack.mcmeta"]}, "Tasty_Items"]
+              },
               "output": "Resource Tweaks",
               "children": {
                 "inputs": {
@@ -158,6 +156,14 @@
           "output": "Normal/Small Back Faces"
         },
         {
+          "inputs": "Normal/Mod/Farmers_Delight",
+          "output": "Normal/Mod/Farmer's Delight"
+        },
+        {
+          "inputs": "Normal/Mod/EBE",
+          "output": "Normal/Mod/Enhanced Block Entities"
+        },
+        {
           "inputs": "Textured/End_Portal_Frame_Fix",
           "output": "Textured/End Portal Frame Fix"
         },
@@ -176,14 +182,6 @@
         {
           "inputs": "Textured/Tall_Seagrass_Fix",
           "output": "Textured/Tall Seagrass Fix"
-        },
-        {
-          "inputs": "Textured/Mod/Farmers_Delight",
-          "output": "Textured/Mod/Farmer's Delight"
-        },
-        {
-          "inputs": "Textured/Mod/EBE",
-          "output": "Textured/Mod/Enhanced Block Entities"
         }
       ]
     }

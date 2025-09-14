@@ -1,4 +1,4 @@
-- Version: 8.7
+- Version: 8.8
 - Game versions: 1.14.4-1.21.9 (25w37a)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
@@ -216,9 +216,9 @@ _Notice: may not contains all features in original pack because visual balance._
 
 - `3D_Default` @[3D Default](https://modrinth.com/resourcepack/3d-default)
   - Used Resource Fixes feature:
-    - Normal variant Display: Anvil, Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater | Tripwire Hook
+    - `Normal.Display`: Anvil, Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater | Tripwire Hook
   - Used Resource Tweaks feature:
-    - Normal variant New Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust.
+    - `Normal.(New_Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust)`.
   - Modified Shovel item model: Middle thin.
   - Modified Brewing Stand model.
   - Emissive blocks are shadeless.
@@ -262,7 +262,7 @@ Suggestions
 2. Config `config.json` following `config.md`
 3. Enter path `cd <the path>`
 4. Then run: `python build.py`
-
-- `--dir <path>` arg change the current directory path.
-- `--cfg <path>` arg change the config path.
-- `--log <path>` arg change the log path.
+    - `--release` arg build config root with tag `only_in_release` is true.
+    - `--dir <path>` arg change the current directory path.
+    - `--cfg <path>` arg change the config path.
+    - `--log <path>` arg change the log path.

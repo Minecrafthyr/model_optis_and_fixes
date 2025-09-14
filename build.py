@@ -12,7 +12,7 @@ import os
 from os import path as op
 from datetime import datetime as dt
 from dataclasses import dataclass, replace
-from typing import IO, Any, Literal
+from typing import IO, Any
 from json.encoder import JSONEncoder
 
 # import fastzipfile
@@ -33,7 +33,6 @@ class Config:
 
     name: str
     src_dir: str
-    mid_dir: str
     out_dir: str
     extra_out_dirs: list[str] | str
     exclude_ext: tuple[str, ...]
@@ -72,8 +71,7 @@ class InputInfo:
     """Information about input. May change after init."""
 
     path: str
-    path_type: Literal["dir", "file"] | None
-    mode: Literal["include", "exclude"]
+    blocking_mode: bool
     zip_mode: bool
     excludes: set[str]
     includes: dict[str, str | None]
@@ -81,10 +79,6 @@ class InputInfo:
 
     def copy(self, **changes):
         return replace(self, **changes)
-
-
-def get_path_type(path: str) -> Literal["dir", "file"] | None:
-    return "dir" if op.isdir(path) else "file" if op.isfile(path) else None
 
 
 class Timer:
@@ -136,10 +130,10 @@ def process_includes(
         for o in obj:
             process_includes(o, includes, path)
     else:
+        new_path = op.join(path, obj["path"]) if "path" in obj else path
         new_out_path = (
             op.join(out_path, obj["out_path"]) if "out_path" in obj else out_path
         )
-        new_path = op.join(path, obj["path"]) if "path" in obj else path
         if "extras" in obj:
             process_includes(obj["extras"], includes, new_path, new_out_path)
         else:
@@ -181,25 +175,20 @@ def process_inputs(
     if inputs is None:
         inputs = list[InputInfo]()
     if ii is None:
-        ii = InputInfo("", None, "exclude", True, set[str](), {}, None)
+        ii = InputInfo(cfg.src_dir, False, True, set[str](), {}, None)
 
     if isinstance(obj, list):
         for o in obj:
             process_inputs(o, inputs, ii.copy(), cfg)
     elif isinstance(obj, str):
         new_path = join_path(ii.path, obj)
-        path_type = get_path_type(new_path)
-        if path_type is None:
-            cfg.log_error("Error: path %s not found", new_path)
-            return inputs
-        inputs.append(ii.copy(path=new_path, path_type=path_type))
+        inputs.append(ii.copy(path=new_path))
     else:
         new_path = op.join(ii.path, obj["path"]) if "path" in obj else ii.path
         new_excludes = process_excludes(obj.get("excludes", []))
         new_excludes.update(ii.excludes)
         new_includes = process_includes(obj.get("includes", []))
         new_includes.update(ii.includes)
-        path_type = get_path_type(new_path)
         reformat: AnyDict | JSONEncoder | None = obj.get("reformat", None)
         if isinstance(reformat, dict):
             reformat = JSONEncoder(
@@ -212,14 +201,10 @@ def process_inputs(
                 separators=reformat.get("separators", None),
                 default=reformat.get("default", None),
             )
-        if path_type is None:
-            cfg.log_error("Error: path %s not found", new_path)
-            return inputs
         new_ii = ii.copy(
             path=new_path,
-            path_type=path_type,
             zip_mode=obj.get("zip_mode", ii.zip_mode),
-            mode=obj.get("mode", ii.mode),
+            blocking_mode=obj.get("mode", ii.blocking_mode),
             excludes=new_excludes,
             includes=new_includes,
             reformat=reformat,
@@ -232,28 +217,31 @@ def process_inputs(
     return inputs
 
 
-def excluding(opath: str, cfg: Config, excludes: set[str]):
+def not_excluded(opath: str, cfg: Config, excludes: set[str]):
     """Excluding files.
-    return True if matched exclude.
+    return False if matched exclude.
     """
     if opath.endswith(cfg.exclude_ext):
         cfg.log_debug('%s: Excluded "%s" by extension', cfg.name, opath)
-        return True
+        return False
     if opath.startswith(tuple(excludes)):
         cfg.log_debug('%s: Excluded "%s" by relative path', cfg.name, opath)
         excludes.remove(opath)
-        return True
+        return False
     if opath.startswith(tuple(cfg.default_excludes)):
         cfg.log_debug('%s: Excluded "%s" by default', cfg.name, opath)
-        return True
-    return False
+        return False
+    return True
 
 
-def include_or_exclude(opath: str, cfg: Config, ii: InputInfo):
-    return (ii.mode == "exclude" and not excluding(opath, cfg, ii.excludes)) or (
-        ii.mode == "include"
-        and any(opath.startswith(include) for include in ii.includes.keys())
-    )
+def not_blocked(opath: str, cfg: Config, ii: InputInfo):
+    if ii.blocking_mode:
+        if not any(opath.startswith(include) for include in ii.includes.keys()):
+            return False
+    else:
+        if any(opath.startswith(include) for include in ii.includes.keys()):
+            return True
+    return not_excluded(opath, cfg, ii.excludes)
 
 
 def moving(opath: str, cfg: Config, ii: InputInfo) -> str:
@@ -290,9 +278,10 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
             return
         with zipfile.ZipFile(file=ii.path, mode="r") as zipf:
             cfg.log_debug(f"Loading zip file {ii.path}")
+
             def on_zipinfo(zinfo: zipfile.ZipInfo):
                 iopath = zinfo.filename
-                if include_or_exclude(iopath, cfg, ii):
+                if not_blocked(iopath, cfg, ii):
                     with zipf.open(iopath) as f:
                         storage[moving(iopath, cfg, ii)] = get_data(iopath, f, ii)
 
@@ -315,7 +304,7 @@ def input_dir(storage: BytesDict, cfg: Config, ii: InputInfo):
             def on_file(file: str):
                 ipath = op.normpath(op.join(root, file))
                 opath = op.relpath(ipath, ii.path).replace(os.sep, "/")
-                if include_or_exclude(opath, cfg, ii):
+                if not_blocked(opath, cfg, ii):
                     with open(ipath, "rb") as f:
                         storage[moving(opath, cfg, ii)] = get_data(ipath, f, ii)
 
@@ -336,16 +325,13 @@ def cfg_tree(
     try:
         inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
 
-        for ii in process_inputs(
-            inputs,
-            None,
-            InputInfo(cfg.src_dir, None, "exclude", True, set[str](), {}, None),
-            cfg,
-        ):
-            if ii.path_type == "dir":
+        for ii in process_inputs(inputs, None, None, cfg):
+            if os.path.isdir(ii.path):
                 input_dir(storage, cfg, ii)
-            else:
+            elif os.path.isfile(ii.path):
                 input_file(storage, cfg, ii)
+            else:
+                cfg.log_error(f"{ii.path} is not dir or file")
 
         def on_output():
 
@@ -417,7 +403,6 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
     cfg = Config(
         raw_cfg.get("name", "<unnamed>"),
         raw_cfg.get("src_dir", "src/"),
-        raw_cfg.get("mid_dir", "mid/"),
         raw_cfg.get("out_dir", "out/"),
         raw_cfg.get("extra_out_dirs", []),
         raw_cfg.get("exclude_ext", (".py", ".backup", ".temp")),
@@ -468,7 +453,6 @@ if __name__ == "__main__":
                     "xb",
                 ) as log_archive:
                     log_archive.write(log.read())
-        
 
         logger.setLevel(logging.DEBUG)
         console_handler = logging.StreamHandler(sys.stdout)
