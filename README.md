@@ -230,7 +230,7 @@ _Notice: may not contains all features in original pack because visual balance._
 #### Credits
 
 - `3D_Default`: Copied zip file from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
-- `UltiCraft-Models3D`: Copied 15 files from [3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [Apache-2.0](https://spdx.org/licenses/Apache-2.0).
+- `UltiCraft-Models3D`: Copied 16 files from [3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [Apache-2.0](https://spdx.org/licenses/Apache-2.0).
 
 
 ## More Information

@@ -56,7 +56,8 @@
                         {
                           "path": "assets/minecraft/textures/block",
                           "extras": ["redstone_ore_on.png", "redstone_ore_on_s.png", "deepslate_redstone_ore_on.png", "deepslate_redstone_ore_on_s.png"]
-                        }
+                        },
+                        {"path": "assets/minecraft/textures/item", "extras": ["potion.png", "potion_splash.png", "honey_bottle.png"]}
                       ]
                     },
                     "3D_Default",

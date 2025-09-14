@@ -1,3 +1,9 @@
+### Version 8.7+fix1
+
+#### Tweaks
+
+- Further fix issue [#12](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/12).
+
 ### Version 8.7
 
 - Rename directories and credit files in source.
