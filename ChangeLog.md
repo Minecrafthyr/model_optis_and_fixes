@@ -1,10 +1,35 @@
+### Version 8.7
+
+- Rename directories and credit files in source.
+- Remove thread execution in input.
+- Removed unused `packsquash.exe` in source. AGPL will override Unlicense.
+
+### Fixes
+
+Normal variant
+
+- `Mod.Farmers_Delight`: Fix wrong cullface.
+
+#### Tweaks
+
+Normal variant
+
+- `3D_Ladder`: use a thin model. ([#12](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/12))
+- ~~`Glass_Tweaks`~~: Removed.
+
+External variant
+
+- `3D_Default`
+  - Removed 3D potions, it conflicts to Tasty Items. ([#12](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/12))
+- `UltiCraft-Models3D` (New) @[3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d)
+  - Only use Bookshelf and barrel. ([#12](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/12))
+
 ### Version 8.6
 
 - Project Restructure:
   - Tweaks to `build.py` `config.json`
   - Rename Resource Fixes Extra to Resource Tweaks, Resource Fixes External to Resource Tweaks External.
   - Mark as beta due to this change.
-
 
 #### Fixes
 
@@ -31,6 +56,8 @@ Normal variant
 - Particle Tweaks: Remove more pixels in Explosion particle texture.
 
 External variant
+
+- Used "Tweaks/Normal/Glass Tweaks".
 
 ### Version 8.5
 

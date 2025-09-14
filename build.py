@@ -1,5 +1,4 @@
 from concurrent.futures import ThreadPoolExecutor
-from io import BytesIO
 from pathlib import Path
 from threading import Thread
 import shutil
@@ -8,7 +7,6 @@ import logging
 import sys
 import time
 import os
-import subprocess
 
 
 from os import path as op
@@ -285,12 +283,13 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
     """Process file input."""
     try:
         if not ii.zip_mode or not ii.path.endswith(".zip"):
+            cfg.log_debug(f"Loading single file {ii.path}")
             with open(ii.path, "rb") as f:
                 storage[op.basename(ii.path)] = get_data(ii.path, f, ii)
             check_excludes(cfg, ii)
             return
         with zipfile.ZipFile(file=ii.path, mode="r") as zipf:
-
+            cfg.log_debug(f"Loading zip file {ii.path}")
             def on_zipinfo(zinfo: zipfile.ZipInfo):
                 iopath = zinfo.filename
                 if include_or_exclude(iopath, cfg, ii):
@@ -309,6 +308,7 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
 
 def input_dir(storage: BytesDict, cfg: Config, ii: InputInfo):
     """Process directory input."""
+    cfg.log_debug(f"Loading directory {ii.path}")
     try:
         for root, _, files in os.walk(ii.path):
 
@@ -336,49 +336,18 @@ def cfg_tree(
     try:
         inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
 
-        with ThreadPoolExecutor() as tpe:
-            for ii in process_inputs(
-                inputs,
-                None,
-                InputInfo(cfg.src_dir, None, "exclude", True, set[str](), {}, None),
-                cfg,
-            ):
-                tpe.submit(
-                    input_dir if ii.path_type == "dir" else input_file, storage, cfg, ii
-                )
-
-        def on_release_output():  # UNUSED NOW
-            out_name = Path(tree["output"])
-            mid_path = Path(cfg.mid_dir, out_name)
-            out_path = Path(cfg.out_dir, out_name)
-
-            os.makedirs(op.dirname(out_path), exist_ok=True)
-
-            shutil.rmtree(mid_path)
-            os.makedirs(op.dirname(mid_path))
-
-            for k, v in storage.items():
-                with (mid_path / k).open("wb") as f:
-                    f.write(v)
-            try:
-                with subprocess.Popen(f".\\{packsquash_path} -") as sub_process:
-
-                    if sub_process.stdin is not None:
-                        data = bytes(
-                            f"""pack_directory = {mid_path}
-    output_file_path = {out_path}
-    """,
-                            "utf-8",
-                        )
-
-                        sub_process.stdin.write(data)
-            except Exception as e:
-                cfg.log_exception("", e)
+        for ii in process_inputs(
+            inputs,
+            None,
+            InputInfo(cfg.src_dir, None, "exclude", True, set[str](), {}, None),
+            cfg,
+        ):
+            if ii.path_type == "dir":
+                input_dir(storage, cfg, ii)
+            else:
+                input_file(storage, cfg, ii)
 
         def on_output():
-            # if release:
-            #    on_release_output()
-            #    return
 
             filepath = Path(tree["output"] + ".zip")
             out_path = Path(cfg.out_dir, filepath)

@@ -1,4 +1,4 @@
-- Version: 8.6
+- Version: 8.7
 - Game versions: 1.14.4-1.21.9 (25w37a)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
@@ -14,7 +14,7 @@ FAQ
 - Resource Fixes Lite | Normal | Textured: ✔️ (in most cases)
 - Resource Tweaks
   - Normal: ❔ (some models slow down, e.g. leaves with back face)
-  - External: ❌️ (3D models slow down a lot; depends on block type)
+  - External: ❌️ (3D models slow down a lot; depends on block count)
 
 ## Variants
 
@@ -86,12 +86,12 @@ Optimize block models and fix bugs in Default resources.
 - Sunflower ([MC-90566](https://bugs.mojang.com/browse/MC/issues/MC-90566 "The plants of sunflowers don't connect to their stems"), [MC-122701](https://bugs.mojang.com/browse/MC/issues/MC-122701 "Sunflowers are stretched"), [MC-201760](https://bugs.mojang.com/browse/MC/issues/MC-201760 "Sunflower top half cross model is not mirrored on the back"))
 - Trapdoors ([MC-175626](https://bugs.mojang.com/browse/MC/issues/MC-175626 "Trapdoors are rendered too dark when blocks are placed adjacent to them while smooth lighting is enabled"))
 - Tripwire (Hook) ([MC-262172](https://bugs.mojang.com/browse/MC/issues/MC-262172 "Tripwire hook model incorrect - stick does not attach to ring symmetrically"), [MC-262174](https://bugs.mojang.com/browse/MC/issues/MC-262174 "The section of tripwire that is attached to a tripwire hook is stretched"), [MC-262546](https://bugs.mojang.com/browse/MC/issues/MC-262546 "Texture mapping on tripwire hook rings appears to be wrong"), [MC-262598](https://bugs.mojang.com/browse/MC/issues/MC-262598 'Tripwire textures in the tripwire hook "attached: true" state have a wrong black rendering when the tripwire hook is attached to a non-transparent block'), [MC-262600](https://bugs.mojang.com/browse/MC/issues/MC-262600 "Tripwire texture can rotate unexpectedly when neighbouring connections change / is mapped inconsistently"))
-- Language Fix: Enchantment|Potion Level Fix.
+- `Language_Fix`: Enchantment|Potion Level Fix.
 
 ### Normal
 
-- Better Sculk Sensor Swing
-- Display
+- `Better_Sculk_Sensor_Swing`
+- `Display`
   - 3D Brewing Stand, Cauldron, Comparator, Repeater, Campfires, Candles, Cake, Hopper, Torches, Lanterns, Lever, Sniffer Egg, Turtle Egg, Flower Pot,.
   - Block is a bit bigger in item frame.
   - End Rod, Lightning Rod, All Shelf, Copper Golem is a bit bigger in GUI.
@@ -104,134 +104,134 @@ Optimize block models and fix bugs in Default resources.
   - Tweak some items display, they are not floating on hand or head now.
   - Use front GUI light on Conduit, Torches, End Rod, Lanterns.
   - Spore Blossom upside down on ground.
-- Shadeless Lights
+- `Mod`
+  - Patch for Enhanced Block Entities and Farmer's Delight. If you meet issue, use Respackopts to disable it.
+- `Shadeless_Lights`
   - Light source blocks are shadeless. (a part of [MC-296027](https://bugs.mojang.com/browse/MC/issues/MC-296027 "Certain Light-Emitting Blocks Lack Internal Glow in Java Edition"))
   - Light source items are using front GUI light.
-- Modern Recipe Button Texture
-- Modern Redstone Torch Texture
-- Modern Spectator GUI Texture
-- Small Back faces
+- `Small_Back_Faces`
   - Cactus and small dripleaf has some pixels back face.
 
 ### Textured
 
-- End Portal Frame Fix
+- `End_Portal_Frame_Fix`
   - Now you can notice where it facing.
-- Firefly Bush Fix
+- `Firefly_Bush_Fix`
   - Add smooth translation in Firefly Bush animation.
-- Item Frame Tweaks
+- `Item_Frame_Tweaks`
   - Optimize Item Frame with Texture change.
-- Misc
+- `Misc`
   - Make Particle Tweaks mod's ripple particle transparent.
   - Rabbit Stew Height is consistent with other bowled items.
-- Modern Recipe Button Texture
-- Modern Redstone Torch Texture
-- Modern Spectator GUI Texture
-- [Rail Fix](https://modrinth.com/project/481jOCry)
-  - Raised rail is stretched better. texture.
-- Tall Seagrass Fix
+- `Modern_Recipe_Button_Texture`
+- `Modern_Redstone_Torch_Texture`
+- `Modern_Spectator_GUI_Texture`
+- `Rail_Fix` @[Rail Fix](https://modrinth.com/project/481jOCry)
+  - Raised rail is stretched better.
+- `Tall_Seagrass_Fix`
   - \-1 pixel height on Tall Seagrass Top texture to avoid it visually goes out of water.
 
 #### Credits
 
-- Firefly Bush Fix: Copied 1 file from [Fix Firefly Bush Framerate](https://modrinth.com/project/FE7VLrn4) by [BizCub](https://modrinth.com/user/BizCub) under [MIT License](https://spdx.org/licenses/MIT).
-- Rail Fix: Modified 23 files from [Rail Fix](https://modrinth.com/project/481jOCry) by [Lad_Flaver](https://modrinth.com/user/Lad_Flaver) under [ARR with explicitly stated](https://modrinth.com/project/481jOCry).
-- Smooth Stone Slab Fix: Copied 1 file from [Smooth Stone Slab Fix](https://modrinth.com/project/QoUSM3q9) by [creep](https://modrinth.com/user/creep) under [MIT License](https://spdx.org/licenses/MIT).
+- `Firefly_Bush_Fix`: Copied 1 file from [Fix Firefly Bush Framerate](https://modrinth.com/project/FE7VLrn4) by [BizCub](https://modrinth.com/user/BizCub) under [MIT License](https://spdx.org/licenses/MIT).
+- `Rail_Fix`: Modified 23 files from [Rail Fix](https://modrinth.com/project/481jOCry) by [Lad_Flaver](https://modrinth.com/user/Lad_Flaver) under [ARR with explicitly stated](https://modrinth.com/project/481jOCry).
+- `Smooth_Stone_Slab_Fix`: Copied 1 file from [Smooth Stone Slab Fix](https://modrinth.com/project/QoUSM3q9) by [creep](https://modrinth.com/user/creep) under [MIT License](https://spdx.org/licenses/MIT).
 
 ## Resource Tweaks
 
 ### Normal
 
-- 3D Ladder
-- 3D Pointed Dripstone (for matching texture, model is bigger than collision box)
-- 3D Redstone Dust
-- Animation
+- `3D_Bars`
+- `3D_Ladder`
+- `3D_Pointed_Dripstone` (for matching texture, model is bigger than collision box)
+- `3D_Redstone_Dust`
+- `Animation`
   - Animation of flowing lava is now faster then still lava.
   - Kelp animation is slower.
   - Smooth Lava & Lantern animation
-- Better Cross
+- `Better_Cross`
   - Flowers and fern is rescaled correctly.
   - Cross models are now has mirrored back face.
   - Add random rotation for 1 block tall (standard and potted) cross model.
-- Better Fire
+- `Better_Fire`
   - Fire texture is a bit transparent on body.
   - Sides of floor fire is lower than before (center does not change).
   - Sides of fire are tilted (in supported MC version).
-- Better Leaves
+- `Better_Leaves`
   - Add inner back face.
   - Fast leaves waterlogged texture.
   - Better with [More Culling](https://modrinth.com/mod/moreculling) or [Cull Leaves](https://modrinth.com/mod/cull-leaves)
-- Better Weather
+- `Better_Weather`
   - White and light blue and more transparent rain.
   - Less snow.
-- Better Particles
+- `Better_Particles`
   - Better Effect particles.
   - Light blue Splash particle.
   - Heart, Damage, Golden Heart texture is hollowed.
-- Consistent Planes
+- `Consistent_Planes`
   - Sore plane-like models are now not floating, shadeless, has cullface.
-- Clean Water
-- Cull Glass Pane
-  - This cause gap in some cases, but it's worth.
-- Display
+- `Clean_Water`
+- `Display`
   - Block item is a bit bigger on ground.
-- Fast Better Grass
+- `Fast_Better_Grass`
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
   - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths).
-- Glass Tweaks
-  - Inner faces for All Glass (Pane).
-  - Remove pixels in normal Glass (Pane) texture.
-- Mirrored Pumpkin Blur
-- Moist Farmland
+- `Mirrored_Pumpkin_Blur`
+- `Moist_Farmland`
   - Visualize Farmland "moisture" state 0 - 7.
-- New Torches
+- `New_Torches`
   - All Torch has glowing outline model.
   - 20% more smooth torch handle.
-- Respackopts
+- `Respackopts`
   - Config Fast Better Grass.
-- Sandstone Tweaks
+- `Sandstone_Tweaks`
   - Side using mixed (75% bottom/25% top) texture.
   - Top using mixed (50% bottom/50% top) texture.
   - Smooth/Cut/Chiseled using original top texture.
-- Square Shadow
+- `Square_Shadow`
   - Square entity shadow.
-- Unlit Redstone Ore
+- `Unlit_Redstone_Ore`
   - Redstone Ore is darker on unlit state.
-- Wide Bamboo
+- `Wide_Bamboo`
   - 4 pixel wide Bamboo.
   - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")). With mirrored back face.
   - Rotate bamboo leaves 5° (in supported MC version) to avoid z-fighting.
-- [Tasty Items](https://modrinth.com/project/yVNZK7l2)
+- `Tasty_Items` @[Tasty Items](https://modrinth.com/project/yVNZK7l2)
   - Move Rabbit Stew up 1 pixel (feature in Fixes/Textured/Misc)
 
 #### Credits
 
 _Notice: may not contains all features in original pack because visual balance._
 
-- 3D Bars: Modified 6 files from [Simple 3D Iron Bars](https://modrinth.com/project/p5Kdm58p) by [poqbox](https://modrinth.com/user/poqbox) under [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause).
-- 3D Redstone Dust: Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT).
-- Axolotl Bucket Variants: Copied 11 files from [Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants) by [manyrandomthings](https://modrinth.com/user/manyrandomthings) under [LGPL-3.0-only](https://spdx.org/licenses/LGPL-3.0-only).
-- Better Leaves: Modified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
-- Better Particles: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
-- Fast Better Grass: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
-- Tasty Items: Copied zip file from [Tasty Items](https://modrinth.com/project/yVNZK7l2) by [enchanted-games](https://modrinth.com/user/enchanted-games) under [CC-BY-NC-4.0](https://spdx.org/licenses/CC-BY-NC-4.0).
+- `3D_Bars`: Modified 6 files from [Simple 3D Iron Bars](https://modrinth.com/project/p5Kdm58p) by [poqbox](https://modrinth.com/user/poqbox) under [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause).
+- `3D_Redstone_Dust`: Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT).
+- `Axolotl_Bucket_Variants`: Copied 11 files from [Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants) by [manyrandomthings](https://modrinth.com/user/manyrandomthings) under [LGPL-3.0-only](https://spdx.org/licenses/LGPL-3.0-only).
+- `Better_Leaves`: Modified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
+- `Better_Particles`: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
+- `Fast_Better_Grass`: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
+- `Tasty_Items`: Copied zip file from [Tasty Items](https://modrinth.com/project/yVNZK7l2) by [enchanted-games](https://modrinth.com/user/enchanted-games) under [CC-BY-NC-4.0](https://spdx.org/licenses/CC-BY-NC-4.0).
 
 
 ### External
 
-- [3D Default](https://modrinth.com/resourcepack/3d-default)
+- `3D_Default` @[3D Default](https://modrinth.com/resourcepack/3d-default)
   - Used Resource Fixes feature:
     - Normal variant Display: Anvil, Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater | Tripwire Hook
   - Used Resource Tweaks feature:
-    - Normal variant New Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust, Glass Tweaks.
+    - Normal variant New Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust.
   - Modified Shovel item model: Middle thin.
   - Modified Brewing Stand model.
   - Emissive blocks are shadeless.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
+  - Removed 3D potions.
+- `UltiCraft-Models3D` @[3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d)
+  - Only use Bookshelf and barrel.
 
 #### Credits
 
-- 3D Default: Copied zip file from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
+- `3D_Default`: Copied zip file from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
+- `UltiCraft-Models3D`: Copied 15 files from [3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [Apache-2.0](https://spdx.org/licenses/Apache-2.0).
+
 
 ## More Information
 

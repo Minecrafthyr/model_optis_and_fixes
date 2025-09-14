@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "v8.6 for 1.14.4-1.21.9 (25w37a)",
+    "description": "v8.7 for 1.14.4-1.21.9 (25w37a)",
     "min_format": 5,
     "max_format": [69, 0],
     "pack_format": 64,
