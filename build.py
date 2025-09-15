@@ -26,6 +26,8 @@ logger = logging.getLogger()
 release: bool = False
 packsquash_path: str | None = None
 
+ENCODER = JSONEncoder(ensure_ascii=False, indent=None, separators=(",", ":"))
+
 
 @dataclass(frozen=True)
 class Config:
@@ -37,6 +39,7 @@ class Config:
     extra_out_dirs: list[str] | str
     exclude_ext: tuple[str, ...]
     default_excludes: set[str]
+    default_merge: set[str]
     log_level: int = logging.INFO
     compression: int = 0
     compresslevel: int | None = None
@@ -75,7 +78,7 @@ class InputInfo:
     zip_mode: bool
     excludes: set[str]
     includes: dict[str, str | None]
-    reformat: JSONEncoder | None = None
+    # reformat: JSONEncoder | None = None
 
     def copy(self, **changes):
         return replace(self, **changes)
@@ -113,7 +116,7 @@ def join_path(path: str, /, *paths: str) -> str:
     return Path(path).joinpath(*paths).as_posix()
 
 
-def process_includes(
+def get_paths_with_output(
     obj: list[AnyDict | str] | AnyDict | str,
     includes: dict[str, str | None] | None = None,
     path: str = "",
@@ -128,44 +131,44 @@ def process_includes(
         )
     elif isinstance(obj, list):
         for o in obj:
-            process_includes(o, includes, path)
+            get_paths_with_output(o, includes, path)
     else:
         new_path = op.join(path, obj["path"]) if "path" in obj else path
         new_out_path = (
             op.join(out_path, obj["out_path"]) if "out_path" in obj else out_path
         )
         if "extras" in obj:
-            process_includes(obj["extras"], includes, new_path, new_out_path)
+            get_paths_with_output(obj["extras"], includes, new_path, new_out_path)
         else:
             includes[norm_path(new_path)] = norm_path(new_out_path)
 
     return includes
 
 
-def process_excludes(
+def get_paths(
     obj: list[AnyDict | str] | AnyDict | str,
-    excludes: set[str] | None = None,
+    paths: set[str] | None = None,
     path: str = "",
 ):
     """Process excludes."""
-    if excludes is None:
-        excludes = set[str]()
+    if paths is None:
+        paths = set[str]()
     if isinstance(obj, str):
-        excludes.add(join_path(path, obj))
+        paths.add(join_path(path, obj))
     elif isinstance(obj, list):
         for o in obj:
-            process_excludes(o, excludes, path)
+            get_paths(o, paths, path)
     else:
         new_path = op.join(path, obj["path"]) if "path" in obj else path
         if "extras" in obj:
-            process_excludes(obj["extras"], excludes, new_path)
+            get_paths(obj["extras"], paths, new_path)
         else:
-            excludes.add(norm_path(new_path))
+            paths.add(norm_path(new_path))
 
-    return excludes
+    return paths
 
 
-def process_inputs(
+def get_inputs(
     obj: list[AnyDict | str] | AnyDict | str,
     inputs: list[InputInfo] | None,
     ii: InputInfo | None,
@@ -175,42 +178,42 @@ def process_inputs(
     if inputs is None:
         inputs = list[InputInfo]()
     if ii is None:
-        ii = InputInfo(cfg.src_dir, False, True, set[str](), {}, None)
+        ii = InputInfo(cfg.src_dir, False, True, set[str](), {})
 
     if isinstance(obj, list):
         for o in obj:
-            process_inputs(o, inputs, ii.copy(), cfg)
+            get_inputs(o, inputs, ii.copy(), cfg)
     elif isinstance(obj, str):
         new_path = join_path(ii.path, obj)
         inputs.append(ii.copy(path=new_path))
     else:
         new_path = op.join(ii.path, obj["path"]) if "path" in obj else ii.path
-        new_excludes = process_excludes(obj.get("excludes", []))
+        new_excludes = get_paths(obj.get("excludes", []))
         new_excludes.update(ii.excludes)
-        new_includes = process_includes(obj.get("includes", []))
+        new_includes = get_paths_with_output(obj.get("includes", []))
         new_includes.update(ii.includes)
-        reformat: AnyDict | JSONEncoder | None = obj.get("reformat", None)
-        if isinstance(reformat, dict):
-            reformat = JSONEncoder(
-                skipkeys=reformat.get("skipkeys", False),
-                ensure_ascii=reformat.get("ensure_ascii", True),
-                check_circular=reformat.get("check_circular", True),
-                allow_nan=reformat.get("allow_nan", True),
-                indent=reformat.get("indent", True),
-                sort_keys=reformat.get("sort_keys", True),
-                separators=reformat.get("separators", None),
-                default=reformat.get("default", None),
-            )
+        # reformat: AnyDict | JSONEncoder | None = obj.get("reformat", None)
+        # if isinstance(reformat, dict):
+        #    reformat = JSONEncoder(
+        #        skipkeys=reformat.get("skipkeys", False),
+        #        ensure_ascii=reformat.get("ensure_ascii", False),
+        #        check_circular=reformat.get("check_circular", True),
+        #        allow_nan=reformat.get("allow_nan", True),
+        #        indent=reformat.get("indent", None),
+        #        sort_keys=reformat.get("sort_keys", True),
+        #        separators=reformat.get("separators", (",", ":")),
+        #        default=reformat.get("default", None),
+        #    )
         new_ii = ii.copy(
             path=new_path,
             zip_mode=obj.get("zip_mode", ii.zip_mode),
             blocking_mode=obj.get("mode", ii.blocking_mode),
             excludes=new_excludes,
             includes=new_includes,
-            reformat=reformat,
+            # reformat=reformat,
         )
         if "extras" in obj:
-            process_inputs(obj["extras"], inputs, new_ii, cfg)
+            get_inputs(obj["extras"], inputs, new_ii, cfg)
         else:
             inputs.append(new_ii)
 
@@ -261,10 +264,28 @@ def check_excludes(cfg: Config, ii: InputInfo):
         )
 
 
-def get_data(ipath: str, stream: IO[bytes], ii: InputInfo):
-    if release and ii.reformat is not None and ipath.endswith(".json"):
-        return bytes(ii.reformat.encode(json.load(stream)), "utf-8")
-    return stream.read()
+def store_file(
+    storage: BytesDict,
+    cfg: Config,
+    ii: InputInfo,
+    stream: IO[bytes],
+    ipath: str,
+    opath: str,
+):
+    moved = moving(opath, cfg, ii)
+    if ipath.endswith(".json"):
+        if opath.startswith(tuple(cfg.default_merge)) and moved in storage:
+            original = json.loads(storage[moved])
+            target = json.load(stream)
+            if isinstance(original, dict) and isinstance(target, dict):
+                original.update(target)
+                storage[moved] = bytes(ENCODER.encode(original), "utf-8")
+                return
+        if release:
+            storage[moved] = bytes(ENCODER.encode(json.load(stream)), "utf-8")
+            return
+    storage[moved] = stream.read()
+    return
 
 
 def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
@@ -273,7 +294,7 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
         if not ii.zip_mode or not ii.path.endswith(".zip"):
             cfg.log_debug(f"Loading single file {ii.path}")
             with open(ii.path, "rb") as f:
-                storage[op.basename(ii.path)] = get_data(ii.path, f, ii)
+                store_file(storage, cfg, ii, f, ii.path, ii.path)
             check_excludes(cfg, ii)
             return
         with zipfile.ZipFile(file=ii.path, mode="r") as zipf:
@@ -283,7 +304,7 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
                 iopath = zinfo.filename
                 if not_blocked(iopath, cfg, ii):
                     with zipf.open(iopath) as f:
-                        storage[moving(iopath, cfg, ii)] = get_data(iopath, f, ii)
+                        store_file(storage, cfg, ii, f, iopath, iopath)
 
             with ThreadPoolExecutor() as tpe:
                 for zinfo in zipf.filelist:
@@ -306,7 +327,7 @@ def input_dir(storage: BytesDict, cfg: Config, ii: InputInfo):
                 opath = op.relpath(ipath, ii.path).replace(os.sep, "/")
                 if not_blocked(opath, cfg, ii):
                     with open(ipath, "rb") as f:
-                        storage[moving(opath, cfg, ii)] = get_data(ipath, f, ii)
+                        store_file(storage, cfg, ii, f, ipath, opath)
 
             with ThreadPoolExecutor() as tpe:
                 for file in files:
@@ -325,7 +346,7 @@ def cfg_tree(
     try:
         inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
 
-        for ii in process_inputs(inputs, None, None, cfg):
+        for ii in get_inputs(inputs, None, None, cfg):
             if os.path.isdir(ii.path):
                 input_dir(storage, cfg, ii)
             elif os.path.isfile(ii.path):
@@ -394,7 +415,7 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
             for item in raw_cfg:
                 tpe.submit(cfg_root, item)
         return
-    if not release and raw_cfg.get("only_in_release", False):
+    if raw_cfg.get("only_in_release", False) and not release:
         return
     log_level: int | str = raw_cfg.get("log_level", logging.INFO)
     if isinstance(log_level, str):
@@ -406,7 +427,8 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
         raw_cfg.get("out_dir", "out/"),
         raw_cfg.get("extra_out_dirs", []),
         raw_cfg.get("exclude_ext", (".py", ".backup", ".temp")),
-        process_excludes(raw_cfg.get("default_excludes", [])),
+        get_paths(raw_cfg.get("default_excludes", [])),
+        get_paths(raw_cfg.get("default_merge", [])),
         log_level,
         raw_cfg.get("compression", 0),
         raw_cfg.get("compresslevel", None),

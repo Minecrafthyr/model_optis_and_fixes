@@ -58,6 +58,12 @@ A great example is the [config.json](config.json).
 - Dict: [Exclude Tree](#exclude-tree)
 - List: exclude trees.
 
+#### `default_merge`
+
+- String: the file starts with this string and will be merged.
+- Dict: Merge Tree (same structure as Exclude Tree but merging)
+- List: merge trees.
+
 #### `tree`
 
 - Dict: a [Config Tree](#config-tree).

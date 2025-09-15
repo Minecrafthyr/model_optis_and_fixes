@@ -1,19 +1,19 @@
 ### Version 8.8
 
 - Improve `build.py` `build.md`
+  - Add `default_merge` config.
+- Add Respackopts config in all variants and fix it **isn't working at all**.
 
-#### Fixes
+#### Tweaks
 
 Normal variant
 
-- Tweaks Respackopts configs.
-
-#### Tweaks
+- Add Respackopts config for 3D Redstone Dust and 3D Pointed Dripstone.
 
 External variant
 
 - `3D_Default`
-  - Trapdoor use `Fixes.Normal.Display`: Thin Block.
+  - Trapdoor use `Fixes.Normal.Display`: higher in GUI.
   - Remove incorrect ladder item.
 
 ### Version 8.7+fix1

@@ -5,6 +5,7 @@
     "log_level": "DEBUG",
     "compression": 8,
     "compresslevel": 9,
+    "default_merge": ["assets/res_fixes/lang/"],
     "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Craft to Exile 2 (VR Support)/resourcepacks", "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks", "C:/PCL2/.minecraft/versions/Tinker's Construct Pack/resourcepacks"],
     "tree": {
       "inputs": "Fixes/Base",
@@ -29,7 +30,6 @@
             "children": {
               "inputs": {
                 "path": "Tweaks/Normal",
-                "reformat": {"indent": null, "separators": [",", ":"]},
                 "extras": ["3D_Bars", "Consistent_Planes", "3D_Ladder", "3D_Pointed_Dripstone", "3D_Redstone_Dust", "Axolotl_Bucket_Variants", "Better_Animation", "Better_Copper_Grate", "Better_Cross", "Better_Fire", "Better_Leaves", "Better_Particles", "Better_Weather", "Clean_Water", "Display", "Fast_Better_Grass", "Language_Tweaks", "Mirrored_Pumpkin_Blur", "Moist_Farmland", "New_Torches", "Respackopts", "Sandstone_Tweaks", "Square_Shadow", "Unlit_Redstone_Ore", "Wide_Bamboo", {"path": "Tasty_Items-v1.2.zip", "excludes": ["credits.txt", "pack.png", "pack.mcmeta"]}, "Tasty_Items"]
               },
               "output": "Resource Tweaks",
@@ -39,7 +39,6 @@
                   "extras": [
                     {
                       "path": "3D Default 1.21.2+ v1.12.1.zip",
-                      "reformat": {"indent": null, "separators": [",", ":"]},
                       "includes": [{"path": "README.md", "out_path": "README/GeForceLegend's 3D Default.md"}],
                       "excludes": [
                         "pack.mcmeta",
