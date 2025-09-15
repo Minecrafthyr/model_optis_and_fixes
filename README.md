@@ -235,10 +235,13 @@ _Notice: may not contains all features in original pack because visual balance._
 
 ## More Information
 
+### Known Issues
+
+- Respackopts config (some entry and translation) not working.
+
+### Planned
+
 - You can try resourcepack here, but may not compatible.
-
-Planned
-
 - More random rotate & fixes models in Extra/Better Cross.
 - Slowly embedding or implementing outside packs.
   - [Vanilla Tweaks](https://vanillatweaks.net/picker/resource-packs/)
@@ -248,7 +251,7 @@ Planned
   - [Smooth Bow Animations](https://modrinth.com/resourcepack/smooth-bow-animations)
   - [Blockstates +](https://modrinth.com/resourcepack/blockstates)
 
-Suggestions
+### Suggestions
 
 - [3D Particles](https://modrinth.com/resourcepack/3d-particles)
 - [AL's 3D Potions](https://modrinth.com/resourcepack/als-3d-potions)

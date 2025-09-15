@@ -1,35 +1,40 @@
 {
-	"id": "res_fixes",
+	"id": "resFixes",
 	"version": 13,
 	"capabilities": [
 		"FileFilter"
 	],
 	"conf": {
 		"fixes": {
-			"random_rotate": true,
-			"handheld_arrow": true
+			"lite": {
+				"randomRotate": true,
+				"handheldArrow": true
+			},
+			"normal": {
+				"ebeMod": true,
+				"farmersDelightMod": true,
+				"flowerPot": true,
+				"brewingStand": true,
+				"block": true,
+				"endRod": true,
+				"candle": true,
+				"conduit": true,
+				"cauldron": true,
+				"hopper": true,
+				"comparatorAndRepeater": true,
+				"lever": true,
+				"cake": true,
+				"chorusPlant": true,
+				"snifferEgg": true,
+				"tripwireHook": true,
+				"torch": true,
+				"lantern": true
+			}
 		},
-		"mod_optimization": {
-			"ebe": true,
-			"farmers_delight": true
-		},
-		"improvements": {
-			"flower_pot": true,
-			"brewing_stand": true,
-			"block": true,
-			"end_rod": true,
-			"candle": true,
-			"conduit": true,
-			"cauldron": true,
-			"hopper": true,
-			"comparator_and_repeater": true,
-			"lever": true,
-			"cake": true,
-			"chorus_plant": true,
-			"sniffer_egg": true,
-			"tripwire_hook": true,
-			"torch": true,
-			"lantern": true
+		"tweaks": {
+			"normal": {
+				"fastBetterGrass": true
+			}
 		}
 	}
 }
