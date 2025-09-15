@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/fallback/redstone_ore",
+  "textures": {
+    "all": "res_fixes:block/fallback/deepslate_redstone_ore_on"
+  }
+}

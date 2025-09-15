@@ -44,15 +44,11 @@
                         "pack.mcmeta",
                         {
                           "path": "assets/minecraft/models/block",
-                          "extras": ["bamboo_large_leaves.json", "bamboo_small_leaves.json", "deepslate_redstone_ore_on.json", "flower_pot_cross.json", "flower_pot.json", "lightning_rod_on.json", "lightning_rod.json", "potted_allium.json", "potted_azure_bluet.json", "potted_blue_orchid.json", "potted_cornflower.json", "potted_fern.json", "potted_lily_of_the_valley.json", "potted_orange_tulip.json", "potted_oxeye_daisy.json", "potted_pink_tulip.json", "potted_poppy.json", "potted_red_tulip.json", "potted_white_tulip.json", "potted_wither_rose.json", "redstone_dust_dot.json", "redstone_dust_side_alt.json", "redstone_dust_side_alt0.json", "redstone_dust_side_alt1.json", "redstone_dust_side.json", "redstone_dust_side0.json", "redstone_dust_side1.json", "redstone_dust_up.json", "redstone_ore_on.json", "template_campfire.json", "template_redstone_torch_wall.json", "template_redstone_torch.json"]
+                          "extras": ["bamboo_large_leaves.json", "bamboo_small_leaves.json", "flower_pot_cross.json", "flower_pot.json", "lightning_rod_on.json", "lightning_rod.json", "potted_allium.json", "potted_azure_bluet.json", "potted_blue_orchid.json", "potted_cornflower.json", "potted_fern.json", "potted_lily_of_the_valley.json", "potted_orange_tulip.json", "potted_oxeye_daisy.json", "potted_pink_tulip.json", "potted_poppy.json", "potted_red_tulip.json", "potted_white_tulip.json", "potted_wither_rose.json", "redstone_dust_dot.json", "redstone_dust_side_alt.json", "redstone_dust_side_alt0.json", "redstone_dust_side_alt1.json", "redstone_dust_side.json", "redstone_dust_side0.json", "redstone_dust_side1.json", "redstone_dust_up.json", "template_campfire.json", "template_redstone_torch_wall.json", "template_redstone_torch.json"]
                         },
                         {
                           "path": "assets/minecraft/models/item",
                           "extras": ["black_candle.json", "blue_candle.json", "brown_candle.json", "candle.json", "comparator.json", "cyan_candle.json", "flower_pot.json", "gray_candle.json", "green_candle.json", "light_blue_candle.json", "light_gray_candle.json", "lightning_rod.json", "lime_candle.json", "magenta_candle.json", "orange_candle.json", "pink_candle.json", "repeater.json", "torch.json", "soul_torch.json", "redstone_torch.json", "lantern.json", "soul_lantern.json", "potion.json", "splash_potion.json", "lingering_potion.json", "honey_bottle.json", "ominous_bottle.json", "ladder.json"]
-                        },
-                        {
-                          "path": "assets/minecraft/textures/block",
-                          "extras": ["redstone_ore_on.png", "redstone_ore_on_s.png", "deepslate_redstone_ore_on.png", "deepslate_redstone_ore_on_s.png"]
                         },
                         {"path": "assets/minecraft/textures/item", "extras": ["potion.png", "potion_splash.png", "honey_bottle.png"]}
                       ]

@@ -4,9 +4,13 @@
 
 Normal variant
 
-- Fix Respackopts not working. ([#13](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/13))
+- `Respackopts`: Fix Respackopts not working. ([#13](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/13))
 
 #### Resource Tweaks
+
+Normal variant
+
+- `Respackopts`: add option to toggle Unlit Redstone Ore.
 
 External variant
 

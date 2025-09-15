@@ -35,7 +35,8 @@
 			"normal": {
 				"fastBetterGrass": true,
 				"pointedDripstone": true,
-				"redstoneDust": true
+				"redstoneDust": true,
+				"unlitRedstoneOre": true
 			}
 		}
 	}
