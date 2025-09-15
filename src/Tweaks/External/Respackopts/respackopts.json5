@@ -36,6 +36,9 @@
 				"fastBetterGrass": true,
 				"pointedDripstone": true,
 				"redstoneDust": true
+			},
+			"external": {
+				"chain": true
 			}
 		}
 	}

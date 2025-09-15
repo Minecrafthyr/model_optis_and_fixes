@@ -91,7 +91,7 @@ class Timer:
         self.cfg = cfg
         self.arg1 = arg1
         self.arg2 = arg2
-        self.start_time = None
+        self.start_time: float | None = None
 
     def __enter__(self):
         self.start_time = time.time()
@@ -192,18 +192,6 @@ def get_inputs(
         new_excludes.update(ii.excludes)
         new_includes = get_paths_with_output(obj.get("includes", []))
         new_includes.update(ii.includes)
-        # reformat: AnyDict | JSONEncoder | None = obj.get("reformat", None)
-        # if isinstance(reformat, dict):
-        #    reformat = JSONEncoder(
-        #        skipkeys=reformat.get("skipkeys", False),
-        #        ensure_ascii=reformat.get("ensure_ascii", False),
-        #        check_circular=reformat.get("check_circular", True),
-        #        allow_nan=reformat.get("allow_nan", True),
-        #        indent=reformat.get("indent", None),
-        #        sort_keys=reformat.get("sort_keys", True),
-        #        separators=reformat.get("separators", (",", ":")),
-        #        default=reformat.get("default", None),
-        #    )
         new_ii = ii.copy(
             path=new_path,
             zip_mode=obj.get("zip_mode", ii.zip_mode),

@@ -5,7 +5,7 @@
     "log_level": "DEBUG",
     "compression": 8,
     "compresslevel": 9,
-    "default_merge": ["assets/res_fixes/lang/"],
+    "default_merge": ["assets/res_fixes/lang/", "assets/minecraft/lang/"],
     "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Craft to Exile 2 (VR Support)/resourcepacks", "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks", "C:/PCL2/.minecraft/versions/Tinker's Construct Pack/resourcepacks"],
     "tree": {
       "inputs": "Fixes/Base",

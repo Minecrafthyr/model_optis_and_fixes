@@ -1,32 +1,29 @@
-- Version: 8.8
+- Version: 8.9
 - Game versions: 1.14.4-1.21.9 (25w37a)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
   - [CurseForge](https://legacy.curseforge.com/minecraft/texture-packs/resource-fixes)
 - Old name: Model Optimizations and Fixes
-- (May contains errors. Some bugs can't be fix by resourepack.)
+- May contains errors. Some bugs can't be fix by resourepack.
 
 FAQ
 
 > FPS Boost?
 
-- Resource Fixes Lite | Normal | Textured: ✔️ (in most cases)
-- Resource Tweaks
-  - Normal: ❔ (some models slow down, e.g. leaves with back face)
-  - External: ❌️ (3D models slow down a lot; depends on block count)
+- Resource Fixes Lite | Normal | Textured: ✔️ (in some cases; depends on block type and count).
+- Resource Tweaks Normal | External: ❌️ (some models slow downs).
 
 ## Variants
 
-Resource Fixes Normal (Resource Fixes.zip) is Primary file. Download variants in **additional files** or [Github Source](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/out/Variants).
+Resource Fixes.zip is Primary file. Download variants in **additional files** or on [Github](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/out/Variants).
 
 Resource Fixes (optimize and fixes)
 
 - Lite variant  
   Optimization & Fixes only, compatible with texture only resourcepacks.
 - Normal variant  
-  Visually improve item models (3D block item) or display.  
-  Config use [Respackopts](https://modrinth.com/mod/TiF5QWZY) mod (not suggested, it just disable files).
+  Visually improve item models (3D block item) or display.
 - Textured variant  
   Using texture may conflict to other resourcepack.  
   Designed with Default resource style.
@@ -211,7 +208,6 @@ _Notice: may not contains all features in original pack because visual balance._
 - `Fast_Better_Grass`: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
 - `Tasty_Items`: Copied zip file from [Tasty Items](https://modrinth.com/project/yVNZK7l2) by [enchanted-games](https://modrinth.com/user/enchanted-games) under [CC-BY-NC-4.0](https://spdx.org/licenses/CC-BY-NC-4.0).
 
-
 ### External
 
 - `3D_Default` @[3D Default](https://modrinth.com/resourcepack/3d-default)
@@ -232,12 +228,7 @@ _Notice: may not contains all features in original pack because visual balance._
 - `3D_Default`: Copied zip file from [3D Default](https://modrinth.com/resourcepack/3d-default) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
 - `UltiCraft-Models3D`: Copied 16 files from [3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [Apache-2.0](https://spdx.org/licenses/Apache-2.0).
 
-
 ## More Information
-
-### Known Issues
-
-- Respackopts config (some entry and translation) not working.
 
 ### Planned
 
@@ -265,7 +256,7 @@ _Notice: may not contains all features in original pack because visual balance._
 2. Config `config.json` following `config.md`
 3. Enter path `cd <the path>`
 4. Then run: `python build.py`
-    - `--release` arg build config root with tag `only_in_release` is true.
-    - `--dir <path>` arg change the current directory path.
-    - `--cfg <path>` arg change the config path.
-    - `--log <path>` arg change the log path.
+   - `--release` arg build config root with tag `only_in_release` is true.
+   - `--dir <path>` arg change the current directory path.
+   - `--cfg <path>` arg change the config path.
+   - `--log <path>` arg change the log path.

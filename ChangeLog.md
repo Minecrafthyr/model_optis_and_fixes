@@ -1,10 +1,26 @@
+### Version 8.9
+
+#### Resource Fixes
+
+Normal variant
+
+- Fix Respackopts not working. ([#13](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/13))
+
+#### Resource Tweaks
+
+External variant
+
+- `3D_Default`
+  - Add Respackopts option to disable chain. ([#13](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/13))
+  - Trapdoor use `Fixes.Normal.Display`: higher in GUI. (does not apply in v8.8).
+
 ### Version 8.8
 
 - Improve `build.py` `build.md`
   - Add `default_merge` config.
 - Add Respackopts config in all variants and fix it **isn't working at all**.
 
-#### Tweaks
+#### Resource Tweaks
 
 Normal variant
 
@@ -18,7 +34,7 @@ External variant
 
 ### Version 8.7+fix1
 
-#### Tweaks
+#### Resource Tweaks
 
 - Further fix issue [#12](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/12).
 
