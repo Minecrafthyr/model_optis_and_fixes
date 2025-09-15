@@ -11,7 +11,7 @@
       "children": {
         "inputs": {
           "path": "Fixes/Lite",
-          "extras": ["Bars_Fix", "Chain_Fix", "Cube_Inner_Faces_Fix", "Dripleaf_Fix", "Fence_Fix", "Flower_Pot_Fix", "Handheld_Arrow", "Language_Fix", "Lever_Fix", "Lightning_Rod_Fix", "Main", "Mangrove_Propagule_Fix", "Modern_Torches", "Plane_Fix", "Rail_Fix", "Random_Rotate", "Shadeless_Stem", "Tripwire_Fix"]
+          "extras": ["Bars_Fix", "Chain_Fix", "Cube_Inner_Faces_Fix", "Dripleaf_Fix", "Fence_Fix", "Flower_Pot_Fix", "Handheld_Arrow", "Language_Fix", "Lever_Fix", "Lightning_Rod_Fix", "Main", "Mangrove_Propagule_Fix", "Modern_Torches", "Plane_Fix", "Rail_Fix", "Random_Rotate", "Shadeless_Stem", "Tripwire_Fix", "Respackopts"]
         },
         "output": "Resource Fixes Lite",
         "children": {
@@ -23,7 +23,7 @@
           "children": {
             "inputs": {
               "path": "Fixes/Textured",
-              "extras": ["End_Portal_Frame_Fix", "Firefly_Bush_Fix", "Item_Frame_Tweaks", "Misc", "Modern_Recipe_Button_Texture", "Modern_Redstone_Torch_Texture", "Modern_Spectator_GUI_Texture", "Rail_Fix", "Smooth_Stone_Slab_Fix", "Tall_Seagrass_Fix"]
+              "extras": ["End_Portal_Frame_Fix", "Firefly_Bush_Fix", "Item_Frame_Tweaks", "Misc", "Modern_Recipe_Button_Texture", "Modern_Redstone_Torch_Texture", "Modern_Spectator_GUI_Texture", "Rail_Fix", "Smooth_Stone_Slab_Fix", "Tall_Seagrass_Fix", "Respackopts"]
             },
             "output": "Resource Fixes Textured",
             "children": {
@@ -49,7 +49,7 @@
                         },
                         {
                           "path": "assets/minecraft/models/item",
-                          "extras": ["black_candle.json", "blue_candle.json", "brown_candle.json", "candle.json", "comparator.json", "cyan_candle.json", "flower_pot.json", "gray_candle.json", "green_candle.json", "light_blue_candle.json", "light_gray_candle.json", "lightning_rod.json", "lime_candle.json", "magenta_candle.json", "orange_candle.json", "pink_candle.json", "repeater.json", "torch.json", "soul_torch.json", "redstone_torch.json", "lantern.json", "soul_lantern.json", "potion.json", "splash_potion.json", "lingering_potion.json", "honey_bottle.json", "ominous_bottle.json"]
+                          "extras": ["black_candle.json", "blue_candle.json", "brown_candle.json", "candle.json", "comparator.json", "cyan_candle.json", "flower_pot.json", "gray_candle.json", "green_candle.json", "light_blue_candle.json", "light_gray_candle.json", "lightning_rod.json", "lime_candle.json", "magenta_candle.json", "orange_candle.json", "pink_candle.json", "repeater.json", "torch.json", "soul_torch.json", "redstone_torch.json", "lantern.json", "soul_lantern.json", "potion.json", "splash_potion.json", "lingering_potion.json", "honey_bottle.json", "ominous_bottle.json", "ladder.json"]
                         },
                         {
                           "path": "assets/minecraft/textures/block",
@@ -59,7 +59,8 @@
                       ]
                     },
                     "3D_Default",
-                    "UltiCraft-Models3D"
+                    "UltiCraft-Models3D",
+                    "Respackopts"
                   ]
                 },
                 "output": "Resource Tweaks External"

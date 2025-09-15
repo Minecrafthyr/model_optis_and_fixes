@@ -4,12 +4,17 @@
 
 #### Fixes
 
+Normal variant
+
+- Tweaks Respackopts configs.
+
 #### Tweaks
 
 External variant
 
 - `3D_Default`
   - Trapdoor use `Fixes.Normal.Display`: Thin Block.
+  - Remove incorrect ladder item.
 
 ### Version 8.7+fix1
 

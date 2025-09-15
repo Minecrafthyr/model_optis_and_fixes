@@ -1,5 +1,5 @@
 {
-	"id": "resFixes",
+	"id": "resFixesNormal",
 	"version": 13,
 	"capabilities": [
 		"FileFilter"
@@ -29,11 +29,6 @@
 				"tripwireHook": true,
 				"torch": true,
 				"lantern": true
-			}
-		},
-		"tweaks": {
-			"normal": {
-				"fastBetterGrass": true
 			}
 		}
 	}
