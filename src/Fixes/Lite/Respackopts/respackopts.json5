@@ -8,7 +8,9 @@
 		"fixes": {
 			"lite": {
 				"randomRotate": true,
-				"handheldArrow": true
+				"handheldArrow": true,
+				"ebeMod": true,
+				"farmersDelightMod": true
 			}
 		}
 	}

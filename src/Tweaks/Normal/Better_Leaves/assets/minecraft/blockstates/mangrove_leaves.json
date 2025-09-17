@@ -5,6 +5,9 @@
     },
     "waterlogged=true": {
       "model": "minecraft:block/mangrove_leaves_waterlogged"
+    },
+    "": {
+      "model": "minecraft:block/mangrove_leaves"
     }
   }
 }

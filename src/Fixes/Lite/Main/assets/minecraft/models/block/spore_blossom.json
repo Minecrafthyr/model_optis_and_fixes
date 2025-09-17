@@ -1,6 +1,7 @@
 {
   "credit": "Made with Blockbench by Minecraft_hyr",
   "parent": "block/block",
+  "display": {"head": {"translation": [0, 2, 0]}},
   "textures": {
     "base": "block/spore_blossom_base",
     "particle": "block/spore_blossom",

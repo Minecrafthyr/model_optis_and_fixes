@@ -5,6 +5,9 @@
     },
     "waterlogged=true": {
       "model": "minecraft:block/cherry_leaves_waterlogged"
+    },
+    "": {
+      "model": "minecraft:block/cherry_leaves"
     }
   }
 }

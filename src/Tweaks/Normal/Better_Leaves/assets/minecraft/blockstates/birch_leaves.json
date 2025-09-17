@@ -5,6 +5,9 @@
     },
     "waterlogged=true": {
       "model": "minecraft:block/birch_leaves_waterlogged"
+    },
+    "": {
+      "model": "minecraft:block/birch_leaves"
     }
   }
 }

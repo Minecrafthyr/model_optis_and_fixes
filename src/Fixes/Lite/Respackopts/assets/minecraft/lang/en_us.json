@@ -1,7 +1,10 @@
 {
   "rpo.resFixesLite": "Resource Fixes Lite",
+  
   "rpo.resFixesLite.fixes": "Fixes",
   "rpo.resFixesLite.fixes.lite": "Lite",
   "rpo.resFixesLite.fixes.lite.handheldArrow": "Handheld Arrow",
-  "rpo.resFixesLite.fixes.lite.randomRotate": "Block random rotate"
+  "rpo.resFixesLite.fixes.lite.randomRotate": "Block random rotate",
+  "rpo.resFixesLite.fixes.lite.ebeMod": "Minor optimize Enhanced Block Entities mod",
+  "rpo.resFixesLite.fixes.lite.farmersDelightMod": "Minor optimize Farmer's Delight mod"
 }

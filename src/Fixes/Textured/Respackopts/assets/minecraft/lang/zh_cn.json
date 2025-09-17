@@ -1,26 +1,20 @@
 {
   "rpo.resFixesTextured": "资源修复【纹理】",
+ 
   "rpo.resFixesTextured.fixes": "修复",
   "rpo.resFixesTextured.fixes.lite": "轻量",
   "rpo.resFixesTextured.fixes.lite.handheldArrow": "手持箭",
   "rpo.resFixesTextured.fixes.lite.randomRotate": "方块随机旋转",
+  "rpo.resFixesTextured.fixes.lite.ebeMod": "微小优化方块实体增强(Enhanced Block Entities)模组",
+  "rpo.resFixesTextured.fixes.lite.farmersDelightMod": "微小优化农夫乐事(Farmer's Delight)模组",
+  
   "rpo.resFixesTextured.fixes.normal": "一般",
   "rpo.resFixesTextured.fixes.normal.block": "方块物品改进",
-  "rpo.resFixesTextured.fixes.normal.endRod": "末地烛物品",
-  "rpo.resFixesTextured.fixes.normal.chorusPlant": "紫颂植物物品",
-  "rpo.resFixesTextured.fixes.normal.conduit": "潮涌核心物品",
-  "rpo.resFixesTextured.fixes.normal.torch": "三维火把物品",
-  "rpo.resFixesTextured.fixes.normal.tripwireHook": "三维绊线钩物品",
-  "rpo.resFixesTextured.fixes.normal.lantern": "三维灯笼物品",
-  "rpo.resFixesTextured.fixes.normal.candle": "三维蜡烛物品",
-  "rpo.resFixesTextured.fixes.normal.cauldron": "三维炼药锅物品",
-  "rpo.resFixesTextured.fixes.normal.hopper": "三维漏斗物品",
-  "rpo.resFixesTextured.fixes.normal.comparatorAndRepeater": "三维比较器和中续器物品",
-  "rpo.resFixesTextured.fixes.normal.lever": "三维拉杆物品",
+  "rpo.resFixesTextured.fixes.normal.button": "按钮物品改进",
   "rpo.resFixesTextured.fixes.normal.cake": "三维蛋糕物品",
-  "rpo.resFixesTextured.fixes.normal.snifferEgg": "三维嗅探兽蛋物品",
-  "rpo.resFixesTextured.fixes.normal.flowerPot": "三维花盆物品",
-  "rpo.resFixesTextured.fixes.normal.brewingStand": "三维炼药台物品",
-  "rpo.resFixesTextured.fixes.normal.ebeMod": "方块实体增强(Enhanced Block Entities)模组",
-  "rpo.resFixesTextured.fixes.normal.farmersDelightMod": "农夫乐事(Farmer's Delight)模组"
+  "rpo.resFixesTextured.fixes.normal.cauldron": "三维炼药锅物品",
+  "rpo.resFixesTextured.fixes.normal.chorusPlant": "紫颂植物物品改进",
+  "rpo.resFixesTextured.fixes.normal.comparatorAndRepeater": "三维比较器和中续器物品",
+  "rpo.resFixesTextured.fixes.normal.conduit": "潮涌核心物品改进",
+  "rpo.resFixesTextured.fixes.normal.hopper": "三维漏斗物品"
 }

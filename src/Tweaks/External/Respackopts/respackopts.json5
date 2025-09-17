@@ -11,35 +11,39 @@
 				"handheldArrow": true
 			},
 			"normal": {
-				"ebeMod": true,
-				"farmersDelightMod": true,
-				"flowerPot": true,
-				"brewingStand": true,
 				"block": true,
-				"endRod": true,
-				"candle": true,
 				"conduit": true,
 				"cauldron": true,
 				"hopper": true,
 				"comparatorAndRepeater": true,
-				"lever": true,
 				"cake": true,
-				"chorusPlant": true,
-				"snifferEgg": true,
-				"tripwireHook": true,
-				"torch": true,
-				"lantern": true
+				"chorusPlant": true
 			}
 		},
 		"tweaks": {
 			"normal": {
+				"brewingStand": true,
+				"candle": true,
+				"crossCorrection": false,
+				"endRod": true,
 				"fastBetterGrass": true,
+				"flowerPot": true,
+				"lantern": true,
+				"lever": true,
+				"moistFarmland": true,
 				"pointedDripstone": true,
 				"redstoneDust": true,
-				"unlitRedstoneOre": true
+				"sculkSensor": true,
+				"snifferEgg": true,
+				"torch": true,
+				"tripwireHook": true,
+				"unlitRedstoneOre": true,
+				"newTorches": true,
+				"shadeless": true
 			},
 			"external": {
-				"chain": true
+				"chain": true,
+				"cobweb": true
 			}
 		}
 	}

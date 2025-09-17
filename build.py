@@ -37,9 +37,9 @@ class Config:
     src_dir: str
     out_dir: str
     extra_out_dirs: list[str] | str
-    exclude_ext: tuple[str, ...]
-    default_excludes: set[str]
-    default_merge: set[str]
+    exclude_ext: tuple
+    default_excludes: tuple
+    default_merge: tuple
     log_level: int = logging.INFO
     compression: int = 0
     compresslevel: int | None = None
@@ -76,7 +76,7 @@ class InputInfo:
     path: str
     blocking_mode: bool
     zip_mode: bool
-    excludes: set[str]
+    excludes: tuple
     includes: dict[str, str | None]
     # reformat: JSONEncoder | None = None
 
@@ -122,7 +122,6 @@ def get_paths_with_output(
     path: str = "",
     out_path: str = "",
 ):
-    """Process includes."""
     if includes is None:
         includes = {}
     if isinstance(obj, str):
@@ -150,7 +149,6 @@ def get_paths(
     paths: set[str] | None = None,
     path: str = "",
 ):
-    """Process excludes."""
     if paths is None:
         paths = set[str]()
     if isinstance(obj, str):
@@ -174,18 +172,22 @@ def get_inputs(
     ii: InputInfo | None,
     cfg: Config,
 ) -> list[InputInfo]:
-    """Process excludes."""
     if inputs is None:
         inputs = list[InputInfo]()
     if ii is None:
-        ii = InputInfo(cfg.src_dir, False, True, set[str](), {})
+        ii = InputInfo(cfg.src_dir, False, True, (), {})
 
     if isinstance(obj, list):
         for o in obj:
             get_inputs(o, inputs, ii.copy(), cfg)
     elif isinstance(obj, str):
         new_path = join_path(ii.path, obj)
-        inputs.append(ii.copy(path=new_path))
+        if new_path.endswith("input_config.json"):
+            with open(new_path, "r") as f:
+                json_data = json.load(f)
+            get_inputs(json_data, inputs, ii, cfg)
+        else:
+            inputs.append(ii.copy(path=new_path))
     else:
         new_path = op.join(ii.path, obj["path"]) if "path" in obj else ii.path
         new_excludes = get_paths(obj.get("excludes", []))
@@ -196,7 +198,7 @@ def get_inputs(
             path=new_path,
             zip_mode=obj.get("zip_mode", ii.zip_mode),
             blocking_mode=obj.get("mode", ii.blocking_mode),
-            excludes=new_excludes,
+            excludes=tuple(new_excludes),
             includes=new_includes,
             # reformat=reformat,
         )
@@ -208,18 +210,17 @@ def get_inputs(
     return inputs
 
 
-def not_excluded(opath: str, cfg: Config, excludes: set[str]):
+def not_excluded(opath: str, cfg: Config, excludes: tuple):
     """Excluding files.
     return False if matched exclude.
     """
     if opath.endswith(cfg.exclude_ext):
         cfg.log_debug('%s: Excluded "%s" by extension', cfg.name, opath)
         return False
-    if opath.startswith(tuple(excludes)):
+    if opath.startswith(excludes):
         cfg.log_debug('%s: Excluded "%s" by relative path', cfg.name, opath)
-        excludes.remove(opath)
         return False
-    if opath.startswith(tuple(cfg.default_excludes)):
+    if opath.startswith(cfg.default_excludes):
         cfg.log_debug('%s: Excluded "%s" by default', cfg.name, opath)
         return False
     return True
@@ -241,17 +242,6 @@ def moving(opath: str, cfg: Config, ii: InputInfo) -> str:
         cfg.log_debug('Moved "%s" to "%s"', opath, mpath)
     return mpath or opath
 
-
-def check_excludes(cfg: Config, ii: InputInfo):
-    if len(ii.excludes) != 0:
-        cfg.log_warning(
-            "%s files in %s not excluded: %s",
-            len(ii.excludes),
-            ii.path,
-            ii.excludes,
-        )
-
-
 def store_file(
     storage: BytesDict,
     cfg: Config,
@@ -262,7 +252,7 @@ def store_file(
 ):
     moved = moving(opath, cfg, ii)
     if ipath.endswith(".json"):
-        if opath.startswith(tuple(cfg.default_merge)) and moved in storage:
+        if opath.startswith(cfg.default_merge) and moved in storage:
             original = json.loads(storage[moved])
             target = json.load(stream)
             if isinstance(original, dict) and isinstance(target, dict):
@@ -282,8 +272,7 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
         if not ii.zip_mode or not ii.path.endswith(".zip"):
             cfg.log_debug(f"Loading single file {ii.path}")
             with open(ii.path, "rb") as f:
-                store_file(storage, cfg, ii, f, ii.path, ii.path)
-            check_excludes(cfg, ii)
+                store_file(storage, cfg, ii, f, ii.path, op.basename(ii.path))
             return
         with zipfile.ZipFile(file=ii.path, mode="r") as zipf:
             cfg.log_debug(f"Loading zip file {ii.path}")
@@ -299,7 +288,6 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
                     if zinfo.is_dir():
                         continue
                     tpe.submit(on_zipinfo, zinfo)
-            check_excludes(cfg, ii)
     except Exception as e:
         cfg.log_error("Error processing file %s: %s", ii.path, e, exc_info=True)
 
@@ -320,7 +308,6 @@ def input_dir(storage: BytesDict, cfg: Config, ii: InputInfo):
             with ThreadPoolExecutor() as tpe:
                 for file in files:
                     tpe.submit(on_file, file)
-        check_excludes(cfg, ii)
     except Exception as e:
         cfg.log_error("Error processing directory %s: %s", ii.path, e, exc_info=True)
 
@@ -332,6 +319,11 @@ def cfg_tree(
 ):
     """Process config tree."""
     try:
+        removes = tuple(get_paths(tree.get("removes", [])))
+        for k in storage.keys():
+            if k.startswith(removes):
+                storage.pop(k)
+
         inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
 
         for ii in get_inputs(inputs, None, None, cfg):
@@ -352,8 +344,8 @@ def cfg_tree(
                 with zipfile.ZipFile(
                     out_path,
                     "w",
-                    compression=cfg.compression,
-                    compresslevel=cfg.compresslevel,
+                    compression=zipfile.ZIP_DEFLATED if release else cfg.compression,
+                    compresslevel=9 if release else cfg.compresslevel,
                 ) as zipm:
                     for k, v in storage.items():
                         zipm.writestr(k, v)
@@ -415,8 +407,8 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
         raw_cfg.get("out_dir", "out/"),
         raw_cfg.get("extra_out_dirs", []),
         raw_cfg.get("exclude_ext", (".py", ".backup", ".temp")),
-        get_paths(raw_cfg.get("default_excludes", [])),
-        get_paths(raw_cfg.get("default_merge", [])),
+        tuple(get_paths(raw_cfg.get("default_excludes", []))),
+        tuple(get_paths(raw_cfg.get("default_merge", []))),
         log_level,
         raw_cfg.get("compression", 0),
         raw_cfg.get("compresslevel", None),
@@ -473,7 +465,7 @@ if __name__ == "__main__":
             )
         )
 
-        file_handler = logging.FileHandler(log_path, encoding="utf-8", mode="w")
+        file_handler = logging.FileHandler(log_path, mode="w")
         file_handler.setLevel(logging.DEBUG)
         file_handler.setFormatter(
             logging.Formatter(
@@ -486,7 +478,7 @@ if __name__ == "__main__":
         logger.addHandler(file_handler)
         tp_start = dt.now()
 
-        with open(cfg_path, "r", encoding="utf-8") as cfg_file:
+        with open(cfg_path, "r") as cfg_file:
             config_data = json.load(cfg_file)
 
         cfg_root(config_data)

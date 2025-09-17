@@ -1,26 +1,20 @@
 {
   "rpo.resFixesNormal": "Resource Fixes",
+  
   "rpo.resFixesNormal.fixes": "Fixes",
   "rpo.resFixesNormal.fixes.lite": "Lite",
   "rpo.resFixesNormal.fixes.lite.handheldArrow": "Handheld Arrow",
   "rpo.resFixesNormal.fixes.lite.randomRotate": "Block random rotate",
+  "rpo.resFixesNormal.fixes.lite.ebeMod": "Minor optimize Enhanced Block Entities mod",
+  "rpo.resFixesNormal.fixes.lite.farmersDelightMod": "Minor optimize Farmer's Delight mod",
+ 
   "rpo.resFixesNormal.fixes.normal": "Normal",
-  "rpo.resFixesNormal.fixes.normal.block": "Block Item Improvements",
-  "rpo.resFixesNormal.fixes.normal.endRod": "End Rod Item",
-  "rpo.resFixesNormal.fixes.normal.chorusPlant": "Chorus Plant Item",
-  "rpo.resFixesNormal.fixes.normal.conduit": "Conduit Item",
-  "rpo.resFixesNormal.fixes.normal.torch": "3D Torch Item",
-  "rpo.resFixesNormal.fixes.normal.tripwireHook": "3D Tripwire Hook Item",
-  "rpo.resFixesNormal.fixes.normal.lantern": "3D Lanterns Item",
-  "rpo.resFixesNormal.fixes.normal.candle": "3D Candles Item",
-  "rpo.resFixesNormal.fixes.normal.cauldron": "3D Cauldron Item",
-  "rpo.resFixesNormal.fixes.normal.hopper": "3D Hopper Item",
-  "rpo.resFixesNormal.fixes.normal.comparatorAndRepeater": "3D Comparator & Repeater Item",
-  "rpo.resFixesNormal.fixes.normal.lever": "3D Lever Item",
-  "rpo.resFixesNormal.fixes.normal.cake": "3D Cake Item",
-  "rpo.resFixesNormal.fixes.normal.snifferEgg": "3D Sniffer Egg Item",
-  "rpo.resFixesNormal.fixes.normal.flowerPot": "3D Flower Pot Item",
-  "rpo.resFixesNormal.fixes.normal.brewingStand": "3D Brewing Stand Item",
-  "rpo.resFixesNormal.fixes.normal.ebeMod": "Enhanced Block Entities Mod",
-  "rpo.resFixesNormal.fixes.normal.farmersDelightMod": "Farmer's Delight Mod"
+  "rpo.resFixesNormal.fixes.normal.block": "Block item improvements",
+  "rpo.resFixesNormal.fixes.normal.button": "Button item improvements",
+  "rpo.resFixesNormal.fixes.normal.cake": "3D Cake item",
+  "rpo.resFixesNormal.fixes.normal.cauldron": "3D Cauldron item",
+  "rpo.resFixesNormal.fixes.normal.chorusPlant": "Chorus Plant item improvements",
+  "rpo.resFixesNormal.fixes.normal.comparatorAndRepeater": "3D Comparator & Repeater item",
+  "rpo.resFixesNormal.fixes.normal.conduit": "Conduit item improvements",
+  "rpo.resFixesNormal.fixes.normal.hopper": "3D Hopper item"
 }

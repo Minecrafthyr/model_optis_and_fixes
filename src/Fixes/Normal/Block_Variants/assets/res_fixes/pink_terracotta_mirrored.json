@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all_mirrored",
+  "textures": {
+    "all": "minecraft:block/pink_terracotta"
+  }
+}

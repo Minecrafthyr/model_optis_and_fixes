@@ -2,147 +2,107 @@ A great example is the [config.json](config.json).
 
 ### Config Root
 
-#### `name`
+Config Tree can hold multiple nested Config Root:
 
-- Default: `"<unknown>"`
-- String: name displayed in log.
+---
 
-#### `only_in_release`
+Array: [[Config Root](#config-root)]
 
-- Default: `false`
-- False: build normally.
-- True: only build with command arg `--release`
+Object: {
 
-#### `src_dir`
+- `name`:
+  - Default: `"<unknown>"`
+  - String: name displayed in log.
+- `only_in_release`: if true, only build with command arg `--release`.
+- `src_dir`
+  - Default: `src/`.
+  - String: path of source directory.
+- `out_dir`
+  - Default: `out/`.
+  - String: path of output directory.
+- `log_level`
+  - String: log level in "DEBUG", "INFO" (default), "WARN", "ERROR", "CRITICAL"
+  - Integer: log level in 10, 20, 30, 40, 50
+- `compression`: Integer compression type in 0 (STORED) (default), 8 (DEFLATED), 12 (BZIP2), 14 (LZMA). Always DEFLATED if `--release`.
+- `compresslevel`:
+  - Default: default for the given compression type.
+  - Integer: `DEFLATED` accept 0 to 9, `BZIP2` accept 1 to 9. Always 9 if `--release`.
+- `extra_out_dirs`: List of string paths that copy the output zip to.
+- `exclude_ext`:
+  - Default: Exclude file ends with `(".py", ".backup", ".temp")`.
+  - List of String: Exclude files ends with. Dot "." is required, like default value shows.
+- `default_excludes`: [Path Tree](#path-tree) that default excludes.
+- `default_merge`: [Path Tree](#path-tree) that default merging.
+- `tree`: [Config Tree](#config-tree).
 
-- Default: `src/`.
-- String: path of source directory.
-
-#### `out_dir`
-
-- Default: `out/`.
-- String: path of output directory.
-
-#### `log_level`
-
-- Default: `INFO`.
-- String: log level in "DEBUG", "INFO", "WARN", "ERROR", "CRITICAL"
-- Integer: log level in 10, 20, 30, 40, 50
-
-#### `compression`
-
-- Default: `STORED`.
-- Integer: compression type in 0 (STORED), 8 (DEFLATED), 12 (BZIP2), 14 (LZMA)
-
-#### `compresslevel`
-
-- Default: default for the given compression type.
-- Integer:
-  - When using `STORED` or `LZMA` this keyword has no effect
-  - When using `DEFLATED` integers 0 through 9 are accepted.
-  - When using `BZIP2` integers 1 through 9 are accepted.
-
-#### `extra_out_dirs`
-
-- Default: do nothing.
-- List of String: paths that copy the output zip to.
-
-#### `exclude_ext`
-
-- Default: Exclude file ends with `[".py", ".backup", ".temp"]`.
-- List of String: Exclude files ends with. Dot "." is required, like default value shows.
-
-#### `default_excludes`
-
-- String: exclude a path.
-- Dict: [Exclude Tree](#exclude-tree)
-- List: exclude trees.
-
-#### `default_merge`
-
-- String: the file starts with this string and will be merged.
-- Dict: Merge Tree (same structure as Exclude Tree but merging)
-- List: merge trees.
-
-#### `tree`
-
-- Dict: a [Config Tree](#config-tree).
-- List: list of config trees.
+}
 
 ### Config Tree
 
-#### `inputs`
+Config Tree controls I/O and can hold multiple nested Config Tree:
 
-- String: a path relates to `src_dir`.
-- Dict: a [Input Tree](#input-tree)
-- List: some inputs.
+---
 
-#### `output`
+Array: [[Config Tree](#config-tree)]
 
-- Default: do not output loaded data.
-- String: a relative path to `out_dir`.
+Object: {
 
-#### `children`
+- `removes`: [Path Tree](#path-tree) that remove stored data in copied storage.
+- `inputs`\*: [Input Tree](#input-tree) that put files into storage.
+- `output`: String that output stored data to a zip file at `{out_dir}/{output}.zip`
+- `children`: Config Tree that copy current stored data and entering.
 
-Copy current loaded data to next config tree.
+}
 
-- Dict: config tree.
-- List: list of config trees.
+### Path Tree
+
+Path Tree will transmute structure into set of strings. The result could be directory or file:
+
+---
+
+Array: [[Path Tree](#path-tree)]
+
+String: a path relates to latest path.
+
+Object: {
+
+- `path`: a path relates to latest path. If no `extras`, add this path into result. If has `extras`, this path will used as a new relative path.
+- `extras`: a Path Tree.
+
+}
 
 ### Input Tree
 
-#### `path`
+Path Tree will transmute structure into set of strings. The result could be directory or file:
 
-- String: a path relates to `src_dir`. If no `extras`, start reading this path. If has `extras`, this path will used as new relative path.
+---
 
-#### `blocking_mode`
+Array: [[Input Tree](#input-tree)]
 
-- Default: False.
-- False: if file does match `includes` path, load it.
-- True: if file does not match `includes` path, block it.
+String: a path relates to latest path. If it ends with `input_config.json`, it could read that file as a nested input tree.
 
-#### `includes`
+Object: {
 
-- String: include a path.
-- Dict: [Include Tree](#include-tree)
-- List: include trees.
+- `path`: a path relates to latest path. If no `extras`, add this path into result. If has `extras`, this path will used as a new relative path.
+- `blocking_mode`:
+  - False (default): if file does match `includes` path, load it.
+  - True: if file does not match `includes` path, block it.
+- `includes`: [Path Tree with Output](#path-tree-with-output) to include.
+- `excludes`: [Path Tree](#path-tree) to exclude.
+- `extras`: a [Input Tree](#input-tree)
 
-#### `excludes`
+}
 
-- String: exclude a path.
-- Dict: [Exclude Tree](#exclude-tree)
-- List: exclude trees.
+### Path Tree with Output
 
-#### `extras`
+Path Tree with Output will transmute structure into tuples of (string, string). The result could be (directory, new directory or none) or (file, new file or none):
 
-- String: a path relates to `src_dir`.
-- Dict: a [Input Tree](#input-tree)
-- List: some inputs.
+- Array: [[Path Tree](#path-tree)]
+- String: a path relates to latest path.
+- Object: {
 
-### Include Tree
+  - `path`: a path relates to latest path. If no `extras`, add this path into result. If has `extras`, this path will used as a new relative path.
+  - `out_path`: a output path relates to latest out path. If no `extras`, add this out path into result. If has `extras`, this path will used as new relative out path.
+  - `extras`: a Path Tree.
 
-#### `path`
-
-- String: a path relates to latest `path`. If no `extras`, include this path. If has `extras`, this path will used as new relative path.
-
-#### `out_path`
-
-- String: a output path relates to latest `out_path`. If no `extras`, moving this path. If has `extras`, this path will used as new relative path.
-
-#### `extras`
-
-- String: a path relates to latest input `path`.
-- Dict: a [Include Tree](#include-tree)
-- List: some includes.
-
-### Exclude Tree
-
-#### `path`
-
-- String: a path relates to latest `path`. If no `extras`, exclude this path. If has `extras`, this path will used as new relative path.
-
-#### `extras`
-
-- String: a path relates to latest input `path`.
-- Dict: a [Exclude Tree](#exclude-tree)
-- List: some excludes.
+  }

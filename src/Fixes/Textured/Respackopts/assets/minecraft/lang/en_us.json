@@ -1,26 +1,20 @@
 {
   "rpo.resFixesTextured": "Resource Fixes Textured",
+
   "rpo.resFixesTextured.fixes": "Fixes",
   "rpo.resFixesTextured.fixes.lite": "Lite",
   "rpo.resFixesTextured.fixes.lite.handheldArrow": "Handheld Arrow",
   "rpo.resFixesTextured.fixes.lite.randomRotate": "Block random rotate",
+  "rpo.resFixesTextured.fixes.lite.ebeMod": "Minor optimize Enhanced Block Entities mod",
+  "rpo.resFixesTextured.fixes.lite.farmersDelightMod": "Minor optimize Farmer's Delight mod",
+
   "rpo.resFixesTextured.fixes.normal": "Normal",
-  "rpo.resFixesTextured.fixes.normal.block": "Block Item Improvements",
-  "rpo.resFixesTextured.fixes.normal.endRod": "End Rod Item",
-  "rpo.resFixesTextured.fixes.normal.chorusPlant": "Chorus Plant Item",
-  "rpo.resFixesTextured.fixes.normal.conduit": "Conduit Item",
-  "rpo.resFixesTextured.fixes.normal.torch": "3D Torch Item",
-  "rpo.resFixesTextured.fixes.normal.tripwireHook": "3D Tripwire Hook Item",
-  "rpo.resFixesTextured.fixes.normal.lantern": "3D Lanterns Item",
-  "rpo.resFixesTextured.fixes.normal.candle": "3D Candles Item",
-  "rpo.resFixesTextured.fixes.normal.cauldron": "3D Cauldron Item",
-  "rpo.resFixesTextured.fixes.normal.hopper": "3D Hopper Item",
-  "rpo.resFixesTextured.fixes.normal.comparatorAndRepeater": "3D Comparator & Repeater Item",
-  "rpo.resFixesTextured.fixes.normal.lever": "3D Lever Item",
-  "rpo.resFixesTextured.fixes.normal.cake": "3D Cake Item",
-  "rpo.resFixesTextured.fixes.normal.snifferEgg": "3D Sniffer Egg Item",
-  "rpo.resFixesTextured.fixes.normal.flowerPot": "3D Flower Pot Item",
-  "rpo.resFixesTextured.fixes.normal.brewingStand": "3D Brewing Stand Item",
-  "rpo.resFixesTextured.fixes.normal.ebeMod": "Enhanced Block Entities Mod",
-  "rpo.resFixesTextured.fixes.normal.farmersDelightMod": "Farmer's Delight Mod"
+  "rpo.resFixesTextured.fixes.normal.block": "Block item improvements",
+  "rpo.resFixesTextured.fixes.normal.button": "Button item improvements",
+  "rpo.resFixesTextured.fixes.normal.cake": "3D Cake item",
+  "rpo.resFixesTextured.fixes.normal.cauldron": "3D Cauldron item",
+  "rpo.resFixesTextured.fixes.normal.chorusPlant": "Chorus Plant item improvements",
+  "rpo.resFixesTextured.fixes.normal.comparatorAndRepeater": "3D Comparator & Repeater item",
+  "rpo.resFixesTextured.fixes.normal.conduit": "Conduit item improvements",
+  "rpo.resFixesTextured.fixes.normal.hopper": "3D Hopper item"
 }

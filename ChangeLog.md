@@ -1,3 +1,26 @@
+### Version 9.0
+
+- `build.py`: Allow load input tree by input `input_config.json`.
+- Separate folders in source to fix multiple Respackopts issue and add more options.
+
+#### Resource Tweaks
+
+Normal variant
+
+- `Natural_Firefly_Bushes` (New) ([#14](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/14)).
+- `Better_Leaves`: Fixed not working.
+- `Display`: moved here some display tweaks from `Fixes.Normal.Display`
+- `Cross_Correction` (Renamed from `Better_Cross`):
+  - Disabled by default using Respackopts.
+  - Fix `cross_emissive` used wrong texture. ([#14](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/14)).
+
+External variant
+
+- `3D_Default`
+  - Remove 3D sculk sensor and use `Normal.Tweaks.Better_Sculk_Sensor_Swing`.
+  - Add a Respackopts option to disable cobweb.
+  - Removed incorrect Brewing Stand potion model. ([#13](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/13))
+
 ### Version 8.9
 
 #### Resource Fixes

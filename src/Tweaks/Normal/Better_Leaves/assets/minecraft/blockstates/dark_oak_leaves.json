@@ -5,6 +5,9 @@
     },
     "waterlogged=true": {
       "model": "minecraft:block/dark_oak_leaves_waterlogged"
+    },
+    "": {
+      "model": "minecraft:block/dark_oak_leaves"
     }
   }
 }

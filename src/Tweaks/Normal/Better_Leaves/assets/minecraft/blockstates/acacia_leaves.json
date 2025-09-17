@@ -5,6 +5,9 @@
     },
     "waterlogged=true": {
       "model": "minecraft:block/acacia_leaves_waterlogged"
+    },
+    "": {
+      "model": "minecraft:block/acacia_leaves"
     }
   }
 }

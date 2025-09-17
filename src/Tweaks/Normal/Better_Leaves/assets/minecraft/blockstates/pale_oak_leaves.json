@@ -5,6 +5,9 @@
     },
     "waterlogged=true": {
       "model": "minecraft:block/pale_oak_leaves_waterlogged"
+    },
+    "": {
+      "model": "minecraft:block/pale_oak_leaves"
     }
   }
 }
