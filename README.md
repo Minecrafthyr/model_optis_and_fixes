@@ -92,6 +92,8 @@ Optimize block models and fix bugs in Default resources.
 
 ### Normal
 
+
+- `Block_Variants`: variants of blocks, now only terracotta.
 `Display`
   - 3D Cauldron, Comparator, Repeater, Cake, Hopper item.
   - Improve Button, Conduit item.
@@ -102,8 +104,7 @@ Optimize block models and fix bugs in Default resources.
   - Tweak mob head/skull item display ([MC-91869](https://bugs.mojang.com/browse/MC/issues/MC-91869 "Mob heads/skulls (except dragon head) are barely recognizable as such when held (held awkwardly in first person view")).
   - Tweak block rotation display ([MC-114274](https://bugs.mojang.com/browse/MC/issues/MC-114274 "The rotation of some blocks in hand/GUI does not match rotation when placed")).
   - Tweak some items display, they are not floating on hand or head now.
-- `Small_Back_Faces`
-  - Cactus and small dripleaf has some pixels back face.
+- `Small_Back_Faces`: Cactus and small dripleaf has some pixels of back faces.
 
 ### Textured
 

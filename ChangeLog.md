@@ -3,6 +3,12 @@
 - `build.py`: Allow load input tree by input `input_config.json`.
 - Separate folders in source to fix multiple Respackopts issue and add more options.
 
+#### Resource Fixes
+
+Normal variant
+
+- `Block_Variants` (New): variants of blocks, now only terracotta.
+
 #### Resource Tweaks
 
 Normal variant
