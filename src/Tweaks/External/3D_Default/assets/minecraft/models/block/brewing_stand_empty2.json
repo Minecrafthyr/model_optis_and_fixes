@@ -1,0 +1,60 @@
+{
+  "format_version": "1.21.6",
+  "credit": "Designed by GeForceLegend",
+  "textures": {
+    "particle": "block/brewing_stand",
+    "texture": "block/brewing_stand"
+  },
+  "elements": [
+    {
+      "from": [5.1, 2, 7.4],
+      "to": [7.1, 14.01, 8.4],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8.1, 8, 7.9]},
+      "faces": {
+        "north": {"uv": [9, 2, 11, 14], "texture": "#texture"},
+        "east": {"uv": [9, 2, 10, 14], "texture": "#texture"},
+        "south": {"uv": [11, 2, 9, 14], "texture": "#texture"},
+        "west": {"uv": [11, 2, 10, 14], "texture": "#texture"},
+        "up": {"uv": [11, 3, 9, 2], "texture": "#texture"},
+        "down": {"uv": [11, 13, 9, 14], "texture": "#texture"}
+      }
+    },
+    {
+      "from": [4.1, 12, 7.4],
+      "to": [5.1, 15, 8.4],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8.1, 8, 7.9]},
+      "faces": {
+        "north": {"uv": [11, 1, 12, 4], "texture": "#texture"},
+        "east": {"uv": [11, 1, 12, 4], "texture": "#texture"},
+        "south": {"uv": [11, 1, 12, 4], "texture": "#texture"},
+        "up": {"uv": [12, 2, 11, 1], "texture": "#texture"},
+        "down": {"uv": [12, 3, 11, 4], "texture": "#texture"}
+      }
+    },
+    {
+      "from": [2.1, 11, 7.4],
+      "to": [3.1, 13, 8.4],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8.1, 8, 7.9]},
+      "faces": {
+        "north": {"uv": [13, 3, 14, 5], "texture": "#texture"},
+        "south": {"uv": [13, 3, 14, 5], "texture": "#texture"},
+        "west": {"uv": [13, 3, 14, 5], "texture": "#texture"},
+        "up": {"uv": [14, 3, 13, 4], "texture": "#texture"},
+        "down": {"uv": [14, 4, 13, 5], "texture": "#texture"}
+      }
+    },
+    {
+      "from": [3.1, 6, 7.4],
+      "to": [4.1, 16, 8.4],
+      "rotation": {"angle": 45, "axis": "y", "origin": [8.1, 8, 7.9]},
+      "faces": {
+        "north": {"uv": [12, 0, 13, 10], "texture": "#texture"},
+        "east": {"uv": [12, 0, 13, 10], "texture": "#texture"},
+        "south": {"uv": [12, 0, 13, 10], "texture": "#texture"},
+        "west": {"uv": [12, 0, 13, 10], "texture": "#texture"},
+        "up": {"uv": [13, 0, 12, 1], "texture": "#texture", "cullface": "up"},
+        "down": {"uv": [13, 9, 12, 10], "texture": "#texture"}
+      }
+    }
+  ]
+}

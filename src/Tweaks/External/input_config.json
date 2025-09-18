@@ -48,6 +48,9 @@
             "brewing_stand_bottle0.json",
             "brewing_stand_bottle1.json",
             "brewing_stand_bottle2.json",
+            "brewing_stand_empty0.json",
+            "brewing_stand_empty1.json",
+            "brewing_stand_empty2.json",
             "calibrated_sculk_sensor.json",
             "sculk_sensor.json",
             "end_rod.json"
@@ -85,7 +88,8 @@
             "ominous_bottle.json",
             "ladder.json",
             "end_rod.json",
-            "tripwire_hook.json"
+            "tripwire_hook.json",
+            "lever.json"
           ]
         },
         {

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/black_terracotta"
+      },
+      {
+        "model": "res_fixes:block/black_terracotta_mirrored"
+      },
+      {
+        "model": "minecraft:block/black_terracotta",
+        "y": 180
+      },
+      {
+        "model": "res_fixes:block/black_terracotta_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

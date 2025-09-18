@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/orange_terracotta"
+      },
+      {
+        "model": "res_fixes:block/orange_terracotta_mirrored"
+      },
+      {
+        "model": "minecraft:block/orange_terracotta",
+        "y": 180
+      },
+      {
+        "model": "res_fixes:block/orange_terracotta_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}
