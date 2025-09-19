@@ -11,6 +11,7 @@ Lite variant
 Normal variant
 
 - Fix skull option not working.
+- Fix terracotta model error.
 
 #### Resource Tweaks
 
