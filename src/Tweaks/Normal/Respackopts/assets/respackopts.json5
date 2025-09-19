@@ -8,16 +8,20 @@
 		"fixes": {
 			"lite": {
 				"randomRotate": true,
-				"handheldArrow": true
+				"handheldArrow": true,
+				"ebeMod": true,
+				"farmersDelightMod": true
 			},
 			"normal": {
 				"block": true,
-				"conduit": true,
-				"cauldron": true,
-				"hopper": true,
-				"comparatorAndRepeater": true,
+				"button": true,
 				"cake": true,
-				"chorusPlant": true
+				"cauldron": true,
+				"chorusPlant": true,
+				"comparatorAndRepeater": true,
+				"conduit": true,
+				"hopper": true,
+				"skull": true
 			}
 		},
 		"tweaks": {
@@ -28,17 +32,29 @@
 				"endRod": true,
 				"fastBetterGrass": true,
 				"flowerPot": true,
-				"lantern": true,
+				"ladder": [
+					"thin",
+					"thick",
+					"off"
+				],
+				"lantern": [
+					"on",
+					"noHandheld",
+					"off"
+				],
 				"lever": true,
 				"moistFarmland": true,
 				"pointedDripstone": true,
 				"redstoneDust": true,
 				"sculkSensor": true,
 				"snifferEgg": true,
-				"torch": true,
+				"newTorches": [
+					"on",
+					"noHandheld",
+					"off"
+				],
 				"tripwireHook": true,
 				"unlitRedstoneOre": true,
-				"newTorches": true,
 				"shadeless": true
 			}
 		}

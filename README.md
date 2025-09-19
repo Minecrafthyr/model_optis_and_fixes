@@ -1,5 +1,5 @@
-- Version: 9.0
-- Game versions: 1.14.4-1.21.9 (25w37a)
+- Version: 9.1
+- Game versions: 1.14.4-1.21.9 (pre1)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -255,7 +255,7 @@ _Notice: may not contains all features in original pack because visual balance._
 2. Config `config.json` following `config.md`
 3. Enter path `cd <the path>`
 4. Then run: `python build.py`
-   - `--release` arg build config root with tag `only_in_release` is true.
+   - `--release` arg build config root with tag `only_in_release` is true and force using compression.
    - `--dir <path>` arg change the current directory path.
    - `--cfg <path>` arg change the config path.
    - `--log <path>` arg change the log path.

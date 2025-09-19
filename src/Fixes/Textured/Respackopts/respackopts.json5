@@ -20,7 +20,8 @@
 				"chorusPlant": true,
 				"comparatorAndRepeater": true,
 				"conduit": true,
-				"hopper": true
+				"hopper": true,
+				"skull": true
 			}
 		}
 	}

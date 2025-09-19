@@ -1,3 +1,29 @@
+### Version 9.1
+
+- Fixed log spamming with Respackopts due to option exceptions.
+
+#### Resource Fixes
+
+Lite variant
+
+- Fix options of mods not working.
+
+Normal variant
+
+- Fix skull option not working.
+
+#### Resource Tweaks
+
+Normal variant
+
+- Add width switch to Ladder.
+- Add handheld switch to Torch and Lantern.
+
+External variant
+
+- `3D_Default`
+  - Add Gilded Blackstone option. ([#13](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/13))
+
 ### Version 9.0
 
 - `build.py`: Allow load input tree by input `input_config.json`.
