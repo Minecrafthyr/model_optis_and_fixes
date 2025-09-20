@@ -1,8 +1,3 @@
 {
-  "item.minecraft.quartz": "Quartz",
-  "item.minecraft.brick": "Clay Brick",
-  "block.minecraft.brick_slab": "Clay Brick Slab",
-  "block.minecraft.brick_stairs": "Clay Brick Stairs",
-  "block.minecraft.brick_wall": "Clay Brick Wall",
-  "block.minecraft.bricks": "Clay Bricks"
+  "item.minecraft.quartz": "Quartz"
 }

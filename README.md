@@ -1,5 +1,5 @@
-- Version: 9.1
-- Game versions: 1.14.4-1.21.9 (pre1)
+- Version: 9.2
+- Game versions: 1.14.4-1.21.9 (pre2)
 - Project Links:
   - [Modrinth](https://modrinth.com/resourcepack/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -87,14 +87,11 @@ Optimize block models and fix bugs in Default resources.
 - `Language_Fix`: Enchantment|Potion Level Fix.
 - Minor optimize Enhanced Block Entities and Farmer's Delight. If you meet issue, use Respackopts to disable it.
 
-> [!NOTE]
-> The description downside is incomplete with v9.0
+> [!NOTE] The description downside is for v9.1
 
 ### Normal
 
-
-- `Block_Variants`: variants of blocks, now only terracotta.
-`Display`
+- `Block_Variants`: variants of blocks, now only terracotta. `Display`
   - 3D Cauldron, Comparator, Repeater, Cake, Hopper item.
   - Improve Button, Conduit item.
   - Chorus Plant has a smaller model now.
@@ -167,7 +164,8 @@ Optimize block models and fix bugs in Default resources.
 - `Fast_Better_Grass`
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
   - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths).
-- `Language_Tweaks`: Tweaks some translation.
+- `Language_Tweaks`
+  - Rename Nether Quartz to Quartz.
 - `Lantern`: 3D item and smooth animation.
 - `Mirrored_Pumpkin_Blur`
 - `Moist_Farmland`
@@ -204,18 +202,17 @@ _Notice: may not contains all features in original pack because visual balance._
 - `Natural_Firefly_Bushes`: Copied zip file from [Natural Firefly Bushes](https://modrinth.com/project/1u7lYbpD) by [TheGreatOwlMaster](https://modrinth.com/user/TheGreatOwlMaster) under [MIT License](https://spdx.org/licenses/MIT).
 - `Tasty_Items`: Copied zip file from [Tasty Items](https://modrinth.com/project/yVNZK7l2) by [enchanted-games](https://modrinth.com/user/enchanted-games) under [CC-BY-NC-4.0](https://spdx.org/licenses/CC-BY-NC-4.0).
 
-
 - `3D_Default` @[3D Default](https://modrinth.com/resourcepack/3d-default)
   - Used Resource Fixes feature:
     - `Normal.Display`: Anvil, Thin block | Flower Pot | Candle | Lightning Rod | Comparator | Repeater | Tripwire Hook
   - Used Resource Tweaks feature:
-    - `Normal.(New_Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust, Better_Sculk_Sensor_Swing)`.
+    - `Normal.(New_Torches, 3D Iron Bars, Unlit Redstone Ore, Wide Bamboo, 3D Redstone Dust)`.
   - Modified Shovel item model: Middle thin.
   - Modified Brewing Stand model.
   - Emissive blocks are shadeless.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
   - Removed 3D potions.
-  - Add Respackopts options to disable chain or cobweb.
+  - Add Respackopts options to disable Chain, Cobweb, Gilded Blackstone.
 - `UltiCraft-Models3D` @[3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d)
   - Only use Bookshelf and barrel.
 
@@ -231,7 +228,7 @@ _Notice: may not contains all features in original pack because visual balance._
 - You can try resourcepack here, but may not compatible.
 - Work in progress:
   - `Fixes.Normal.Block_Variants`: More block variants
-  - `Tweaks.Normal.Cross_Correction`: More random rotate & fixes models.
+  - `Tweaks.Normal.Cross_Correction`: More random rotate & correction models.
   - `Tweaks.Normal.Particle_Tweaks`: More filled block particle texture.
 - Slowly embedding or implementing outside packs.
   - [Vanilla Tweaks](https://vanillatweaks.net/picker/resource-packs/)

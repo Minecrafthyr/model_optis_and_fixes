@@ -1,3 +1,25 @@
+### Version 9.2
+
+- Fixed `remove` in config tree not working.
+
+#### Resource Fixes
+
+Normal variant
+
+- Fix cake option not working.
+
+#### Resource Tweaks
+
+Normal variant
+
+- Fix lantern option not working.
+- `Language_Tweaks`: stop renaming Bricks to Clay Bricks.
+
+External variant
+
+- `3D_Default`:
+  - Use 3D Sculk Sensor again.
+
 ### Version 9.1
 
 - Fixed log spamming with Respackopts due to option exceptions.

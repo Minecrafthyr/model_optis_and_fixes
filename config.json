@@ -80,6 +80,7 @@
                 "Fast_Better_Grass.Respackopts",
                 "Language_Tweaks",
                 "Lantern",
+                "Lantern.Respackopts",
                 "Mirrored_Pumpkin_Blur",
                 "Misc_Blockstates",
                 "Misc_Blockstates.Respackopts",
@@ -104,6 +105,12 @@
             },
             "output": "Resource Tweaks",
             "children": {
+              "removes": [
+                {
+                  "path": "assets/minecraft/models/block/",
+                  "extras": ["calibrated_sculk_sensor.json", "calibrated_sculk_sensor_active.json", "calibrated_sculk_sensor_inactive.json", "sculk_sensor.json", "sculk_sensor_active.json", "sculk_sensor_inactive.json"]
+                }
+              ],
               "inputs": "Tweaks/External/input_config.json",
               "output": "Resource Tweaks External"
             }

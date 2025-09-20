@@ -320,7 +320,9 @@ def cfg_tree(
     """Process config tree."""
     try:
         removes = tuple(get_paths(tree.get("removes", [])))
-        for k in storage.keys():
+        keys = [k for k in storage.keys()]
+
+        for k in keys:
             if k.startswith(removes):
                 storage.pop(k)
 
