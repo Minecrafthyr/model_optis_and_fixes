@@ -2,10 +2,24 @@
   "name": "Variants",
   "out_dir": "out/Variants/",
   "log_level": "INFO",
-  "default_merge": ["assets/res_fixes/lang/", "assets/minecraft/lang/"],
-  "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Craft to Exile 2 (VR Support)/resourcepacks", "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks", "C:/PCL2/.minecraft/versions/Tinker's Construct Pack/resourcepacks"],
+  "default_merge": [
+    "assets/res_fixes/lang/",
+    "assets/minecraft/lang/"
+  ],
+  "extra_out_dirs": [
+    "C:/PCL2/.minecraft/resourcepacks",
+    "C:/PCL2/.minecraft/versions/Craft to Exile 2 (VR Support)/resourcepacks",
+    "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks",
+    "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks",
+    "C:/PCL2/.minecraft/versions/Tinker's Construct Pack/resourcepacks"
+  ],
   "tree": {
-    "inputs": ["Base", "Library/Cube_Inner_Faces", "Library/Item_Offset", "Library/Shadeless"],
+    "inputs": [
+      "Base",
+      "Library/Cube_Inner_Faces",
+      "Library/Item_Offset",
+      "Library/Shadeless"
+    ],
     "children": {
       "inputs": {
         "path": "Fixes/Lite",
@@ -33,7 +47,12 @@
           "Tripwire_Fix",
           {
             "path": "Mod",
-            "extras": ["EBE", "EBE.Respackopts", "Farmers_Delight", "Farmers_Delight.Respackopts"]
+            "extras": [
+              "EBE",
+              "EBE.Respackopts",
+              "Farmers_Delight",
+              "Farmers_Delight.Respackopts"
+            ]
           },
           "Respackopts"
         ]
@@ -42,13 +61,31 @@
       "children": {
         "inputs": {
           "path": "Fixes/Normal",
-          "extras": ["Display", "Display.Respackopts", "Block_Variants", "Block_Variants.Respackopts", "Respackopts", "Small_Back_Faces"]
+          "extras": [
+            "Display",
+            "Display.Respackopts",
+            "Block_Variants",
+            "Block_Variants.Respackopts",
+            "Respackopts",
+            "Small_Back_Faces"
+          ]
         },
         "output": "Resource Fixes",
         "children": {
           "inputs": {
             "path": "Fixes/Textured",
-            "extras": ["End_Portal_Frame_Fix", "Item_Frame_Tweaks", "Misc", "Modern_Recipe_Button_Texture", "Modern_Redstone_Torch_Texture", "Modern_Spectator_GUI_Texture", "Rail_Fix", "Smooth_Stone_Slab_Fix", "Tall_Seagrass_Fix", "Respackopts"]
+            "extras": [
+              "End_Portal_Frame_Fix",
+              "Item_Frame_Tweaks",
+              "Misc",
+              "Modern_Recipe_Button_Texture",
+              "Modern_Redstone_Torch_Texture",
+              "Modern_Spectator_GUI_Texture",
+              "Rail_Fix",
+              "Smooth_Stone_Slab_Fix",
+              "Tall_Seagrass_Fix",
+              "Respackopts"
+            ]
           },
           "output": "Resource Fixes Textured",
           "children": {
@@ -97,9 +134,22 @@
                 "Unlit_Redstone_Ore",
                 "Unlit_Redstone_Ore.Respackopts",
                 "Wide_Bamboo",
-                {"path": "Natural Firefly Bushes 1.0.zip", "excludes": ["pack.png", "pack.mcmeta"]},
+                {
+                  "path": "Natural Firefly Bushes 1.0.zip",
+                  "excludes": [
+                    "pack.png",
+                    "pack.mcmeta"
+                  ]
+                },
                 "Natural_Firefly_Bushes",
-                {"path": "Tasty_Items-v1.2.zip", "excludes": ["credits.txt", "pack.png", "pack.mcmeta"]},
+                {
+                  "path": "Tasty_Items-v1.2.zip",
+                  "excludes": [
+                    "credits.txt",
+                    "pack.png",
+                    "pack.mcmeta"
+                  ]
+                },
                 "Tasty_Items"
               ]
             },
@@ -108,7 +158,14 @@
               "removes": [
                 {
                   "path": "assets/minecraft/models/block/",
-                  "extras": ["calibrated_sculk_sensor.json", "calibrated_sculk_sensor_active.json", "calibrated_sculk_sensor_inactive.json", "sculk_sensor.json", "sculk_sensor_active.json", "sculk_sensor_inactive.json"]
+                  "extras": [
+                    "calibrated_sculk_sensor.json",
+                    "calibrated_sculk_sensor_active.json",
+                    "calibrated_sculk_sensor_inactive.json",
+                    "sculk_sensor.json",
+                    "sculk_sensor_active.json",
+                    "sculk_sensor_inactive.json"
+                  ]
                 }
               ],
               "inputs": "Tweaks/External/input_config.json",

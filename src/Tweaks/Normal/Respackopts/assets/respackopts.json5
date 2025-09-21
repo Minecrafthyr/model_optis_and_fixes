@@ -33,6 +33,7 @@
 				"fastBetterGrass": true,
 				"flowerPot": true,
 				"ladder": [
+					"normal",
 					"thin",
 					"thick",
 					"off"

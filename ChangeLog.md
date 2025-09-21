@@ -1,3 +1,16 @@
+### Version 9.3
+
+#### Resource Tweaks
+
+Normal variant
+
+- `3D_Ladder` now has three option: normal, thin, thick.
+
+External variant
+
+- `3D_Default`:
+  - Excluded `glass_bottle.json` item model. ([#15](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/15))
+
 ### Version 9.2
 
 - Fixed `remove` in config tree not working.
