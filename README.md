@@ -1,4 +1,4 @@
-- Version: 9.3
+- Version: 9.4
 - Game versions: 1.14.4-1.21.9 (pre2)
 - Project Links:
   - [Modrinth](https://modrinth.com/project/xq2isoUl) (updated most quickly)

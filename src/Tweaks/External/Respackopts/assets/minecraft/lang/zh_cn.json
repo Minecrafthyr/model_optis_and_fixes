@@ -17,6 +17,7 @@
   "rpo.resTweaksExternal.fixes.normal.comparatorAndRepeater": "三维比较器和中续器物品",
   "rpo.resTweaksExternal.fixes.normal.conduit": "潮涌核心物品改进",
   "rpo.resTweaksExternal.fixes.normal.hopper": "三维漏斗物品",
+  "rpo.resTweaksExternal.fixes.normal.skull": "头颅物品改进",
 
   "rpo.resTweaksExternal.tweaks": "调整",
   "rpo.resTweaksExternal.tweaks.normal": "一般",
@@ -50,5 +51,6 @@
   "rpo.resTweaksExternal.tweaks.external.mushroom": "三维蘑菇和下界菌（包括盆栽）",
   "rpo.resTweaksExternal.tweaks.external.bed": "三维床",
   "rpo.resTweaksExternal.tweaks.external.lilyPad": "三维睡莲",
-  "rpo.resTweaksExternal.tweaks.external.ore": "三维矿石"
+  "rpo.resTweaksExternal.tweaks.external.ore": "三维矿石",
+  "rpo.resTweaksExternal.tweaks.external.gildedBlackstone": "三维镶金黑石"
 }
