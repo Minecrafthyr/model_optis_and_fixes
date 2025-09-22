@@ -47,5 +47,9 @@
   
   "rpo.resTweaksExternal.tweaks.external": "External",
   "rpo.resTweaksExternal.tweaks.external.chain": "3D Chain (including Hanging Signs and Lanterns)",
-  "rpo.resTweaksExternal.tweaks.external.cobweb": "3D Cobweb"
+  "rpo.resTweaksExternal.tweaks.external.cobweb": "3D Cobweb",
+  "rpo.resTweaksExternal.tweaks.external.mushroom": "3D Mushrooms & Fungus (including pots)",
+  "rpo.resTweaksExternal.tweaks.external.bed": "3D Bed",
+  "rpo.resTweaksExternal.tweaks.external.lilyPad": "3D Lily Pad",
+  "rpo.resTweaksExternal.tweaks.external.ore": "3D Ores"
 }

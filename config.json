@@ -17,6 +17,7 @@
     "inputs": [
       "Base",
       "Library/Cube_Inner_Faces",
+      "Library/Empty_Texture",
       "Library/Item_Offset",
       "Library/Shadeless"
     ],
@@ -113,6 +114,9 @@
                 "Better_Weather",
                 "Clean_Water",
                 "Display",
+                "Display.Respackopts",
+                "Display.Candle",
+                "Display.Candle.Respackopts",
                 "Fast_Better_Grass",
                 "Fast_Better_Grass.Respackopts",
                 "Language_Tweaks",

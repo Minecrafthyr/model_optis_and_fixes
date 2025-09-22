@@ -46,5 +46,9 @@
 
   "rpo.resTweaksExternal.tweaks.external": "外部",
   "rpo.resTweaksExternal.tweaks.external.chain": "三维链条（包含悬挂式告示牌和灯笼）",
-  "rpo.resTweaksExternal.tweaks.external.cobweb": "三维蜘蛛网"
+  "rpo.resTweaksExternal.tweaks.external.cobweb": "三维蜘蛛网",
+  "rpo.resTweaksExternal.tweaks.external.mushroom": "三维蘑菇和下界菌（包括盆栽）",
+  "rpo.resTweaksExternal.tweaks.external.bed": "三维床",
+  "rpo.resTweaksExternal.tweaks.external.lilyPad": "三维睡莲",
+  "rpo.resTweaksExternal.tweaks.external.ore": "三维矿石"
 }

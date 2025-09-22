@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": {"model": "res_fixes:block/fallback/deepslate_redstone_ore_3d"},
+    "lit=true": {"model": "res_fixes:block/fallback/deepslate_redstone_ore_on_3d"}
+  }
+}

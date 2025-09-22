@@ -1,3 +1,23 @@
+### Version 9.4
+
+#### Resource Fixes
+
+Normal variant
+
+- `Block_Variants`: Fix terracotta model error correctly ... in 9.0-9.3 they are not working.
+
+#### Resource Tweaks
+
+Normal variant
+
+
+- Fix candle option not working.
+
+External variant
+
+- `3D_Default`:
+  - Add option for bed, mushrooms, lily pad, ores.
+
 ### Version 9.3
 
 #### Resource Tweaks

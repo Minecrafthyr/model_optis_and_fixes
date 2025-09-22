@@ -213,9 +213,9 @@ _Notice: may not contains all features in original pack because visual balance._
   - Emissive blocks are shadeless.
   - Enable ambient occlusion for (Carved) Pumpkin, Hay Block.
   - Removed 3D potions.
-  - Add Respackopts options to disable Chain, Cobweb, Gilded Blackstone.
+  - Add Respackopts options to disable Bed, Chain, Cobweb, Gilded Blackstone, Lily Pad, Mushrooms & Fungus, Ores.
 - `UltiCraft-Models3D` @[3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d)
-  - Only use Bookshelf and barrel.
+  - Only use Bookshelf and Barrel.
 
 #### Credits
 

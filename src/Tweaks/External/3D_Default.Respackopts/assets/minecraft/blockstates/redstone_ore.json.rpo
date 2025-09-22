@@ -1,4 +1,4 @@
 {
-  "condition": "tweaks.normal.unlitRedstoneOre",
-  "fallback": "assets/res_fixes/blockstates/fallback/redstone_ore_on.json"
+  "condition": "tweaks.normal.unlitRedstoneOre & tweaks.normal.ore",
+  "fallback": "assets/res_fixes/blockstates/fallback/redstone_ore_3d.json"
 }

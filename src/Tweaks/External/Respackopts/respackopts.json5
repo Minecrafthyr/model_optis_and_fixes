@@ -61,7 +61,10 @@
 			"external": {
 				"chain": true,
 				"cobweb": true,
-				"gildedBlackstone": true
+				"gildedBlackstone": true,
+				"mushroom": true,
+				"lilyPad": true,
+				"ore": true
 			}
 		}
 	}
