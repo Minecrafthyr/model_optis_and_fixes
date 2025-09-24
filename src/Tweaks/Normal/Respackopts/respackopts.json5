@@ -56,7 +56,9 @@
 				],
 				"tripwireHook": true,
 				"unlitRedstoneOre": true,
-				"shadeless": true
+				"shadeless": true,
+				"campfire": true,
+				"turtleEgg": true
 			}
 		}
 	}

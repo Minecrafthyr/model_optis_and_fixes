@@ -1,5 +1,5 @@
-- Version: 9.4
-- Game versions: 1.14.4-1.21.9 (pre2)
+- Version: 9.5
+- Game versions: 1.14.4-1.21.9 (pre3)
 - Project Links:
   - [Modrinth](https://modrinth.com/project/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -43,7 +43,7 @@ Please also check license in ./Credits folder (in source or pack) for specific f
 - Resource Tweaks External: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
 - Others: [Unlicense](https://spdx.org/licenses/Unlicense), means you can modify, distribute, split, use it anywhere.
 
-## Fixes
+## Resource Fixes
 
 Optimize block models and fix bugs in Default resources.
 
@@ -121,7 +121,7 @@ Optimize block models and fix bugs in Default resources.
 - `Rail_Fix`: Modified 23 files from [Rail Fix](https://modrinth.com/project/481jOCry) by [Lad_Flaver](https://modrinth.com/user/Lad_Flaver) under [ARR with explicitly stated](https://modrinth.com/project/481jOCry).
 - `Smooth_Stone_Slab_Fix`: Copied 1 file from [Smooth Stone Slab Fix](https://modrinth.com/project/QoUSM3q9) by [creep](https://modrinth.com/user/creep) under [MIT License](https://spdx.org/licenses/MIT).
 
-## Tweaks
+## Resource Tweaks
 
 ### Normal
 
@@ -134,14 +134,11 @@ Optimize block models and fix bugs in Default resources.
   - Animation of flowing lava is now faster then still lava.
   - Smooth Lava animation.
   - Kelp animation is slower.
-- `Better_Copper_Grate`: Inner faces of copper grate.
+- `Better_Copper_Grate`: Inner faces of Copper Grate.
 - `Better_Fire`
   - Fire texture is a bit transparent on body.
   - Sides of floor fire is 1 block height (center does not change), and tilted (in supported MC version).
-- `Better_Leaves` (1.19- does not work)
-  - Add inner back face.
-  - Fast leaves waterlogged texture.
-  - Better with [Cull Leaves](https://modrinth.com/mod/cull-leaves)
+- `Better_Leaves`: Inner faces of Leaves, better with [Cull Leaves](https://modrinth.com/mod/cull-leaves).
 - `Better_Particles`
   - Better Effect particles.
   - Light blue Splash particle.
@@ -157,9 +154,8 @@ Optimize block models and fix bugs in Default resources.
 - `Consistent_Planes`
   - Sore plane-like models are now not floating, shadeless, has cullface.
 - `Clean_Water`
-  - Is now 75% solid to default.
-- `Display`
-  - 3D Brewing Stand, Campfires, Candles, Lever, Sniffer Egg, Turtle Egg, Flower Pot, Tripwire Hook.
+  - Is now 75% solid compared to default.
+- `Display`: 3D Brewing Stand, Campfires, Candles, Lever, Sniffer Egg, Turtle Egg, Flower Pot, Tripwire Hook.
 - `Fast_Better_Grass`
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
   - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths).
@@ -167,8 +163,7 @@ Optimize block models and fix bugs in Default resources.
   - Rename Nether Quartz to Quartz.
 - `Lantern`: 3D item and smooth animation.
 - `Mirrored_Pumpkin_Blur`
-- `Moist_Farmland`
-  - Visualize Farmland "moisture" state 0 - 7 (when it dries up).
+- `Moist_Farmland`: Visualize Farmland "moisture" state 0 - 7 (when it dries up).
 - `Natural_Firefly_Bushes` @[Natural Firefly Bushes](https://modrinth.com/project/1u7lYbpD)
 - `New_Torches`: All Torch has glowing outline model. 20% more smooth torch handle.
 - `Particle_Tweaks`: Slime jump use it's block texture.
@@ -195,7 +190,6 @@ _Notice: may not contains all features in original pack because visual balance._
 - `3D_Bars`: Modified 6 files from [Simple 3D Iron Bars](https://modrinth.com/project/p5Kdm58p) by [poqbox](https://modrinth.com/user/poqbox) under [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause).
 - `3D_Redstone_Dust`: Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT).
 - `Axolotl_Bucket_Variants`: Copied 11 files from [Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants) by [manyrandomthings](https://modrinth.com/user/manyrandomthings) under [LGPL-3.0-only](https://spdx.org/licenses/LGPL-3.0-only).
-- `Better_Leaves`: Modified 41 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/NicerFastLeaves" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
 - `Better_Particles`: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
 - `Fast_Better_Grass`: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
 - `Natural_Firefly_Bushes`: Copied zip file from [Natural Firefly Bushes](https://modrinth.com/project/1u7lYbpD) by [TheGreatOwlMaster](https://modrinth.com/user/TheGreatOwlMaster) under [MIT License](https://spdx.org/licenses/MIT).
@@ -233,7 +227,6 @@ _Notice: may not contains all features in original pack because visual balance._
   - `Tweaks.Normal.Particle_Tweaks`: More filled block particle texture.
 - Slowly embedding or implementing outside packs.
   - [Vanilla Tweaks](https://vanillatweaks.net/picker/resource-packs/)
-  - [SKN's Topsy Textures](https://modrinth.com/resourcepack/skns-topsy-textures)
   - [Vary Me](https://modrinth.com/resourcepack/vary-me)
   - [Smaller Side Shield](https://modrinth.com/resourcepack/smaller-side-shield)
   - [Smooth Bow Animations](https://modrinth.com/resourcepack/smooth-bow-animations)

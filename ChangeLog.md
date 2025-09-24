@@ -1,3 +1,13 @@
+### Version 9.5
+
+#### Resource Tweaks
+
+Normal variant
+
+- `Better_Leaves`: remove fast waterlogged leaves feature.
+- Fix config of this variant not working.
+- Fix campfire and turtle egg option not working.
+
 ### Version 9.4
 
 #### Resource Fixes
@@ -9,7 +19,6 @@ Normal variant
 #### Resource Tweaks
 
 Normal variant
-
 
 - Fix candle option not working.
 
