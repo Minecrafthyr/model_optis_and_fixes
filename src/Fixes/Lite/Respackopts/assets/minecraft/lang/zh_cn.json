@@ -1,10 +1,18 @@
 {
-  "rpo.resFixesLite": "资源修复【轻量】",
-  
+  "rpo.resFixesLite": "Resource Fixes Lite",
   "rpo.resFixesLite.fixes": "修复",
   "rpo.resFixesLite.fixes.lite": "轻量",
+  "rpo.resFixesLite.fixes.normal": "一般",
+  "rpo.resFixesLite.fixes.textured": "纹理",
+  "rpo.resFixesLite.tweaks": "调整",
+  "rpo.resFixesLite.tweaks.normal": "一般",
+  "rpo.resFixesLite.tweaks.external": "外部",
   "rpo.resFixesLite.fixes.lite.handheldArrow": "手持箭",
+  "rpo.resFixesLite.fixes.lite.handheldArrow.tooltip": "修复 MC-201808",
   "rpo.resFixesLite.fixes.lite.randomRotate": "方块随机旋转",
-  "rpo.resFixesLite.fixes.lite.ebeMod": "微小优化方块实体增强(Enhanced Block Entities)模组",
-  "rpo.resFixesLite.fixes.lite.farmersDelightMod": "微小优化农夫乐事(Farmer's Delight)模组"
+  "rpo.resFixesLite.fixes.lite.randomRotate.tooltip": "粘土，砂土，绯红和诡异菌岩，沙砾方块随机旋转（部分修复 MC-144914）",
+  "rpo.resFixesLite.fixes.lite.ebeMod": "方块实体增强（Enhanced Block Entities）模组",
+  "rpo.resFixesLite.fixes.lite.ebeMod.tooltip": "微量优化方块实体增强模组",
+  "rpo.resFixesLite.fixes.lite.farmersDelightMod": "农夫乐事（Farmer's Delight）模组",
+  "rpo.resFixesLite.fixes.lite.farmersDelightMod.tooltip": "微量优化农夫乐事模组"
 }

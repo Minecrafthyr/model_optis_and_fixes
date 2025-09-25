@@ -1,10 +1,18 @@
 {
   "rpo.resFixesLite": "Resource Fixes Lite",
-  
   "rpo.resFixesLite.fixes": "Fixes",
   "rpo.resFixesLite.fixes.lite": "Lite",
+  "rpo.resFixesLite.fixes.normal": "Normal",
+  "rpo.resFixesLite.fixes.textured": "Textured",
+  "rpo.resFixesLite.tweaks": "Tweaks",
+  "rpo.resFixesLite.tweaks.normal": "Normal",
+  "rpo.resFixesLite.tweaks.external": "External",
   "rpo.resFixesLite.fixes.lite.handheldArrow": "Handheld Arrow",
+  "rpo.resFixesLite.fixes.lite.handheldArrow.tooltip": "Fix MC-201808",
   "rpo.resFixesLite.fixes.lite.randomRotate": "Block random rotate",
-  "rpo.resFixesLite.fixes.lite.ebeMod": "Minor optimize Enhanced Block Entities mod",
-  "rpo.resFixesLite.fixes.lite.farmersDelightMod": "Minor optimize Farmer's Delight mod"
+  "rpo.resFixesLite.fixes.lite.randomRotate.tooltip": "Clay, Coarse Dirt, Crimson & Warped Nylium, Gravel, block randomly rotate (partial fix of MC-144914)",
+  "rpo.resFixesLite.fixes.lite.ebeMod": "Enhanced Block Entities mod",
+  "rpo.resFixesLite.fixes.lite.ebeMod.tooltip": "Minor optimize to Enhanced Block Entities mod",
+  "rpo.resFixesLite.fixes.lite.farmersDelightMod": "Farmer's Delight mod",
+  "rpo.resFixesLite.fixes.lite.farmersDelightMod.tooltip": "Minor optimize to Farmer's Delight mod"
 }

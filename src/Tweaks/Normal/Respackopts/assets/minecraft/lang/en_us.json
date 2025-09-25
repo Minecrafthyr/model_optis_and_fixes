@@ -1,14 +1,20 @@
 {
-  "rpo.resTweaksNormal": "Resource Tweaks",
-  
-  "rpo.resFixesTextured.fixes": "Fixes",
+  "rpo.resTweaksNormal": "Resource Tweaks Normal",
+  "rpo.resTweaksNormal.fixes": "Fixes",
   "rpo.resTweaksNormal.fixes.lite": "Lite",
-  "rpo.resTweaksNormal.fixes.lite.handheldArrow": "Handheld Arrow",
-  "rpo.resTweaksNormal.fixes.lite.randomRotate": "Block random rotate",
-  "rpo.resTweaksNormal.fixes.lite.ebeMod": "Minor optimize Enhanced Block Entities mod",
-  "rpo.resTweaksNormal.fixes.lite.farmersDelightMod": "Minor optimize Farmer's Delight mod",
-  
   "rpo.resTweaksNormal.fixes.normal": "Normal",
+  "rpo.resTweaksNormal.fixes.textured": "Textured",
+  "rpo.resTweaksNormal.tweaks": "Tweaks",
+  "rpo.resTweaksNormal.tweaks.normal": "Normal",
+  "rpo.resTweaksNormal.tweaks.external": "External",
+  "rpo.resTweaksNormal.fixes.lite.handheldArrow": "Handheld Arrow",
+  "rpo.resTweaksNormal.fixes.lite.handheldArrow.tooltip": "Fix MC-201808",
+  "rpo.resTweaksNormal.fixes.lite.randomRotate": "Block random rotate",
+  "rpo.resTweaksNormal.fixes.lite.randomRotate.tooltip": "Clay, Coarse Dirt, Crimson & Warped Nylium, Gravel, block randomly rotate (partial fix of MC-144914)",
+  "rpo.resTweaksNormal.fixes.lite.ebeMod": "Enhanced Block Entities mod",
+  "rpo.resTweaksNormal.fixes.lite.ebeMod.tooltip": "Minor optimize to Enhanced Block Entities mod",
+  "rpo.resTweaksNormal.fixes.lite.farmersDelightMod": "Farmer's Delight mod",
+  "rpo.resTweaksNormal.fixes.lite.farmersDelightMod.tooltip": "Minor optimize to Farmer's Delight mod",
   "rpo.resTweaksNormal.fixes.normal.block": "Block item improvements",
   "rpo.resTweaksNormal.fixes.normal.button": "Button item improvements",
   "rpo.resTweaksNormal.fixes.normal.cake": "3D Cake item",
@@ -18,9 +24,7 @@
   "rpo.resTweaksNormal.fixes.normal.conduit": "Conduit item improvements",
   "rpo.resTweaksNormal.fixes.normal.hopper": "3D Hopper item",
   "rpo.resTweaksNormal.fixes.normal.skull": "Skull item improvements",
-  
-  "rpo.resTweaksNormal.tweaks": "Tweaks",
-  "rpo.resTweaksNormal.tweaks.normal": "Normal",
+  "rpo.resTweaksNormal.fixes.normal.biggerInGui": "Some items bigger in GUI",
   "rpo.resTweaksNormal.tweaks.normal.brewingStand": "3D Brewing Stand item",
   "rpo.resTweaksNormal.tweaks.normal.candle": "3D Candles item",
   "rpo.resTweaksNormal.tweaks.normal.crossCorrection": "Cross Model correction",
@@ -39,9 +43,11 @@
   "rpo.resTweaksNormal.tweaks.normal.redstoneDust": "3D Redstone Dust",
   "rpo.resTweaksNormal.tweaks.normal.sculkSensor": "Better Sculk Sensor Swing",
   "rpo.resTweaksNormal.tweaks.normal.snifferEgg": "3D Sniffer Egg item",
-  "rpo.resTweaksNormal.tweaks.normal.torch": "3D Torch item",
+  "rpo.resTweaksNormal.tweaks.normal.turtleEgg": "3D Turtle Egg item",
+  "rpo.resTweaksNormal.tweaks.normal.campfire": "3D Campfire item",
   "rpo.resTweaksNormal.tweaks.normal.tripwireHook": "3D Tripwire Hook item",
   "rpo.resTweaksNormal.tweaks.normal.unlitRedstoneOre": "Unlit Redstone Ore",
   "rpo.resTweaksNormal.tweaks.normal.newTorches": "New Torches",
-  "rpo.resTweaksNormal.tweaks.normal.shadeless": "Some blocks shadeless"
+  "rpo.resTweaksNormal.tweaks.normal.shadeless": "Some blocks shadeless",
+  "rpo.resTweaksNormal.tweaks.normal.shadeless.tooltip": "Light blocks, etc."
 }

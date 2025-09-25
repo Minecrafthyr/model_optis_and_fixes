@@ -1,0 +1,212 @@
+{
+  "base_translates": {
+    "en_us": {
+      "fixes": "Fixes",
+      "fixes.lite": "Lite",
+      "fixes.normal": "Normal",
+      "fixes.textured": "Textured",
+      "tweaks": "Tweaks",
+      "tweaks.normal": "Normal",
+      "tweaks.external": "External"
+    },
+    "zh_cn": {
+      "fixes": "修复",
+      "fixes.lite": "轻量",
+      "fixes.normal": "一般",
+      "fixes.textured": "纹理",
+      "tweaks": "调整",
+      "tweaks.normal": "一般",
+      "tweaks.external": "外部"
+    }
+  },
+  "list": [
+    {
+      "pack": "Fixes",
+      "variant": "Lite",
+      "conf": {
+        "handheldArrow": true,
+        "randomRotate": true,
+        "ebeMod": true,
+        "farmersDelightMod": true
+      },
+      "translates": {
+        "en_us": {
+          "handheldArrow": "Handheld Arrow",
+          "handheldArrow.tooltip": "Fix MC-201808",
+          "randomRotate": "Block random rotate",
+          "randomRotate.tooltip": "Clay, Coarse Dirt, Crimson & Warped Nylium, Gravel, block randomly rotate (partial fix of MC-144914)",
+          "ebeMod": "Enhanced Block Entities mod",
+          "ebeMod.tooltip": "Minor optimize to Enhanced Block Entities mod",
+          "farmersDelightMod": "Farmer's Delight mod",
+          "farmersDelightMod.tooltip": "Minor optimize to Farmer's Delight mod"
+        },
+        "zh_cn": {
+          "handheldArrow": "手持箭",
+          "handheldArrow.tooltip": "修复 MC-201808",
+          "randomRotate": "方块随机旋转",
+          "randomRotate.tooltip": "粘土，砂土，绯红和诡异菌岩，沙砾方块随机旋转（部分修复 MC-144914）",
+          "ebeMod": "方块实体增强（Enhanced Block Entities）模组",
+          "ebeMod.tooltip": "微量优化方块实体增强模组",
+          "farmersDelightMod": "农夫乐事（Farmer's Delight）模组",
+          "farmersDelightMod.tooltip": "微量优化农夫乐事模组"
+        }
+      }
+    },
+    {
+      "variant": "Normal",
+      "conf": {
+        "block": true,
+        "button": true,
+        "cake": true,
+        "cauldron": true,
+        "chorusPlant": true,
+        "comparatorAndRepeater": true,
+        "conduit": true,
+        "hopper": true,
+        "skull": true,
+        "biggerInGui": true
+      },
+      "translates": {
+        "en_us": {
+          "block": "Block item improvements",
+          "button": "Button item improvements",
+          "cake": "3D Cake item",
+          "cauldron": "3D Cauldron item",
+          "chorusPlant": "Chorus Plant item improvements",
+          "comparatorAndRepeater": "3D Comparator & Repeater item",
+          "conduit": "Conduit item improvements",
+          "hopper": "3D Hopper item",
+          "skull": "Skull item improvements",
+          "biggerInGui": "Some items bigger in GUI"
+        },
+        "zh_cn": {
+          "block": "方块物品改进",
+          "button": "按钮物品改进",
+          "cake": "三维蛋糕物品",
+          "cauldron": "三维炼药锅物品",
+          "chorusPlant": "紫颂植物物品改进",
+          "comparatorAndRepeater": "三维比较器和中续器物品",
+          "conduit": "潮涌核心物品改进",
+          "hopper": "三维漏斗物品",
+          "skull": "头颅物品改进",
+          "biggerInGui": "部分物品在图形用户界面更大"
+        }
+      }
+    },
+    {"variant": "Textured"},
+    {
+      "pack": "Tweaks",
+      "variant": "Normal",
+      "conf": {
+        "brewingStand": true,
+        "candle": true,
+        "crossCorrection": false,
+        "endRod": true,
+        "fastBetterGrass": true,
+        "flowerPot": true,
+        "ladder": ["normal", "thin", "thick", "off"],
+        "lantern": ["on", "noHandheld", "off"],
+        "lever": true,
+        "moistFarmland": true,
+        "pointedDripstone": true,
+        "redstoneDust": true,
+        "sculkSensor": true,
+        "snifferEgg": true,
+        "newTorches": ["on", "noHandheld", "off"],
+        "tripwireHook": true,
+        "unlitRedstoneOre": true,
+        "shadeless": true,
+        "campfire": true,
+        "turtleEgg": true
+      },
+      "translates": {
+        "en_us": {
+          "brewingStand": "3D Brewing Stand item",
+          "candle": "3D Candles item",
+          "crossCorrection": "Cross Model correction",
+          "endRod": "End rod item improvements",
+          "fastBetterGrass": "Fast Better Grass",
+          "flowerPot": "3D Flower Pot item",
+          "ladder": "3D Ladder block",
+          "ladder.thin": "Thin (1 pixel width)",
+          "ladder.normal": "Normal (2 pixel width)",
+          "ladder.thick": "Thick (3 pixel width)",
+          "ladder.off": "Off",
+          "lantern": "Lantern improvements",
+          "lever": "3D Lever item",
+          "moistFarmland": "Farmland moisture visualize",
+          "pointedDripstone": "3D Pointed Dripstone",
+          "redstoneDust": "3D Redstone Dust",
+          "sculkSensor": "Better Sculk Sensor Swing",
+          "snifferEgg": "3D Sniffer Egg item",
+          "turtleEgg": "3D Turtle Egg item",
+          "campfire": "3D Campfire item",
+          "tripwireHook": "3D Tripwire Hook item",
+          "unlitRedstoneOre": "Unlit Redstone Ore",
+          "newTorches": "New Torches",
+          "shadeless": "Some blocks shadeless",
+          "shadeless.tooltip": "Light blocks, etc."
+        },
+        "zh_cn": {
+          "brewingStand": "三维炼药台物品",
+          "candle": "三维蜡烛物品",
+          "crossCorrection": "交叉模型修正",
+          "endRod": "末地烛物品改进",
+          "fastBetterGrass": "快速的更好草",
+          "flowerPot": "三维花盆物品",
+          "ladder": "三维梯子方块",
+          "ladder.thin": "薄（1像素宽）",
+          "ladder.normal": "正常（2像素宽）",
+          "ladder.thick": "厚（3像素宽）",
+          "ladder.off": "关",
+          "lantern": "灯笼改进",
+          "lever": "三维拉杆物品",
+          "moistFarmland": "耕地潮湿可视化",
+          "pointedDripstone": "三维滴水石锥",
+          "redstoneDust": "三维红石粉",
+          "sculkSensor": "更好的幽匿传感器摆动",
+          "snifferEgg": "三维嗅探兽蛋物品",
+          "turtleEgg": "三维海龟蛋物品",
+          "campfire": "三维营火物品",
+          "tripwireHook": "三维绊线钩物品",
+          "unlitRedstoneOre": "熄灭的红石矿石",
+          "newTorches": "新型火把",
+          "shadeless": "部分方块无阴影",
+          "shadeless.tooltip": "如光源方块"
+        }
+      }
+    },
+    {
+      "variant": "External",
+      "conf": {
+        "chain": true,
+        "cobweb": true,
+        "gildedBlackstone": true,
+        "mushroom": true,
+        "lilyPad": true,
+        "ore": true,
+        "bed": true
+      },
+      "translates": {
+        "en_us": {
+          "chain": "3D Chain (including Hanging Signs and Lanterns)",
+          "cobweb": "3D Cobweb",
+          "mushroom": "3D Mushrooms & Fungus (including pots)",
+          "bed": "3D Bed improvements",
+          "lilyPad": "3D Lily Pad",
+          "ore": "3D Ores",
+          "gildedBlackstone": "3D Gilded Blackstone"
+        },
+        "zh_cn": {
+          "chain": "三维链条（包含悬挂式告示牌和灯笼）",
+          "cobweb": "三维蜘蛛网",
+          "mushroom": "三维蘑菇和下界菌（包括盆栽）",
+          "bed": "三维床改进",
+          "lilyPad": "三维睡莲",
+          "ore": "三维矿石",
+          "gildedBlackstone": "三维镶金黑石"
+        }
+      }
+    }
+  ]
+}

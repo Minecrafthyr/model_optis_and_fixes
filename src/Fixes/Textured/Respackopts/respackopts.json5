@@ -1,28 +1,29 @@
 {
-	"id": "resFixesTextured",
-	"version": 13,
-	"capabilities": [
-		"FileFilter"
-	],
-	"conf": {
-		"fixes": {
-			"lite": {
-				"randomRotate": true,
-				"handheldArrow": true,
-				"ebeMod": true,
-				"farmersDelightMod": true
-			},
-			"normal": {
-				"block": true,
-				"button": true,
-				"cake": true,
-				"cauldron": true,
-				"chorusPlant": true,
-				"comparatorAndRepeater": true,
-				"conduit": true,
-				"hopper": true,
-				"skull": true
-			}
-		}
-	}
+  "id": "resFixesTextured",
+  "version": 13,
+  "capabilities": [
+    "FileFilter"
+  ],
+  "conf": {
+    "fixes": {
+      "lite": {
+        "handheldArrow": true,
+        "randomRotate": true,
+        "ebeMod": true,
+        "farmersDelightMod": true
+      },
+      "normal": {
+        "block": true,
+        "button": true,
+        "cake": true,
+        "cauldron": true,
+        "chorusPlant": true,
+        "comparatorAndRepeater": true,
+        "conduit": true,
+        "hopper": true,
+        "skull": true,
+        "biggerInGui": true
+      }
+    }
+  }
 }

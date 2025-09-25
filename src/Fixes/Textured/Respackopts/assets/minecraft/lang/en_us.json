@@ -1,14 +1,20 @@
 {
   "rpo.resFixesTextured": "Resource Fixes Textured",
-
   "rpo.resFixesTextured.fixes": "Fixes",
   "rpo.resFixesTextured.fixes.lite": "Lite",
-  "rpo.resFixesTextured.fixes.lite.handheldArrow": "Handheld Arrow",
-  "rpo.resFixesTextured.fixes.lite.randomRotate": "Block random rotate",
-  "rpo.resFixesTextured.fixes.lite.ebeMod": "Minor optimize Enhanced Block Entities mod",
-  "rpo.resFixesTextured.fixes.lite.farmersDelightMod": "Minor optimize Farmer's Delight mod",
-
   "rpo.resFixesTextured.fixes.normal": "Normal",
+  "rpo.resFixesTextured.fixes.textured": "Textured",
+  "rpo.resFixesTextured.tweaks": "Tweaks",
+  "rpo.resFixesTextured.tweaks.normal": "Normal",
+  "rpo.resFixesTextured.tweaks.external": "External",
+  "rpo.resFixesTextured.fixes.lite.handheldArrow": "Handheld Arrow",
+  "rpo.resFixesTextured.fixes.lite.handheldArrow.tooltip": "Fix MC-201808",
+  "rpo.resFixesTextured.fixes.lite.randomRotate": "Block random rotate",
+  "rpo.resFixesTextured.fixes.lite.randomRotate.tooltip": "Clay, Coarse Dirt, Crimson & Warped Nylium, Gravel, block randomly rotate (partial fix of MC-144914)",
+  "rpo.resFixesTextured.fixes.lite.ebeMod": "Enhanced Block Entities mod",
+  "rpo.resFixesTextured.fixes.lite.ebeMod.tooltip": "Minor optimize to Enhanced Block Entities mod",
+  "rpo.resFixesTextured.fixes.lite.farmersDelightMod": "Farmer's Delight mod",
+  "rpo.resFixesTextured.fixes.lite.farmersDelightMod.tooltip": "Minor optimize to Farmer's Delight mod",
   "rpo.resFixesTextured.fixes.normal.block": "Block item improvements",
   "rpo.resFixesTextured.fixes.normal.button": "Button item improvements",
   "rpo.resFixesTextured.fixes.normal.cake": "3D Cake item",
@@ -17,5 +23,6 @@
   "rpo.resFixesTextured.fixes.normal.comparatorAndRepeater": "3D Comparator & Repeater item",
   "rpo.resFixesTextured.fixes.normal.conduit": "Conduit item improvements",
   "rpo.resFixesTextured.fixes.normal.hopper": "3D Hopper item",
-  "rpo.resFixesNormal.fixes.normal.skull": "Skull item improvements"
+  "rpo.resFixesTextured.fixes.normal.skull": "Skull item improvements",
+  "rpo.resFixesTextured.fixes.normal.biggerInGui": "Some items bigger in GUI"
 }

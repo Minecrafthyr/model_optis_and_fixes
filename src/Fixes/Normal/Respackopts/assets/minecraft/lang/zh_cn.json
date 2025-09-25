@@ -1,14 +1,20 @@
 {
-  "rpo.resFixesNormal": "资源修复",
-
+  "rpo.resFixesNormal": "Resource Fixes Normal",
   "rpo.resFixesNormal.fixes": "修复",
   "rpo.resFixesNormal.fixes.lite": "轻量",
-  "rpo.resFixesNormal.fixes.lite.handheldArrow": "手持箭",
-  "rpo.resFixesNormal.fixes.lite.randomRotate": "方块随机旋转",
-  "rpo.resFixesNormal.fixes.lite.ebeMod": "微小优化方块实体增强(Enhanced Block Entities)模组",
-  "rpo.resFixesNormal.fixes.lite.farmersDelightMod": "微小优化农夫乐事(Farmer's Delight)模组",
- 
   "rpo.resFixesNormal.fixes.normal": "一般",
+  "rpo.resFixesNormal.fixes.textured": "纹理",
+  "rpo.resFixesNormal.tweaks": "调整",
+  "rpo.resFixesNormal.tweaks.normal": "一般",
+  "rpo.resFixesNormal.tweaks.external": "外部",
+  "rpo.resFixesNormal.fixes.lite.handheldArrow": "手持箭",
+  "rpo.resFixesNormal.fixes.lite.handheldArrow.tooltip": "修复 MC-201808",
+  "rpo.resFixesNormal.fixes.lite.randomRotate": "方块随机旋转",
+  "rpo.resFixesNormal.fixes.lite.randomRotate.tooltip": "粘土，砂土，绯红和诡异菌岩，沙砾方块随机旋转（部分修复 MC-144914）",
+  "rpo.resFixesNormal.fixes.lite.ebeMod": "方块实体增强（Enhanced Block Entities）模组",
+  "rpo.resFixesNormal.fixes.lite.ebeMod.tooltip": "微量优化方块实体增强模组",
+  "rpo.resFixesNormal.fixes.lite.farmersDelightMod": "农夫乐事（Farmer's Delight）模组",
+  "rpo.resFixesNormal.fixes.lite.farmersDelightMod.tooltip": "微量优化农夫乐事模组",
   "rpo.resFixesNormal.fixes.normal.block": "方块物品改进",
   "rpo.resFixesNormal.fixes.normal.button": "按钮物品改进",
   "rpo.resFixesNormal.fixes.normal.cake": "三维蛋糕物品",
@@ -16,5 +22,7 @@
   "rpo.resFixesNormal.fixes.normal.chorusPlant": "紫颂植物物品改进",
   "rpo.resFixesNormal.fixes.normal.comparatorAndRepeater": "三维比较器和中续器物品",
   "rpo.resFixesNormal.fixes.normal.conduit": "潮涌核心物品改进",
-  "rpo.resFixesNormal.fixes.normal.hopper": "三维漏斗物品"
+  "rpo.resFixesNormal.fixes.normal.hopper": "三维漏斗物品",
+  "rpo.resFixesNormal.fixes.normal.skull": "头颅物品改进",
+  "rpo.resFixesNormal.fixes.normal.biggerInGui": "部分物品在图形用户界面更大"
 }

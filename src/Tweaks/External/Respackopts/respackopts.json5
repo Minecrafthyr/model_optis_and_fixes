@@ -1,73 +1,75 @@
 {
-	"id": "resTweaksExternal",
-	"version": 13,
-	"capabilities": [
-		"FileFilter"
-	],
-	"conf": {
-		"fixes": {
-			"lite": {
-				"randomRotate": true,
-				"handheldArrow": true,
-				"ebeMod": true,
-				"farmersDelightMod": true
-			},
-			"normal": {
-				"block": true,
-				"button": true,
-				"cake": true,
-				"cauldron": true,
-				"chorusPlant": true,
-				"comparatorAndRepeater": true,
-				"conduit": true,
-				"hopper": true,
-				"skull": true
-			}
-		},
-		"tweaks": {
-			"normal": {
-				"brewingStand": true,
-				"candle": true,
-				"crossCorrection": false,
-				"endRod": true,
-				"fastBetterGrass": true,
-				"flowerPot": true,
-				"ladder": [
-					"normal",
-					"thin",
-					"thick",
-					"off"
-				],
-				"lantern": [
-					"on",
-					"noHandheld",
-					"off"
-				],
-				"lever": true,
-				"moistFarmland": true,
-				"pointedDripstone": true,
-				"redstoneDust": true,
-				"sculkSensor": true,
-				"snifferEgg": true,
-				"newTorches": [
-					"on",
-					"noHandheld",
-					"off"
-				],
-				"tripwireHook": true,
-				"unlitRedstoneOre": true,
-				"shadeless": true,
-				"campfire": true,
-				"turtleEgg": true
-			},
-			"external": {
-				"chain": true,
-				"cobweb": true,
-				"gildedBlackstone": true,
-				"mushroom": true,
-				"lilyPad": true,
-				"ore": true
-			}
-		}
-	}
+  "id": "resTweaksExternal",
+  "version": 13,
+  "capabilities": [
+    "FileFilter"
+  ],
+  "conf": {
+    "fixes": {
+      "lite": {
+        "handheldArrow": true,
+        "randomRotate": true,
+        "ebeMod": true,
+        "farmersDelightMod": true
+      },
+      "normal": {
+        "block": true,
+        "button": true,
+        "cake": true,
+        "cauldron": true,
+        "chorusPlant": true,
+        "comparatorAndRepeater": true,
+        "conduit": true,
+        "hopper": true,
+        "skull": true,
+        "biggerInGui": true
+      }
+    },
+    "tweaks": {
+      "normal": {
+        "brewingStand": true,
+        "candle": true,
+        "crossCorrection": false,
+        "endRod": true,
+        "fastBetterGrass": true,
+        "flowerPot": true,
+        "ladder": [
+          "normal",
+          "thin",
+          "thick",
+          "off"
+        ],
+        "lantern": [
+          "on",
+          "noHandheld",
+          "off"
+        ],
+        "lever": true,
+        "moistFarmland": true,
+        "pointedDripstone": true,
+        "redstoneDust": true,
+        "sculkSensor": true,
+        "snifferEgg": true,
+        "newTorches": [
+          "on",
+          "noHandheld",
+          "off"
+        ],
+        "tripwireHook": true,
+        "unlitRedstoneOre": true,
+        "shadeless": true,
+        "campfire": true,
+        "turtleEgg": true
+      },
+      "external": {
+        "chain": true,
+        "cobweb": true,
+        "gildedBlackstone": true,
+        "mushroom": true,
+        "lilyPad": true,
+        "ore": true,
+        "bed": true
+      }
+    }
+  }
 }

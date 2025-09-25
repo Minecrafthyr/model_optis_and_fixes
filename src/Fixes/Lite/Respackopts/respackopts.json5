@@ -1,17 +1,17 @@
 {
-	"id": "resFixesLite",
-	"version": 13,
-	"capabilities": [
-		"FileFilter"
-	],
-	"conf": {
-		"fixes": {
-			"lite": {
-				"randomRotate": true,
-				"handheldArrow": true,
-				"ebeMod": true,
-				"farmersDelightMod": true
-			}
-		}
-	}
+  "id": "resFixesLite",
+  "version": 13,
+  "capabilities": [
+    "FileFilter"
+  ],
+  "conf": {
+    "fixes": {
+      "lite": {
+        "handheldArrow": true,
+        "randomRotate": true,
+        "ebeMod": true,
+        "farmersDelightMod": true
+      }
+    }
+  }
 }

@@ -1,3 +1,13 @@
+### Version 9.6
+
+- Use a python script generate Respackopts options, for keep consistent in different variants.
+
+#### Resource Fixes
+
+Normal variant
+
+- Add "Some items bigger in GUI" option.
+
 ### Version 9.5
 
 #### Resource Tweaks
