@@ -11,8 +11,8 @@
 
 > FPS Boost?
 
-- Resource Fixes Lite | Normal | Textured: ✔️ (in some cases; depends on block type and count).
-- Resource Tweaks Normal | External: ❌️ (some models slow downs).
+- Resource Fixes Lite|Normal|Textured|Simplified: ✔️ (in some cases; depends on block type and count).
+- Resource Tweaks Normal|External: ❌️ (some models slow downs).
 
 ## Variants
 
@@ -239,7 +239,6 @@ _Notice: may not contains all features in original pack because visual balance._
 ### Suggestions
 
 - [3D Particles](https://modrinth.com/resourcepack/3d-particles)
-- [AL's 3D Potions](https://modrinth.com/resourcepack/als-3d-potions)
 - [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp)
 - [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
 - [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
