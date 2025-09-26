@@ -1,1 +1,4 @@
-{"condition": "fixes.normal.block"}
+{
+  "condition": "fixes.normal.biggerInGui",
+  "fallback": "assets/res_fixes/models/block/fallback/template_lightning_rod.json"
+}

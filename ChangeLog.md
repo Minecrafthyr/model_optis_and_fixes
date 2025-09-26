@@ -1,3 +1,11 @@
+### Version 9.7
+
+#### Resource Fixes
+
+Normal variant
+
+- Make Lighting Rod use "Some items bigger in GUI" option instead of Block improvements, and it will fallback to a correct model.
+
 ### Version 9.6
 
 - Use a python script generate Respackopts options, for keep consistent in different variants.

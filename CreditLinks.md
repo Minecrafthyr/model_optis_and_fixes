@@ -17,7 +17,6 @@
 - [Natural_Firefly_Bushes](src/Tweaks/Normal/Natural_Firefly_Bushes/Credits/Tweaks.Normal.Natural_Firefly_Bushes.md) for file [Natural Firefly Bushes 1.0.zip](src/Tweaks/Normal/Natural%20Firefly%20Bushes%201.0.zip)
 - [Tasty_Items](src/Tweaks/Normal/Tasty_Items/Credits/Tweaks.Normal.Tasty_Items.md) for file [Tasty_Items-v1.2.zip](src/Tweaks/Normal/Tasty_Items-v1.2.zip)
 
-
 #### External
 
 - [3D_Default](src/Tweaks/External/3D_Default/Credits/Tweaks.External.3D_Default.md) for file [3D Default 1.21.2+ v1.12.1.zip](src/Tweaks/External/3D%20Default%201.21.2+%20v1.12.1.zip)

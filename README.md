@@ -1,5 +1,5 @@
-- Version: 9.6
-- Game versions: 1.14.4-1.21.9 (pre4)
+- Version: 9.7
+- Game versions: 1.14.4-1.21.9
 - Project Links:
   - [Modrinth](https://modrinth.com/project/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
