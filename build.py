@@ -242,6 +242,7 @@ def moving(opath: str, cfg: Config, ii: InputInfo) -> str:
         cfg.log_debug('Moved "%s" to "%s"', opath, mpath)
     return mpath or opath
 
+
 def store_file(
     storage: BytesDict,
     cfg: Config,
@@ -327,6 +328,7 @@ def cfg_tree(
                 storage.pop(k)
 
         inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
+        extra_out = tree.get("extra_out", True)
 
         for ii in get_inputs(inputs, None, None, cfg):
             if os.path.isdir(ii.path):
@@ -337,7 +339,6 @@ def cfg_tree(
                 cfg.log_error(f"{ii.path} is not dir or file")
 
         def on_output():
-
             filepath = Path(tree["output"] + ".zip")
             out_path = Path(cfg.out_dir, filepath)
 
@@ -358,7 +359,8 @@ def cfg_tree(
                 len(storage),
                 out_path.stat().st_size >> 10,
             )
-
+            if not extra_out:
+                return
             if isinstance(cfg.extra_out_dirs, list):
                 for extra_out_dir in cfg.extra_out_dirs:
                     shutil.copy(out_path, extra_out_dir)
@@ -377,7 +379,6 @@ def cfg_tree(
                 cfg_tree(cfg, children, storage.copy())
 
         if "children" in tree and "output" in tree:
-
             th = Thread(target=on_children)
             th.start()
             on_output()

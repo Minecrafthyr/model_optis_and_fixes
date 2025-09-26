@@ -32,6 +32,7 @@ ENCODER = json.JSONEncoder(indent=2, ensure_ascii=False)
 def write_files():
     name = f"res{pack}{variant}"
     tname = "rpo." + name
+    os.makedirs(f"{pack}/{variant}/Respackopts/assets/minecraft/lang",exist_ok=True)
     with open(
         f"{pack}/{variant}/Respackopts/respackopts.json5", "w", encoding="utf-8"
     ) as c:

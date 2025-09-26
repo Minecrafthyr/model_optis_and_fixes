@@ -1,5 +1,5 @@
 {
-	"parent": "res_fixes:block/template/shadeless_plane/full",
+	"parent": "res_fixes:block/shadeless_plane/full",
 	"textures": {
 		"texture": "block/resin_clump"
 	}

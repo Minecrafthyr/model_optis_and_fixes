@@ -1,0 +1,31 @@
+{
+  "format_version": "1.21.6",
+  "credit": "Made with Blockbench by Minecraft_hyr",
+  "parent": "block/block",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "#propagule"
+  },
+  "elements": [
+    {
+      "from": [5, 0, 8],
+      "to": [11, 16, 8],
+      "shade": false,
+      "rotation": {"angle": -45, "axis": "y", "origin": [8, 16, 8], "rescale": true},
+      "faces": {
+        "north": {"uv": [5, 0, 11, 16], "texture": "#propagule"},
+        "south": {"uv": [5, 0, 11, 16], "texture": "#propagule"}
+      }
+    },
+    {
+      "from": [5, 0, 8],
+      "to": [11, 16, 8],
+      "shade": false,
+      "rotation": {"angle": 45, "axis": "y", "origin": [8, 16, 8], "rescale": true},
+      "faces": {
+        "north": {"uv": [5, 0, 11, 16], "texture": "#propagule"},
+        "south": {"uv": [5, 0, 11, 16], "texture": "#propagule"}
+      }
+    }
+  ]
+}

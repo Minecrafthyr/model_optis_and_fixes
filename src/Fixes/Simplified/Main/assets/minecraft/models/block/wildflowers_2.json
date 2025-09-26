@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/plane/floor",
+  "textures": {
+    "texture": "simplified:block/wildflowers_2"
+  }
+}

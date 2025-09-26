@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/tinted_plane/floor",
+  "textures": {
+    "texture": "simplified:block/leaf_litter_3"
+  }
+}

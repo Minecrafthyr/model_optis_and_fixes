@@ -1,5 +1,5 @@
 {
-	"parent": "res_fixes:block/template/shadeless_plane/side",
+	"parent": "res_fixes:block/shadeless_plane/side",
 	"textures": {
 		"texture": "block/sculk_vein"
 	}

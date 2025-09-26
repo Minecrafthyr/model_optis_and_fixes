@@ -1,0 +1,21 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"particle": "block/dragon_egg",
+		"all": "block/dragon_egg"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 16, 15],
+			"faces": {
+				"north": {"texture": "#all"},
+				"east": {"texture": "#all"},
+				"south": {"texture": "#all"},
+				"west": {"texture": "#all"},
+				"up": {"texture": "#all"},
+				"down": {"texture": "#all"}
+			}
+		}
+	]
+}

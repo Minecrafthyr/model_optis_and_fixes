@@ -1,5 +1,5 @@
 {
-	"parent": "res_fixes:block/template/shadeless_plane/floor",
+	"parent": "res_fixes:block/shadeless_plane/floor",
 	"textures": {
 			"texture": "#rail"
 	}

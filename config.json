@@ -19,7 +19,8 @@
       "Library/Cube_Inner_Faces",
       "Library/Empty_Texture",
       "Library/Item_Offset",
-      "Library/Shadeless"
+      "Library/Shadeless",
+      "Library/Plane"
     ],
     "children": {
       "inputs": {
@@ -89,93 +90,105 @@
             ]
           },
           "output": "Resource Fixes Textured",
-          "children": {
-            "inputs": {
-              "path": "Tweaks/Normal",
-              "extras": [
-                "Consistent_Planes",
-                "3D_Bars",
-                "3D_Ladder",
-                "3D_Ladder.Respackopts",
-                "3D_Pointed_Dripstone",
-                "3D_Pointed_Dripstone.Respackopts",
-                "3D_Redstone_Dust",
-                "3D_Redstone_Dust.Respackopts",
-                "Axolotl_Bucket_Variants",
-                "Better_Animation",
-                "Better_Copper_Grate",
-                "Cross_Correction",
-                "Cross_Correction.Respackopts",
-                "Better_Fire",
-                "Better_Leaves",
-                "Better_Particles",
-                "Better_Sculk_Sensor_Swing",
-                "Better_Sculk_Sensor_Swing.Respackopts",
-                "Better_Weather",
-                "Clean_Water",
-                "Display",
-                "Display.Respackopts",
-                "Display.Candle",
-                "Display.Candle.Respackopts",
-                "Fast_Better_Grass",
-                "Fast_Better_Grass.Respackopts",
-                "Language_Tweaks",
-                "Lantern",
-                "Lantern.Respackopts",
-                "Mirrored_Pumpkin_Blur",
-                "Misc_Blockstates",
-                "Misc_Blockstates.Respackopts",
-                "Moist_Farmland",
-                "Moist_Farmland.Respackopts",
-                "New_Torches",
-                "New_Torches.Respackopts",
-                "Particle_Tweaks",
-                "Respackopts",
-                "Sandstone_Tweaks",
-                "Shadeless",
-                "Shadeless.Respackopts",
-                "Square_Shadow",
-                "Unlit_Redstone_Ore",
-                "Unlit_Redstone_Ore.Respackopts",
-                "Wide_Bamboo",
-                {
-                  "path": "Natural Firefly Bushes 1.0.zip",
-                  "excludes": [
-                    "pack.png",
-                    "pack.mcmeta"
-                  ]
-                },
-                "Natural_Firefly_Bushes",
-                {
-                  "path": "Tasty_Items-v1.2.zip",
-                  "excludes": [
-                    "credits.txt",
-                    "pack.png",
-                    "pack.mcmeta"
-                  ]
-                },
-                "Tasty_Items"
-              ]
+          "children": [
+            {
+              "inputs": {
+                "path": "Fixes/Simplified",
+                "extras": [
+                  "Main",
+                  "Respackopts"
+                ]
+              },
+              "output": "Resource Fixes Simplified"
             },
-            "output": "Resource Tweaks",
-            "children": {
-              "removes": [
-                {
-                  "path": "assets/minecraft/models/block/",
-                  "extras": [
-                    "calibrated_sculk_sensor.json",
-                    "calibrated_sculk_sensor_active.json",
-                    "calibrated_sculk_sensor_inactive.json",
-                    "sculk_sensor.json",
-                    "sculk_sensor_active.json",
-                    "sculk_sensor_inactive.json"
-                  ]
-                }
-              ],
-              "inputs": "Tweaks/External/input_config.json",
-              "output": "Resource Tweaks External"
+            {
+              "inputs": {
+                "path": "Tweaks/Normal",
+                "extras": [
+                  "Consistent_Planes",
+                  "3D_Bars",
+                  "3D_Ladder",
+                  "3D_Ladder.Respackopts",
+                  "3D_Pointed_Dripstone",
+                  "3D_Pointed_Dripstone.Respackopts",
+                  "3D_Redstone_Dust",
+                  "3D_Redstone_Dust.Respackopts",
+                  "Axolotl_Bucket_Variants",
+                  "Better_Animation",
+                  "Better_Copper_Grate",
+                  "Cross_Correction",
+                  "Cross_Correction.Respackopts",
+                  "Better_Fire",
+                  "Better_Leaves",
+                  "Better_Particles",
+                  "Better_Sculk_Sensor_Swing",
+                  "Better_Sculk_Sensor_Swing.Respackopts",
+                  "Better_Weather",
+                  "Clean_Water",
+                  "Display",
+                  "Display.Respackopts",
+                  "Display.Candle",
+                  "Display.Candle.Respackopts",
+                  "Fast_Better_Grass",
+                  "Fast_Better_Grass.Respackopts",
+                  "Language_Tweaks",
+                  "Lantern",
+                  "Lantern.Respackopts",
+                  "Mirrored_Pumpkin_Blur",
+                  "Misc_Blockstates",
+                  "Misc_Blockstates.Respackopts",
+                  "Moist_Farmland",
+                  "Moist_Farmland.Respackopts",
+                  "New_Torches",
+                  "New_Torches.Respackopts",
+                  "Particle_Tweaks",
+                  "Respackopts",
+                  "Sandstone_Tweaks",
+                  "Shadeless",
+                  "Shadeless.Respackopts",
+                  "Square_Shadow",
+                  "Unlit_Redstone_Ore",
+                  "Unlit_Redstone_Ore.Respackopts",
+                  "Wide_Bamboo",
+                  {
+                    "path": "Natural Firefly Bushes 1.0.zip",
+                    "excludes": [
+                      "pack.png",
+                      "pack.mcmeta"
+                    ]
+                  },
+                  "Natural_Firefly_Bushes",
+                  {
+                    "path": "Tasty_Items-v1.2.zip",
+                    "excludes": [
+                      "credits.txt",
+                      "pack.png",
+                      "pack.mcmeta"
+                    ]
+                  },
+                  "Tasty_Items"
+                ]
+              },
+              "output": "Resource Tweaks",
+              "children": {
+                "removes": [
+                  {
+                    "path": "assets/minecraft/models/block/",
+                    "extras": [
+                      "calibrated_sculk_sensor.json",
+                      "calibrated_sculk_sensor_active.json",
+                      "calibrated_sculk_sensor_inactive.json",
+                      "sculk_sensor.json",
+                      "sculk_sensor_active.json",
+                      "sculk_sensor_inactive.json"
+                    ]
+                  }
+                ],
+                "inputs": "Tweaks/External/input_config.json",
+                "output": "Resource Tweaks External"
+              }
             }
-          }
+          ]
         }
       }
     }

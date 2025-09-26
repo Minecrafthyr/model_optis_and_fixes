@@ -27,6 +27,9 @@ Resource Fixes (optimize and fixes)
 - Textured variant  
   Using texture may conflict to other resourcepack.  
   Designed with Default resource style.
+- Simplified variant  
+  Simplified Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflowers, Dragon Egg block model.  
+  Resource Tweaks are **not affected**.
 
 Resource Tweaks (tweaks and improvements)
 
@@ -222,7 +225,8 @@ _Notice: may not contains all features in original pack because visual balance._
 
 - You can try resourcepack here, but may not compatible.
 - Work in progress:
-  - `Fixes.Normal.Block_Variants`: More block variants
+  - `Fixes.Simplified`: More simplified models.
+  - `Fixes.Normal.Block_Variants`: More block variants.
   - `Tweaks.Normal.Cross_Correction`: More random rotate & correction models.
   - `Tweaks.Normal.Particle_Tweaks`: More filled block particle texture.
 - Slowly embedding or implementing outside packs.

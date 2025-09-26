@@ -47,7 +47,7 @@ Array: [[Config Tree](#config-tree)]
 
 Object: {
 
-- `removes`: [Path Tree](#path-tree) that remove stored data in copied storage.
+- `removes`: [Path Tree](#path-tree) that remove stored data in copied storage start with `removes`.
 - `inputs`\*: [Input Tree](#input-tree) that put files into storage.
 - `output`: String that output stored data to a zip file at `{out_dir}/{output}.zip`
 - `children`: Config Tree that copy current stored data and entering.

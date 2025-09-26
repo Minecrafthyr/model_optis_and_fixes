@@ -1,0 +1,6 @@
+{
+  "parent": "simplified:block/mangrove_propagule_hanging",
+  "textures": {
+    "propagule": "simplified:block/mangrove_propagule_hanging_4"
+  }
+}

@@ -2,9 +2,19 @@
 
 #### Resource Fixes
 
+Lite variant
+
+- Correctly fix Hanging Mangrove Propagule model performance issue.
+
 Normal variant
 
 - Make Lighting Rod use "Some items bigger in GUI" option instead of Block improvements, and it will fallback to a correct model.
+
+Simplified variant (New)
+
+- This is a new variant relates to Textured variant. Resource Tweaks are **not affected**
+- Simplified Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflowers, Dragon Egg block model.
+- More model is planned.
 
 ### Version 9.6
 

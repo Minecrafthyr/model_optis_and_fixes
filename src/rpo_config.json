@@ -94,6 +94,7 @@
       }
     },
     {"variant": "Textured"},
+    {"variant": "Simplified"},
     {
       "pack": "Tweaks",
       "variant": "Normal",
