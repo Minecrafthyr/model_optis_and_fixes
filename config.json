@@ -1,5 +1,6 @@
 {
   "name": "Variants",
+  "src_dir": "src/",
   "out_dir": "out/Variants/",
   "log_level": "INFO",
   "default_merge": [

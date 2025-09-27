@@ -9,6 +9,8 @@
       "lite": {
         "handheldArrow": true,
         "randomRotate": true,
+        "vine": true,
+        "plane": true,
         "ebeMod": true,
         "farmersDelightMod": true
       }

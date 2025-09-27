@@ -14,5 +14,9 @@
   "rpo.resFixesLite.fixes.lite.ebeMod": "方块实体增强（Enhanced Block Entities）模组",
   "rpo.resFixesLite.fixes.lite.ebeMod.tooltip": "微量优化方块实体增强模组",
   "rpo.resFixesLite.fixes.lite.farmersDelightMod": "农夫乐事（Farmer's Delight）模组",
-  "rpo.resFixesLite.fixes.lite.farmersDelightMod.tooltip": "微量优化农夫乐事模组"
+  "rpo.resFixesLite.fixes.lite.farmersDelightMod.tooltip": "微量优化农夫乐事模组",
+  "rpo.resFixesLite.fixes.lite.vine": "藤蔓修复",
+  "rpo.resFixesLite.fixes.lite.vine.tooltip": "同时控制 调整.一般.一致平面（Consistent_Planes）",
+  "rpo.resFixesLite.fixes.lite.plane": "平面修复",
+  "rpo.resFixesLite.fixes.lite.plane.tooltip": "除藤蔓外的平面。同时控制 调整.一般.一致平面（Consistent_Planes）"
 }

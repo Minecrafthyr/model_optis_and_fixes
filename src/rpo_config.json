@@ -26,6 +26,8 @@
       "conf": {
         "handheldArrow": true,
         "randomRotate": true,
+        "vine": true,
+        "plane": true,
         "ebeMod": true,
         "farmersDelightMod": true
       },
@@ -38,7 +40,11 @@
           "ebeMod": "Enhanced Block Entities mod",
           "ebeMod.tooltip": "Minor optimize to Enhanced Block Entities mod",
           "farmersDelightMod": "Farmer's Delight mod",
-          "farmersDelightMod.tooltip": "Minor optimize to Farmer's Delight mod"
+          "farmersDelightMod.tooltip": "Minor optimize to Farmer's Delight mod",
+          "vine": "Vine Fix",
+          "vine.tooltip": "Also controls Tweaks.Normal.Consistent_Planes",
+          "plane": "Plane Fix",
+          "plane.tooltip": "Plane except Vine. Also controls Tweaks.Normal.Consistent_Planes"
         },
         "zh_cn": {
           "handheldArrow": "手持箭",
@@ -48,7 +54,11 @@
           "ebeMod": "方块实体增强（Enhanced Block Entities）模组",
           "ebeMod.tooltip": "微量优化方块实体增强模组",
           "farmersDelightMod": "农夫乐事（Farmer's Delight）模组",
-          "farmersDelightMod.tooltip": "微量优化农夫乐事模组"
+          "farmersDelightMod.tooltip": "微量优化农夫乐事模组",
+          "vine": "藤蔓修复",
+          "vine.tooltip": "同时控制 调整.一般.一致平面（Consistent_Planes）",
+          "plane": "平面修复",
+          "plane.tooltip": "除藤蔓外的平面。同时控制 调整.一般.一致平面（Consistent_Planes）"
         }
       }
     },

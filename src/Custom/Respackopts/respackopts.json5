@@ -1,0 +1,16 @@
+{
+  "id": "resCustomA",
+  "version": 13,
+  "capabilities": [
+    "FileFilter"
+  ],
+  "conf": {
+    "chain": true,
+    "cobweb": true,
+    "gildedBlackstone": true,
+    "mushroom": true,
+    "lilyPad": true,
+    "ore": true,
+    "bed": true
+  }
+}

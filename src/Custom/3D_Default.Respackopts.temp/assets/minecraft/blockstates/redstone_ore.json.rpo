@@ -1,0 +1,4 @@
+{
+  "condition": "tweaks.normal.unlitRedstoneOre & tweaks.external.ore",
+  "fallback": "assets/res_fixes/blockstates/fallback/redstone_ore_3d.json"
+}

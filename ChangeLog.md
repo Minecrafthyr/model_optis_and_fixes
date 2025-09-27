@@ -1,3 +1,27 @@
+### Version 9.8
+
+#### Resource Fixes
+
+Lite variant
+
+- `Cube_Inner_Faces_Fix`: Fix wrong cullface & texture mapping again.
+- Fix opened wall bamboo fence is higher then it should be.
+- Add option to solve [#17](https://github.com/Minecrafthyr/model_optis_and_fixes/issues/17).
+
+Simplified variant
+
+- Simplified Chorus Plant, Chorus Flower, Fence Gate block model.
+
+### Resource Tweaks
+
+Normal variant
+
+- Improve Tripwire Hook item display.
+
+External variant
+
+- Fix wrong credit.
+
 ### Version 9.7
 
 #### Resource Fixes

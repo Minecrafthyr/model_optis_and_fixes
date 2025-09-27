@@ -1,0 +1,19 @@
+{
+  "pack": {
+    "pack_format": 35,
+    "supported_formats": [35, 64],
+    "min_format": 35,
+    "max_format": 64,
+    "description": "3D Default by GeForceLegend [Edited]"
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "1_21_4",
+        "min_format": 44,
+        "max_format": 9999,
+        "formats": [44, 9999]
+      }
+    ]
+  }
+}

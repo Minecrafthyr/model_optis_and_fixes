@@ -1,0 +1,16 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "texture": "block/chorus_plant",
+        "inside": "block/chorus_plant",
+        "particle": "block/chorus_plant"
+    },
+    "elements": [
+        {   "from": [ 3, 3, 3 ],
+            "to": [ 13, 13, 13 ],
+            "faces": {
+                "north": { "texture": "#inside" }
+            }
+        }
+    ]
+}

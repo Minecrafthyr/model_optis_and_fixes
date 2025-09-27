@@ -1,4 +1,4 @@
-Copied 16 files from [3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d) by [GeForceLegend](https://modrinth.com/user/GeForceLegend) under [Apache-2.0](https://spdx.org/licenses/Apache-2.0).
+Copied 16 files from [3D Models (UltiCraft Sandalone)](https://modrinth.com/resourcepack/ulticraft-models-3d) by [meenimc](https://modrinth.com/user/meenimc) under [Apache-2.0](https://spdx.org/licenses/Apache-2.0).
 
 ### Files
 

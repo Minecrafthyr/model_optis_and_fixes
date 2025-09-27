@@ -1,0 +1,6 @@
+{
+  "parent": "res_fixes:block/fallback/template_chain",
+  "textures": {
+    "texture": "minecraft:block/chain"
+  }
+}

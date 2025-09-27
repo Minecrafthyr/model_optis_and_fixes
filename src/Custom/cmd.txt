@@ -1,0 +1,1 @@
+python build.py --cfg src/Custom/config.json --log src/Custom/build.log --release
