@@ -1,8 +1,8 @@
-[11:00:18.036] [INFO] == Config "Variants" starts ==
-[11:00:18.506] [INFO] Variants: "Resource Fixes Lite.zip" completed (305 files, 200 KiB)
-[11:00:19.171] [INFO] Variants: "Resource Fixes.zip" completed (447 files, 239 KiB)
-[11:00:19.404] [INFO] Variants: "Resource Fixes Textured.zip" completed (491 files, 261 KiB)
-[11:00:19.440] [INFO] Variants: "Resource Fixes Simplified.zip" completed (529 files, 272 KiB)
-[11:00:21.487] [INFO] Variants: "Resource Tweaks.zip" completed (2087 files, 912 KiB)
-[11:00:22.036] [INFO] Variants: "Resource Tweaks External.zip" completed (3418 files, 1615 KiB)
-[11:00:22.066] [INFO] Build stops at 2025-09-27 11:00:22.066604, total cost 0:00:04.031215.
+[12:26:09.464] [INFO] == Config "Variants" starts ==
+[12:26:10.167] [INFO] Variants: "Resource Fixes Lite.zip" completed (309 files, 201 KiB)
+[12:26:10.662] [INFO] Variants: "Resource Fixes.zip" completed (451 files, 240 KiB)
+[12:26:11.112] [INFO] Variants: "Resource Fixes Textured.zip" completed (495 files, 262 KiB)
+[12:26:11.200] [INFO] Variants: "Resource Fixes Simplified.zip" completed (533 files, 273 KiB)
+[12:26:13.766] [INFO] Variants: "Resource Tweaks.zip" completed (2091 files, 913 KiB)
+[12:26:15.806] [INFO] Variants: "Resource Tweaks External.zip" completed (3422 files, 1615 KiB)
+[12:26:15.850] [INFO] Build stops at 2025-09-27 12:26:15.850210, total cost 0:00:06.387462.
