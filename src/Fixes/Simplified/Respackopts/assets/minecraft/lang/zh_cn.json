@@ -1,12 +1,7 @@
 {
-  "rpo.resFixesSimplified": "Resource Fixes Simplified",
+  "rpo.resFixesSimplified": "资源修复【简化】",
   "rpo.resFixesSimplified.fixes": "修复",
   "rpo.resFixesSimplified.fixes.lite": "轻量",
-  "rpo.resFixesSimplified.fixes.normal": "一般",
-  "rpo.resFixesSimplified.fixes.textured": "纹理",
-  "rpo.resFixesSimplified.tweaks": "调整",
-  "rpo.resFixesSimplified.tweaks.normal": "一般",
-  "rpo.resFixesSimplified.tweaks.external": "外部",
   "rpo.resFixesSimplified.fixes.lite.handheldArrow": "手持箭",
   "rpo.resFixesSimplified.fixes.lite.handheldArrow.tooltip": "修复 MC-201808",
   "rpo.resFixesSimplified.fixes.lite.randomRotate": "方块随机旋转",
@@ -19,6 +14,7 @@
   "rpo.resFixesSimplified.fixes.lite.vine.tooltip": "同时控制 调整.一般.一致平面（Consistent_Planes）",
   "rpo.resFixesSimplified.fixes.lite.plane": "平面修复",
   "rpo.resFixesSimplified.fixes.lite.plane.tooltip": "除藤蔓外的平面。同时控制 调整.一般.一致平面（Consistent_Planes）",
+  "rpo.resFixesSimplified.fixes.normal": "一般",
   "rpo.resFixesSimplified.fixes.normal.block": "方块物品改进",
   "rpo.resFixesSimplified.fixes.normal.button": "按钮物品改进",
   "rpo.resFixesSimplified.fixes.normal.cake": "三维蛋糕物品",
@@ -28,5 +24,7 @@
   "rpo.resFixesSimplified.fixes.normal.conduit": "潮涌核心物品改进",
   "rpo.resFixesSimplified.fixes.normal.hopper": "三维漏斗物品",
   "rpo.resFixesSimplified.fixes.normal.skull": "头颅物品改进",
-  "rpo.resFixesSimplified.fixes.normal.biggerInGui": "部分物品在图形用户界面更大"
+  "rpo.resFixesSimplified.fixes.normal.biggerInGui": "部分物品在用户界面更大",
+  "rpo.resFixesSimplified.fixes.textured": "纹理",
+  "rpo.resFixesSimplified.fixes.simplified": "简化"
 }

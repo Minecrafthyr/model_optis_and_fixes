@@ -1,5 +1,9 @@
 A great example is the [config.json](config.json).
 
+> [!WARN]
+> All path matching now uses glob pattern matching (see Python fnmatch/glob syntax).  
+> All extension matching is still suffix matching.
+
 ### Config Root
 
 Config Tree can hold multiple nested Config Root:
@@ -56,17 +60,17 @@ Object: {
 
 ### Path Tree
 
-Path Tree will transmute structure into set of strings. The result could be directory or file:
+Path Tree will transmute structure into a set of glob patterns (strings). The result could be a directory or file:
 
 ---
 
 Array: [[Path Tree](#path-tree)]
 
-String: a path relates to latest path.
+String: a path relates to latest path, supports glob patterns (e.g. `assets/minecraft/lang/*.json`, `**/blockstates/*`).
 
 Object: {
 
-- `path`: a path relates to latest path. If no `extras`, add this path into result. If has `extras`, this path will used as a new relative path.
+- `path`: a path relates to latest path, supports glob patterns. If no `extras`, add this path into result. If has `extras`, this path will be used as a new relative path.
 - `extras`: a Path Tree.
 
 }

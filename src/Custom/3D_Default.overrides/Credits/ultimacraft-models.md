@@ -4,6 +4,14 @@ Copied 1 file from [UltimaCraft Models](https://modrinth.com/resourcepack/ultima
 
 assets/minecraft/models/block/fletching_table.json
 
+src/Custom/3D_Default.overrides/assets/minecraft/textures/block/models/
+
+- fletching_table_front.png
+- fletching_table_side.png
+- fletching_table_top.png
+- fletching_table_top_empty.png
+- fletching_table_top_tools.png
+
 ### License
 
     Attribution-NonCommercial 4.0 International

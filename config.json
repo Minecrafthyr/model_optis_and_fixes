@@ -2,17 +2,15 @@
   "name": "Variants",
   "src_dir": "src/",
   "out_dir": "out/Variants/",
-  "log_level": "INFO",
+  "log_level": "DEBUG",
   "default_merge": [
-    "assets/res_fixes/lang/",
-    "assets/minecraft/lang/"
+    "assets/res_fixes/lang/*",
+    "assets/minecraft/lang/*"
   ],
   "extra_out_dirs": [
     "C:/PCL2/.minecraft/resourcepacks",
-    "C:/PCL2/.minecraft/versions/Craft to Exile 2 (VR Support)/resourcepacks",
-    "C:/PCL2/.minecraft/versions/MITE Desperate Survival/resourcepacks",
-    "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks",
-    "C:/PCL2/.minecraft/versions/Tinker's Construct Pack/resourcepacks"
+    "C:/PCL2/.minecraft/versions/Night Gale 1.21.9/resourcepacks",
+    "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks"
   ],
   "tree": {
     "inputs": [
@@ -24,170 +22,40 @@
       "Library/Plane"
     ],
     "children": {
-      "inputs": {
-        "path": "Fixes/Lite",
-        "extras": [
-          "Bars_Fix",
-          "Brewing_Stand_Fix",
-          "Chain_Fix",
-          "Cube_Inner_Faces_Fix",
-          "Dripleaf_Fix",
-          "Fence_Fix",
-          "Flower_Pot_Fix",
-          "Handheld_Arrow",
-          "Handheld_Arrow.Respackopts",
-          "Language_Fix",
-          "Lever_Fix",
-          "Lightning_Rod_Fix",
-          "Main",
-          "Mangrove_Propagule_Fix",
-          "Modern_Torches",
-          "Plane_Fix",
-          "Plane_Fix.Respackopts",
-          "Rail_Fix",
-          "Random_Rotate",
-          "Random_Rotate.Respackopts",
-          "Shadeless_Stem",
-          "Tripwire_Fix",
-          {
-            "path": "Mod",
-            "extras": [
-              "EBE",
-              "EBE.Respackopts",
-              "Farmers_Delight",
-              "Farmers_Delight.Respackopts"
-            ]
-          },
-          "Respackopts"
-        ]
-      },
+      "inputs": "Fixes/Lite/inputs.json",
       "output": "Resource Fixes Lite",
       "children": {
-        "inputs": {
-          "path": "Fixes/Normal",
-          "extras": [
-            "Display",
-            "Display.Respackopts",
-            "Block_Variants",
-            "Block_Variants.Respackopts",
-            "Respackopts",
-            "Small_Back_Faces"
-          ]
-        },
+        "inputs": "Fixes/Normal/inputs.json",
         "output": "Resource Fixes",
         "children": {
-          "inputs": {
-            "path": "Fixes/Textured",
-            "extras": [
-              "End_Portal_Frame_Fix",
-              "Item_Frame_Tweaks",
-              "Misc",
-              "Modern_Recipe_Button_Texture",
-              "Modern_Redstone_Torch_Texture",
-              "Modern_Spectator_GUI_Texture",
-              "Rail_Fix",
-              "Smooth_Stone_Slab_Fix",
-              "Tall_Seagrass_Fix",
-              "Respackopts"
-            ]
-          },
+          "inputs": "Fixes/Textured/inputs.json",
           "output": "Resource Fixes Textured",
           "children": [
             {
-              "inputs": {
-                "path": "Fixes/Simplified",
-                "extras": [
-                  "Main",
-                  "Respackopts"
-                ]
-              },
+              "inputs": "Fixes/Simplified/inputs.json",
               "output": "Resource Fixes Simplified"
             },
             {
-              "inputs": {
-                "path": "Tweaks/Normal",
-                "extras": [
-                  "Consistent_Planes",
-                  "3D_Bars",
-                  "3D_Ladder",
-                  "3D_Ladder.Respackopts",
-                  "3D_Pointed_Dripstone",
-                  "3D_Pointed_Dripstone.Respackopts",
-                  "3D_Redstone_Dust",
-                  "3D_Redstone_Dust.Respackopts",
-                  "Axolotl_Bucket_Variants",
-                  "Better_Animation",
-                  "Better_Copper_Grate",
-                  "Cross_Correction",
-                  "Cross_Correction.Respackopts",
-                  "Better_Fire",
-                  "Better_Leaves",
-                  "Better_Particles",
-                  "Better_Sculk_Sensor_Swing",
-                  "Better_Sculk_Sensor_Swing.Respackopts",
-                  "Better_Weather",
-                  "Clean_Water",
-                  "Display",
-                  "Display.Respackopts",
-                  "Display.Candle",
-                  "Display.Candle.Respackopts",
-                  "Fast_Better_Grass",
-                  "Fast_Better_Grass.Respackopts",
-                  "Language_Tweaks",
-                  "Lantern",
-                  "Lantern.Respackopts",
-                  "Mirrored_Pumpkin_Blur",
-                  "Misc_Blockstates",
-                  "Misc_Blockstates.Respackopts",
-                  "Moist_Farmland",
-                  "Moist_Farmland.Respackopts",
-                  "New_Torches",
-                  "New_Torches.Respackopts",
-                  "Particle_Tweaks",
-                  "Respackopts",
-                  "Sandstone_Tweaks",
-                  "Shadeless",
-                  "Shadeless.Respackopts",
-                  "Square_Shadow",
-                  "Unlit_Redstone_Ore",
-                  "Unlit_Redstone_Ore.Respackopts",
-                  "Wide_Bamboo",
-                  {
-                    "path": "Natural Firefly Bushes 1.0.zip",
-                    "excludes": [
-                      "pack.png",
-                      "pack.mcmeta"
-                    ]
-                  },
-                  "Natural_Firefly_Bushes",
-                  {
-                    "path": "Tasty_Items-v1.2.zip",
-                    "excludes": [
-                      "credits.txt",
-                      "pack.png",
-                      "pack.mcmeta"
-                    ]
-                  },
-                  "Tasty_Items"
-                ]
-              },
-              "output": "Resource Tweaks",
+              "inputs": "Tweaks/Lite/inputs.json",
+              "output": "Resource Tweaks Lite",
               "children": {
-                "removes": [
-                  {
+                "inputs": "Tweaks/Normal/inputs.json",
+                "output": "Resource Tweaks",
+                "children": {
+                  "removes": {
                     "path": "assets/minecraft/models/block/",
                     "extras": [
-                      "calibrated_sculk_sensor.json",
-                      "calibrated_sculk_sensor_active.json",
-                      "calibrated_sculk_sensor_inactive.json",
-                      "sculk_sensor.json",
-                      "sculk_sensor_active.json",
-                      "sculk_sensor_inactive.json"
+                      "calibrated_sculk_sensor.json*",
+                      "calibrated_sculk_sensor_active.json*",
+                      "calibrated_sculk_sensor_inactive.json*",
+                      "sculk_sensor.json*",
+                      "sculk_sensor_active.json*",
+                      "sculk_sensor_inactive.json*"
                     ]
-                  }
-                ],
-                "inputs": "Tweaks/External/input_config.json",
-                "output": "Resource Tweaks External"
+                  },
+                  "inputs": "Tweaks/External/inputs.json",
+                  "output": "Resource Tweaks External"
+                }
               }
             }
           ]

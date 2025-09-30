@@ -1,0 +1,43 @@
+[
+  "3D_Bars",
+  "3D_Ladder",
+  "3D_Ladder.Respackopts",
+  "Axolotl_Bucket_Variants",
+  "Better_Animation",
+  "Better_Fire",
+  "Better_Particles",
+  "Better_Sculk_Sensor_Swing",
+  "Better_Sculk_Sensor_Swing.Respackopts",
+  "Better_Weather",
+  "Clean_Water",
+  "Display.Candle.Respackopts",
+  "Display.Candle",
+  "Display.Respackopts",
+  "Display",
+  "Fast_Better_Grass",
+  "Fast_Better_Grass.Respackopts",
+  "Language_Tweaks",
+  "Lantern",
+  "Lantern.Respackopts",
+  "Mirrored_Pumpkin_Blur",
+  "Moist_Farmland",
+  "Moist_Farmland.Respackopts",
+  {
+    "path": "Natural Firefly Bushes 1.0.zip",
+    "excludes": [
+      "pack.png",
+      "pack.mcmeta"
+    ]
+  },
+  "Natural_Firefly_Bushes",
+  "New_Torches",
+  "New_Torches.Respackopts",
+  "Particle_Tweaks",
+  "Sandstone_Tweaks",
+  "Shadeless",
+  "Shadeless.Respackopts",
+  "Square_Shadow",
+  "Unlit_Redstone_Ore",
+  "Unlit_Redstone_Ore.Respackopts",
+  "Respackopts"
+]

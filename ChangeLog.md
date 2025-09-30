@@ -1,3 +1,18 @@
+### Version 9.9
+
+### Resource Fixes
+
+Normal variant
+
+- Fixed End Rod bigger in GUI not working.
+
+### Resource Tweaks
+
+Lite variant (New)
+
+- Moved some low performance impact or stable feature here.
+- `Better_Particles`: Does not use weird water splash shape.
+
 ### Version 9.8
 
 #### Resource Fixes

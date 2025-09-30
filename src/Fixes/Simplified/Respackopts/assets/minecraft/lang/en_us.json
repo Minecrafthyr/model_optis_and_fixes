@@ -2,11 +2,6 @@
   "rpo.resFixesSimplified": "Resource Fixes Simplified",
   "rpo.resFixesSimplified.fixes": "Fixes",
   "rpo.resFixesSimplified.fixes.lite": "Lite",
-  "rpo.resFixesSimplified.fixes.normal": "Normal",
-  "rpo.resFixesSimplified.fixes.textured": "Textured",
-  "rpo.resFixesSimplified.tweaks": "Tweaks",
-  "rpo.resFixesSimplified.tweaks.normal": "Normal",
-  "rpo.resFixesSimplified.tweaks.external": "External",
   "rpo.resFixesSimplified.fixes.lite.handheldArrow": "Handheld Arrow",
   "rpo.resFixesSimplified.fixes.lite.handheldArrow.tooltip": "Fix MC-201808",
   "rpo.resFixesSimplified.fixes.lite.randomRotate": "Block random rotate",
@@ -19,6 +14,7 @@
   "rpo.resFixesSimplified.fixes.lite.vine.tooltip": "Also controls Tweaks.Normal.Consistent_Planes",
   "rpo.resFixesSimplified.fixes.lite.plane": "Plane Fix",
   "rpo.resFixesSimplified.fixes.lite.plane.tooltip": "Plane except Vine. Also controls Tweaks.Normal.Consistent_Planes",
+  "rpo.resFixesSimplified.fixes.normal": "Normal",
   "rpo.resFixesSimplified.fixes.normal.block": "Block item improvements",
   "rpo.resFixesSimplified.fixes.normal.button": "Button item improvements",
   "rpo.resFixesSimplified.fixes.normal.cake": "3D Cake item",
@@ -28,5 +24,7 @@
   "rpo.resFixesSimplified.fixes.normal.conduit": "Conduit item improvements",
   "rpo.resFixesSimplified.fixes.normal.hopper": "3D Hopper item",
   "rpo.resFixesSimplified.fixes.normal.skull": "Skull item improvements",
-  "rpo.resFixesSimplified.fixes.normal.biggerInGui": "Some items bigger in GUI"
+  "rpo.resFixesSimplified.fixes.normal.biggerInGui": "Some items bigger in GUI",
+  "rpo.resFixesSimplified.fixes.textured": "Textured",
+  "rpo.resFixesSimplified.fixes.simplified": "Simplified"
 }

@@ -1,0 +1,65 @@
+{
+  "id": "resTweaksLite",
+  "version": 13,
+  "capabilities": [
+    "FileFilter"
+  ],
+  "conf": {
+    "fixes": {
+      "lite": {
+        "handheldArrow": true,
+        "randomRotate": true,
+        "vine": true,
+        "plane": true,
+        "ebeMod": true,
+        "farmersDelightMod": true
+      },
+      "normal": {
+        "block": true,
+        "button": true,
+        "cake": true,
+        "cauldron": true,
+        "chorusPlant": true,
+        "comparatorAndRepeater": true,
+        "conduit": true,
+        "hopper": true,
+        "skull": true,
+        "biggerInGui": true
+      }
+    },
+    "tweaks": {
+      "lite": {
+        "brewingStand": true,
+        "candle": true,
+        "endRod": true,
+        "fastBetterGrass": true,
+        "flowerPot": true,
+        "ladder": [
+          "normal",
+          "thin",
+          "thick",
+          "off"
+        ],
+        "lantern": [
+          "on",
+          "noHandheld",
+          "off"
+        ],
+        "lever": true,
+        "moistFarmland": true,
+        "sculkSensor": true,
+        "snifferEgg": true,
+        "newTorches": [
+          "on",
+          "noHandheld",
+          "off"
+        ],
+        "tripwireHook": true,
+        "unlitRedstoneOre": true,
+        "shadeless": true,
+        "campfire": true,
+        "turtleEgg": true
+      }
+    }
+  }
+}

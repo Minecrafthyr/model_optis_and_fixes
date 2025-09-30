@@ -28,10 +28,9 @@
       }
     },
     "tweaks": {
-      "normal": {
+      "lite": {
         "brewingStand": true,
         "candle": true,
-        "crossCorrection": false,
         "endRod": true,
         "fastBetterGrass": true,
         "flowerPot": true,
@@ -48,8 +47,6 @@
         ],
         "lever": true,
         "moistFarmland": true,
-        "pointedDripstone": true,
-        "redstoneDust": true,
         "sculkSensor": true,
         "snifferEgg": true,
         "newTorches": [
@@ -62,6 +59,11 @@
         "shadeless": true,
         "campfire": true,
         "turtleEgg": true
+      },
+      "normal": {
+        "pointedDripstone": true,
+        "crossCorrection": false,
+        "redstoneDust": true
       }
     }
   }

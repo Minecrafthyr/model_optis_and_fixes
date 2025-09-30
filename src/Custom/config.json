@@ -13,39 +13,122 @@
             "extras": [
               {
                 "path": "blockstates",
-                "extras": ["potted", "crimson_fungus.json", "brown_mushroom.json", "red_mushroom.json", "warped_fungus.json"]
+                "extras": [
+                  "potted*",
+                  "crimson_fungus.json",
+                  "brown_mushroom.json",
+                  "red_mushroom.json",
+                  "warped_fungus.json"
+                ]
               },
               {
                 "path": "models/block",
-                "extras": ["chain.json", "flower", "potted", "lightning_rod", "redstone_dust", "brewing_stand", "cobweb.json", "template_hanging_lantern.json", "template_lantern.json", "gilded_blackstone.json"]
+                "extras": [
+                  "chain.json",
+                  "flower*",
+                  "potted*",
+                  "lightning_rod",
+                  "redstone_dust",
+                  "brewing_stand",
+                  "cobweb.json",
+                  "template_hanging_lantern.json",
+                  "template_lantern.json",
+                  "gilded_blackstone.json",
+                  "allium.json",
+                  "azure_bluet.json",
+                  "blue_orchid.json",
+                  "fern.json",
+                  "lily_of_the_valley.json",
+                  "orange_tulip.json",
+                  "oxeye_daisy.json",
+                  "pink_tulip.json",
+                  "poppy.json",
+                  "red_tulip.json",
+                  "white_tulip.json",
+                  "wither_rose.json",
+                  "cornflower.json"
+                ]
               },
               {
                 "path": "models/item",
-                "extras": ["potion.json", "splash_potion.json", "lingering_potion.json", "honey_bottle.json", "ominous_bottle.json", "glass_bottle.json", "chain.json"]
+                "extras": [
+                  "potion.json",
+                  "splash_potion.json",
+                  "lingering_potion.json",
+                  "honey_bottle.json",
+                  "ominous_bottle.json",
+                  "glass_bottle.json",
+                  "chain.json"
+                ]
               },
               {
                 "path": "textures/item",
-                "extras": ["potion.png", "potion_splash.png", "honey_bottle.png"]
+                "extras": [
+                  "potion.png",
+                  "potion_splash.png",
+                  "honey_bottle.png"
+                ]
               },
               "optifine/cem/bed"
             ]
           },
-
           {
             "path": "1_21_4/assets/minecraft/",
             "extras": [
               {
                 "path": "blockstates",
-                "extras": ["acacia_hanging_sign.json", "acacia_wall_hanging_sign.json", "bamboo_hanging_sign.json", "bamboo_wall_hanging_sign.json", "birch_hanging_sign.json", "birch_wall_hanging_sign.json", "cherry_hanging_sign.json", "cherry_wall_hanging_sign.json", "crimson_hanging_sign.json", "crimson_wall_hanging_sign.json", "dark_oak_hanging_sign.json", "dark_oak_wall_hanging_sign.json", "jungle_hanging_sign.json", "jungle_wall_hanging_sign.json", "mangrove_hanging_sign.json", "mangrove_wall_hanging_sign.json", "oak_hanging_sign.json", "oak_wall_hanging_sign.json", "pale_oak_hanging_sign.json", "pale_wall_oak_hanging_sign.json", "spruce_hanging_sign.json", "spruce_wall_hanging_sign.json", "warped_hanging_sign.json", "warped_wall_hanging_sign.json"]
+                "extras": [
+                  "acacia_hanging_sign.json",
+                  "acacia_wall_hanging_sign.json",
+                  "bamboo_hanging_sign.json",
+                  "bamboo_wall_hanging_sign.json",
+                  "birch_hanging_sign.json",
+                  "birch_wall_hanging_sign.json",
+                  "cherry_hanging_sign.json",
+                  "cherry_wall_hanging_sign.json",
+                  "crimson_hanging_sign.json",
+                  "crimson_wall_hanging_sign.json",
+                  "dark_oak_hanging_sign.json",
+                  "dark_oak_wall_hanging_sign.json",
+                  "jungle_hanging_sign.json",
+                  "jungle_wall_hanging_sign.json",
+                  "mangrove_hanging_sign.json",
+                  "mangrove_wall_hanging_sign.json",
+                  "oak_hanging_sign.json",
+                  "oak_wall_hanging_sign.json",
+                  "pale_oak_hanging_sign.json",
+                  "pale_wall_oak_hanging_sign.json",
+                  "spruce_hanging_sign.json",
+                  "spruce_wall_hanging_sign.json",
+                  "warped_hanging_sign.json",
+                  "warped_wall_hanging_sign.json"
+                ]
               },
               {
                 "path": "models/block",
-                "extras": ["hanging_sign_chain.json", "wall_hanging_sign_chain.json"]
+                "extras": [
+                  "hanging_sign_chain.json",
+                  "wall_hanging_sign_chain.json"
+                ]
               },
               "textures/block/hanging_sign_chain.png",
+              "optifine/cem/hanging_sign.jem",
               {
                 "path": "textures/entity/signs/hanging",
-                "extras": ["acacia.png", "bamboo.png", "birch.png", "cherry.png", "crimson.png", "dark_oak.png", "jungle.png", "mangrove.png", "oak.png", "pale_oak.png", "spruce.png", "warped.png"]
+                "extras": [
+                  "acacia.png",
+                  "bamboo.png",
+                  "birch.png",
+                  "cherry.png",
+                  "crimson.png",
+                  "dark_oak.png",
+                  "jungle.png",
+                  "mangrove.png",
+                  "oak.png",
+                  "pale_oak.png",
+                  "spruce.png",
+                  "warped.png"
+                ]
               }
             ]
           }
@@ -53,6 +136,6 @@
       },
       "3D_Default.overrides"
     ],
-    "output": "3D Default v1.12.1 [Edited]"
+    "output": "3D Default v1.12.1 [Edit 3]"
   }
 }

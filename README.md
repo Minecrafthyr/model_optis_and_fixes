@@ -1,10 +1,10 @@
-- Version: 9.8
+- Version: 9.9
 - Game versions: 1.14.4-1.21.9
 - Project Links:
   - [Modrinth](https://modrinth.com/project/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
   - [CurseForge](https://www.curseforge.com/minecraft/texture-packs/resource-fixes-and-tweaks)
-- Optional Dependencies: [Respackopts](https://modrinth.com/project/TiF5QWZY) for config.
+- Optional Dependencies: **[Respackopts](https://modrinth.com/project/TiF5QWZY) for config**.
 - May contains errors. Some bugs can't be fix by resourepack.
 
 ### FAQ
@@ -28,13 +28,15 @@ Resource Fixes (optimize and fixes)
   Using texture may conflict to other resourcepack.  
   Designed with Default resource style.
 - Simplified variant  
-  Simplified Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflowers, Dragon Egg block model.  
+  Simplified some block models.  
   Resource Tweaks are **not affected**.
 
 Resource Tweaks (tweaks and improvements)
 
-- Normal variant  
+- Lite variant  
   Contains significant visual tweaks that I thought better, not fixes.
+- Normal variant  
+  May causing lag or breaking visual tweaks, options may help you.
 - External variant  
   Try compat with external pack.  
   Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
@@ -45,6 +47,8 @@ Please also check license in ./Credits folder (in source or pack) for specific f
 
 - Resource Tweaks External: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
 - Others: [Unlicense](https://spdx.org/licenses/Unlicense), means you can modify, distribute, split, use it anywhere.
+
+---
 
 ## Resource Fixes
 
@@ -124,24 +128,25 @@ Optimize block models and fix bugs in Default resources.
 - `Rail_Fix`: Modified 23 files from [Rail Fix](https://modrinth.com/project/481jOCry) by [Lad_Flaver](https://modrinth.com/user/Lad_Flaver) under [ARR with explicitly stated](https://modrinth.com/project/481jOCry).
 - `Smooth_Stone_Slab_Fix`: Copied 1 file from [Smooth Stone Slab Fix](https://modrinth.com/project/QoUSM3q9) by [creep](https://modrinth.com/user/creep) under [MIT License](https://spdx.org/licenses/MIT).
 
+### Simplified
+
+This variant just for fun and does not affect Resource Tweaks.
+
+Simplified model: Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflowers, Dragon Egg, Chorus Plant, Chorus Flower, Fence Gate.
+
 ## Resource Tweaks
 
-### Normal
+### Lite
 
-- `3D_Bars`
 - `3D_Ladder`
-- `3D_Pointed_Dripstone`
-- `3D_Redstone_Dust`
 - `Axolotl_Bucket_Variants` @[Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants)
 - `Better_Animation`
   - Animation of flowing lava is now faster then still lava.
   - Smooth Lava animation.
   - Kelp animation is slower.
-- `Better_Copper_Grate`: Inner faces of Copper Grate.
 - `Better_Fire`
   - Fire texture is a bit transparent on body.
   - Sides of floor fire is 1 block height (center does not change), and tilted (in supported MC version).
-- `Better_Leaves`: Inner faces of Leaves, better with [Cull Leaves](https://modrinth.com/mod/cull-leaves).
 - `Better_Particles`
   - Better Effect particles.
   - Light blue Splash particle.
@@ -150,20 +155,13 @@ Optimize block models and fix bugs in Default resources.
 - `Better_Weather`
   - White and light blue and more transparent rain.
   - Less filled texture.
-- `Cross_Correction`
-  - Center of Flowers and fern is corrected.
-  - Cross models are now has mirrored back face.
-  - Add random rotation for 1 block tall (standard and potted) cross model.
-- `Consistent_Planes`
-  - Sore plane-like models are now not floating, shadeless, has cullface.
-- `Clean_Water`
-  - Is now 75% solid compared to default.
+- `Clean_Water`: It's now 75% solid compared to default.
 - `Display`: 3D Brewing Stand, Campfires, Candles, Lever, Sniffer Egg, Turtle Egg, Flower Pot, Tripwire Hook.
 - `Fast_Better_Grass`
   - Makes the following blocks use the top texture on their sides as well: (Snow-covered) Grass block, Dirt path, Podzol, Mycelium, (Warped|Crimson) Nylium, additionally Farmland.
   - Also make compatibly with [Full Paths](https://modrinth.com/mod/full-paths).
 - `Language_Tweaks`
-  - Rename Nether Quartz to Quartz.
+  - Renamed Nether Quartz to Quartz.
 - `Lantern`: 3D item and smooth animation.
 - `Mirrored_Pumpkin_Blur`
 - `Moist_Farmland`: Visualize Farmland "moisture" state 0 - 7 (when it dries up).
@@ -178,9 +176,28 @@ Optimize block models and fix bugs in Default resources.
   - Light source blocks are shadeless.
   - Light source items are using front GUI light.
 - `Square_Shadow`: Square entity shadow.
+- `Unlit_Redstone_Ore`: Redstone Ore is darker on unlit state.
+
+#### Credits
+
+- `Axolotl_Bucket_Variants`: Copied 11 files from [Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants) by [manyrandomthings](https://modrinth.com/user/manyrandomthings) under [LGPL-3.0-only](https://spdx.org/licenses/LGPL-3.0-only).
+- `Better_Particles`: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
+- `Fast_Better_Grass`: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
+- `Natural_Firefly_Bushes`: Copied zip file from [Natural Firefly Bushes](https://modrinth.com/project/1u7lYbpD) by [TheGreatOwlMaster](https://modrinth.com/user/TheGreatOwlMaster) under [MIT License](https://spdx.org/licenses/MIT).
+### Normal
+
+- `3D_Bars`
+- `3D_Pointed_Dripstone`
+- `3D_Redstone_Dust`
+- `Better_Copper_Grate`: Inner faces of Copper Grate.
+- `Better_Leaves`: Inner faces of Leaves, better with [Cull Leaves](https://modrinth.com/mod/cull-leaves).
+- `Consistent_Planes`: Some plane-like models are now not floating, shadeless, has cullface.
+- `Cross_Correction`
+  - Center of Flowers and fern is corrected.
+  - Cross models are now has mirrored back face.
+  - Add random rotation for 1 block tall (standard and potted) cross model.
 - `Tasty_Items` @[Tasty Items](https://modrinth.com/project/yVNZK7l2)
   - Move Rabbit Stew up 1 pixel (feature in Fixes/Textured/Misc)
-- `Unlit_Redstone_Ore`: Redstone Ore is darker on unlit state.
 - `Wide_Bamboo`
   - 4 pixel wide Bamboo.
   - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")). With mirrored back face.
@@ -188,15 +205,10 @@ Optimize block models and fix bugs in Default resources.
 
 #### Credits
 
-_Notice: may not contains all features in original pack because visual balance._
-
 - `3D_Bars`: Modified 6 files from [Simple 3D Iron Bars](https://modrinth.com/project/p5Kdm58p) by [poqbox](https://modrinth.com/user/poqbox) under [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause).
 - `3D_Redstone_Dust`: Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT).
-- `Axolotl_Bucket_Variants`: Copied 11 files from [Axolotl Bucket Variants](https://modrinth.com/resourcepack/axolotl-bucket-variants) by [manyrandomthings](https://modrinth.com/user/manyrandomthings) under [LGPL-3.0-only](https://spdx.org/licenses/LGPL-3.0-only).
-- `Better_Particles`: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
-- `Fast_Better_Grass`: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
-- `Natural_Firefly_Bushes`: Copied zip file from [Natural Firefly Bushes](https://modrinth.com/project/1u7lYbpD) by [TheGreatOwlMaster](https://modrinth.com/user/TheGreatOwlMaster) under [MIT License](https://spdx.org/licenses/MIT).
 - `Tasty_Items`: Copied zip file from [Tasty Items](https://modrinth.com/project/yVNZK7l2) by [enchanted-games](https://modrinth.com/user/enchanted-games) under [CC-BY-NC-4.0](https://spdx.org/licenses/CC-BY-NC-4.0).
+
 
 ### External
 

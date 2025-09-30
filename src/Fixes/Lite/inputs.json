@@ -1,0 +1,34 @@
+[
+  "Bars_Fix",
+  "Brewing_Stand_Fix",
+  "Chain_Fix",
+  "Cube_Inner_Faces_Fix",
+  "Dripleaf_Fix",
+  "Fence_Fix",
+  "Flower_Pot_Fix",
+  "Handheld_Arrow",
+  "Handheld_Arrow.Respackopts",
+  "Language_Fix",
+  "Lever_Fix",
+  "Lightning_Rod_Fix",
+  "Main",
+  "Mangrove_Propagule_Fix",
+  "Modern_Torches",
+  "Plane_Fix",
+  "Plane_Fix.Respackopts",
+  "Rail_Fix",
+  "Random_Rotate",
+  "Random_Rotate.Respackopts",
+  "Shadeless_Stem",
+  "Tripwire_Fix",
+  {
+    "path": "Mod",
+    "extras": [
+      "EBE",
+      "EBE.Respackopts",
+      "Farmers_Delight",
+      "Farmers_Delight.Respackopts"
+    ]
+  },
+  "Respackopts"
+]

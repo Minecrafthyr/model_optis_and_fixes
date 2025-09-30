@@ -1,0 +1,7 @@
+{
+  "condition": "tweaks.lite.ladder.normal",
+  "fallbacks": [
+    "assets/res_fixes/models/block/fallback/ladder_thin.json",
+    "assets/res_fixes/models/block/fallback/ladder_thick.json"
+  ]
+}

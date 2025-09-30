@@ -7,6 +7,8 @@ import logging
 import sys
 import time
 import os
+import glob
+import fnmatch
 
 
 from os import path as op
@@ -182,10 +184,17 @@ def get_inputs(
             get_inputs(o, inputs, ii.copy(), cfg)
     elif isinstance(obj, str):
         new_path = join_path(ii.path, obj)
-        if new_path.endswith("input_config.json"):
+        if new_path.endswith("inputs.json"):
             with open(new_path, "r") as f:
                 json_data = json.load(f)
-            get_inputs(json_data, inputs, ii, cfg)
+            get_inputs(
+                json_data,
+                inputs,
+                ii.copy(
+                    path=join_path(ii.path, op.relpath(op.dirname(new_path), ii.path))
+                ),
+                cfg,
+            )
         else:
             inputs.append(ii.copy(path=new_path))
     else:
@@ -200,7 +209,6 @@ def get_inputs(
             blocking_mode=obj.get("mode", ii.blocking_mode),
             excludes=tuple(new_excludes),
             includes=new_includes,
-            # reformat=reformat,
         )
         if "extras" in obj:
             get_inputs(obj["extras"], inputs, new_ii, cfg)
@@ -215,23 +223,27 @@ def not_excluded(opath: str, cfg: Config, excludes: tuple):
     return False if matched exclude.
     """
     if opath.endswith(cfg.exclude_ext):
-        cfg.log_debug('%s: Excluded "%s" by extension', cfg.name, opath)
+        cfg.log_debug('%s: exclude "%s" by extension', cfg.name, opath)
         return False
-    if opath.startswith(excludes):
-        cfg.log_debug('%s: Excluded "%s" by relative path', cfg.name, opath)
-        return False
-    if opath.startswith(cfg.default_excludes):
-        cfg.log_debug('%s: Excluded "%s" by default', cfg.name, opath)
-        return False
+    opath_obj = Path(opath)
+    for pattern in excludes:
+        if opath_obj.match(pattern):
+            cfg.log_debug('%s: excluded "%s"', cfg.name, opath)
+            return False
+    for pattern in cfg.default_excludes:
+        if opath_obj.match(pattern):
+            cfg.log_debug('%s: exclude "%s" by default', cfg.name, opath)
+            return False
     return True
 
 
 def not_blocked(opath: str, cfg: Config, ii: InputInfo):
+    opath_obj = Path(opath)
     if ii.blocking_mode:
-        if not any(opath.startswith(include) for include in ii.includes.keys()):
+        if not any(opath_obj.match(include) for include in ii.includes.keys()):
             return False
     else:
-        if any(opath.startswith(include) for include in ii.includes.keys()):
+        if any(opath_obj.match(include) for include in ii.includes.keys()):
             return True
     return not_excluded(opath, cfg, ii.excludes)
 
@@ -253,13 +265,14 @@ def store_file(
 ):
     moved = moving(opath, cfg, ii)
     if ipath.endswith(".json"):
-        if opath.startswith(cfg.default_merge) and moved in storage:
-            original = json.loads(storage[moved])
-            target = json.load(stream)
-            if isinstance(original, dict) and isinstance(target, dict):
-                original.update(target)
-                storage[moved] = bytes(ENCODER.encode(original), "utf-8")
-                return
+        for pattern in cfg.default_merge:
+            if fnmatch.fnmatch(opath, pattern) and moved in storage:
+                original = json.loads(storage[moved])
+                target = json.load(stream)
+                if isinstance(original, dict) and isinstance(target, dict):
+                    original.update(target)
+                    storage[moved] = bytes(ENCODER.encode(original), "utf-8")
+                    return
         if release:
             storage[moved] = bytes(ENCODER.encode(json.load(stream)), "utf-8")
             return
@@ -297,18 +310,19 @@ def input_dir(storage: BytesDict, cfg: Config, ii: InputInfo):
     """Process directory input."""
     cfg.log_debug(f"Loading directory {ii.path}")
     try:
-        for root, _, files in os.walk(ii.path):
+        base_path = Path(ii.path)
 
-            def on_file(file: str):
-                ipath = op.normpath(op.join(root, file))
-                opath = op.relpath(ipath, ii.path).replace(os.sep, "/")
-                if not_blocked(opath, cfg, ii):
-                    with open(ipath, "rb") as f:
-                        store_file(storage, cfg, ii, f, ipath, opath)
+        all_files = [p for p in base_path.rglob("*") if p.is_file()]
 
-            with ThreadPoolExecutor() as tpe:
-                for file in files:
-                    tpe.submit(on_file, file)
+        def on_file(file_path: Path):
+            opath = file_path.relative_to(base_path).as_posix()
+            if not_blocked(opath, cfg, ii):
+                with open(file_path, "rb") as f:
+                    store_file(storage, cfg, ii, f, file_path.as_posix(), opath)
+
+        with ThreadPoolExecutor() as tpe:
+            for file_path in all_files:
+                tpe.submit(on_file, file_path)
     except Exception as e:
         cfg.log_error("Error processing directory %s: %s", ii.path, e, exc_info=True)
 
@@ -321,22 +335,27 @@ def cfg_tree(
     """Process config tree."""
     try:
         removes = tuple(get_paths(tree.get("removes", [])))
-        keys = [k for k in storage.keys()]
+        keys = list(storage.keys())
 
         for k in keys:
-            if k.startswith(removes):
-                storage.pop(k)
+            k_obj = Path(k)
+            for pattern in removes:
+                if k_obj.match(pattern):
+                    storage.pop(k)
+                    break
 
         inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
         extra_out = tree.get("extra_out", True)
 
         for ii in get_inputs(inputs, None, None, cfg):
-            if os.path.isdir(ii.path):
-                input_dir(storage, cfg, ii)
-            elif os.path.isfile(ii.path):
-                input_file(storage, cfg, ii)
-            else:
+            isdir = os.path.isdir(ii.path)
+            isfile = os.path.isfile(ii.path)
+            if not isdir and not isfile:
                 cfg.log_error(f"{ii.path} is not dir or file")
+            if isdir:
+                input_dir(storage, cfg, ii)
+            if isfile:
+                input_file(storage, cfg, ii)
 
         def on_output():
             filepath = Path(tree["output"] + ".zip")
@@ -409,7 +428,7 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
         raw_cfg.get("src_dir", "src/"),
         raw_cfg.get("out_dir", "out/"),
         raw_cfg.get("extra_out_dirs", []),
-        raw_cfg.get("exclude_ext", (".py", ".backup", ".temp")),
+        raw_cfg.get("exclude_ext", (".py", ".backup", ".temp", ".tmp")),
         tuple(get_paths(raw_cfg.get("default_excludes", []))),
         tuple(get_paths(raw_cfg.get("default_merge", []))),
         log_level,
