@@ -1,6 +1,11 @@
 {
   "credit": "Made with Blockbench by Minecraft_hyr",
   "parent": "block/block",
+  "display": {
+    "on_shelf": {
+      "rotation": [0, 90, 0]
+    }
+  },
   "textures": {
     "particle": "#texture"
   },

@@ -1,3 +1,21 @@
+### Version 9.10
+
+- Removed Block bigger in Item Frames because external pack and mod does not follow it.
+
+### Resource Fixes
+
+- Fix 
+
+### Resource Tweaks
+
+Lite variant
+
+- Torcherino smooth lantern animation support.
+
+External variant
+
+- `3D_Default`: updated to v1.13.0
+
 ### Version 9.9
 
 ### Resource Fixes

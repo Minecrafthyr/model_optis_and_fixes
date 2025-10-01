@@ -3,57 +3,37 @@
   "src_dir": "src/",
   "out_dir": "out/Variants/",
   "log_level": "DEBUG",
-  "default_merge": [
-    "assets/res_fixes/lang/*",
-    "assets/minecraft/lang/*"
-  ],
-  "extra_out_dirs": [
-    "C:/PCL2/.minecraft/resourcepacks",
-    "C:/PCL2/.minecraft/versions/Night Gale 1.21.9/resourcepacks",
-    "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks"
-  ],
+  "merge": ["assets/res_fixes/lang/*", "assets/minecraft/lang/*"],
+  "excludes": ["*.py", "*.temp", "*.tmp", "*.backup"],
+  "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Night Gale 1.21.9/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks"],
   "tree": {
-    "inputs": [
-      "Base",
-      "Library/Cube_Inner_Faces",
-      "Library/Empty_Texture",
-      "Library/Item_Offset",
-      "Library/Shadeless",
-      "Library/Plane"
-    ],
+    "inputs": ["Base", "Library/Cube_Inner_Faces", "Library/Empty_Texture", "Library/Item_Offset", "Library/Shadeless", "Library/Plane"],
     "children": {
-      "inputs": "Fixes/Lite/inputs.json",
+      "inputs": {"type": "load_json", "path": "Fixes/Lite/inputs.json"},
       "output": "Resource Fixes Lite",
       "children": {
-        "inputs": "Fixes/Normal/inputs.json",
+        "inputs": {"type": "load_json", "path": "Fixes/Normal/inputs.json"},
         "output": "Resource Fixes",
         "children": {
-          "inputs": "Fixes/Textured/inputs.json",
+          "inputs": {"type": "load_json", "path": "Fixes/Textured/inputs.json"},
           "output": "Resource Fixes Textured",
           "children": [
             {
-              "inputs": "Fixes/Simplified/inputs.json",
+              "inputs": {"type": "load_json", "path": "Fixes/Simplified/inputs.json"},
               "output": "Resource Fixes Simplified"
             },
             {
-              "inputs": "Tweaks/Lite/inputs.json",
+              "inputs": {"type": "load_json", "path": "Tweaks/Lite/inputs.json"},
               "output": "Resource Tweaks Lite",
               "children": {
-                "inputs": "Tweaks/Normal/inputs.json",
+                "inputs": {"type": "load_json", "path": "Tweaks/Normal/inputs.json"},
                 "output": "Resource Tweaks",
                 "children": {
                   "removes": {
                     "path": "assets/minecraft/models/block/",
-                    "extras": [
-                      "calibrated_sculk_sensor.json*",
-                      "calibrated_sculk_sensor_active.json*",
-                      "calibrated_sculk_sensor_inactive.json*",
-                      "sculk_sensor.json*",
-                      "sculk_sensor_active.json*",
-                      "sculk_sensor_inactive.json*"
-                    ]
+                    "extras": ["calibrated_sculk_sensor.json*", "calibrated_sculk_sensor_active.json*", "calibrated_sculk_sensor_inactive.json*", "sculk_sensor.json*", "sculk_sensor_active.json*", "sculk_sensor_inactive.json*"]
                   },
-                  "inputs": "Tweaks/External/inputs.json",
+                  "inputs": {"type": "load_json", "path": "Tweaks/External/inputs.json"},
                   "output": "Resource Tweaks External"
                 }
               }

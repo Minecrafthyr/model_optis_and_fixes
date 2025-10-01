@@ -1,6 +1,6 @@
 [
   {
-    "path": "3D Default 1.21.2+ v1.12.1.zip",
+    "path": "3D Default 1.21.2+ v1.13.0.zip",
     "includes": [
       {
         "path": "README.md",
@@ -77,8 +77,13 @@
           "torch.json",
           "soul_torch.json",
           "redstone_torch.json",
+          "copper_torch.json",
           "lantern.json",
           "soul_lantern.json",
+          "copper_lantern.json",
+          "exposed_copper_lantern.json",
+          "oxidized_copper_lantern.json",
+          "weathered_copper_lantern.json",
           "potion.json",
           "splash_potion.json",
           "lingering_potion.json",

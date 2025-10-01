@@ -7,8 +7,8 @@ import logging
 import sys
 import time
 import os
-import glob
-import fnmatch
+import argparse
+import zipfile
 
 
 from os import path as op
@@ -16,17 +16,14 @@ from datetime import datetime as dt
 from dataclasses import dataclass, replace
 from typing import IO, Any
 from json.encoder import JSONEncoder
+from contextlib import contextmanager
 
-# import fastzipfile
-# from fastzipfile import zipfile
-import zipfile
 
 AnyDict = dict[str, Any]
 BytesDict = dict[str, bytes]
 
 logger = logging.getLogger()
 release: bool = False
-packsquash_path: str | None = None
 
 ENCODER = JSONEncoder(ensure_ascii=False, indent=None, separators=(",", ":"))
 
@@ -39,12 +36,9 @@ class Config:
     src_dir: str
     out_dir: str
     extra_out_dirs: list[str] | str
-    exclude_ext: tuple
-    default_excludes: tuple
-    default_merge: tuple
+    excludes: tuple
+    merge: tuple
     log_level: int = logging.INFO
-    compression: int = 0
-    compresslevel: int | None = None
 
     def log_debug(self, msg, *args, **kwargs):
         if self.log_level <= logging.DEBUG:
@@ -86,28 +80,19 @@ class InputInfo:
         return replace(self, **changes)
 
 
-class Timer:
-    """Timer for debug logging."""
-
-    def __init__(self, cfg: Config, arg1: str, arg2: Any):
-        self.cfg = cfg
-        self.arg1 = arg1
-        self.arg2 = arg2
-        self.start_time: float | None = None
-
-    def __enter__(self):
-        self.start_time = time.time()
-        return self
-
-    def __exit__(self, exc_type: None, exc_val: None, exc_tb: None):
-        if self.start_time is not None:
-            self.cfg.log_debug(
-                '%s: %s "%s" costs %ss',
-                self.cfg.name,
-                self.arg1,
-                self.arg2,
-                time.time() - self.start_time,
-            )
+@contextmanager
+def timer(cfg: Config, operation: str, target: Any):
+    start_time = time.time()
+    try:
+        yield
+    finally:
+        cfg.log_debug(
+            '%s: %s "%s" costs %ss',
+            cfg.name,
+            operation,
+            target,
+            time.time() - start_time,
+        )
 
 
 def norm_path(path: str) -> str:
@@ -118,32 +103,17 @@ def join_path(path: str, /, *paths: str) -> str:
     return Path(path).joinpath(*paths).as_posix()
 
 
-def get_paths_with_output(
-    obj: list[AnyDict | str] | AnyDict | str,
-    includes: dict[str, str | None] | None = None,
-    path: str = "",
-    out_path: str = "",
-):
-    if includes is None:
-        includes = {}
-    if isinstance(obj, str):
-        includes[join_path(path, obj)] = (
-            join_path(out_path, obj) if len(out_path) != 0 else None
-        )
-    elif isinstance(obj, list):
-        for o in obj:
-            get_paths_with_output(o, includes, path)
-    else:
-        new_path = op.join(path, obj["path"]) if "path" in obj else path
-        new_out_path = (
-            op.join(out_path, obj["out_path"]) if "out_path" in obj else out_path
-        )
-        if "extras" in obj:
-            get_paths_with_output(obj["extras"], includes, new_path, new_out_path)
-        else:
-            includes[norm_path(new_path)] = norm_path(new_out_path)
+def join_path_from_file(path: str, s: str) -> str:
+    return join_path(path, op.relpath(op.dirname(s), path))
 
-    return includes
+
+def get_from_file(obj: AnyDict, path: str):
+    _type = obj.get("type", None)
+    if _type == "load_json" and op.isfile(path):
+        with open(path, "r") as f:
+            json_data = json.load(f)
+            return json_data
+    return None
 
 
 def get_paths(
@@ -160,12 +130,48 @@ def get_paths(
             get_paths(o, paths, path)
     else:
         new_path = op.join(path, obj["path"]) if "path" in obj else path
-        if "extras" in obj:
+        _load_json = get_from_file(obj, new_path)
+        if _load_json is not None:
+            get_paths(_load_json, paths, join_path_from_file(path, new_path))
+        elif "extras" in obj:
             get_paths(obj["extras"], paths, new_path)
         else:
             paths.add(norm_path(new_path))
 
     return paths
+
+
+def get_paths_with_output(
+    obj: list[AnyDict | str] | AnyDict | str,
+    paths_w_o: dict[str, str | None] | None = None,
+    path: str = "",
+    out_path: str = "",
+):
+    if paths_w_o is None:
+        paths_w_o = {}
+    if isinstance(obj, str):
+        paths_w_o[join_path(path, obj)] = (
+            join_path(out_path, obj) if len(out_path) != 0 else None
+        )
+    elif isinstance(obj, list):
+        for o in obj:
+            get_paths_with_output(o, paths_w_o, path)
+    else:
+        new_path = op.join(path, obj["path"]) if "path" in obj else path
+        new_out_path = (
+            op.join(out_path, obj["out_path"]) if "out_path" in obj else out_path
+        )
+        _load_json = get_from_file(obj, new_path)
+        if _load_json is not None:
+            get_paths_with_output(
+                _load_json, paths_w_o, join_path_from_file(path, new_path), new_out_path
+            )
+        elif "extras" in obj:
+            get_paths_with_output(obj["extras"], paths_w_o, new_path, new_out_path)
+        else:
+            paths_w_o[norm_path(new_path)] = norm_path(new_out_path)
+
+    return paths_w_o
 
 
 def get_inputs(
@@ -184,32 +190,32 @@ def get_inputs(
             get_inputs(o, inputs, ii.copy(), cfg)
     elif isinstance(obj, str):
         new_path = join_path(ii.path, obj)
-        if new_path.endswith("inputs.json"):
-            with open(new_path, "r") as f:
-                json_data = json.load(f)
-            get_inputs(
-                json_data,
-                inputs,
-                ii.copy(
-                    path=join_path(ii.path, op.relpath(op.dirname(new_path), ii.path))
-                ),
-                cfg,
-            )
-        else:
-            inputs.append(ii.copy(path=new_path))
+        inputs.append(ii.copy(path=new_path))
     else:
         new_path = op.join(ii.path, obj["path"]) if "path" in obj else ii.path
         new_excludes = get_paths(obj.get("excludes", []))
         new_excludes.update(ii.excludes)
         new_includes = get_paths_with_output(obj.get("includes", []))
         new_includes.update(ii.includes)
+
         new_ii = ii.copy(
-            path=new_path,
             zip_mode=obj.get("zip_mode", ii.zip_mode),
             blocking_mode=obj.get("mode", ii.blocking_mode),
             excludes=tuple(new_excludes),
             includes=new_includes,
         )
+
+        _load_json = get_from_file(obj, new_path)
+        if _load_json is not None:
+            new_ii.path = join_path_from_file(ii.path, new_path)
+            get_inputs(
+                _load_json,
+                inputs,
+                new_ii,
+                cfg,
+            )
+
+        new_ii.path = new_path
         if "extras" in obj:
             get_inputs(obj["extras"], inputs, new_ii, cfg)
         else:
@@ -218,32 +224,35 @@ def get_inputs(
     return inputs
 
 
-def not_excluded(opath: str, cfg: Config, excludes: tuple):
+def full_match(path: Path, container: Any):
+    for pattern in container:
+        if path.full_match(pattern):
+            return True
+    return False
+
+
+def not_excluded(opath: Path, cfg: Config, excludes: tuple):
     """Excluding files.
     return False if matched exclude.
     """
-    if opath.endswith(cfg.exclude_ext):
-        cfg.log_debug('%s: exclude "%s" by extension', cfg.name, opath)
+    # if opath.endswith(cfg.exclude_ext):
+    #    cfg.log_debug('%s: exclude "%s" by extension', cfg.name, opath)
+    #    return False
+    if full_match(opath, excludes):
+        cfg.log_debug('%s: excluded "%s"', cfg.name, opath)
         return False
-    opath_obj = Path(opath)
-    for pattern in excludes:
-        if opath_obj.match(pattern):
-            cfg.log_debug('%s: excluded "%s"', cfg.name, opath)
-            return False
-    for pattern in cfg.default_excludes:
-        if opath_obj.match(pattern):
-            cfg.log_debug('%s: exclude "%s" by default', cfg.name, opath)
-            return False
+    if full_match(opath, cfg.excludes):
+        cfg.log_debug('%s: exclude "%s" by default', cfg.name, opath)
+        return False
     return True
 
 
-def not_blocked(opath: str, cfg: Config, ii: InputInfo):
-    opath_obj = Path(opath)
+def not_blocked(opath: Path, cfg: Config, ii: InputInfo):
     if ii.blocking_mode:
-        if not any(opath_obj.match(include) for include in ii.includes.keys()):
+        if not full_match(opath, list(ii.includes.keys())):
             return False
     else:
-        if any(opath_obj.match(include) for include in ii.includes.keys()):
+        if full_match(opath, list(ii.includes.keys())):
             return True
     return not_excluded(opath, cfg, ii.excludes)
 
@@ -265,15 +274,14 @@ def store_file(
 ):
     moved = moving(opath, cfg, ii)
     if ipath.endswith(".json"):
-        for pattern in cfg.default_merge:
-            if fnmatch.fnmatch(opath, pattern) and moved in storage:
-                original = json.loads(storage[moved])
-                target = json.load(stream)
-                if isinstance(original, dict) and isinstance(target, dict):
-                    original.update(target)
-                    storage[moved] = bytes(ENCODER.encode(original), "utf-8")
-                    return
-        if release:
+        if moved in storage and full_match(Path(opath), cfg.merge):
+            original = json.loads(storage[moved])
+            target = json.load(stream)
+            if isinstance(original, dict) and isinstance(target, dict):
+                original.update(target)
+                storage[moved] = bytes(ENCODER.encode(original), "utf-8")
+                return
+        if args.release:
             storage[moved] = bytes(ENCODER.encode(json.load(stream)), "utf-8")
             return
     storage[moved] = stream.read()
@@ -282,132 +290,119 @@ def store_file(
 
 def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
     """Process file input."""
-    try:
-        if not ii.zip_mode or not ii.path.endswith(".zip"):
-            cfg.log_debug(f"Loading single file {ii.path}")
-            with open(ii.path, "rb") as f:
-                store_file(storage, cfg, ii, f, ii.path, op.basename(ii.path))
-            return
-        with zipfile.ZipFile(file=ii.path, mode="r") as zipf:
-            cfg.log_debug(f"Loading zip file {ii.path}")
+    if not ii.zip_mode or not ii.path.endswith(".zip"):
+        cfg.log_debug("Loading single file %s", ii.path)
+        with open(ii.path, "rb") as f:
+            store_file(storage, cfg, ii, f, ii.path, op.basename(ii.path))
+        return
+    with zipfile.ZipFile(file=ii.path, mode="r") as zipf:
+        cfg.log_debug("Loading zip file %s", ii.path)
 
-            def on_zipinfo(zinfo: zipfile.ZipInfo):
-                iopath = zinfo.filename
-                if not_blocked(iopath, cfg, ii):
-                    with zipf.open(iopath) as f:
-                        store_file(storage, cfg, ii, f, iopath, iopath)
+        def on_zipinfo(zinfo: zipfile.ZipInfo):
+            iopath = zinfo.filename
+            if not_blocked(Path(iopath), cfg, ii):
+                with zipf.open(iopath) as f:
+                    store_file(storage, cfg, ii, f, iopath, iopath)
 
-            with ThreadPoolExecutor() as tpe:
-                for zinfo in zipf.filelist:
-                    if zinfo.is_dir():
-                        continue
-                    tpe.submit(on_zipinfo, zinfo)
-    except Exception as e:
-        cfg.log_error("Error processing file %s: %s", ii.path, e, exc_info=True)
+        with ThreadPoolExecutor() as tpe:
+            for zinfo in zipf.filelist:
+                if zinfo.is_dir():
+                    continue
+                tpe.submit(on_zipinfo, zinfo)
 
 
 def input_dir(storage: BytesDict, cfg: Config, ii: InputInfo):
     """Process directory input."""
     cfg.log_debug(f"Loading directory {ii.path}")
-    try:
-        base_path = Path(ii.path)
+    base_path = Path(ii.path)
+    all_files = [p for p in base_path.rglob("*") if p.is_file()]
 
-        all_files = [p for p in base_path.rglob("*") if p.is_file()]
+    def on_file(file_path: Path):
+        opath = file_path.relative_to(base_path)
+        if not_blocked(opath, cfg, ii):
+            with open(file_path, "rb") as f:
+                store_file(storage, cfg, ii, f, file_path.as_posix(), opath.as_posix())
 
-        def on_file(file_path: Path):
-            opath = file_path.relative_to(base_path).as_posix()
-            if not_blocked(opath, cfg, ii):
-                with open(file_path, "rb") as f:
-                    store_file(storage, cfg, ii, f, file_path.as_posix(), opath)
-
-        with ThreadPoolExecutor() as tpe:
-            for file_path in all_files:
-                tpe.submit(on_file, file_path)
-    except Exception as e:
-        cfg.log_error("Error processing directory %s: %s", ii.path, e, exc_info=True)
+    with ThreadPoolExecutor() as tpe:
+        for file_path in all_files:
+            tpe.submit(on_file, file_path)
 
 
-def cfg_tree(
-    cfg: Config,
-    tree: AnyDict,
-    storage: BytesDict,
-):
-    """Process config tree."""
-    try:
-        removes = tuple(get_paths(tree.get("removes", [])))
-        keys = list(storage.keys())
+def cfg_tree(cfg: Config, tree: AnyDict, storage: BytesDict):
+    removes = get_paths(tree.get("removes", []))
+    for k in list(storage.keys()):
+        if full_match(Path(k), removes):
+            cfg.log_debug("Removed %s from storage", k)
+            storage.pop(k)
 
-        for k in keys:
-            k_obj = Path(k)
-            for pattern in removes:
-                if k_obj.match(pattern):
-                    storage.pop(k)
-                    break
+    inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
+    extra_out = tree.get("extra_out", True)
 
-        inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
-        extra_out = tree.get("extra_out", True)
-
-        for ii in get_inputs(inputs, None, None, cfg):
-            isdir = os.path.isdir(ii.path)
-            isfile = os.path.isfile(ii.path)
-            if not isdir and not isfile:
-                cfg.log_error(f"{ii.path} is not dir or file")
-            if isdir:
+    for ii in get_inputs(inputs, None, None, cfg):
+        isdir = os.path.isdir(ii.path)
+        isfile = os.path.isfile(ii.path)
+        if not isdir and not isfile:
+            cfg.log_error("%s is not dir or file", ii.path)
+        if isdir:
+            try:
                 input_dir(storage, cfg, ii)
-            if isfile:
+            except Exception as e:
+                cfg.log_error("Error at %s: %s", ii.path, e, exc_info=True)
+        if isfile:
+            try:
                 input_file(storage, cfg, ii)
+            except Exception as e:
+                cfg.log_error("Error at %s: %s", ii.path, e, exc_info=True)
 
-        def on_output():
-            filepath = Path(tree["output"] + ".zip")
-            out_path = Path(cfg.out_dir, filepath)
+    def on_output():
+        filepath = Path(tree["output"] + ".zip")
+        out_path = Path(cfg.out_dir, filepath)
+        os.makedirs(op.dirname(out_path), exist_ok=True)
+        with timer(cfg, "Zipping", filepath):
 
-            os.makedirs(op.dirname(out_path), exist_ok=True)
-            with Timer(cfg, "Zipping", filepath):
-                with zipfile.ZipFile(
-                    out_path,
-                    "w",
-                    compression=zipfile.ZIP_DEFLATED if release else cfg.compression,
-                    compresslevel=9 if release else cfg.compresslevel,
-                ) as zipm:
-                    for k, v in storage.items():
-                        zipm.writestr(k, v)
-            cfg.log_info(
-                '%s: "%s" completed (%s files, %s KiB)',
-                cfg.name,
-                filepath,
-                len(storage),
-                out_path.stat().st_size >> 10,
-            )
-            if not extra_out:
-                return
-            if isinstance(cfg.extra_out_dirs, list):
-                for extra_out_dir in cfg.extra_out_dirs:
-                    shutil.copy(out_path, extra_out_dir)
-            else:
-                shutil.copy(out_path, cfg.extra_out_dirs)
-            if len(cfg.extra_out_dirs) != 0:
-                cfg.log_debug('Copied "%s" to "%s"', out_path, cfg.extra_out_dirs)
+            with zipfile.ZipFile(
+                out_path,
+                "w",
+                zipfile.ZIP_DEFLATED,
+                compresslevel=9 if args.release else 1,
+            ) as vzip:
+                for k, v in storage.items():
+                    vzip.writestr(k, v)
+        cfg.log_info(
+            '%s: "%s" completed (%s files, %s KiB)',
+            cfg.name,
+            filepath,
+            len(storage),
+            out_path.stat().st_size >> 10,
+        )
+        if not extra_out:
+            return
+        if isinstance(cfg.extra_out_dirs, list):
+            for extra_out_dir in cfg.extra_out_dirs:
+                shutil.copy(out_path, extra_out_dir)
+        else:
+            shutil.copy(out_path, cfg.extra_out_dirs)
+        if len(cfg.extra_out_dirs) != 0:
+            cfg.log_debug('Copied "%s" to "%s"', out_path, cfg.extra_out_dirs)
 
-        def on_children():
-            children: AnyDict | list[AnyDict] = tree["children"]
-            if isinstance(children, list):
-                with ThreadPoolExecutor() as tpe:
-                    for i in children:
-                        tpe.submit(cfg_tree, cfg, i, storage.copy())
-            else:
-                cfg_tree(cfg, children, storage.copy())
+    def on_children():
+        children: AnyDict | list[AnyDict] = tree["children"]
+        if isinstance(children, list):
+            with ThreadPoolExecutor() as tpe:
+                for i in children:
+                    tpe.submit(cfg_tree, cfg, i, storage.copy())
+        else:
+            cfg_tree(cfg, children, storage.copy())
 
-        if "children" in tree and "output" in tree:
-            th = Thread(target=on_children)
-            th.start()
-            on_output()
-            th.join()
-        elif "children" in tree:
-            on_children()
-        elif "output" in tree:
-            on_output()
-    except Exception as e:
-        cfg.log_error("Error in cfg_tree for config %s: %s", cfg.name, e, exc_info=True)
+    if "children" in tree and "output" in tree:
+        th = Thread(target=on_children)
+        th.start()
+        on_output()
+        th.join()
+    elif "children" in tree:
+        on_children()
+    elif "output" in tree:
+        on_output()
 
 
 def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
@@ -417,7 +412,7 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
             for item in raw_cfg:
                 tpe.submit(cfg_root, item)
         return
-    if raw_cfg.get("only_in_release", False) and not release:
+    if raw_cfg.get("only_in_release", False) and not args.release:
         return
     log_level: int | str = raw_cfg.get("log_level", logging.INFO)
     if isinstance(log_level, str):
@@ -428,12 +423,9 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
         raw_cfg.get("src_dir", "src/"),
         raw_cfg.get("out_dir", "out/"),
         raw_cfg.get("extra_out_dirs", []),
-        raw_cfg.get("exclude_ext", (".py", ".backup", ".temp", ".tmp")),
-        tuple(get_paths(raw_cfg.get("default_excludes", []))),
-        tuple(get_paths(raw_cfg.get("default_merge", []))),
+        tuple(get_paths(raw_cfg.get("excludes", []))),
+        tuple(get_paths(raw_cfg.get("merge", []))),
         log_level,
-        raw_cfg.get("compression", 0),
-        raw_cfg.get("compresslevel", None),
     )
     cfg.log_info('== Config "%s" starts ==', cfg.name)
     if raw_cfg.get("clear", True):
@@ -450,62 +442,58 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
         cfg_tree(cfg, tree, {})
 
 
-def try_get_arg(s: str, d: str) -> str:
-    try:
-        args = sys.argv[1:]
-        return args[args.index(s) + 1]
-    except:
-        return d
-
-
-if __name__ == "__main__":
-    try:
-        release = "--release" in sys.argv[1:]
-        dir_path = try_get_arg("--dir", op.dirname(__file__))
-        cfg_path = try_get_arg("--cfg", "config.json")
-        log_path = try_get_arg("--log", "build.log")
-        packsquash_path = try_get_arg("--packsquash", "packsquash.exe")
-
-        os.chdir(dir_path)
-
-        if op.isfile(log_path):
-            os.makedirs("logs", exist_ok=True)
-
-            with open(log_path, "rb") as log:
-                with open(
-                    f"logs/{dt.fromtimestamp(os.stat(log_path).st_mtime).strftime("%Y-%m-%d_%H-%M-%S")} {op.basename(log_path)}",
-                    "xb",
-                ) as log_archive:
-                    log_archive.write(log.read())
-
-        logger.setLevel(logging.DEBUG)
-        console_handler = logging.StreamHandler(sys.stdout)
-        console_handler.setLevel(logging.INFO)
-        console_handler.setFormatter(
-            logging.Formatter(
-                "[%(asctime)s] [%(levelname)s] %(message)s", datefmt="%H:%M:%S"
-            )
+def setup_log():
+    if op.isfile(args.log):
+        os.makedirs("logs", exist_ok=True)
+        _t = dt.fromtimestamp(os.stat(args.log).st_mtime).strftime("%Y-%m-%d_%H-%M-%S")
+        shutil.copy2(
+            args.log,
+            f"logs/{_t} {op.basename(args.log)}",
         )
 
-        file_handler = logging.FileHandler(log_path, mode="w")
-        file_handler.setLevel(logging.DEBUG)
-        file_handler.setFormatter(
-            logging.Formatter(
-                "[%(asctime)s.%(msecs)03d] [%(levelname)s] %(message)s",
-                datefmt="%H:%M:%S",
-            )
+    logger.setLevel(logging.DEBUG)
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(
+        logging.Formatter(
+            "[%(asctime)s] [%(levelname)s] %(message)s", datefmt="%H:%M:%S"
         )
+    )
 
-        logger.addHandler(console_handler)
-        logger.addHandler(file_handler)
-        tp_start = dt.now()
+    file_handler = logging.FileHandler(args.log, mode="w")
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(
+        logging.Formatter(
+            "[%(asctime)s.%(msecs)03d] [%(levelname)s] %(message)s",
+            datefmt="%H:%M:%S",
+        )
+    )
 
-        with open(cfg_path, "r") as cfg_file:
-            config_data = json.load(cfg_file)
+    logger.addHandler(console_handler)
+    logger.addHandler(file_handler)
 
-        cfg_root(config_data)
 
-        logging.info("Build stops at %s, total cost %s.", dt.now(), dt.now() - tp_start)
+def parse_args():
 
-    except Exception as e:
-        logging.error("Error: %s", e, exc_info=True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--release", action="store_true")
+    parser.add_argument("--dir", default=os.path.dirname(__file__))
+    parser.add_argument("--cfg", default="config.json")
+    parser.add_argument("--log", default="build.log")
+    return parser.parse_args()
+
+
+args = parse_args()
+
+os.chdir(args.dir)
+
+setup_log()
+
+tp_start = dt.now()
+
+with open(args.cfg, "rb") as _cfg_f:
+    config_data = json.load(_cfg_f)
+
+cfg_root(config_data)
+
+logging.info("Build stops at %s, total cost %s.", dt.now(), dt.now() - tp_start)

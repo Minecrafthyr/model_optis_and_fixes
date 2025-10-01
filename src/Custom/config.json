@@ -6,7 +6,7 @@
   "tree": {
     "inputs": [
       {
-        "path": "3D Default 1.21.2+ v1.12.1.zip",
+        "path": "3D Default 1.21.2+ v1.13.0.zip",
         "excludes": [
           {
             "path": "assets/minecraft",
@@ -24,13 +24,14 @@
               {
                 "path": "models/block",
                 "extras": [
-                  "chain.json",
                   "flower*",
                   "potted*",
                   "lightning_rod",
                   "redstone_dust",
                   "brewing_stand",
                   "cobweb.json",
+                  "chain.json",
+                  "template_chain.json",
                   "template_hanging_lantern.json",
                   "template_lantern.json",
                   "gilded_blackstone.json",
@@ -58,7 +59,18 @@
                   "honey_bottle.json",
                   "ominous_bottle.json",
                   "glass_bottle.json",
-                  "chain.json"
+                  "chain.json",
+                  "iron_chain.json",
+                  "copper_chain.json",
+                  "exposed_copper_chain.json",
+                  "oxidized_copper_chain.json",
+                  "weathered_copper_chain.json",
+                  "lantern.json",
+                  "soul_lantern.json",
+                  "copper_lantern.json",
+                  "exposed_copper_lantern.json",
+                  "oxidized_copper_lantern.json",
+                  "weathered_copper_lantern.json"
                 ]
               },
               {
@@ -136,6 +148,6 @@
       },
       "3D_Default.overrides"
     ],
-    "output": "3D Default v1.12.1 [Edit 3]"
+    "output": "3D Default 1.21.2+ v1.13.0 [Edit 3]"
   }
 }
