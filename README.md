@@ -11,8 +11,8 @@
 
 > FPS Boost?
 
-- Resource Fixes Lite|Normal|Textured|Simplified: ✔️ (in some cases; depends on block type and count).
-- Resource Tweaks Normal|External: ❌️ (some models slow downs).
+- Fixes.(Lite|Normal|Textured|Simplified): ✔️ (in some cases; depends on block type and count).
+- Tweaks.(Lite|Normal|External): ❌️ (some models slow downs).
 
 ## Variants
 
@@ -28,7 +28,7 @@ Resource Fixes (optimize and fixes)
   Using texture may conflict to other resourcepack.  
   Designed with Default resource style.
 - Simplified variant  
-  Simplified some block models.  
+  Simplified some block models for fun.  
   Resource Tweaks are **not affected**.
 
 Resource Tweaks (tweaks and improvements)
@@ -184,6 +184,7 @@ Simplified model: Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflow
 - `Better_Particles`: Modified 9 files from "[Vanilla Tweaks](https://vanillatweaks.net/)/Unobtrusive Particles" under [Vanilla Tweaks - Terms and Conditions](https://vanillatweaks.net/terms/).
 - `Fast_Better_Grass`: Modified 8 files from [Fast Better Grass](https://modrinth.com/project/dspVZXKP) by [Fabulously Optimized](https://modrinth.com/organization/fabulously-optimized)/[robotkoer](https://modrinth.com/user/robotkoer) under [MIT License](https://spdx.org/licenses/MIT).
 - `Natural_Firefly_Bushes`: Copied zip file from [Natural Firefly Bushes](https://modrinth.com/project/1u7lYbpD) by [TheGreatOwlMaster](https://modrinth.com/user/TheGreatOwlMaster) under [MIT License](https://spdx.org/licenses/MIT).
+
 ### Normal
 
 - `3D_Bars`
@@ -208,7 +209,6 @@ Simplified model: Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflow
 - `3D_Bars`: Modified 6 files from [Simple 3D Iron Bars](https://modrinth.com/project/p5Kdm58p) by [poqbox](https://modrinth.com/user/poqbox) under [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause).
 - `3D_Redstone_Dust`: Modified 4 files from [Just 3D](https://modrinth.com/project/EnOq8vEP) by [sniffercraft34](https://modrinth.com/user/sniffercraft34) under [MIT License](https://spdx.org/licenses/MIT).
 - `Tasty_Items`: Copied zip file from [Tasty Items](https://modrinth.com/project/yVNZK7l2) by [enchanted-games](https://modrinth.com/user/enchanted-games) under [CC-BY-NC-4.0](https://spdx.org/licenses/CC-BY-NC-4.0).
-
 
 ### External
 

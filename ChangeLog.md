@@ -1,10 +1,7 @@
 ### Version 9.10
 
 - Removed Block bigger in Item Frames because external pack and mod does not follow it.
-
-### Resource Fixes
-
-- Fix 
+- Fix some items has no `on_shelf` display.
 
 ### Resource Tweaks
 
