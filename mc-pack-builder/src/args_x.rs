@@ -27,7 +27,7 @@ macro_rules! param {
   };
 }
 impl ArgsX {
-  pub fn param(&mut self, args: &mut std::env::Args, s: &str) -> bool {
+  pub fn params(&mut self, args: &mut std::env::Args, s: &str) -> bool {
     match s {
       "-d" | "--dir" => self.dir = param!(args, "path").into(),
       "-l" | "--log" => self.log = param!(args, "path").into(),
@@ -52,12 +52,12 @@ impl ArgsX {
       "run" => args_x.config = Some(param!(args, "path").into()),
       "input" => args_x.config = None,
       arg =>
-        if !args_x.param(&mut args, arg) {
+        if !args_x.params(&mut args, arg) {
           return args_x;
         },
     };
     while let Some(arg) = args.next()
-      && args_x.param(&mut args, &arg)
+      && args_x.params(&mut args, &arg)
     {}
     args_x
   }

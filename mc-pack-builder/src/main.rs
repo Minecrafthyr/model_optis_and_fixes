@@ -132,7 +132,6 @@ fn create_zip_output(storage: &Storage, output_path: &Path, config: &Config) -> 
   info!(config, "\"{}\" completed ({} files, {} KiB)", output_path.display(), storage.len(), file_size);
   Ok(())
 }
-fn valid_output(p: &Path) -> Option<&Path> { if p.is_absolute() && p.exists() { Some(p) } else { None } }
 fn extra_out(path_o: &Path, file_name: &OsStr, config: &Config) {
   let mut success = Vec::new();
   let mut invaild = Vec::new();
