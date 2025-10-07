@@ -134,20 +134,20 @@ fn create_zip_output(storage: &Storage, output_path: &Path, config: &Config) -> 
 }
 fn extra_out(path_o: &Path, file_name: &OsStr, config: &Config) {
   let mut success = Vec::new();
-  let mut invaild = Vec::new();
+  let mut invalid = Vec::new();
   for p in &config.extra_out_dirs {
     if p.is_absolute() && p.exists() {
       let p = p.join(file_name);
-      if fs::copy(&path_o, &p).is_ok() { &mut success } else { &mut invaild }.push(p.display().to_string())
+      if fs::copy(&path_o, &p).is_ok() { &mut success } else { &mut invalid }.push(p.display().to_string())
     } else {
-      invaild.push(p.display().to_string());
+      invalid.push(p.display().to_string());
     }
   }
   if !success.is_empty() {
     debug!(config, "Copied \"{}\" to \"{:?}\"", path_o.display(), success);
   }
-  if !invaild.is_empty() {
-    error!(config, "Error copy \"{}\" to \"{:?}\"", path_o.display(), invaild);
+  if !invalid.is_empty() {
+    error!(config, "Error copy \"{}\" to \"{:?}\"", path_o.display(), invalid);
   }
 }
 fn process_tree(tree: &Value, storage: Storage, config: &Config) -> Result<()> {
