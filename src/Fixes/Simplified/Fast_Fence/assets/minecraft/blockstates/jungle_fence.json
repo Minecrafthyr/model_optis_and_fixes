@@ -1,0 +1,131 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "true",
+            "east": "false",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "true",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "true",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "false",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "false",
+            "south": "false",
+            "west": "true"
+          },
+          {
+            "north": "true",
+            "east": "true",
+            "south": "false",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "true",
+            "south": "true",
+            "west": "false"
+          },
+          {
+            "north": "false",
+            "east": "false",
+            "south": "true",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "block/jungle_fence_post"
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "south": "false"
+      },
+      "apply": {
+        "model": "block/jungle_fence_side",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "false"
+      },
+      "apply": {
+        "model": "block/jungle_fence_side",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true",
+        "north": "false"
+      },
+      "apply": {
+        "model": "block/jungle_fence_side",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "true",
+        "east": "false"
+      },
+      "apply": {
+        "model": "block/jungle_fence_side",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "north": "true",
+        "south": "true"
+      },
+      "apply": {
+        "model": "block/jungle_fence_side_double",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true",
+        "west": "true"
+      },
+      "apply": {
+        "model": "block/jungle_fence_side_double",
+        "y": 90,
+        "uvlock": true
+      }
+    }
+  ]
+}

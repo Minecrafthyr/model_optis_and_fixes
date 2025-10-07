@@ -1,6 +1,3 @@
-from concurrent.futures import ThreadPoolExecutor
-from pathlib import Path
-from threading import Thread
 import shutil
 import json
 import logging
@@ -9,23 +6,27 @@ import time
 import os
 import argparse
 import zipfile
+import io
 
-
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+from threading import Thread
 from os import path as op
 from datetime import datetime as dt
 from dataclasses import dataclass, replace
-from typing import IO, Any
+from zipfile import ZipFile
+from typing import IO, Any, Iterable
 from json.encoder import JSONEncoder
 from contextlib import contextmanager
 
+import jsonpatch
+from PIL import Image
 
-AnyDict = dict[str, Any]
-BytesDict = dict[str, bytes]
+type AnyDict = dict[str, Any]
+type BytesDict = dict[str, bytes]
 
 logger = logging.getLogger()
 release: bool = False
-
-ENCODER = JSONEncoder(ensure_ascii=False, indent=None, separators=(",", ":"))
 
 
 @dataclass(frozen=True)
@@ -33,302 +34,336 @@ class Config:
     """A config entry"""
 
     name: str
-    src_dir: str
-    out_dir: str
-    extra_out_dirs: list[str] | str
-    excludes: tuple
-    merge: tuple
+    src_dir: Path
+    out_dir: Path
+    extra_out_dirs: list[Path]
+    excludes: set[Path]
+    merge: set[Path]
     log_level: int = logging.INFO
+    merge_readme: bool = False
 
-    def log_debug(self, msg, *args, **kwargs):
+    def log_debug(self, msg, *_args, **_kwargs):
         if self.log_level <= logging.DEBUG:
-            logging.debug(msg, *args, **kwargs)
+            logging.debug(msg, *_args, **_kwargs)
 
-    def log_info(self, msg, *args, **kwargs):
+    def log_info(self, msg, *_args, **_kwargs):
         if self.log_level <= logging.INFO:
-            logging.info(msg, *args, **kwargs)
+            logging.info(msg, *_args, **_kwargs)
 
-    def log_warning(self, msg, *args, **kwargs):
+    def log_warning(self, msg, *_args, **_kwargs):
         if self.log_level <= logging.WARNING:
-            logging.warning(msg, *args, **kwargs)
+            logging.warning(msg, *_args, **_kwargs)
 
-    def log_error(self, msg, *args, **kwargs):
+    def log_error(self, msg, *_args, **_kwargs):
         if self.log_level <= logging.ERROR:
-            logging.error(msg, *args, **kwargs)
+            logging.error(msg, *_args, **_kwargs)
 
-    def log_critical(self, msg, *args, **kwargs):
+    def log_critical(self, msg, *_args, **_kwargs):
         if self.log_level <= logging.CRITICAL:
-            logging.critical(msg, *args, **kwargs)
+            logging.critical(msg, *_args, **_kwargs)
 
-    def log_exception(self, msg, *args, exc_info=True, **kwargs):
+    def log_exception(self, msg, *_args, exc_info=True, **_kwargs):
         if self.log_level <= logging.ERROR:
-            logging.error(msg, *args, exc_info=exc_info, **kwargs)
+            logging.error(msg, *_args, exc_info=exc_info, **_kwargs)
+
+
+def create_config(raw_cfg: AnyDict) -> Config | None:
+    if raw_cfg.get("only_in_release", False) and not args.release:
+        return None
+    log_level: int | str = raw_cfg.get("log_level", logging.INFO)
+    if isinstance(log_level, str):
+        log_level = logging.getLevelNamesMapping()[log_level]
+    _out_dirs = raw_cfg.get("extra_out_dirs", [])
+    if isinstance(_out_dirs, str):
+        _out_dir = Path(_out_dirs)
+        _out_dirs = [_out_dir] if _out_dir.is_absolute() else []
+    elif isinstance(_out_dirs, list):
+        _out_dirs = [p for p in map(Path, _out_dirs) if p.is_absolute()]
+    else:
+        _out_dirs = []
+
+    cfg = Config(
+        str(raw_cfg.get("name", "<unnamed>")),
+        Path(raw_cfg.get("src_dir", "src/")),
+        Path(raw_cfg.get("out_dir", "out/")),
+        _out_dirs,
+        get_paths(raw_cfg.get("excludes", [])),
+        get_paths(raw_cfg.get("merge", [])),
+        log_level,
+        raw_cfg.get("merge_readme", False),
+    )
+    cfg.log_info("%s: starting...", cfg.name)
+    if raw_cfg.get("clear", True):
+        shutil.rmtree(cfg.out_dir, ignore_errors=True)
+    os.makedirs(cfg.out_dir, exist_ok=True)
+    return cfg
 
 
 @dataclass
 class InputInfo:
     """Information about input. May change after init."""
 
-    path: str
+    path: Path
     blocking_mode: bool
     zip_mode: bool
-    excludes: tuple
-    includes: dict[str, str | None]
-    # reformat: JSONEncoder | None = None
+    excludes: set[Path]
+    includes: dict[Path, Path | None]
 
     def copy(self, **changes):
         return replace(self, **changes)
 
 
+ENCODER = JSONEncoder(ensure_ascii=False, indent=None, separators=(",", ":"))
+
+
 @contextmanager
 def timer(cfg: Config, operation: str, target: Any):
-    start_time = time.time()
+    start = time.time()
     try:
         yield
     finally:
-        cfg.log_debug(
-            '%s: %s "%s" costs %ss',
-            cfg.name,
-            operation,
-            target,
-            time.time() - start_time,
-        )
+        cfg.log_debug('%s: %s "%s" costs %ss', cfg.name, operation, target, time.time() - start)
 
 
-def norm_path(path: str) -> str:
-    return Path(path).as_posix()
+@contextmanager
+def error_context(cfg: Config, operation: str, target: Path):
+    try:
+        yield
+    except Exception as e:
+        cfg.log_error("Error in %s at %s: %s", operation, target, e, exc_info=True)
+        raise
 
 
-def join_path(path: str, /, *paths: str) -> str:
-    return Path(path).joinpath(*paths).as_posix()
+def is_empty(p: Path):
+    return p == Path(".") or p == Path()
 
 
-def join_path_from_file(path: str, s: str) -> str:
-    return join_path(path, op.relpath(op.dirname(s), path))
+def join_path_s(path: Path, may_path: Path | None) -> Path:
+    return path if may_path is None else path / may_path
 
 
-def get_from_file(obj: AnyDict, path: str):
-    _type = obj.get("type", None)
-    if _type == "load_json" and op.isfile(path):
-        with open(path, "r") as f:
-            json_data = json.load(f)
-            return json_data
-    return None
+def load_json(path: Path, *_args, **_kwargs) -> Any:
+    with open(path, *_args, **_kwargs) as f:
+        json_data = json.load(f)
+        return json_data
 
 
 def get_paths(
     obj: list[AnyDict | str] | AnyDict | str,
-    paths: set[str] | None = None,
-    path: str = "",
+    paths: set[Path] | None = None,
+    path: Path = Path(),
 ):
     if paths is None:
-        paths = set[str]()
+        paths = set[Path]()
     if isinstance(obj, str):
-        paths.add(join_path(path, obj))
+        paths.add(path / obj)
     elif isinstance(obj, list):
         for o in obj:
             get_paths(o, paths, path)
     else:
-        new_path = op.join(path, obj["path"]) if "path" in obj else path
-        _load_json = get_from_file(obj, new_path)
-        if _load_json is not None:
-            get_paths(_load_json, paths, join_path_from_file(path, new_path))
+        _path = join_path_s(path, obj.get("path"))
+
+        if obj.get("type") == "load_json" and op.isfile(_path):
+            get_paths(load_json(_path), paths, _path.parent)
         elif "extras" in obj:
-            get_paths(obj["extras"], paths, new_path)
+            get_paths(obj["extras"], paths, _path)
         else:
-            paths.add(norm_path(new_path))
+            paths.add(_path)
 
     return paths
 
 
-def get_paths_with_output(
+def get_paths_with_out(
     obj: list[AnyDict | str] | AnyDict | str,
-    paths_w_o: dict[str, str | None] | None = None,
-    path: str = "",
-    out_path: str = "",
+    paths: dict[Path, Path | None] | None = None,
+    i_path: Path = Path(),
+    o_path: Path = Path(),
 ):
-    if paths_w_o is None:
-        paths_w_o = {}
+    if paths is None:
+        paths = {}
     if isinstance(obj, str):
-        paths_w_o[join_path(path, obj)] = (
-            join_path(out_path, obj) if len(out_path) != 0 else None
-        )
+        paths[i_path / obj] = None if is_empty(o_path) else o_path / obj
     elif isinstance(obj, list):
         for o in obj:
-            get_paths_with_output(o, paths_w_o, path)
+            get_paths_with_out(o, paths, i_path)
     else:
-        new_path = op.join(path, obj["path"]) if "path" in obj else path
-        new_out_path = (
-            op.join(out_path, obj["out_path"]) if "out_path" in obj else out_path
-        )
-        _load_json = get_from_file(obj, new_path)
-        if _load_json is not None:
-            get_paths_with_output(
-                _load_json, paths_w_o, join_path_from_file(path, new_path), new_out_path
-            )
+        _i_path = join_path_s(i_path, obj.get("path"))
+        _o_path = join_path_s(o_path, obj.get("out_path"))
+        if obj.get("type") == "load_json" and op.isfile(_i_path):
+            get_paths_with_out(load_json(_i_path), paths, _i_path.parent, _o_path)
         elif "extras" in obj:
-            get_paths_with_output(obj["extras"], paths_w_o, new_path, new_out_path)
+            get_paths_with_out(obj["extras"], paths, _i_path, _o_path)
         else:
-            paths_w_o[norm_path(new_path)] = norm_path(new_out_path)
+            paths[_i_path] = _o_path
 
-    return paths_w_o
+    return paths
 
 
 def get_inputs(
     obj: list[AnyDict | str] | AnyDict | str,
-    inputs: list[InputInfo] | None,
-    ii: InputInfo | None,
     cfg: Config,
+    inputs: list[InputInfo] | None = None,
+    ii: InputInfo | None = None,
 ) -> list[InputInfo]:
     if inputs is None:
         inputs = list[InputInfo]()
     if ii is None:
-        ii = InputInfo(cfg.src_dir, False, True, (), {})
+        ii = InputInfo(Path(cfg.src_dir), False, True, set[Path](), {})
 
     if isinstance(obj, list):
         for o in obj:
-            get_inputs(o, inputs, ii.copy(), cfg)
+            get_inputs(o, cfg, inputs, ii.copy())
     elif isinstance(obj, str):
-        new_path = join_path(ii.path, obj)
-        inputs.append(ii.copy(path=new_path))
+        inputs.append(ii.copy(path=ii.path / obj))
     else:
-        new_path = op.join(ii.path, obj["path"]) if "path" in obj else ii.path
-        new_excludes = get_paths(obj.get("excludes", []))
-        new_excludes.update(ii.excludes)
-        new_includes = get_paths_with_output(obj.get("includes", []))
-        new_includes.update(ii.includes)
-
+        _path = join_path_s(ii.path, obj.get("path"))
         new_ii = ii.copy(
             zip_mode=obj.get("zip_mode", ii.zip_mode),
             blocking_mode=obj.get("mode", ii.blocking_mode),
-            excludes=tuple(new_excludes),
-            includes=new_includes,
+            excludes=ii.excludes.copy() | get_paths(obj.get("excludes", [])),
+            includes=ii.includes.copy() | get_paths_with_out(obj.get("includes", [])),
         )
-
-        _load_json = get_from_file(obj, new_path)
-        if _load_json is not None:
-            new_ii.path = join_path_from_file(ii.path, new_path)
-            get_inputs(
-                _load_json,
-                inputs,
-                new_ii,
-                cfg,
-            )
-
-        new_ii.path = new_path
-        if "extras" in obj:
-            get_inputs(obj["extras"], inputs, new_ii, cfg)
+        if obj.get("type") == "load_json" and _path.is_file():
+            new_ii.path = _path.parent
+            get_inputs(load_json(_path), cfg, inputs, new_ii)
         else:
-            inputs.append(new_ii)
-
+            new_ii.path = _path
+            if "extras" in obj:
+                get_inputs(obj["extras"], cfg, inputs, new_ii)
+            else:
+                inputs.append(new_ii)
     return inputs
 
 
-def full_match(path: Path, container: Any):
-    for pattern in container:
+def full_match(path: Path, iterable: Iterable[Any]):
+    for pattern in iterable:
         if path.full_match(pattern):
             return True
     return False
 
 
-def not_excluded(opath: Path, cfg: Config, excludes: tuple):
+def not_excluded(path_o: Path, cfg: Config, excludes: set[Path]):
     """Excluding files.
     return False if matched exclude.
     """
-    # if opath.endswith(cfg.exclude_ext):
-    #    cfg.log_debug('%s: exclude "%s" by extension', cfg.name, opath)
-    #    return False
-    if full_match(opath, excludes):
-        cfg.log_debug('%s: excluded "%s"', cfg.name, opath)
+    if full_match(path_o, excludes):
+        cfg.log_debug('%s: excluded "%s"', cfg.name, path_o)
         return False
-    if full_match(opath, cfg.excludes):
-        cfg.log_debug('%s: exclude "%s" by default', cfg.name, opath)
+    if full_match(path_o, cfg.excludes):
+        cfg.log_debug('%s: excluded "%s" by default', cfg.name, path_o)
         return False
     return True
 
 
-def not_blocked(opath: Path, cfg: Config, ii: InputInfo):
+def not_blocked(path_o: Path, cfg: Config, ii: InputInfo):
     if ii.blocking_mode:
-        if not full_match(opath, list(ii.includes.keys())):
+        if not full_match(path_o, list(ii.includes.keys())):
             return False
     else:
-        if full_match(opath, list(ii.includes.keys())):
+        if full_match(path_o, list(ii.includes.keys())):
             return True
-    return not_excluded(opath, cfg, ii.excludes)
+    return not_excluded(path_o, cfg, ii.excludes)
 
 
-def moving(opath: str, cfg: Config, ii: InputInfo) -> str:
-    mpath = ii.includes.get(opath, None)
-    if mpath is not None:
-        cfg.log_debug('Moved "%s" to "%s"', opath, mpath)
-    return mpath or opath
+def moving(o_path: Path, cfg: Config, ii: InputInfo) -> str:
+    m_path = ii.includes.get(o_path, None)
+    if m_path and not is_empty(m_path):
+        cfg.log_debug('Moved "%s" to "%s"', o_path, m_path)
+    return str(m_path or o_path)
 
 
-def store_file(
+def encode_bytes(obj: Any) -> bytes:
+    return bytes(ENCODER.encode(obj), "utf-8")
+
+
+def optimize_png(stream: IO[bytes]):
+    img = Image.open(stream)
+    try:  # necessary
+        output = io.BytesIO()
+        img.save(output, "png", optimize=True)
+        return output.getvalue()
+    except:
+        return stream.read()
+
+
+def store(
     storage: BytesDict,
     cfg: Config,
     ii: InputInfo,
     stream: IO[bytes],
-    ipath: str,
-    opath: str,
+    o_path: Path,
 ):
-    moved = moving(opath, cfg, ii)
-    if ipath.endswith(".json"):
-        if moved in storage and full_match(Path(opath), cfg.merge):
-            original = json.loads(storage[moved])
-            target = json.load(stream)
-            if isinstance(original, dict) and isinstance(target, dict):
-                original.update(target)
-                storage[moved] = bytes(ENCODER.encode(original), "utf-8")
-                return
-        if args.release:
-            storage[moved] = bytes(ENCODER.encode(json.load(stream)), "utf-8")
+    moved = moving(o_path, cfg, ii)
+    result = bytes()
+    if moved.endswith(".json") and moved in storage and full_match(o_path, cfg.merge):
+        stored = json.loads(storage[moved])
+        target = json.load(stream)
+        if isinstance(stored, dict) and isinstance(target, dict):
+            result = encode_bytes(stored | target)
             return
-    storage[moved] = stream.read()
+    elif release and moved.endswith(".json"):
+        result = encode_bytes(json.loads(storage[moved]))
+    elif moved.endswith(".json*.pbpatch"):
+        if moved.removesuffix(".pbpatch") in storage:
+            result = encode_bytes(jsonpatch.apply_patch(json.loads(storage[moved]), stream.read(), True))
+        else:
+            cfg.log_warning(".pbpatch %s does not find a file to patch", o_path)
+    elif cfg.merge_readme and moved.lower().endswith("readme.md") and moved in storage:
+        endl = b"" if storage[moved].endswith(b"\n") else b"\n"
+        result = storage[moved] + endl + stream.read()
+        return
+    elif moved.endswith(".png") and args.release:
+        result = optimize_png(stream)
+        stream.seek(0)
+        cfg.log_debug("%s => %s", len(stream.read()), len(result))
+    else:
+        result = stream.read()
+    storage[moved] = result
     return
 
 
 def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
     """Process file input."""
-    if not ii.zip_mode or not ii.path.endswith(".zip"):
+    if not ii.zip_mode or not ii.path.name.endswith(".zip"):
         cfg.log_debug("Loading single file %s", ii.path)
         with open(ii.path, "rb") as f:
-            store_file(storage, cfg, ii, f, ii.path, op.basename(ii.path))
+            store(storage, cfg, ii, f, Path(ii.path.name))
         return
+
     with zipfile.ZipFile(file=ii.path, mode="r") as zipf:
         cfg.log_debug("Loading zip file %s", ii.path)
+        paths = [
+            _i.filename for _i in zipf.filelist if not _i.is_dir() and not_blocked(Path(_i.filename), cfg, ii)
+        ]
 
-        def on_zipinfo(zinfo: zipfile.ZipInfo):
-            iopath = zinfo.filename
-            if not_blocked(Path(iopath), cfg, ii):
-                with zipf.open(iopath) as f:
-                    store_file(storage, cfg, ii, f, iopath, iopath)
+        def on_filename(path_io: str):
+            with zipf.open(str(path_io)) as f:
+                store(storage, cfg, ii, f, Path(path_io))
 
         with ThreadPoolExecutor() as tpe:
-            for zinfo in zipf.filelist:
-                if zinfo.is_dir():
-                    continue
-                tpe.submit(on_zipinfo, zinfo)
+            for path in paths:
+                tpe.submit(on_filename, path)
 
 
 def input_dir(storage: BytesDict, cfg: Config, ii: InputInfo):
-    """Process directory input."""
-    cfg.log_debug(f"Loading directory {ii.path}")
     base_path = Path(ii.path)
-    all_files = [p for p in base_path.rglob("*") if p.is_file()]
+    all_files = [
+        (p, p.relative_to(base_path))
+        for p in base_path.rglob("*")
+        if p.is_file() and not_blocked(p.relative_to(base_path), cfg, ii)
+    ]
 
-    def on_file(file_path: Path):
-        opath = file_path.relative_to(base_path)
-        if not_blocked(opath, cfg, ii):
-            with open(file_path, "rb") as f:
-                store_file(storage, cfg, ii, f, file_path.as_posix(), opath.as_posix())
+    def on_file(path: Path, o_path: Path):
+        with path.open("rb") as f:
+            store(storage, cfg, ii, f, o_path)
 
     with ThreadPoolExecutor() as tpe:
-        for file_path in all_files:
-            tpe.submit(on_file, file_path)
+        for i_path, o_path in all_files:
+            tpe.submit(on_file, i_path, o_path)
 
 
 def cfg_tree(cfg: Config, tree: AnyDict, storage: BytesDict):
+    name = tree.get("name", "<unknown>")
     removes = get_paths(tree.get("removes", []))
     for k in list(storage.keys()):
         if full_match(Path(k), removes):
@@ -338,52 +373,38 @@ def cfg_tree(cfg: Config, tree: AnyDict, storage: BytesDict):
     inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
     extra_out = tree.get("extra_out", True)
 
-    for ii in get_inputs(inputs, None, None, cfg):
-        isdir = os.path.isdir(ii.path)
-        isfile = os.path.isfile(ii.path)
-        if not isdir and not isfile:
-            cfg.log_error("%s is not dir or file", ii.path)
-        if isdir:
-            try:
-                input_dir(storage, cfg, ii)
-            except Exception as e:
-                cfg.log_error("Error at %s: %s", ii.path, e, exc_info=True)
-        if isfile:
-            try:
-                input_file(storage, cfg, ii)
-            except Exception as e:
-                cfg.log_error("Error at %s: %s", ii.path, e, exc_info=True)
+    with timer(cfg, "Loading", name):
+        # no multithread here because new inputs may override or attach to old file
+        for ii in get_inputs(inputs, cfg):
+            isdir = os.path.isdir(ii.path)
+            isfile = os.path.isfile(ii.path)
+            if not isdir and not isfile:
+                cfg.log_error("%s is not dir or file", ii.path)
+                continue
+            if isdir:
+                with error_context(cfg, "input dir", ii.path):
+                    input_dir(storage, cfg, ii)
+            if isfile:
+                with error_context(cfg, "input file", ii.path):
+                    input_file(storage, cfg, ii)
 
     def on_output():
-        filepath = Path(tree["output"] + ".zip")
-        out_path = Path(cfg.out_dir, filepath)
-        os.makedirs(op.dirname(out_path), exist_ok=True)
-        with timer(cfg, "Zipping", filepath):
+        o_path = cfg.out_dir / (tree["output"] + ".zip")
+        os.makedirs(o_path.parent, exist_ok=True)
 
-            with zipfile.ZipFile(
-                out_path,
-                "w",
-                zipfile.ZIP_DEFLATED,
-                compresslevel=9 if args.release else 1,
-            ) as vzip:
+        with timer(cfg, "Zipping", name):
+            # no multithread here because ZipFile does not support that
+            with ZipFile(o_path, "w", 8, True, 9 if args.release else 1) as zipf:
                 for k, v in storage.items():
-                    vzip.writestr(k, v)
-        cfg.log_info(
-            '%s: "%s" completed (%s files, %s KiB)',
-            cfg.name,
-            filepath,
-            len(storage),
-            out_path.stat().st_size >> 10,
-        )
+                    zipf.writestr(k, v)
+        size = o_path.stat().st_size >> 10
+        cfg.log_info('%s: "%s" completed (%s files, %s KiB)', cfg.name, o_path.name, len(storage), size)
         if not extra_out:
             return
-        if isinstance(cfg.extra_out_dirs, list):
-            for extra_out_dir in cfg.extra_out_dirs:
-                shutil.copy(out_path, extra_out_dir)
-        else:
-            shutil.copy(out_path, cfg.extra_out_dirs)
-        if len(cfg.extra_out_dirs) != 0:
-            cfg.log_debug('Copied "%s" to "%s"', out_path, cfg.extra_out_dirs)
+        for extra_out_dir in cfg.extra_out_dirs:
+            shutil.copy(o_path, extra_out_dir)
+        if cfg.extra_out_dirs != 0:
+            cfg.log_debug('Copied "%s" to "%s"', o_path, [str(p) for p in cfg.extra_out_dirs])
 
     def on_children():
         children: AnyDict | list[AnyDict] = tree["children"]
@@ -412,26 +433,10 @@ def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
             for item in raw_cfg:
                 tpe.submit(cfg_root, item)
         return
-    if raw_cfg.get("only_in_release", False) and not args.release:
+
+    if not (cfg := create_config(raw_cfg)):
         return
-    log_level: int | str = raw_cfg.get("log_level", logging.INFO)
-    if isinstance(log_level, str):
-        log_level = logging.getLevelNamesMapping()[log_level]
 
-    cfg = Config(
-        raw_cfg.get("name", "<unnamed>"),
-        raw_cfg.get("src_dir", "src/"),
-        raw_cfg.get("out_dir", "out/"),
-        raw_cfg.get("extra_out_dirs", []),
-        tuple(get_paths(raw_cfg.get("excludes", []))),
-        tuple(get_paths(raw_cfg.get("merge", []))),
-        log_level,
-    )
-    cfg.log_info('== Config "%s" starts ==', cfg.name)
-    if raw_cfg.get("clear", True):
-        shutil.rmtree(cfg.out_dir, ignore_errors=True)
-
-    os.makedirs(cfg.out_dir, exist_ok=True)
     tree: AnyDict | list[AnyDict] = raw_cfg["tree"]
 
     if isinstance(tree, list):
@@ -446,54 +451,32 @@ def setup_log():
     if op.isfile(args.log):
         os.makedirs("logs", exist_ok=True)
         _t = dt.fromtimestamp(os.stat(args.log).st_mtime).strftime("%Y-%m-%d_%H-%M-%S")
-        shutil.copy2(
-            args.log,
-            f"logs/{_t} {op.basename(args.log)}",
-        )
-
+        shutil.copy2(args.log, f"logs/{_t} {op.basename(args.log)}")
     logger.setLevel(logging.DEBUG)
-    console_handler = logging.StreamHandler(sys.stdout)
-    console_handler.setLevel(logging.INFO)
-    console_handler.setFormatter(
-        logging.Formatter(
-            "[%(asctime)s] [%(levelname)s] %(message)s", datefmt="%H:%M:%S"
-        )
-    )
+    _stdout = logging.StreamHandler(sys.stdout)
+    _stdout.setLevel(logging.INFO)
 
-    file_handler = logging.FileHandler(args.log, mode="w")
-    file_handler.setLevel(logging.DEBUG)
-    file_handler.setFormatter(
-        logging.Formatter(
-            "[%(asctime)s.%(msecs)03d] [%(levelname)s] %(message)s",
-            datefmt="%H:%M:%S",
-        )
-    )
+    _stdout.setFormatter(logging.Formatter("[%(asctime)s] [%(levelname)s] %(message)s", "%H:%M:%S"))
+    logger.addHandler(_stdout)
 
-    logger.addHandler(console_handler)
-    logger.addHandler(file_handler)
+    _file = logging.FileHandler(args.log, mode="w")
+    _file.setLevel(logging.DEBUG)
+    _file.setFormatter(logging.Formatter("[%(asctime)s.%(msecs)03d] [%(levelname)s] %(message)s", "%H:%M:%S"))
+    logger.addHandler(_file)
 
 
 def parse_args():
-
     parser = argparse.ArgumentParser()
-    parser.add_argument("--release", action="store_true")
-    parser.add_argument("--dir", default=os.path.dirname(__file__))
-    parser.add_argument("--cfg", default="config.json")
-    parser.add_argument("--log", default="build.log")
+    parser.add_argument("-r", "--release", action="store_true")
+    parser.add_argument("-d", "--dir", default=os.path.dirname(__file__))
+    parser.add_argument("-c", "--cfg", default="config.json")
+    parser.add_argument("-l", "--log", default="build.log")
     return parser.parse_args()
 
 
 args = parse_args()
-
 os.chdir(args.dir)
-
 setup_log()
-
 tp_start = dt.now()
-
-with open(args.cfg, "rb") as _cfg_f:
-    config_data = json.load(_cfg_f)
-
-cfg_root(config_data)
-
+cfg_root(load_json(args.cfg, "rb"))
 logging.info("Build stops at %s, total cost %s.", dt.now(), dt.now() - tp_start)

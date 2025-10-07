@@ -4,9 +4,14 @@
     "Respackopts"
   ],
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode","editor.wordWrap": "off"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "off"
   },
   "[markdown]": {
     "editor.defaultFormatter": null
-  }
+  },
+  "black-formatter.args": [
+    "--line-length",
+    "110"
+  ],"files.autoSave": "afterDelay"
 }

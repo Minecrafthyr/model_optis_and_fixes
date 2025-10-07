@@ -2,6 +2,7 @@
 
 #### Textured
 
+- [Better_Fast_Leaves](src/Fixes/Textured/Better_Fast_Leaves/Credits/Fixes.Textured.Better_Fast_Leaves.md)
 - [Rail_Fix](src/Fixes/Textured/Rail_Fix/Credits/Fixes.Textured.Rail_Fix.md)
 - [Smooth_Stone_Slab_Fix](src/Fixes/Textured/Smooth_Stone_Slab_Fix/Credits/Fixes.Textured.Smooth_Stone_Slab_Fix.md)
 

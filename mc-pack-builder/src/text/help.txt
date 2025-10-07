@@ -1,0 +1,16 @@
+Allowed patterns are:
+    run:
+        <path>: execute with config file <path>.
+    input:
+        execute with terminal input.
+    help:
+        print this message.
+    about:
+        print about message.
+    
+    -d, --dir:
+        <path>: execute on directory <path>.
+    -l, --log:
+        <path>: output log to file <path> or "build.log" by default.
+    -r, --release:
+        use release mode, load config root with entry {{only_in_release = true}} and reduce more file size.

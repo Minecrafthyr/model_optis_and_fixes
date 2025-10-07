@@ -1,0 +1,15 @@
+tab_spaces=2
+use_small_heuristics="Max"
+format_macro_matchers=true
+format_macro_bodies=true
+brace_style="PreferSameLine"
+combine_control_expr=true
+edition="2024"
+fn_single_line=true
+match_arm_blocks=false
+overflow_delimited_expr=true
+where_single_line=true
+blank_lines_upper_bound=0
+fn_params_layout="Compressed"
+max_width=110
+#match_arm_indent=false #not working

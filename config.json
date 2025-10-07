@@ -5,30 +5,37 @@
   "log_level": "DEBUG",
   "merge": ["assets/res_fixes/lang/*", "assets/minecraft/lang/*"],
   "excludes": ["*.py", "*.temp", "*.tmp", "*.backup"],
-  "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Night Gale 1.21.9/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks"],
+  "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Night Gale 1.21.9/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks", "C:/PCL2/.minecraft/versions/Dev 1.21.5 Fabric/resourcepacks"],
   "tree": {
     "inputs": ["Base", "Library/Cube_Inner_Faces", "Library/Empty_Texture", "Library/Item_Offset", "Library/Shadeless", "Library/Plane"],
     "children": {
+      "name": "Fixes.Lite",
       "inputs": {"type": "load_json", "path": "Fixes/Lite/inputs.json"},
       "output": "Resource Fixes Lite",
       "children": {
+        "name": "Fixes.Normal",
         "inputs": {"type": "load_json", "path": "Fixes/Normal/inputs.json"},
         "output": "Resource Fixes",
         "children": {
+          "name": "Fixes.Textured",
           "inputs": {"type": "load_json", "path": "Fixes/Textured/inputs.json"},
           "output": "Resource Fixes Textured",
           "children": [
             {
+              "name": "Fixes.Simplified",
               "inputs": {"type": "load_json", "path": "Fixes/Simplified/inputs.json"},
               "output": "Resource Fixes Simplified"
             },
             {
+              "name": "Tweaks.Lite",
               "inputs": {"type": "load_json", "path": "Tweaks/Lite/inputs.json"},
               "output": "Resource Tweaks Lite",
               "children": {
+                "name": "Tweaks.Normal",
                 "inputs": {"type": "load_json", "path": "Tweaks/Normal/inputs.json"},
                 "output": "Resource Tweaks",
                 "children": {
+                  "name": "Tweaks.External",
                   "removes": {
                     "path": "assets/minecraft/models/block/",
                     "extras": ["calibrated_sculk_sensor.json*", "calibrated_sculk_sensor_active.json*", "calibrated_sculk_sensor_inactive.json*", "sculk_sensor.json*", "sculk_sensor_active.json*", "sculk_sensor_inactive.json*"]

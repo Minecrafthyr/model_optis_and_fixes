@@ -1,3 +1,26 @@
+### Version 9.11
+
+- `build.py`
+  - Used more pathlib.Path.
+  - Add `jsonpatch`, when file has `.json.pbpatch` suffix it patching to stored json file (only), instead of reading.
+  - Add `Pillow`, optimize images when `--release` (not significant, only reduce 10~100 KiBs).
+  - Short args like `-r`.
+- Add a Rust language based build script (show only, not runnable now).
+
+### Resource Fixes
+
+Normal variant
+
+- `Block_Variants`: make x axis deepslate rotate 90° / -90° on y.
+
+Textured variant
+
+- `Better_Fast_Leaves`: Same as Sodium's fast leaves.
+
+Simplified variant
+
+- Simplified fences (except bamboo fence).
+
 ### Version 9.10
 
 - Removed Block bigger in Item Frames because external pack and mod does not follow it.
@@ -349,7 +372,7 @@ Extra variant
 
 External variant
 
-- Fix Unlit Redstone Ore correctly. ~~blocktates~~blockstates.
+- Fix Unlit Redstone Ore correctly. ~~blockstates~~blockstates.
 - Also enable ambient occlusion of horizontal Hay Block.
 - Cull Glass Pane in Extra variant.
 
