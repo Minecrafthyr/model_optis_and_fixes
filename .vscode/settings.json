@@ -13,5 +13,5 @@
   "black-formatter.args": [
     "--line-length",
     "110"
-  ],"files.autoSave": "afterDelay"
+  ]
 }

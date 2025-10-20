@@ -1,5 +1,5 @@
-- Version: 9.11
-- Game versions: 1.14.4-1.21.10
+- Version: 9.12
+- Game versions: 1.14.4-1.21.10 (snapshot 25w41a)
 - Project Links:
   - [Modrinth](https://modrinth.com/project/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
@@ -178,6 +178,7 @@ Simplified model: Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflow
   - Light source blocks are shadeless.
   - Light source items are using front GUI light.
 - `Square_Shadow`: Square entity shadow.
+- `Transparent_Glass`: Transparent Glass works after 25w41a.
 - `Unlit_Redstone_Ore`: Redstone Ore is darker on unlit state.
 
 #### Credits
@@ -204,7 +205,7 @@ Simplified model: Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflow
 - `Wide_Bamboo`
   - 4 pixel wide Bamboo.
   - Wider bamboo leaves ([MC-262691](https://bugs.mojang.com/browse/MC/issues/MC-262691 "The leaves planes in bamboo aren't as wide as they should be")). With mirrored back face.
-  - Rotate bamboo leaves 5° (in supported MC version) to avoid z-fighting.
+  - Rotate bamboo leaves 5° after 25w06a () to avoid z-fighting.
 
 #### Credits
 
@@ -256,15 +257,3 @@ Simplified model: Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflow
 - [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp)
 - [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
 - [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
-
-## Custom Build
-
-1. Clone Github Repository
-2. Config `config.json` following `config.md`
-3. Enter path `cd <the path>`
-4. `pip install jsonpatch`
-5. `python build.py`
-   - `--release` arg build config root with tag `only_in_release` is true and do more compressions.
-   - `--dir <path>` arg change the current directory path.
-   - `--cfg <path>` arg change the config path.
-   - `--log <path>` arg change the log path.

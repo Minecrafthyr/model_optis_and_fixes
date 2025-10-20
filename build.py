@@ -6,7 +6,6 @@ import time
 import os
 import argparse
 import zipfile
-import io
 
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -19,8 +18,15 @@ from typing import IO, Any, Iterable
 from json.encoder import JSONEncoder
 from contextlib import contextmanager
 
-import jsonpatch
-from PIL import Image
+jsonpatch_feature = True
+try:
+    import jsonpatch
+except:
+    try:
+        if os.system("pip install jsonpatch") != 0:
+            jsonpatch_feature = False
+    except:
+        jsonpatch_feature = False
 
 type AnyDict = dict[str, Any]
 type BytesDict = dict[str, bytes]
@@ -39,8 +45,11 @@ class Config:
     extra_out_dirs: list[Path]
     excludes: set[Path]
     merge: set[Path]
-    log_level: int = logging.INFO
-    merge_readme: bool = False
+    log_level: int
+    tree: AnyDict | list[AnyDict]
+
+    def copy(self, **changes):
+        return replace(self, **changes)
 
     def log_debug(self, msg, *_args, **_kwargs):
         if self.log_level <= logging.DEBUG:
@@ -67,36 +76,65 @@ class Config:
             logging.error(msg, *_args, exc_info=exc_info, **_kwargs)
 
 
-def create_config(raw_cfg: AnyDict) -> Config | None:
-    if raw_cfg.get("only_in_release", False) and not args.release:
-        return None
+def create_config(raw_cfg: list[AnyDict] | AnyDict, pcfg: Config | None = None) -> list[Config]:
+    r = list()
+    if isinstance(raw_cfg, list):
+        for f in raw_cfg:
+            if cfg := create_config(f, pcfg):
+                r.extend(cfg)
+        return r
     log_level: int | str = raw_cfg.get("log_level", logging.INFO)
     if isinstance(log_level, str):
-        log_level = logging.getLevelNamesMapping()[log_level]
-    _out_dirs = raw_cfg.get("extra_out_dirs", [])
-    if isinstance(_out_dirs, str):
-        _out_dir = Path(_out_dirs)
-        _out_dirs = [_out_dir] if _out_dir.is_absolute() else []
-    elif isinstance(_out_dirs, list):
-        _out_dirs = [p for p in map(Path, _out_dirs) if p.is_absolute()]
-    else:
-        _out_dirs = []
+        log_level = logging.getLevelNamesMapping()[log_level.upper()]
 
-    cfg = Config(
-        str(raw_cfg.get("name", "<unnamed>")),
-        Path(raw_cfg.get("src_dir", "src/")),
-        Path(raw_cfg.get("out_dir", "out/")),
-        _out_dirs,
-        get_paths(raw_cfg.get("excludes", [])),
-        get_paths(raw_cfg.get("merge", [])),
-        log_level,
-        raw_cfg.get("merge_readme", False),
+    _out_dirs = raw_cfg.get("extra_out_dirs", [])
+    extra_out_dirs = list[Path]()
+    if pcfg:
+        extra_out_dirs.extend(pcfg.extra_out_dirs)
+    if isinstance(_out_dirs, str):
+        if (_out_dir := Path(_out_dirs)).is_absolute():
+            extra_out_dirs.append(_out_dir)
+    elif isinstance(_out_dirs, list):
+        extra_out_dirs.extend([p for p in map(Path, _out_dirs) if p.is_absolute()])
+
+    cfg = (
+        Config(
+            name=str(raw_cfg.get("name", pcfg.name)),
+            src_dir=Path(raw_cfg.get("src_dir", pcfg.src_dir)),
+            out_dir=Path(raw_cfg.get("out_dir", pcfg.out_dir)),
+            extra_out_dirs=extra_out_dirs,
+            excludes=pcfg.excludes | get_paths(raw_cfg.get("excludes", [])),
+            merge=pcfg.merge | get_paths(raw_cfg.get("merge", [])),
+            log_level=log_level,
+            tree=raw_cfg.get("tree", {}),
+        )
+        if pcfg
+        else Config(
+            name=str(raw_cfg.get("name", "<unnamed>")),
+            src_dir=Path(raw_cfg.get("src_dir", "src/")),
+            out_dir=Path(raw_cfg.get("out_dir", "out/")),
+            extra_out_dirs=extra_out_dirs,
+            excludes=get_paths(raw_cfg.get("excludes", [])),
+            merge=get_paths(raw_cfg.get("merge", [])),
+            log_level=log_level,
+            tree=raw_cfg.get("tree", {}),
+        )
     )
     cfg.log_info("%s: starting...", cfg.name)
     if raw_cfg.get("clear", True):
         shutil.rmtree(cfg.out_dir, ignore_errors=True)
     os.makedirs(cfg.out_dir, exist_ok=True)
-    return cfg
+    if cfg.tree != {} and not (raw_cfg.get("only_in_release", False) and not args.release):
+        r.append(cfg)
+
+    children: list[AnyDict] | AnyDict | None = raw_cfg.get("children")
+    if isinstance(children, list):
+        for d in children:
+            r.append(create_config(d, cfg))
+    elif isinstance(children, dict):
+        r.append(create_config(children, cfg))
+
+    return r
 
 
 @dataclass
@@ -176,25 +214,25 @@ def get_paths(
 def get_paths_with_out(
     obj: list[AnyDict | str] | AnyDict | str,
     paths: dict[Path, Path | None] | None = None,
-    i_path: Path = Path(),
-    o_path: Path = Path(),
+    i: Path = Path(),
+    o: Path = Path(),
 ):
     if paths is None:
         paths = {}
     if isinstance(obj, str):
-        paths[i_path / obj] = None if is_empty(o_path) else o_path / obj
+        paths[i / obj] = None if is_empty(o) else o / obj
     elif isinstance(obj, list):
-        for o in obj:
-            get_paths_with_out(o, paths, i_path)
+        for item in obj:
+            get_paths_with_out(item, paths, i)
     else:
-        _i_path = join_path_s(i_path, obj.get("path"))
-        _o_path = join_path_s(o_path, obj.get("out_path"))
-        if obj.get("type") == "load_json" and op.isfile(_i_path):
-            get_paths_with_out(load_json(_i_path), paths, _i_path.parent, _o_path)
+        _i = join_path_s(i, obj.get("path"))
+        _o = join_path_s(o, obj.get("out_path"))
+        if obj.get("type") == "load_json" and op.isfile(_i):
+            get_paths_with_out(load_json(_i), paths, _i.parent, _o)
         elif "extras" in obj:
-            get_paths_with_out(obj["extras"], paths, _i_path, _o_path)
+            get_paths_with_out(obj["extras"], paths, _i, _o)
         else:
-            paths[_i_path] = _o_path
+            paths[_i] = _o
 
     return paths
 
@@ -235,8 +273,10 @@ def get_inputs(
     return inputs
 
 
-def full_match(path: Path, iterable: Iterable[Any]):
+def match(path: Path, iterable: Iterable[Any]):
     for pattern in iterable:
+        if not isinstance(pattern, str):
+            pattern = str(pattern)
         if path.full_match(pattern):
             return True
     return False
@@ -246,10 +286,10 @@ def not_excluded(path_o: Path, cfg: Config, excludes: set[Path]):
     """Excluding files.
     return False if matched exclude.
     """
-    if full_match(path_o, excludes):
+    if match(path_o, excludes):
         cfg.log_debug('%s: excluded "%s"', cfg.name, path_o)
         return False
-    if full_match(path_o, cfg.excludes):
+    if match(path_o, cfg.excludes):
         cfg.log_debug('%s: excluded "%s" by default', cfg.name, path_o)
         return False
     return True
@@ -257,10 +297,10 @@ def not_excluded(path_o: Path, cfg: Config, excludes: set[Path]):
 
 def not_blocked(path_o: Path, cfg: Config, ii: InputInfo):
     if ii.blocking_mode:
-        if not full_match(path_o, list(ii.includes.keys())):
+        if not match(path_o, list(ii.includes.keys())):
             return False
     else:
-        if full_match(path_o, list(ii.includes.keys())):
+        if match(path_o, list(ii.includes.keys())):
             return True
     return not_excluded(path_o, cfg, ii.excludes)
 
@@ -276,16 +316,6 @@ def encode_bytes(obj: Any) -> bytes:
     return bytes(ENCODER.encode(obj), "utf-8")
 
 
-def optimize_png(stream: IO[bytes]):
-    img = Image.open(stream)
-    try:  # necessary
-        output = io.BytesIO()
-        img.save(output, "png", optimize=True)
-        return output.getvalue()
-    except:
-        return stream.read()
-
-
 def store(
     storage: BytesDict,
     cfg: Config,
@@ -294,30 +324,27 @@ def store(
     o_path: Path,
 ):
     moved = moving(o_path, cfg, ii)
-    result = bytes()
-    if moved.endswith(".json") and moved in storage and full_match(o_path, cfg.merge):
-        stored = json.loads(storage[moved])
-        target = json.load(stream)
-        if isinstance(stored, dict) and isinstance(target, dict):
-            result = encode_bytes(stored | target)
+    with error_context(cfg, "store", o_path):
+        result = bytes()
+        if moved.lower().endswith(".json") and moved in storage and match(o_path, cfg.merge):
+            stored = json.loads(storage[moved])
+            target = json.load(stream)
+            if isinstance(stored, dict) and isinstance(target, dict):
+                result = encode_bytes(stored | target)
+                return
+        elif release and moved.endswith(".json"):
+            result = encode_bytes(json.loads(storage[moved]))
+        elif jsonpatch_feature and moved.endswith(".json.*.pbpatch"):
+            if moved.removesuffix(".pbpatch") in storage:
+                result = encode_bytes(jsonpatch.apply_patch(json.loads(storage[moved]), stream.read(), True))
+            else:
+                cfg.log_warning(".pbpatch %s does not find a file to patch", o_path)
+        elif (moved.lower().endswith(".md") or moved.lower().endswith(".txt")) and moved in storage and match(o_path, cfg.merge):
+            endl = b"" if storage[moved].endswith(b"\n") else b"\n"
+            result = storage[moved] + endl + stream.read()
             return
-    elif release and moved.endswith(".json"):
-        result = encode_bytes(json.loads(storage[moved]))
-    elif moved.endswith(".json*.pbpatch"):
-        if moved.removesuffix(".pbpatch") in storage:
-            result = encode_bytes(jsonpatch.apply_patch(json.loads(storage[moved]), stream.read(), True))
         else:
-            cfg.log_warning(".pbpatch %s does not find a file to patch", o_path)
-    elif cfg.merge_readme and moved.lower().endswith("readme.md") and moved in storage:
-        endl = b"" if storage[moved].endswith(b"\n") else b"\n"
-        result = storage[moved] + endl + stream.read()
-        return
-    elif moved.endswith(".png") and args.release:
-        result = optimize_png(stream)
-        stream.seek(0)
-        cfg.log_debug("%s => %s", len(stream.read()), len(result))
-    else:
-        result = stream.read()
+            result = stream.read()
     storage[moved] = result
     return
 
@@ -337,7 +364,7 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
         ]
 
         def on_filename(path_io: str):
-            with zipf.open(str(path_io)) as f:
+            with zipf.open(path_io) as f:
                 store(storage, cfg, ii, f, Path(path_io))
 
         with ThreadPoolExecutor() as tpe:
@@ -346,6 +373,7 @@ def input_file(storage: BytesDict, cfg: Config, ii: InputInfo):
 
 
 def input_dir(storage: BytesDict, cfg: Config, ii: InputInfo):
+    
     base_path = Path(ii.path)
     all_files = [
         (p, p.relative_to(base_path))
@@ -366,16 +394,15 @@ def cfg_tree(cfg: Config, tree: AnyDict, storage: BytesDict):
     name = tree.get("name", "<unknown>")
     removes = get_paths(tree.get("removes", []))
     for k in list(storage.keys()):
-        if full_match(Path(k), removes):
+        if match(Path(k), removes):
             cfg.log_debug("Removed %s from storage", k)
             storage.pop(k)
 
-    inputs: str | AnyDict | list[str | AnyDict] = tree["inputs"]
     extra_out = tree.get("extra_out", True)
 
     with timer(cfg, "Loading", name):
         # no multithread here because new inputs may override or attach to old file
-        for ii in get_inputs(inputs, cfg):
+        for ii in get_inputs(tree["inputs"], cfg):
             isdir = os.path.isdir(ii.path)
             isfile = os.path.isfile(ii.path)
             if not isdir and not isfile:
@@ -389,22 +416,30 @@ def cfg_tree(cfg: Config, tree: AnyDict, storage: BytesDict):
                     input_file(storage, cfg, ii)
 
     def on_output():
-        o_path = cfg.out_dir / (tree["output"] + ".zip")
+        output: str = tree["output"]
+        o_path = cfg.out_dir / output
         os.makedirs(o_path.parent, exist_ok=True)
-
-        with timer(cfg, "Zipping", name):
-            # no multithread here because ZipFile does not support that
-            with ZipFile(o_path, "w", 8, True, 9 if args.release else 1) as zipf:
+        if output.endswith(".zip"):
+            with timer(cfg, "Zipping", name):
+                # no multithread here because ZipFile does not support that
+                with ZipFile(o_path, "w", 8, True, 9 if args.release else 1) as zipf:
+                    for k, v in storage.items():
+                        zipf.writestr(k, v)
+            size = o_path.stat().st_size >> 10
+            cfg.log_info('%s: "%s" completed (%s files, %s KiB)', cfg.name, o_path.name, len(storage), size)
+            if not extra_out:
+                return
+            for extra_out_dir in cfg.extra_out_dirs:
+                shutil.copy(o_path, extra_out_dir)
+            if cfg.extra_out_dirs != 0:
+                cfg.log_debug('Copied "%s" to "%s"', o_path, [str(p) for p in cfg.extra_out_dirs])
+        else:
+            with timer(cfg, "Writing", name):
                 for k, v in storage.items():
-                    zipf.writestr(k, v)
-        size = o_path.stat().st_size >> 10
-        cfg.log_info('%s: "%s" completed (%s files, %s KiB)', cfg.name, o_path.name, len(storage), size)
-        if not extra_out:
-            return
-        for extra_out_dir in cfg.extra_out_dirs:
-            shutil.copy(o_path, extra_out_dir)
-        if cfg.extra_out_dirs != 0:
-            cfg.log_debug('Copied "%s" to "%s"', o_path, [str(p) for p in cfg.extra_out_dirs])
+                    print(str(o_path / k))
+                    with (o_path / k).open("wb", encoding="utf-8") as f:
+                        f.write(v)
+                cfg.log_info('%s: "%s" completed (%s files)', cfg.name, o_path.name, len(storage))
 
     def on_children():
         children: AnyDict | list[AnyDict] = tree["children"]
@@ -416,8 +451,7 @@ def cfg_tree(cfg: Config, tree: AnyDict, storage: BytesDict):
             cfg_tree(cfg, children, storage.copy())
 
     if "children" in tree and "output" in tree:
-        th = Thread(target=on_children)
-        th.start()
+        (th := Thread(target=on_children)).start()
         on_output()
         th.join()
     elif "children" in tree:
@@ -426,32 +460,27 @@ def cfg_tree(cfg: Config, tree: AnyDict, storage: BytesDict):
         on_output()
 
 
-def cfg_root(raw_cfg: list[AnyDict] | AnyDict):
-    """Process config root."""
-    if isinstance(raw_cfg, list):
+def cfg_root(cfg: Config):
+    if isinstance(cfg.tree, list):
         with ThreadPoolExecutor() as tpe:
-            for item in raw_cfg:
-                tpe.submit(cfg_root, item)
-        return
-
-    if not (cfg := create_config(raw_cfg)):
-        return
-
-    tree: AnyDict | list[AnyDict] = raw_cfg["tree"]
-
-    if isinstance(tree, list):
-        with ThreadPoolExecutor() as tpe:
-            for j in tree:
+            for j in cfg.tree:
                 tpe.submit(cfg_tree, cfg, j, {})
     else:
-        cfg_tree(cfg, tree, {})
+        cfg_tree(cfg, cfg.tree, {})
+
+
+def load_cfg(raw_cfg: list[AnyDict] | AnyDict):
+    with ThreadPoolExecutor() as tpe:
+        for cfg in create_config(raw_cfg):
+            tpe.submit(cfg_root, cfg)
 
 
 def setup_log():
-    if op.isfile(args.log):
+    p = Path(args.log)
+    if p.is_file():
         os.makedirs("logs", exist_ok=True)
-        _t = dt.fromtimestamp(os.stat(args.log).st_mtime).strftime("%Y-%m-%d_%H-%M-%S")
-        shutil.copy2(args.log, f"logs/{_t} {op.basename(args.log)}")
+        _t = dt.fromtimestamp(p.stat().st_mtime).strftime("%Y-%m-%d_%H-%M-%S")
+        p.copy(f"logs/{_t} {op.basename(args.log)}")
     logger.setLevel(logging.DEBUG)
     _stdout = logging.StreamHandler(sys.stdout)
     _stdout.setLevel(logging.INFO)
@@ -471,6 +500,7 @@ def parse_args():
     parser.add_argument("-d", "--dir", default=os.path.dirname(__file__))
     parser.add_argument("-c", "--cfg", default="config.json")
     parser.add_argument("-l", "--log", default="build.log")
+
     return parser.parse_args()
 
 
@@ -478,5 +508,5 @@ args = parse_args()
 os.chdir(args.dir)
 setup_log()
 tp_start = dt.now()
-cfg_root(load_json(args.cfg, "rb"))
+load_cfg(load_json(args.cfg, "rb"))
 logging.info("Build stops at %s, total cost %s.", dt.now(), dt.now() - tp_start)

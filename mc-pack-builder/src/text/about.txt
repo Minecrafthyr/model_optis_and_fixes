@@ -1,2 +1,0 @@
-===Mincecraft pack builder (MCPB) about===
-this is a simple program that read input config and copy files to output.

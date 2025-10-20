@@ -2,11 +2,10 @@ A great example is the [config.json](config.json).
 
 > [!WARN]
 > All path matching now uses glob pattern matching (see Python fnmatch/glob syntax).  
-> All extension matching is still suffix matching.
 
-### Config Root
+### Config Root Tree
 
-Config Tree can hold multiple nested Config Root:
+A Config File and hold multiple nested Config Root Tree.
 
 ---
 
@@ -16,19 +15,16 @@ Object: {
 
 - `name`: String that is name displayed in log, or `"<unknown>"`
 - `only_in_release`: if true, only build with command arg `--release`.
-- `src_dir`
-  - Default: `src/`.
-  - String: path of source directory.
-- `out_dir`
-  - Default: `out/`.
-  - String: path of output directory.
+- `src_dir`: path of source directory (default is `src/`).
+- `out_dir`: path of output directory (default is `out/`).
 - `log_level`
   - String: log level in "DEBUG", "INFO" (default), "WARN", "ERROR", "CRITICAL"
   - Integer: log level in 10, 20, 30, 40, 50
 - `extra_out_dirs`: List of string paths that copy the output zip to.
 - `excludes`: [Path Tree](#path-tree) that default excludes with glob.
 - `merge`: [Path Tree](#path-tree) that default merging.
-- `tree`: [Config Tree](#config-tree).
+- `tree`: [Config Tree](#config-tree) if not present, config will not load, useful for `children`.
+- `children`: [Config Root Tree](#config-root-tree).
 
 }
 

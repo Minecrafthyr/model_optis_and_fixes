@@ -1,3 +1,20 @@
+### Version 9.12
+
+- `build.py`
+  - Use python 3.14 features.
+  - removed png optimization.
+  - Allow non-zip output, and changed format on `output`.
+  - Merge for any `.md`, `.txt` file, use `merge` config root.
+  - Allow nested config root.
+- `mc-pack-builder`: removed because not useable.
+- Support 25w42a (format 70.1).
+
+### Resource Tweaks
+
+Lite variant
+
+- `Transparent_Glass` (New): Transparent Glass works after 25w41a.
+
 ### Version 9.11
 
 - `build.py`

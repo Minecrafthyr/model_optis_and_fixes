@@ -5,35 +5,36 @@
   "log_level": "DEBUG",
   "merge": ["assets/res_fixes/lang/*", "assets/minecraft/lang/*"],
   "excludes": ["*.py", "*.temp", "*.tmp", "*.backup"],
-  "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Night Gale 1.21.9/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks", "C:/PCL2/.minecraft/versions/Dev 1.21.5 Fabric/resourcepacks"],
+  "extra_out_dirs": ["C:/PCL2/.minecraft/resourcepacks", "C:/PCL2/.minecraft/versions/Night Gale 1.21.10/resourcepacks", "C:/PCL2/.minecraft/versions/Shadow Fabric/resourcepacks", "C:/PCL2/.minecraft/versions/Dev 1.21.5 Fabric/resourcepacks"],
   "tree": {
+    "name": "Fixes.Base",
     "inputs": ["Base", "Library/Cube_Inner_Faces", "Library/Empty_Texture", "Library/Item_Offset", "Library/Shadeless", "Library/Plane"],
     "children": {
       "name": "Fixes.Lite",
       "inputs": {"type": "load_json", "path": "Fixes/Lite/inputs.json"},
-      "output": "Resource Fixes Lite",
+      "output": "Resource Fixes Lite.zip",
       "children": {
         "name": "Fixes.Normal",
         "inputs": {"type": "load_json", "path": "Fixes/Normal/inputs.json"},
-        "output": "Resource Fixes",
+        "output": "Resource Fixes.zip",
         "children": {
           "name": "Fixes.Textured",
           "inputs": {"type": "load_json", "path": "Fixes/Textured/inputs.json"},
-          "output": "Resource Fixes Textured",
+          "output": "Resource Fixes Textured.zip",
           "children": [
             {
               "name": "Fixes.Simplified",
               "inputs": {"type": "load_json", "path": "Fixes/Simplified/inputs.json"},
-              "output": "Resource Fixes Simplified"
+              "output": "Resource Fixes Simplified.zip"
             },
             {
               "name": "Tweaks.Lite",
               "inputs": {"type": "load_json", "path": "Tweaks/Lite/inputs.json"},
-              "output": "Resource Tweaks Lite",
+              "output": "Resource Tweaks Lite.zip",
               "children": {
                 "name": "Tweaks.Normal",
                 "inputs": {"type": "load_json", "path": "Tweaks/Normal/inputs.json"},
-                "output": "Resource Tweaks",
+                "output": "Resource Tweaks.zip",
                 "children": {
                   "name": "Tweaks.External",
                   "removes": {
@@ -41,7 +42,7 @@
                     "extras": ["calibrated_sculk_sensor.json*", "calibrated_sculk_sensor_active.json*", "calibrated_sculk_sensor_inactive.json*", "sculk_sensor.json*", "sculk_sensor_active.json*", "sculk_sensor_inactive.json*"]
                   },
                   "inputs": {"type": "load_json", "path": "Tweaks/External/inputs.json"},
-                  "output": "Resource Tweaks External"
+                  "output": "Resource Tweaks External.zip"
                 }
               }
             }
