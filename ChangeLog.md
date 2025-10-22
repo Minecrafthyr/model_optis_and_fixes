@@ -6,8 +6,15 @@
   - Allow non-zip output, and changed format on `output`.
   - Merge for any `.md`, `.txt` file, use `merge` config root.
   - Allow nested config root.
+  - JSON patch is now matching `.json.*.pbpatch` instead of `.json*.pbpatch`
 - `mc-pack-builder`: removed because not useable.
-- Support 25w42a (format 70.1).
+- Support 25w43a (format 71.0).
+
+### Resource Fixes
+
+Textured variant
+
+- Removed `Better_Fast_Leaves`: now we know it's intended, from update log.
 
 ### Resource Tweaks
 

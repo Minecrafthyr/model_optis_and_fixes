@@ -10,24 +10,38 @@
     "entries": [
       {
         "directory": "overlay_44",
-        "__comment": "Item model type",
+        "__comment": "The Garden Awakens 1.21.4-24w45a: Item model type",
         "min_format": 44,
         "max_format": 9999,
         "formats": [44, 9999]
       },
       {
         "directory": "overlay_51",
-        "__comment": "Block model rotation unlimit",
+        "__comment": "Spring to Life 1.21.5-25w06a: Block model rotation unlimit",
         "min_format": 51,
         "max_format": 9999,
         "formats": [51, 9999]
       },
       {
         "directory": "overlay_65.1",
-        "__comment": "Copper Age updates",
+        "__comment": "Copper Age 1.21.9-25w32a",
         "min_format": [65, 1],
         "max_format": 9999,
         "formats": [65, 9999]
+      },
+      {
+        "directory": "overlay_70.0",
+        "__comment": "Mounts of Mayhem Age 1.21.11-25w41a: Render type improved",
+        "min_format": [70, 0],
+        "max_format": 9999,
+        "formats": [70, 9999]
+      },
+      {
+        "directory": "overlay_71.0",
+        "__comment": "Mounts of Mayhem Age 1.21.11-25w43a: mipmap_strategy",
+        "min_format": [71, 0],
+        "max_format": 9999,
+        "formats": [71, 9999]
       },
       {
         "directory": "1_21_4",

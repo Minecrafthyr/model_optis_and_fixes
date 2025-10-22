@@ -33,7 +33,7 @@ type BytesDict = dict[str, bytes]
 
 logger = logging.getLogger()
 release: bool = False
-
+args: argparse.Namespace
 
 @dataclass(frozen=True)
 class Config:
@@ -475,12 +475,12 @@ def load_cfg(raw_cfg: list[AnyDict] | AnyDict):
             tpe.submit(cfg_root, cfg)
 
 
-def setup_log():
-    p = Path(args.log)
+def setup_log(log:str):
+    p = Path(log)
     if p.is_file():
         os.makedirs("logs", exist_ok=True)
         _t = dt.fromtimestamp(p.stat().st_mtime).strftime("%Y-%m-%d_%H-%M-%S")
-        p.copy(f"logs/{_t} {op.basename(args.log)}")
+        p.copy(f"logs/{_t} {op.basename(log)}")
     logger.setLevel(logging.DEBUG)
     _stdout = logging.StreamHandler(sys.stdout)
     _stdout.setLevel(logging.INFO)
@@ -488,7 +488,7 @@ def setup_log():
     _stdout.setFormatter(logging.Formatter("[%(asctime)s] [%(levelname)s] %(message)s", "%H:%M:%S"))
     logger.addHandler(_stdout)
 
-    _file = logging.FileHandler(args.log, mode="w")
+    _file = logging.FileHandler(log, mode="w")
     _file.setLevel(logging.DEBUG)
     _file.setFormatter(logging.Formatter("[%(asctime)s.%(msecs)03d] [%(levelname)s] %(message)s", "%H:%M:%S"))
     logger.addHandler(_file)
@@ -504,9 +504,10 @@ def parse_args():
     return parser.parse_args()
 
 
-args = parse_args()
-os.chdir(args.dir)
-setup_log()
-tp_start = dt.now()
-load_cfg(load_json(args.cfg, "rb"))
-logging.info("Build stops at %s, total cost %s.", dt.now(), dt.now() - tp_start)
+if __name__ == "__main__":
+    args = parse_args()
+    os.chdir(args.dir)
+    setup_log(args.log)
+    tp_start = dt.now()
+    load_cfg(load_json(args.cfg, "rb"))
+    logging.info("Build stops at %s, total cost %s.", dt.now(), dt.now() - tp_start)

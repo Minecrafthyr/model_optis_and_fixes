@@ -257,3 +257,4 @@ Simplified model: Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflow
 - [Boosted Brightness](https://modrinth.com/resourcepack/boosted-brightness-rp)
 - [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
 - [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
+- [Re-Shaded](https://modrinth.com/resourcepack/re-shaded)
