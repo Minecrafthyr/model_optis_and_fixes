@@ -1,5 +1,5 @@
 - [Description](Description.md) used in Modrinth and Curseforge.
-- [Credit Links](CreditLinks.md)
+- [Link to all credit file](CreditLinks.md)
 - [LICENSE](src/Base/LICENSE) and additional license notice [LICENSE.1](src/Base/LICENSE.1)
 
 ## Custom Build

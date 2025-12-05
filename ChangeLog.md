@@ -6,21 +6,24 @@
   - Allow non-zip output, and changed format on `output`.
   - Merge for any `.md`, `.txt` file, use `merge` config root.
   - Allow nested config root.
-  - JSON patch is now matching `.json.*.pbpatch` instead of `.json*.pbpatch`
+  - JSON patch is now globing `.json.*.pbpatch` instead of `.json*.pbpatch`
 - `mc-pack-builder`: removed because not useable.
-- Support 25w43a (format 71.0).
+- Support 1.21.11 (format 75).
 
 ### Resource Fixes
 
 Textured variant
 
-- Removed `Better_Fast_Leaves`: now we know it's intended, from update log.
+- Removed `Better_Fast_Leaves` because mojang add it (in older versions, uses other pack instead).
 
 ### Resource Tweaks
 
 Lite variant
 
+- `Better_Animation`: Slowed lava animation.
 - `Transparent_Glass` (New): Transparent Glass works after 25w41a.
+- `Language_Tweaks`:
+  - Correction zh_cn Mossy Cobblestone (苔石 -> 苔圆石).
 
 ### Version 9.11
 

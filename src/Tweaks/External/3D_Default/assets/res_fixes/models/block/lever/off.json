@@ -1,5 +1,6 @@
 {
   "credit": "Designed by GeForceLegend",
+	"parent": "block/block",
   "ambientocclusion": false,
   "textures": {
     "particle": "block/cobblestone",

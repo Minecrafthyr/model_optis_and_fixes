@@ -1,5 +1,9 @@
 {
   "item.minecraft.quartz": "石英",
   "block.minecraft.crafting_table": "合成台",
-  "block.tconstruct.crafting_station": "合成站"
+  "block.tconstruct.crafting_station": "合成站",
+  "block.minecraft.mossy_cobblestone": "苔圆石",
+  "block.minecraft.mossy_cobblestone_slab": "苔圆石台阶",
+  "block.minecraft.mossy_cobblestone_stairs": "苔圆石楼梯",
+  "block.minecraft.mossy_cobblestone_wall": "苔圆石墙"
 }
