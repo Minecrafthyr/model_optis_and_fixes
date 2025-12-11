@@ -1,134 +1,134 @@
-[11:43:57.761] [INFO] Variants: starting...
-[11:43:57.933] [DEBUG] Variants: Loading "Fixes.Base" costs 0.14429283142089844s
-[11:43:58.942] [DEBUG] Variants: Loading "Fixes.Lite" costs 1.008345127105713s
-[11:43:59.310] [DEBUG] Variants: Zipping "Fixes.Lite" costs 0.3636610507965088s
-[11:43:59.313] [INFO] Variants: "Resource Fixes Lite.zip" completed (311 files, 246 KiB)
-[11:43:59.395] [DEBUG] Copied "out\Variants\Resource Fixes Lite.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
-[11:44:01.140] [DEBUG] Variants: Loading "Fixes.Normal" costs 2.1951749324798584s
-[11:44:01.557] [DEBUG] Variants: Zipping "Fixes.Normal" costs 0.4113595485687256s
-[11:44:01.558] [INFO] Variants: "Resource Fixes.zip" completed (454 files, 290 KiB)
-[11:44:01.569] [DEBUG] Variants: Loading "Fixes.Textured" costs 0.4260072708129883s
-[11:44:01.619] [DEBUG] Copied "out\Variants\Resource Fixes.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
-[11:44:01.999] [DEBUG] Variants: Loading "Fixes.Simplified" costs 0.42594099044799805s
-[11:44:02.797] [DEBUG] Variants: Zipping "Fixes.Textured" costs 1.2177212238311768s
-[11:44:02.801] [INFO] Variants: "Resource Fixes Textured.zip" completed (498 files, 313 KiB)
-[11:44:02.861] [DEBUG] Copied "out\Variants\Resource Fixes Textured.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
-[11:44:02.965] [DEBUG] Variants: Zipping "Fixes.Simplified" costs 0.9609143733978271s
-[11:44:02.966] [INFO] Variants: "Resource Fixes Simplified.zip" completed (536 files, 322 KiB)
-[11:44:03.007] [DEBUG] Copied "out\Variants\Resource Fixes Simplified.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
-[11:44:03.427] [DEBUG] Loading zip file src\Tweaks\Lite\Natural Firefly Bushes 1.0.zip
-[11:44:03.438] [DEBUG] Variants: excluded "pack.mcmeta"
-[11:44:03.439] [DEBUG] Variants: excluded "pack.png"
-[11:44:04.537] [DEBUG] Variants: Loading "Tweaks.Lite" costs 2.9593565464019775s
-[11:44:05.082] [DEBUG] Variants: excluded "run.py" by default
-[11:44:05.445] [DEBUG] Loading zip file src\Tweaks\Normal\Tasty_Items-v1.2.zip
-[11:44:05.584] [DEBUG] Variants: excluded "credits.txt"
-[11:44:05.585] [DEBUG] Variants: excluded "pack.mcmeta"
-[11:44:05.585] [DEBUG] Variants: excluded "pack.png"
-[11:44:05.986] [DEBUG] Variants: Zipping "Tweaks.Lite" costs 1.4415836334228516s
-[11:44:05.988] [INFO] Variants: "Resource Tweaks Lite.zip" completed (1173 files, 614 KiB)
-[11:44:06.099] [DEBUG] Copied "out\Variants\Resource Tweaks Lite.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
-[11:44:06.269] [DEBUG] Variants: Loading "Tweaks.Normal" costs 1.7260456085205078s
-[11:44:06.379] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor.json from storage
-[11:44:06.380] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor_inactive.json from storage
-[11:44:06.380] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor_active.json from storage
-[11:44:06.381] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor_inactive.json from storage
-[11:44:06.381] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor.json from storage
-[11:44:06.382] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor_active.json from storage
-[11:44:06.383] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor.json.rpo from storage
-[11:44:06.384] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor_active.json.rpo from storage
-[11:44:06.384] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor_inactive.json.rpo from storage
-[11:44:06.385] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor.json.rpo from storage
-[11:44:06.385] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor_active.json.rpo from storage
-[11:44:06.386] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor_inactive.json.rpo from storage
-[11:44:06.756] [DEBUG] Loading zip file src\Tweaks\External\3D Default 1.21.2+ v1.13.0.zip
-[11:44:06.797] [DEBUG] Variants: excluded "pack.mcmeta"
-[11:44:07.142] [DEBUG] Variants: excluded "assets\minecraft\models\block\bamboo_large_leaves.json"
-[11:44:07.143] [DEBUG] Variants: excluded "assets\minecraft\models\block\bamboo_small_leaves.json"
-[11:44:07.200] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand.json"
-[11:44:07.203] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_bottle0.json"
-[11:44:07.204] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_bottle1.json"
-[11:44:07.206] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_bottle2.json"
-[11:44:07.208] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_empty0.json"
-[11:44:07.210] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_empty1.json"
-[11:44:07.211] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_empty2.json"
-[11:44:07.517] [DEBUG] Variants: excluded "assets\minecraft\models\block\end_rod.json"
-[11:44:07.689] [DEBUG] Variants: excluded "assets\minecraft\models\block\flower_pot.json"
-[11:44:07.692] [DEBUG] Variants: excluded "assets\minecraft\models\block\flower_pot_cross.json"
-[11:44:08.077] [DEBUG] Variants: excluded "assets\minecraft\models\block\ladder.json"
-[11:44:08.170] [DEBUG] Variants: excluded "assets\minecraft\models\block\lightning_rod.json"
-[11:44:08.177] [DEBUG] Variants: excluded "assets\minecraft\models\block\lightning_rod_on.json"
-[11:44:08.661] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_allium.json"
-[11:44:08.668] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_azure_bluet.json"
-[11:44:08.675] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_blue_orchid.json"
-[11:44:08.703] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_cornflower.json"
-[11:44:08.713] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_fern.json"
-[11:44:08.717] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_lily_of_the_valley.json"
-[11:44:08.722] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_orange_tulip.json"
-[11:44:08.723] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_oxeye_daisy.json"
-[11:44:08.724] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_pink_tulip.json"
-[11:44:08.727] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_poppy.json"
-[11:44:08.732] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_red_tulip.json"
-[11:44:08.737] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_white_tulip.json"
-[11:44:08.740] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_wither_rose.json"
-[11:44:08.808] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_dot.json"
-[11:44:08.809] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side.json"
-[11:44:08.809] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side0.json"
-[11:44:08.811] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side1.json"
-[11:44:08.816] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side_alt.json"
-[11:44:08.820] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side_alt0.json"
-[11:44:08.822] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side_alt1.json"
-[11:44:08.824] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_up.json"
-[11:44:09.069] [DEBUG] Variants: excluded "assets\minecraft\models\block\template_anvil.json"
-[11:44:09.107] [DEBUG] Variants: excluded "assets\minecraft\models\block\template_campfire.json"
-[11:44:09.190] [DEBUG] Variants: excluded "assets\minecraft\models\block\template_redstone_torch.json"
-[11:44:09.191] [DEBUG] Variants: excluded "assets\minecraft\models\block\template_redstone_torch_wall.json"
-[11:44:09.750] [DEBUG] Variants: excluded "assets\minecraft\models\item\black_candle.json"
-[11:44:09.758] [DEBUG] Variants: excluded "assets\minecraft\models\item\blue_candle.json"
-[11:44:09.777] [DEBUG] Variants: excluded "assets\minecraft\models\item\brown_candle.json"
-[11:44:09.790] [DEBUG] Variants: excluded "assets\minecraft\models\item\candle.json"
-[11:44:10.201] [DEBUG] Variants: excluded "assets\minecraft\models\item\comparator.json"
-[11:44:10.389] [DEBUG] Variants: excluded "assets\minecraft\models\item\copper_lantern.json"
-[11:44:10.405] [DEBUG] Variants: excluded "assets\minecraft\models\item\copper_torch.json"
-[11:44:10.460] [DEBUG] Variants: excluded "assets\minecraft\models\item\cyan_candle.json"
-[11:44:10.532] [DEBUG] Variants: excluded "assets\minecraft\models\item\end_rod.json"
-[11:44:10.548] [DEBUG] Variants: excluded "assets\minecraft\models\item\exposed_copper_lantern.json"
-[11:44:10.557] [DEBUG] Variants: excluded "assets\minecraft\models\item\flower_pot.json"
-[11:44:10.566] [DEBUG] Variants: excluded "assets\minecraft\models\item\glass_bottle.json"
-[11:44:10.596] [DEBUG] Variants: excluded "assets\minecraft\models\item\gray_candle.json"
-[11:44:10.602] [DEBUG] Variants: excluded "assets\minecraft\models\item\green_candle.json"
-[11:44:10.614] [DEBUG] Variants: excluded "assets\minecraft\models\item\honey_bottle.json"
-[11:44:10.691] [DEBUG] Variants: excluded "assets\minecraft\models\item\ladder.json"
-[11:44:10.694] [DEBUG] Variants: excluded "assets\minecraft\models\item\lantern.json"
-[11:44:10.697] [DEBUG] Variants: excluded "assets\minecraft\models\item\lever.json"
-[11:44:10.702] [DEBUG] Variants: excluded "assets\minecraft\models\item\lightning_rod.json"
-[11:44:10.706] [DEBUG] Variants: excluded "assets\minecraft\models\item\light_blue_candle.json"
-[11:44:10.715] [DEBUG] Variants: excluded "assets\minecraft\models\item\light_gray_candle.json"
-[11:44:10.725] [DEBUG] Variants: excluded "assets\minecraft\models\item\lime_candle.json"
-[11:44:10.733] [DEBUG] Variants: excluded "assets\minecraft\models\item\lingering_potion.json"
-[11:44:10.740] [DEBUG] Variants: excluded "assets\minecraft\models\item\magenta_candle.json"
-[11:44:10.794] [DEBUG] Variants: excluded "assets\minecraft\models\item\ominous_bottle.json"
-[11:44:10.795] [DEBUG] Variants: excluded "assets\minecraft\models\item\orange_candle.json"
-[11:44:10.813] [DEBUG] Variants: excluded "assets\minecraft\models\item\oxidized_copper_lantern.json"
-[11:44:10.835] [DEBUG] Variants: excluded "assets\minecraft\models\item\pink_candle.json"
-[11:44:10.848] [DEBUG] Variants: excluded "assets\minecraft\models\item\potion.json"
-[11:44:11.236] [DEBUG] Variants: excluded "assets\minecraft\models\item\redstone_torch.json"
-[11:44:11.252] [DEBUG] Variants: excluded "assets\minecraft\models\item\repeater.json"
-[11:44:11.278] [DEBUG] Variants: excluded "assets\minecraft\models\item\soul_lantern.json"
-[11:44:11.288] [DEBUG] Variants: excluded "assets\minecraft\models\item\soul_torch.json"
-[11:44:11.292] [DEBUG] Variants: excluded "assets\minecraft\models\item\splash_potion.json"
-[11:44:11.352] [DEBUG] Variants: excluded "assets\minecraft\models\item\torch.json"
-[11:44:11.355] [DEBUG] Variants: excluded "assets\minecraft\models\item\tripwire_hook.json"
-[11:44:11.385] [DEBUG] Variants: excluded "assets\minecraft\models\item\weathered_copper_lantern.json"
-[11:44:14.112] [DEBUG] Variants: excluded "assets\minecraft\textures\item\honey_bottle.png"
-[11:44:14.150] [DEBUG] Variants: excluded "assets\minecraft\textures\item\potion.png"
-[11:44:14.184] [DEBUG] Variants: excluded "assets\minecraft\textures\item\potion_splash.png"
-[11:44:14.349] [DEBUG] Moved "README.md" to "README\GeForceLegend's 3D Default.md"
-[11:44:16.901] [DEBUG] Variants: Zipping "Tweaks.Normal" costs 10.564104080200195s
-[11:44:16.902] [INFO] Variants: "Resource Tweaks.zip" completed (2103 files, 1021 KiB)
-[11:44:16.965] [DEBUG] Copied "out\Variants\Resource Tweaks.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
-[11:44:17.930] [DEBUG] Variants: Loading "Tweaks.External" costs 11.213592052459717s
-[11:44:19.361] [DEBUG] Variants: Zipping "Tweaks.External" costs 1.4271540641784668s
-[11:44:19.362] [INFO] Variants: "Resource Tweaks External.zip" completed (3471 files, 1962 KiB)
-[11:44:19.540] [DEBUG] Copied "out\Variants\Resource Tweaks External.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
-[11:44:19.631] [INFO] Build stops at 2025-12-04 11:44:19.630972, total cost 0:00:21.871166.
+[09:26:40.999] [INFO] Variants: starting...
+[09:26:41.114] [DEBUG] Variants: Loading "Fixes.Base" costs 0.10245418548583984s
+[09:26:41.506] [DEBUG] Variants: Loading "Fixes.Lite" costs 0.39122939109802246s
+[09:26:41.658] [DEBUG] Variants: Zipping "Fixes.Lite" costs 0.15027284622192383s
+[09:26:41.659] [INFO] Variants: "Resource Fixes Lite.zip" completed (311 files, 212 KiB)
+[09:26:41.684] [DEBUG] Copied "out\Variants\Resource Fixes Lite.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
+[09:26:41.820] [DEBUG] Variants: Loading "Fixes.Normal" costs 0.3129091262817383s
+[09:26:42.036] [DEBUG] Variants: Loading "Fixes.Textured" costs 0.21285700798034668s
+[09:26:42.376] [DEBUG] Variants: Zipping "Fixes.Normal" costs 0.552025556564331s
+[09:26:42.378] [INFO] Variants: "Resource Fixes.zip" completed (454 files, 254 KiB)
+[09:26:42.399] [DEBUG] Variants: Loading "Fixes.Simplified" costs 0.3605923652648926s
+[09:26:42.433] [DEBUG] Copied "out\Variants\Resource Fixes.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
+[09:26:43.188] [DEBUG] Variants: Zipping "Fixes.Textured" costs 1.147524118423462s
+[09:26:43.189] [INFO] Variants: "Resource Fixes Textured.zip" completed (498 files, 276 KiB)
+[09:26:43.225] [DEBUG] Variants: Zipping "Fixes.Simplified" costs 0.8238022327423096s
+[09:26:43.229] [INFO] Variants: "Resource Fixes Simplified.zip" completed (536 files, 286 KiB)
+[09:26:43.261] [DEBUG] Copied "out\Variants\Resource Fixes Simplified.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
+[09:26:43.272] [DEBUG] Copied "out\Variants\Resource Fixes Textured.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
+[09:26:43.545] [DEBUG] Loading zip file src\Tweaks\Lite\Natural Firefly Bushes 1.0.zip
+[09:26:43.552] [DEBUG] Variants: excluded "pack.mcmeta"
+[09:26:43.552] [DEBUG] Variants: excluded "pack.png"
+[09:26:44.623] [DEBUG] Variants: Loading "Tweaks.Lite" costs 2.5834689140319824s
+[09:26:45.382] [DEBUG] Variants: Zipping "Tweaks.Lite" costs 0.751793384552002s
+[09:26:45.384] [INFO] Variants: "Resource Tweaks Lite.zip" completed (1173 files, 560 KiB)
+[09:26:45.416] [DEBUG] Copied "out\Variants\Resource Tweaks Lite.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
+[09:26:45.905] [DEBUG] Variants: excluded "run.py" by default
+[09:26:46.386] [DEBUG] Loading zip file src\Tweaks\Normal\Tasty_Items-v1.4.zip
+[09:26:46.857] [DEBUG] Variants: excluded "credits.txt"
+[09:26:46.857] [DEBUG] Variants: excluded "pack.mcmeta"
+[09:26:46.858] [DEBUG] Variants: excluded "pack.png"
+[09:26:48.123] [DEBUG] Variants: Loading "Tweaks.Normal" costs 3.493793249130249s
+[09:26:48.563] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor.json from storage
+[09:26:48.563] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor_active.json from storage
+[09:26:48.564] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor_inactive.json from storage
+[09:26:48.564] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor.json from storage
+[09:26:48.564] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor_inactive.json from storage
+[09:26:48.564] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor_active.json from storage
+[09:26:48.565] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor.json.rpo from storage
+[09:26:48.565] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor_active.json.rpo from storage
+[09:26:48.565] [DEBUG] Removed assets\minecraft\models\block\calibrated_sculk_sensor_inactive.json.rpo from storage
+[09:26:48.566] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor_active.json.rpo from storage
+[09:26:48.566] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor_inactive.json.rpo from storage
+[09:26:48.567] [DEBUG] Removed assets\minecraft\models\block\sculk_sensor.json.rpo from storage
+[09:26:49.166] [DEBUG] Loading zip file src\Tweaks\External\3D Default 1.21.2+ v1.13.1.zip
+[09:26:49.207] [DEBUG] Variants: excluded "pack.mcmeta"
+[09:26:49.553] [DEBUG] Variants: excluded "assets\minecraft\models\block\bamboo_large_leaves.json"
+[09:26:49.554] [DEBUG] Variants: excluded "assets\minecraft\models\block\bamboo_small_leaves.json"
+[09:26:49.613] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand.json"
+[09:26:49.614] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_bottle0.json"
+[09:26:49.615] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_bottle1.json"
+[09:26:49.615] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_bottle2.json"
+[09:26:49.617] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_empty0.json"
+[09:26:49.618] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_empty1.json"
+[09:26:49.618] [DEBUG] Variants: excluded "assets\minecraft\models\block\brewing_stand_empty2.json"
+[09:26:49.961] [DEBUG] Variants: excluded "assets\minecraft\models\block\end_rod.json"
+[09:26:50.033] [DEBUG] Variants: excluded "assets\minecraft\models\block\flower_pot.json"
+[09:26:50.035] [DEBUG] Variants: excluded "assets\minecraft\models\block\flower_pot_cross.json"
+[09:26:50.165] [DEBUG] Variants: excluded "assets\minecraft\models\block\ladder.json"
+[09:26:50.180] [DEBUG] Variants: excluded "assets\minecraft\models\block\lightning_rod.json"
+[09:26:50.182] [DEBUG] Variants: excluded "assets\minecraft\models\block\lightning_rod_on.json"
+[09:26:50.361] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_allium.json"
+[09:26:50.364] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_azure_bluet.json"
+[09:26:50.366] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_blue_orchid.json"
+[09:26:50.373] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_cornflower.json"
+[09:26:50.379] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_fern.json"
+[09:26:50.383] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_lily_of_the_valley.json"
+[09:26:50.385] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_orange_tulip.json"
+[09:26:50.386] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_oxeye_daisy.json"
+[09:26:50.387] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_pink_tulip.json"
+[09:26:50.388] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_poppy.json"
+[09:26:50.392] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_red_tulip.json"
+[09:26:50.395] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_white_tulip.json"
+[09:26:50.397] [DEBUG] Variants: excluded "assets\minecraft\models\block\potted_wither_rose.json"
+[09:26:50.422] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_dot.json"
+[09:26:50.423] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side.json"
+[09:26:50.425] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side0.json"
+[09:26:50.427] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side1.json"
+[09:26:50.429] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side_alt.json"
+[09:26:50.431] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side_alt0.json"
+[09:26:50.432] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_side_alt1.json"
+[09:26:50.434] [DEBUG] Variants: excluded "assets\minecraft\models\block\redstone_dust_up.json"
+[09:26:50.549] [DEBUG] Variants: excluded "assets\minecraft\models\block\template_anvil.json"
+[09:26:50.563] [DEBUG] Variants: excluded "assets\minecraft\models\block\template_campfire.json"
+[09:26:50.602] [DEBUG] Variants: excluded "assets\minecraft\models\block\template_redstone_torch.json"
+[09:26:50.603] [DEBUG] Variants: excluded "assets\minecraft\models\block\template_redstone_torch_wall.json"
+[09:26:50.738] [DEBUG] Variants: excluded "assets\minecraft\models\item\black_candle.json"
+[09:26:50.740] [DEBUG] Variants: excluded "assets\minecraft\models\item\blue_candle.json"
+[09:26:50.749] [DEBUG] Variants: excluded "assets\minecraft\models\item\brown_candle.json"
+[09:26:50.758] [DEBUG] Variants: excluded "assets\minecraft\models\item\candle.json"
+[09:26:50.926] [DEBUG] Variants: excluded "assets\minecraft\models\item\comparator.json"
+[09:26:51.020] [DEBUG] Variants: excluded "assets\minecraft\models\item\copper_lantern.json"
+[09:26:51.029] [DEBUG] Variants: excluded "assets\minecraft\models\item\copper_torch.json"
+[09:26:51.057] [DEBUG] Variants: excluded "assets\minecraft\models\item\cyan_candle.json"
+[09:26:51.112] [DEBUG] Variants: excluded "assets\minecraft\models\item\end_rod.json"
+[09:26:51.117] [DEBUG] Variants: excluded "assets\minecraft\models\item\exposed_copper_lantern.json"
+[09:26:51.126] [DEBUG] Variants: excluded "assets\minecraft\models\item\flower_pot.json"
+[09:26:51.132] [DEBUG] Variants: excluded "assets\minecraft\models\item\glass_bottle.json"
+[09:26:51.150] [DEBUG] Variants: excluded "assets\minecraft\models\item\gray_candle.json"
+[09:26:51.155] [DEBUG] Variants: excluded "assets\minecraft\models\item\green_candle.json"
+[09:26:51.165] [DEBUG] Variants: excluded "assets\minecraft\models\item\honey_bottle.json"
+[09:26:51.195] [DEBUG] Variants: excluded "assets\minecraft\models\item\ladder.json"
+[09:26:51.196] [DEBUG] Variants: excluded "assets\minecraft\models\item\lantern.json"
+[09:26:51.197] [DEBUG] Variants: excluded "assets\minecraft\models\item\lever.json"
+[09:26:51.198] [DEBUG] Variants: excluded "assets\minecraft\models\item\lightning_rod.json"
+[09:26:51.199] [DEBUG] Variants: excluded "assets\minecraft\models\item\light_blue_candle.json"
+[09:26:51.201] [DEBUG] Variants: excluded "assets\minecraft\models\item\light_gray_candle.json"
+[09:26:51.203] [DEBUG] Variants: excluded "assets\minecraft\models\item\lime_candle.json"
+[09:26:51.206] [DEBUG] Variants: excluded "assets\minecraft\models\item\lingering_potion.json"
+[09:26:51.208] [DEBUG] Variants: excluded "assets\minecraft\models\item\magenta_candle.json"
+[09:26:51.238] [DEBUG] Variants: excluded "assets\minecraft\models\item\ominous_bottle.json"
+[09:26:51.238] [DEBUG] Variants: excluded "assets\minecraft\models\item\orange_candle.json"
+[09:26:51.246] [DEBUG] Variants: excluded "assets\minecraft\models\item\oxidized_copper_lantern.json"
+[09:26:51.261] [DEBUG] Variants: excluded "assets\minecraft\models\item\pink_candle.json"
+[09:26:51.265] [DEBUG] Variants: excluded "assets\minecraft\models\item\potion.json"
+[09:26:51.351] [DEBUG] Variants: excluded "assets\minecraft\models\item\redstone_torch.json"
+[09:26:51.356] [DEBUG] Variants: excluded "assets\minecraft\models\item\repeater.json"
+[09:26:51.362] [DEBUG] Variants: excluded "assets\minecraft\models\item\soul_lantern.json"
+[09:26:51.363] [DEBUG] Variants: excluded "assets\minecraft\models\item\soul_torch.json"
+[09:26:51.364] [DEBUG] Variants: excluded "assets\minecraft\models\item\splash_potion.json"
+[09:26:51.388] [DEBUG] Variants: excluded "assets\minecraft\models\item\torch.json"
+[09:26:51.389] [DEBUG] Variants: excluded "assets\minecraft\models\item\tripwire_hook.json"
+[09:26:51.400] [DEBUG] Variants: excluded "assets\minecraft\models\item\weathered_copper_lantern.json"
+[09:26:53.154] [DEBUG] Variants: excluded "assets\minecraft\textures\item\honey_bottle.png"
+[09:26:53.169] [DEBUG] Variants: excluded "assets\minecraft\textures\item\potion.png"
+[09:26:53.171] [DEBUG] Variants: excluded "assets\minecraft\textures\item\potion_splash.png"
+[09:26:53.251] [DEBUG] Moved "README.md" to "README\GeForceLegend's 3D Default.md"
+[09:26:54.851] [DEBUG] Variants: Loading "Tweaks.External" costs 5.765572547912598s
+[09:26:55.272] [DEBUG] Variants: Zipping "Tweaks.Normal" costs 7.037177801132202s
+[09:26:55.273] [INFO] Variants: "Resource Tweaks.zip" completed (2117 files, 949 KiB)
+[09:26:55.307] [DEBUG] Copied "out\Variants\Resource Tweaks.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
+[09:26:56.507] [DEBUG] Variants: Zipping "Tweaks.External" costs 1.6553318500518799s
+[09:26:56.508] [INFO] Variants: "Resource Tweaks External.zip" completed (3487 files, 1681 KiB)
+[09:26:56.543] [DEBUG] Copied "out\Variants\Resource Tweaks External.zip" to "['C:\\PCL2\\.minecraft\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Night Gale 1.21.10\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Shadow Fabric\\resourcepacks', 'C:\\PCL2\\.minecraft\\versions\\Dev 1.21.5 Fabric\\resourcepacks']"
+[09:26:56.553] [INFO] Build stops at 2025-12-11 09:26:56.553300, total cost 0:00:15.555419.

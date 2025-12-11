@@ -1,35 +1,34 @@
-- Version: 9.12
-- Game versions: 1.14.4-1.21.10 (snapshot 25w41a)
+- Version: 9.13
+- Game versions: 1.14.4-1.21.11
 - Project Links:
   - [Modrinth](https://modrinth.com/project/xq2isoUl) (updated most quickly)
   - [Github](https://github.com/Minecrafthyr/model_optis_and_fixes)
   - [CurseForge](https://www.curseforge.com/minecraft/texture-packs/resource-fixes-and-tweaks)
 - Optional Dependencies: **[Respackopts](https://modrinth.com/project/TiF5QWZY) for config**.
-- May contains errors. Some bugs can't be fix by resourepack.
+- May contains errors. Some bugs can't be fixed by resource pack.
 
 ### FAQ
 
 > FPS Boost?
 
 - Fixes.(Lite|Normal|Textured|Simplified): ✔️ (in some cases; depends on block type and count).
-- Tweaks.(Lite|Normal|External): ❌️ (some models slow downs).
+- Tweaks.(Lite|Normal|External): ❌️ (some models slow-downs).
 
 ## Variants
 
-Resource Fixes.zip is primary file. Download variants in **additional files** or on [Github](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/out/Variants).
+Resource Fixes.zip is the primary file. Download variants in **additional files** or on [Github](https://github.com/Minecrafthyr/model_optis_and_fixes/tree/main/out/Variants).
 
 Resource Fixes (optimize and fixes)
 
 - Lite variant  
-  Optimization & Fixes only, compatible with texture only resourcepacks.
+  Optimization & fixes only, compatible with texture only resource packs.
 - Normal variant  
   Visually improve item models (3D block item) or display.
 - Textured variant  
-  Using texture may conflict to other resourcepack.  
+  Using texture may conflict to other resource pack.  
   Designed with Default resource style.
 - Simplified variant  
-  Simplified some block models for fun.  
-  Resource Tweaks are **not affected**.
+  Simplified some block models for fun, does **not** apply to Resource Tweaks.
 
 Resource Tweaks (tweaks and improvements)
 
@@ -38,12 +37,12 @@ Resource Tweaks (tweaks and improvements)
 - Normal variant  
   May causing lag or breaking visual tweaks, options may help you.
 - External variant  
-  Try compat with external pack.  
+  Try compact with external pack.  
   Embedded GeForceLegend's [3D Default](https://modrinth.com/resourcepack/3d-default).
 
 ## License
 
-Please also check license in ./Credits folder (in source or pack) for specific files.
+Please also check license in ./Credits folder (in github source or pack) for specific files.
 
 - Resource Tweaks External: [GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only).
 - Others: [Unlicense](https://spdx.org/licenses/Unlicense), means you can modify, distribute, split, use it anywhere.
@@ -258,3 +257,7 @@ Simplified model: Hanging Mangrove Propagule, Leaf Litter, Pink Petals, Wildflow
 - [Smoother Glowing](https://modrinth.com/shader/smoother-glowing)
 - [Visual: Armor Trims](https://modrinth.com/resourcepack/visual-armor-trims)
 - [Re-Shaded](https://modrinth.com/resourcepack/re-shaded)
+
+Mod
+
+- [Quick Pack](https://modrinth.com/mod/quick-pack)
